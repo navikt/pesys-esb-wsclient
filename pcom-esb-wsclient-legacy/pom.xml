@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>pesys-esb-wsclient-legacy</artifactId>
+        <groupId>no.nav.pensjon</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>pcom-esb-wsclient-legacy</artifactId>
+    <description>JAXWS for ESB wsdls used by several Pensjon modules</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>no.nav.esb.pensjon</groupId>
+            <artifactId>pensjon-tjeneste-iverksattVedtakBehandling</artifactId>
+            <version>1.1.2</version>
+            <classifier>wsdlif</classifier>
+            <type>zip</type>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>no.nav.tjenester</groupId>
+                    <artifactId>pensjon-iverksattVedtakBehandling-tjenestespesifikasjon</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>no.nav.tjenester</groupId>
+                    <artifactId>pensjon-behandleOppdragsmelding-tjenestespesifikasjon</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>no.nav.esb.pensjon</groupId>
+            <artifactId>pensjon-tjeneste-samordning</artifactId>
+            <version>1.1.4</version>
+            <classifier>wsdlif</classifier>
+            <type>zip</type>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>no.nav.tjenester</groupId>
+                    <artifactId>pensjon-samordning-tjenestespesifikasjon</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>no.nav.esb.layers.modules.cons</groupId>
+            <artifactId>nav-cons-pen-pen-batch-oppdrag</artifactId>
+            <version>8.2.1</version>
+            <classifier>wsdlif</classifier>
+            <type>zip</type>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>unpack-dependency</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>unpack-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <includeGroupIds>no.nav.esb.pensjon,no.nav.esb.layers.modules.cons</includeGroupIds>
+                            <outputDirectory>${project.build.outputDirectory}/wsdl</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+
+            <plugin>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-codegen-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>process-sources</phase>
+                        <configuration>
+                            <wsdlOptions>
+
+                                <!-- Iverksett Vedtak Behandling -->
+                                <wsdlOption>
+                                    <wsdl>${project.build.outputDirectory}/wsdl/no/nav/domene/pensjon/tjenester/iverksattVedtakBehandling/v1/Binding.wsdl</wsdl>
+                                </wsdlOption>
+
+                                <!-- Samordning -->
+                                <wsdlOption>
+                                    <wsdl>${project.build.outputDirectory}/wsdl/pensjon-tjeneste-samordning_SamordningWSEXP.wsdl</wsdl>
+                                </wsdlOption>
+
+                                <!-- PEN Oppdrag Batch -->
+                                <wsdlOption>
+                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pen-batch-oppdrag_PENOppdragBatchWSEXP.wsdl</wsdl>
+                                    <extraargs>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-batch-oppdrag/no/nav/inf=no.nav.inf</extraarg>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-batch-oppdrag/no/nav/inf/Binding=no.nav.inf.binding</extraarg>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-batch-oppdrag/no/nav/lib/pen/psakpselv/asbo/oppdrag=no.nav.lib.pen.psakpselv.asbo.oppdrag</extraarg>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/oppdrag=no.nav.lib.pen.psakpselv.asbo.oppdrag</extraarg>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault=no.nav.lib.pen.psakpselv.fault</extraarg>
+                                    </extraargs>
+                                </wsdlOption>
+
+                            </wsdlOptions>
+                        </configuration>
+                        <goals>
+                            <goal>wsdl2java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

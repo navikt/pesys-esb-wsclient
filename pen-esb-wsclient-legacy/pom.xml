@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>pesys-esb-wsclient-legacy</artifactId>
+        <groupId>no.nav.pensjon</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>pen-esb-wsclient-legacy</artifactId>
+    <description>JAXWS for ESB wsdls used by PEN</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>no.nav.esb.layers.modules.cons</groupId>
+            <artifactId>nav-cons-pen-psak-navansatt</artifactId>
+            <version>8.4.1</version>
+            <classifier>wsdlif</classifier>
+            <type>zip</type>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>no.nav.esb.layers.modules.cons</groupId>
+            <artifactId>nav-cons-pen-pen-navorgenhet</artifactId>
+            <version>8.4.1</version>
+            <classifier>wsdlif</classifier>
+            <type>zip</type>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>no.nav.esb.layers.libs.gbo</groupId>
+                    <artifactId>nav-lib-frg</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>no.nav.esb.layers.modules.cons</groupId>
+            <artifactId>nav-cons-pen-pen-oppdrag</artifactId>
+            <version>8.4.1</version>
+            <classifier>wsdlif</classifier>
+            <type>zip</type>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>no.nav.esb.layers.libs.gbo</groupId>
+                    <artifactId>nav-lib-oko</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>no.nav.esb.layers.libs.asbo</groupId>
+                    <artifactId>nav-lib-cons-oppdrag-commons</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>no.nav.esb.layers.libs.commons</groupId>
+                    <artifactId>nav-lib-commons-codestables</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>unpack-dependency</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>unpack-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <includeGroupIds>no.nav.esb.pensjon,no.nav.esb.layers.modules.cons</includeGroupIds>
+                            <outputDirectory>${project.build.outputDirectory}/wsdl</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-codegen-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <configuration>
+                            <wsdlOptions>
+
+                                <!-- PSAK NAV Ansatt-->
+                                <wsdlOption>
+                                    <wsdl>${project.build.outputDirectory}/wsdl/PSAKNAVAnsattWSEXP_PSAKNAVAnsattHttp_Service.wsdl</wsdl>
+                                    <extraargs>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-cons-pen-psak-navansatt/no/nav/inf=no.nav.inf</extraarg>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-cons-pen-psak-navansatt/no/nav/inf/Binding=no.nav.inf.binding</extraarg>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo=no.nav.lib.pen.psakpselv.asbo</extraarg>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/navansatt=no.nav.lib.pen.psakpselv.asbo.navansatt</extraarg>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/navorgenhet=no.nav.lib.pen.psakpselv.asbo.navorgenhet</extraarg>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault=no.nav.lib.pen.psakpselv.fault</extraarg>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/navansatt=no.nav.lib.pen.psakpselv.fault.navansatt</extraarg>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/navorgenhet=no.nav.lib.pen.psakpselv.fault.navorgenhet</extraarg>
+                                    </extraargs>
+                                </wsdlOption>
+
+                                <!-- PEN NAV Org Enhet -->
+                                <wsdlOption>
+                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pen-navorgenhet_PENNAVOrgEnhetWSEXP.wsdl
+                                    </wsdl>
+                                    <extraargs>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-navorgenhet/no/nav/inf/PENNAVOrgEnhet=no.nav.inf</extraarg>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-navorgenhet/no/nav/inf/PENNAVOrgEnhet/Binding=no.nav.inf.binding</extraarg>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/navorgenhet=no.nav.lib.pen.psakpselv.asbo.navorgenhet</extraarg>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo=no.nav.lib.pen.psakpselv.asbo</extraarg>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault=no.nav.lib.pen.psakpselv.fault</extraarg>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/navorgenhet=no.nav.lib.pen.psakpselv.fault.navorgenhet</extraarg>
+                                    </extraargs>
+                                </wsdlOption>
+
+                                <!-- Oppdrag -->
+                                <wsdlOption>
+                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pen-oppdrag_PENOppdragWSEXP.wsdl
+                                    </wsdl>
+                                    <extraargs>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-oppdrag/no/nav/inf=no.nav.inf</extraarg>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-oppdrag/no/nav/inf/Binding=no.nav.inf.binding</extraarg>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/oppdrag=no.nav.lib.pen.psakpselv.asbo.oppdrag</extraarg>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/oppdrag=no.nav.lib.pen.psakpselv.fault.oppdrag</extraarg>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault=no.nav.lib.pen.psakpselv.fault</extraarg>
+                                    </extraargs>
+                                </wsdlOption>
+                            </wsdlOptions>
+                        </configuration>
+                        <goals>
+                            <goal>wsdl2java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
