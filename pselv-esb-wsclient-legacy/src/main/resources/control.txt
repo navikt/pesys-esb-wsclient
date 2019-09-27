@@ -1,0 +1,7 @@
+#/no\.nav\..*/=include
+
+no.nav.lib.pen.psakpselv.asbo.medlemskapsunntak.ASBOPenPeriode=include
+no.nav.lib.pen.psakpselv.asbo.medlemskapsunntak.ASBOPenGrunnlagListe=include
+no.nav.lib.pen.psakpselv.asbo.medlemskapsunntak.ASBOPenGrunnlag=include
+no.nav.lib.pen.psakpselv.asbo.person.ASBOPenAnnenAdresseListe=include
+no.nav.lib.pen.psakpselv.asbo.medlemskapsunntak.ASBOPenGrunnlagListe=include

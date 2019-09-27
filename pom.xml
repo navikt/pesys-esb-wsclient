@@ -11,24 +11,17 @@
 
     <properties>
         <esb.url>https://tjenestebuss-t4.adeo.no</esb.url>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <modules>
         <module>pcom-esb-wsclient-legacy</module>
         <module>pen-esb-wsclient-legacy</module>
+        <module>psak-esb-wsclient-legacy</module>
+        <module>pselv-esb-wsclient-legacy</module>
     </modules>
 
     <build>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <excludes>
-                    <exclude>*.properties</exclude>
-                </excludes>
-                <filtering>false</filtering>
-            </resource>
-        </resources>
-
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -40,6 +33,18 @@
                     <groupId>org.apache.cxf</groupId>
                     <artifactId>cxf-codegen-plugin</artifactId>
                     <version>3.3.1</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.apache.cxf.xjcplugins</groupId>
+                            <artifactId>cxf-xjc-boolean</artifactId>
+                            <version>3.2.0</version>
+                        </dependency>
+<!--                        <dependency>-->
+<!--                            <groupId>com.github.jaxb-xew-plugin</groupId>-->
+<!--                            <artifactId>jaxb-xew-plugin</artifactId>-->
+<!--                            <version>1.11</version>-->
+<!--                        </dependency>-->
+                    </dependencies>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -53,12 +58,30 @@
                     <execution>
                         <id>attach-sources</id>
                         <goals>
-                            <goal>jar</goal>
+                            <!--<goal>jar</goal>-->
+                            <goal>jar-no-fork</goal> <!-- antrun tries to run twice?! -->
                         </goals>
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.1.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                        <configuration>
+                            <doclint>none</doclint>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
+
     </build>
 
 </project>
