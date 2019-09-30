@@ -24,7 +24,7 @@
             <version>8.4.0</version>
             <classifier>wsdlif</classifier>
             <type>zip</type>
-            <scope>compile</scope>
+            <scope>provided</scope>
             <exclusions>
                 <exclusion>
                     <groupId>*</groupId>
@@ -39,7 +39,7 @@
             <version>8.4.0</version>
             <classifier>wsdlif</classifier>
             <type>zip</type>
-            <scope>compile</scope>
+            <scope>provided</scope>
             <exclusions>
                 <exclusion>
                     <groupId>*</groupId>
@@ -54,7 +54,7 @@
             <version>8.4.1</version>
             <classifier>wsdlif</classifier>
             <type>zip</type>
-            <scope>compile</scope>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
@@ -63,7 +63,7 @@
             <version>8.4.1</version>
             <classifier>wsdlif</classifier>
             <type>zip</type>
-            <scope>compile</scope>
+            <scope>provided</scope>
             <exclusions>
                 <exclusion>
                     <groupId>*</groupId>
@@ -78,7 +78,7 @@
             <version>8.4.1</version>
             <classifier>wsdlif</classifier>
             <type>zip</type>
-            <scope>compile</scope>
+            <scope>provided</scope>
             <exclusions>
                 <exclusion>
                     <groupId>*</groupId>
@@ -214,6 +214,8 @@
                                     <extraarg>-verbose</extraarg>
                                     <!--change Boolean type getters to getXXX (to ensure status quo with starting point) -->
                                     <extraarg>-xjc-Xbg</extraarg>
+                                    <!-- Add namespace on element, not on package level -->
+                                    <extraarg>-xjc-npa</extraarg>
                                     <!-- Common error types, reused from pcom -->
                                     <extraarg>-nexclude</extraarg>
                                     <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault=no.nav.lib.pen.psakpselv.fault</extraarg>

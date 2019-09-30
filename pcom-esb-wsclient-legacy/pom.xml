@@ -163,7 +163,7 @@
             <version>8.4.1</version>
             <classifier>wsdlif</classifier>
             <type>zip</type>
-            <scope>compile</scope>
+            <scope>provided</scope>
             <exclusions>
                 <exclusion>
                     <groupId>*</groupId>
@@ -179,7 +179,7 @@
             <version>8.4.1</version>
             <classifier>wsdlif</classifier>
             <type>zip</type>
-            <scope>compile</scope>
+            <scope>provided</scope>
             <exclusions>
                 <exclusion>
                     <groupId>*</groupId>
@@ -194,7 +194,7 @@
             <version>8.4.1</version>
             <classifier>wsdlif</classifier>
             <type>zip</type>
-            <scope>compile</scope>
+            <scope>provided</scope>
             <exclusions>
                 <exclusion>
                     <groupId>*</groupId>
@@ -240,6 +240,8 @@
                                     <extraarg>-verbose</extraarg>
                                     <!--change Boolean type getters to getXXX (to ensure status quo with starting point) -->
                                     <extraarg>-xjc-Xbg</extraarg>
+                                    <!-- Add namespace on element, not on package level -->
+                                    <extraarg>-xjc-npa</extraarg>
                                 </extraargs>
                             </defaultOptions>
 
@@ -253,9 +255,6 @@
                                 <!-- Samordning -->
                                 <wsdlOption>
                                     <wsdl>${project.build.outputDirectory}/wsdl/pensjon-tjeneste-samordning_SamordningWSEXP.wsdl</wsdl>
-                                    <extraargs>
-
-                                    </extraargs>
                                 </wsdlOption>
 
                                 <!-- Oppdrag: placed here for reuse of FaultPenServiceUnavailable -->
