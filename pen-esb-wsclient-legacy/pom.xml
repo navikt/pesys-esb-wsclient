@@ -350,6 +350,45 @@
             </exclusions>
         </dependency>
 
+        <dependency>
+            <groupId>no.nav.esb.layers.modules.cons</groupId>
+            <artifactId>nav-cons-pen-pen-inntekt</artifactId>
+            <version>8.4.1</version>
+            <classifier>wsdlif</classifier>
+            <type>zip</type>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>no.nav.esb.layers.modules.cons</groupId>
+            <artifactId>nav-cons-pen-pen-oppdrag</artifactId>
+            <version>8.4.1</version>
+            <classifier>wsdlif</classifier>
+            <type>zip</type>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>no.nav.esb.layers.modules.cons</groupId>
+            <artifactId>nav-cons-pen-pen-batch-oppdrag</artifactId>
+            <version>8.1.0</version>
+            <classifier>wsdlif</classifier>
+            <type>zip</type>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -448,6 +487,25 @@
                             <wsdlOptions>
                                 <!-- -nexclude is used to reuse PCOM versions of certain common types -->
 
+                                <!-- PEN Inntekt (shared domain with PSAK/PSELV versions -->
+                                <wsdlOption>
+                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pen-inntekt_PENInntektWSEXP.wsdl</wsdl>
+                                    <extraargs>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-inntekt/no/nav/inf=no.nav.inf.pen.inntekt</extraarg>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-inntekt/no/nav/inf/Binding=no.nav.inf.pen.inntekt</extraarg>
+                                        <extraarg>-nexclude</extraarg>
+                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/inntekt=no.nav.lib.pen.psakpselv.asbo.inntekt</extraarg>
+                                        <extraarg>-nexclude</extraarg>
+                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo=no.nav.lib.pen.psakpselv.asbo</extraarg>
+                                        <extraarg>-nexclude</extraarg>
+                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/inntekt=no.nav.lib.pen.psakpselv.fault.inntekt</extraarg>
+                                        <extraarg>-nexclude</extraarg>
+                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault=no.nav.lib.pen.psakpselv.fault</extraarg>
+                                    </extraargs>
+                                </wsdlOption>
+
                                 <!-- PSAK NAV Ansatt-->
                                 <wsdlOption>
                                     <wsdl>${project.build.outputDirectory}/wsdl/PSAKNAVAnsattWSEXP_PSAKNAVAnsattHttp_Service.wsdl</wsdl>
@@ -488,6 +546,43 @@
                                         <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault=no.nav.lib.pen.psakpselv.fault</extraarg>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/navorgenhet=no.nav.lib.pen.psakpselv.fault.navorgenhet</extraarg>
+                                    </extraargs>
+                                </wsdlOption>
+
+                                <!-- Oppdrag: placed here for reuse of FaultPenServiceUnavailable -->
+                                <wsdlOption>
+                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pen-oppdrag_PENOppdragWSEXP.wsdl
+                                    </wsdl>
+                                    <extraargs>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-oppdrag/no/nav/inf=no.nav.inf.pen.oppdrag</extraarg>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-oppdrag/no/nav/inf/Binding=no.nav.inf.pen.oppdrag</extraarg>
+                                        <extraarg>-nexclude</extraarg>
+                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/oppdrag=no.nav.lib.pen.psakpselv.asbo.oppdrag</extraarg>
+                                        <extraarg>-nexclude</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-batch-oppdrag/no/nav/lib/pen/psakpselv/asbo/oppdrag=no.nav.lib.pen.psakpselv.asbo.oppdrag</extraarg>
+                                        <extraarg>-nexclude</extraarg>
+                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/oppdrag=no.nav.lib.pen.psakpselv.fault.oppdrag</extraarg>
+                                        <extraarg>-nexclude</extraarg>
+                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault=no.nav.lib.pen.psakpselv.fault</extraarg>
+                                    </extraargs>
+                                </wsdlOption>
+
+                                <!-- PEN Oppdrag Batch -->
+                                <wsdlOption>
+                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pen-batch-oppdrag_PENOppdragBatchWSEXP.wsdl</wsdl>
+                                    <extraargs>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-batch-oppdrag/no/nav/inf=no.nav.inf.pen.oppdragbatch</extraarg>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-batch-oppdrag/no/nav/inf/Binding=no.nav.inf.pen.oppdragbatch</extraarg>
+                                        <extraarg>-nexclude</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-batch-oppdrag/no/nav/lib/pen/psakpselv/asbo/oppdrag=no.nav.lib.pen.psakpselv.asbo.oppdrag</extraarg>
+                                        <extraarg>-nexclude</extraarg>
+                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/oppdrag=no.nav.lib.pen.psakpselv.asbo.oppdrag</extraarg>
+                                        <extraarg>-nexclude</extraarg>
+                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault=no.nav.lib.pen.psakpselv.fault</extraarg>
                                     </extraargs>
                                 </wsdlOption>
 

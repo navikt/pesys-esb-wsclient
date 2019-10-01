@@ -37,8 +37,8 @@
             <scope>provided</scope>
             <exclusions>
                 <exclusion>
-                    <groupId>no.nav.tjenester</groupId>
-                    <artifactId>pensjon-samordning-tjenestespesifikasjon</artifactId>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -52,8 +52,8 @@
             <scope>provided</scope>
             <exclusions>
                 <exclusion>
-                    <groupId>no.nav.esb.layers.libs.gbo</groupId>
-                    <artifactId>nav-lib-frg</artifactId>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -106,8 +106,8 @@
             <scope>provided</scope>
             <exclusions>
                 <exclusion>
-                    <groupId>no.nav.esb.layers.libs.gbo</groupId>
-                    <artifactId>nav-lib-sto</artifactId>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -294,7 +294,7 @@
                                     </extraargs>
                                 </wsdlOption>
 
-                                <!-- PSAK Samordning: placed here (for now) due to PCOM converter shit -->
+                                <!-- PSAK Samordning: placed here (for now) due to PCOM converter stuff -->
                                 <wsdlOption>
                                     <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-psak-samordning_PSAKSamordningWSEXP.wsdl</wsdl>
                                     <extraargs>
@@ -423,14 +423,14 @@
                                     </extraargs>
                                 </wsdlOption>
 
-                                <!-- PSAK Henvendelse (due to PCOM stuff) -->
+                                <!-- PSAK Henvendelse (due to PCOM domain dep, inf in psak-module ) -->
                                 <wsdlOption>
                                     <wsdl>${project.build.outputDirectory}/wsdl/PSAKHenvendelseWSEXP_PSAKHenvendelseHttp_Service.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-xjc-Xbg</extraarg>
-                                        <extraarg>-p</extraarg>
+                                        <extraarg>-nexclude</extraarg>
                                         <extraarg>http://nav-cons-pen-psak-henvendelse/no/nav/inf=no.nav.inf.psak.henvendelse</extraarg>
-                                        <extraarg>-p</extraarg>
+                                        <extraarg>-nexclude</extraarg>
                                         <extraarg>http://nav-cons-pen-psak-henvendelse/no/nav/inf/Binding=no.nav.inf.psak.henvendelse</extraarg>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/henvendelse=no.nav.lib.pen.psakpselv.asbo.henvendelse</extraarg>
@@ -449,6 +449,29 @@
                         </configuration>
                         <goals>
                             <goal>wsdl2java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.7</version>
+                <executions>
+                    <execution>
+                        <id>copy</id>
+                        <phase>process-sources</phase>
+                        <configuration>
+                            <target name="Remove sources specific to application module">
+                                <delete>
+                                    <fileset dir="${project.build.directory}/generated-sources/cxf/no/nav/inf/pen"/>
+                                    <fileset dir="${project.build.directory}/generated-sources/cxf/no/nav/inf/psak"/>
+                                </delete>
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
                         </goals>
                     </execution>
                 </executions>
