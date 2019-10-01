@@ -81,7 +81,18 @@
                 </executions>
             </plugin>
         </plugins>
-
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-webdav-jackrabbit</artifactId>
+                <version>3.3.3</version>
+            </extension>
+        </extensions>
     </build>
+
+    <scm>
+        <connection>scm:git:ssh://git@stash.devillo.no:7999/pen/pesys-esb-wsclient-legacy.git</connection>
+        <url>http://stash.devillo.no/projects/PEN/repos/pesys-esb-wsclient-legacy/</url>
+    </scm>
 
 </project>

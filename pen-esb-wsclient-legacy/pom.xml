@@ -453,9 +453,9 @@
                                     <wsdl>${project.build.outputDirectory}/wsdl/PSAKNAVAnsattWSEXP_PSAKNAVAnsattHttp_Service.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-psak-navansatt/no/nav/inf=no.nav.inf</extraarg>
+                                        <extraarg>http://nav-cons-pen-psak-navansatt/no/nav/inf=no.nav.inf.psak.navansatt</extraarg>
                                         <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-psak-navansatt/no/nav/inf/Binding=no.nav.inf.binding</extraarg>
+                                        <extraarg>http://nav-cons-pen-psak-navansatt/no/nav/inf/Binding=no.nav.inf.psak.navansatt</extraarg>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo=no.nav.lib.pen.psakpselv.asbo</extraarg>
                                         <extraarg>-p</extraarg>
@@ -477,9 +477,9 @@
                                     </wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pen-navorgenhet/no/nav/inf/PENNAVOrgEnhet=no.nav.inf</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-navorgenhet/no/nav/inf/PENNAVOrgEnhet=no.nav.inf.pen.navorgenhet</extraarg>
                                         <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pen-navorgenhet/no/nav/inf/PENNAVOrgEnhet/Binding=no.nav.inf.binding</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-navorgenhet/no/nav/inf/PENNAVOrgEnhet/Binding=no.nav.inf.pen.navorgenhet</extraarg>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/navorgenhet=no.nav.lib.pen.psakpselv.asbo.navorgenhet</extraarg>
                                         <extraarg>-p</extraarg>
@@ -496,9 +496,9 @@
                                     <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pen-tjenestepensjon_PENTjenestepensjonWSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pen-tjenestepensjon/no/nav/inf=no.nav.inf</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-tjenestepensjon/no/nav/inf=no.nav.inf.pen.tjenestepensjon</extraarg>
                                         <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pen-tjenestepensjon/no/nav/inf/Binding=no.nav.inf.binding</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-tjenestepensjon/no/nav/inf/Binding=no.nav.inf.pen.tjenestepensjon</extraarg>
                                         <extraarg>-nexclude</extraarg>
                                         <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo=no.nav.lib.pen.psakpselv.asbo</extraarg>
                                         <extraarg>-nexclude</extraarg>
@@ -515,9 +515,9 @@
                                     <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pen-ppen003_PENPPEN003WSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pen-ppen003/no/nav/inf=no.nav.inf</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-ppen003/no/nav/inf=no.nav.inf.pen.ppen003</extraarg>
                                         <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pen-ppen003/no/nav/inf/Binding=no.nav.inf.binding</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-ppen003/no/nav/inf/Binding=no.nav.inf.pen.ppen003</extraarg>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/ppen003=no.nav.lib.pen.psakpselv.asbo.ppen003</extraarg>
                                     </extraargs>
@@ -528,9 +528,9 @@
                                     <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pen-ppen006_PENPPEN006WSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pen-ppen006/no/nav/inf=no.nav.inf</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-ppen006/no/nav/inf=no.nav.inf.pen.ppen006</extraarg>
                                         <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pen-ppen006/no/nav/inf/Binding=no.nav.inf.binding</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-ppen006/no/nav/inf/Binding=no.nav.inf.pen.ppen006</extraarg>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/ppen006=no.nav.lib.pen.psakpselv.asbo.ppen006</extraarg>
                                     </extraargs>
@@ -541,9 +541,9 @@
                                     <wsdl>${project.build.outputDirectory}/wsdl/PPEN008WSEXP_PENPPEN008Http_Service.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pen-ppen008/no/nav/inf/PENPPEN008=no.nav.inf</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-ppen008/no/nav/inf/PENPPEN008=no.nav.inf.pen.ppen008</extraarg>
                                         <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pen-ppen008/no/nav/inf/PENPPEN008/Binding=no.nav.inf.binding</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-ppen008/no/nav/inf/PENPPEN008/Binding=no.nav.inf.pen.ppen008</extraarg>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/ppen008=no.nav.lib.pen.psakpselv.asbo.ppen008</extraarg>
                                     </extraargs>
@@ -554,9 +554,9 @@
                                     <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pen-ppen015_PENPPEN015WSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pen-ppen015/no/nav/inf=no.nav.inf</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-ppen015/no/nav/inf=no.nav.inf.pen.ppen015</extraarg>
                                         <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pen-ppen015/no/nav/inf/Binding=no.nav.inf.binding</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-ppen015/no/nav/inf/Binding=no.nav.inf.pen.ppen015</extraarg>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-cons-pen-pen-ppen015/no/nav/lib/pen/psakpselv/asbo/ppen015=no.nav.lib.pen.psakpselv.asbo.ppen015</extraarg>
                                         <extraarg>-p</extraarg>
@@ -569,9 +569,9 @@
                                     <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pen-fullmakt_PENFullmaktWSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pen-fullmakt/no/nav/inf=no.nav.inf</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-fullmakt/no/nav/inf=no.nav.inf.pen.fullmakt</extraarg>
                                         <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pen-fullmakt/no/nav/inf/Binding=no.nav.inf.binding</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-fullmakt/no/nav/inf/Binding=no.nav.inf.pen.fullmakt</extraarg>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/fullmakt=no.nav.lib.pen.psakpselv.asbo.fullmakt</extraarg>
                                         <extraarg>-nexclude</extraarg>
@@ -584,9 +584,9 @@
                                     <wsdl>${project.build.outputDirectory}/wsdl/PENMedlemskapsunntakWSEXP_PENMedlemskapsunntakHttp_Service.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pen-medlemskapsunntak/no/nav/inf=no.nav.inf</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-medlemskapsunntak/no/nav/inf=no.nav.inf.pen.medlemskapsunntak</extraarg>
                                         <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pen-medlemskapsunntak/no/nav/inf/Binding=no.nav.inf.binding</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-medlemskapsunntak/no/nav/inf/Binding=no.nav.inf.pen.medlemskapsunntak</extraarg>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/medlemskapsunntak=no.nav.lib.pen.psakpselv.asbo.medlemskapsunntak</extraarg>
                                         <extraarg>-p</extraarg>
@@ -601,9 +601,9 @@
                                     <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pen-vedtak_PENVedtakWSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pen-vedtak/no/nav/inf/PENVedtak=no.nav.inf</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-vedtak/no/nav/inf/PENVedtak=no.nav.inf.pen.vedtak</extraarg>
                                         <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pen-vedtak/no/nav/inf/PENVedtak/Binding=no.nav.inf.binding</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-vedtak/no/nav/inf/PENVedtak/Binding=no.nav.inf.pen.vedtak</extraarg>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/vedtak=no.nav.lib.pen.psakpselv.asbo.vedtak</extraarg>
                                     </extraargs>
@@ -614,9 +614,9 @@
                                     <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pen-person_PENPersonWSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pen-person/no/nav/inf/PENPerson=no.nav.inf</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-person/no/nav/inf/PENPerson=no.nav.inf.pen.person</extraarg>
                                         <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pen-person/no/nav/inf/PENPerson/Binding=no.nav.inf.binding</extraarg>
+                                        <extraarg>http://nav-cons-pen-pen-person/no/nav/inf/PENPerson/Binding=no.nav.inf.pen.person</extraarg>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person=no.nav.lib.pen.psakpselv.asbo.person</extraarg>
                                         <extraarg>-nexclude</extraarg>
