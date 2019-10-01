@@ -94,4 +94,22 @@
         <url>http://stash.devillo.no/projects/PEN/repos/pesys-esb-wsclient-legacy/</url>
     </scm>
 
+    <distributionManagement>
+        <repository>
+            <id>m2internal</id>
+            <name>NAV Maven2 Internal Repository</name>
+            <url>dav:http://maven.adeo.no/nexus/content/repositories/m2internal</url>
+        </repository>
+        <snapshotRepository>
+            <id>m2snapshot</id>
+            <name>NAV Maven2 Snapshot Repository</name>
+            <url>http://maven.adeo.no/nexus/content/repositories/m2snapshot</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <issueManagement>
+        <system>JIRA</system>
+        <url>http://jira.adeo.no/browse/PL</url>
+    </issueManagement>
+
 </project>
