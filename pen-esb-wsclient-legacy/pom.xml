@@ -6,7 +6,7 @@
     <parent>
         <artifactId>pesys-esb-wsclient-legacy</artifactId>
         <groupId>no.nav.pensjon</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.0.3-SNAPSHOT</version>
     </parent>
 
     <artifactId>pen-esb-wsclient-legacy</artifactId>
@@ -134,6 +134,10 @@
         </dependency>
 
         <dependency>
+            <!--
+            This dependency unfortunately uses a native Windows "\" in what is actually a directory name.
+            This does not go down well with Linux. Hence, release on windows....
+            -->
             <groupId>no.nav.esb.layers.modules.cons</groupId>
             <artifactId>nav-cons-pen-pen-vedtak</artifactId>
             <version>5.1.1</version>
