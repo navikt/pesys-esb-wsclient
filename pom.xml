@@ -10,7 +10,6 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>
-        <esb.url>https://tjenestebuss-t4.adeo.no</esb.url>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
