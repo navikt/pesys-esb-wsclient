@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:bo="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/vedtak" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/vedtak">
+  <xsd:annotation>
+    <xsd:appinfo source="wid.federated.schema"/>
+  </xsd:annotation>
+  <xsd:include schemaLocation="../no/nav/lib/pen/psakpselv/asbo/vedtak/ASBOPenSimuleringsresultatLinjeListe.xsd"/>
+  <xsd:include schemaLocation="../no/nav/lib/pen/psakpselv/asbo/vedtak/ASBOPenSimuleringsresultatlinje.xsd"/>
+    <xsd:include schemaLocation="../no/nav/lib/pen/psakpselv/asbo/vedtak/ASBOPenSimulerVedtaksutbetalingRequest.xsd"/>
+</xsd:schema>

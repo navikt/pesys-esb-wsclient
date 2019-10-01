@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/vedtak" xmlns:tns="http://nav-cons-pen-pen-vedtak/no/nav/inf/PENVedtak" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PENVedtak" targetNamespace="http://nav-cons-pen-pen-vedtak/no/nav/inf/PENVedtak">
+    <wsdl:types>
+    <xsd:schema targetNamespace="http://nav-cons-pen-pen-vedtak/no/nav/inf/PENVedtak" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/vedtak" xmlns:tns="http://nav-cons-pen-pen-vedtak/no/nav/inf/PENVedtak" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/vedtak" schemaLocation="../lib/pen/psakpselv/asbo/vedtak/ASBOPenSendStoppEllerReaktiviserOppdragsmeldingRequest.xsd"/>
+      <xsd:element name="sendStoppEllerReaktiviserOppdragsmelding">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="sendStoppEllerReaktiviserOppdragsmeldingRequest" nillable="true" type="bons1:ASBOPenSendStoppEllerReaktiviserOppdragsmeldingRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="sendStoppEllerReaktiviserOppdragsmeldingRequestMsg">
+    <wsdl:part element="tns:sendStoppEllerReaktiviserOppdragsmelding" name="sendStoppEllerReaktiviserOppdragsmeldingParameters"/>
+  </wsdl:message>
+    <wsdl:portType name="PENVedtak">
+    <wsdl:operation name="sendStoppEllerReaktiviserOppdragsmelding">
+      <wsdl:input message="tns:sendStoppEllerReaktiviserOppdragsmeldingRequestMsg" name="sendStoppEllerReaktiviserOppdragsmeldingRequest"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

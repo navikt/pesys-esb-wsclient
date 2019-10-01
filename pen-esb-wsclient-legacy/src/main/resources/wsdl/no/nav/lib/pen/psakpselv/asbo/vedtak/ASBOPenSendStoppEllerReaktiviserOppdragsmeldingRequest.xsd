@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/vedtak">
+	<xsd:complexType
+		name="ASBOPenSendStoppEllerReaktiviserOppdragsmeldingRequest">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="vedtaksId"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="vedtakstatus"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="aksjonskode"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

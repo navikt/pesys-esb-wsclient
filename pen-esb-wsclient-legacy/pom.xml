@@ -133,11 +133,11 @@
             </exclusions>
         </dependency>
 
+        <!--
+        This dependency unfortunately uses a native Windows "\" in what is actually a directory name.
+        The use of antrun to try to remedy this is problematic on several accounts, hence the necessary files are included in the resources folder
+        instead of using the dependency..
         <dependency>
-            <!--
-            This dependency unfortunately uses a native Windows "\" in what is actually a directory name.
-            This does not go down well with Linux. Hence, release on windows....
-            -->
             <groupId>no.nav.esb.layers.modules.cons</groupId>
             <artifactId>nav-cons-pen-pen-vedtak</artifactId>
             <version>5.1.1</version>
@@ -173,6 +173,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
+    -->
 
         <dependency>
             <groupId>no.nav.esb.layers.modules.cons</groupId>
@@ -413,59 +414,6 @@
                             <includes>**/*.wsdl,**/*.xsd</includes>
                         </configuration>
                     </execution>
-                    <execution>
-                        <id>unpack-dependency-vedtak-asbo</id>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>unpack-dependencies</goal>
-                        </goals>
-                        <configuration>
-                            <includeGroupIds>no.nav.esb.layers.libs.asbo</includeGroupIds>
-                            <includeArtifactIds>nav-lib-cons-pen-psakpselv</includeArtifactIds>
-                            <outputDirectory>${project.build.outputDirectory}/wsdl/</outputDirectory>
-                            <includes>
-                                **/vedtak/ASBOPenSendStoppEllerReaktiviserOppdragsmeldingRequest.xsd,
-                                **/vedtak/ASBOPenSimuleringsresultatlinje.xsd,
-                                **/vedtak/ASBOPenSimuleringsresultatLinjeListe.xsd,
-                                **/vedtak/ASBOPenSimulerVedtaksutbetalingRequest.xsd
-                            </includes>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-antrun-plugin</artifactId>
-                <version>1.7</version>
-                <executions>
-                    <execution>
-                        <id>move-vedtak-main</id>
-                        <phase>generate-sources</phase>
-                        <configuration>
-                            <target name="Move PEN Vedtak wsdl">
-                                <move todir="${project.build.outputDirectory}/wsdl/">
-                                    <fileset dir="${project.build.outputDirectory}/wsdl/nav-cons-pen-pen-vedtak"/>
-                                </move>
-                            </target>
-                        </configuration>
-                        <goals>
-                            <goal>run</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>copy</id>
-                        <phase>generate-sources</phase>
-                        <configuration>
-                            <target name="Move XSD dependencies for PEN Vedtak">
-                                <move todir="${project.build.outputDirectory}/wsdl/">
-                                    <fileset dir="${project.build.outputDirectory}/wsdl/nav-lib-cons-pen-psakpselv"/>
-                                </move>
-                            </target>
-                        </configuration>
-                        <goals>
-                            <goal>run</goal>
-                        </goals>
-                    </execution>
                 </executions>
             </plugin>
 
@@ -481,7 +429,7 @@
                                     <bindingFile>src/main/resources/bindings.xjb</bindingFile>
                                 </bindingFiles>
                                 <extraargs>
-                                    <extraarg>-verbose</extraarg>
+<!--                                    <extraarg>-verbose</extraarg>-->
                                     <!--change Boolean type getters to getXXX (to ensure status quo with starting point) -->
                                     <extraarg>-xjc-Xbg</extraarg>
                                     <!-- Add namespace on element, not on package level -->
@@ -697,7 +645,7 @@
 
                                 <!-- PEN Vedtak -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pen-vedtak_PENVedtakWSEXP.wsdl</wsdl>
+                                    <wsdl>${project.basedir}/src/main/resources/wsdl/nav-cons-pen-pen-vedtak_PENVedtakWSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-cons-pen-pen-vedtak/no/nav/inf/PENVedtak=no.nav.inf.pen.vedtak</extraarg>
