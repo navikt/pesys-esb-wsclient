@@ -140,21 +140,6 @@
 
         <dependency>
             <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-psak-rettskilder</artifactId>
-            <version>8.8.0</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
             <artifactId>nav-cons-pen-psak-arenasak</artifactId>
             <version>8.8.0</version>
             <classifier>wsdlif</classifier>
@@ -497,19 +482,6 @@
                                         <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/institusjonsopphold=no.nav.lib.pen.psakpselv.fault.institusjonsopphold</extraarg>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/samhandler=no.nav.lib.pen.psakpselv.fault.samhandler</extraarg>
-                                    </extraargs>
-                                </wsdlOption>
-
-                                <!-- PSAK Rettskilder -->
-                                <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/PSAKRettskilderWSEXP_PSAKRettskilderHttp_Service.wsdl</wsdl>
-                                    <extraargs>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-psak-rettskilder/no/nav/inf=no.nav.inf.psak.rettskilder</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-psak-rettskilder/no/nav/inf/Binding=no.nav.inf.psak.rettskilder</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/rettskilder=no.nav.lib.pen.psakpselv.asbo.rettskilder</extraarg>
                                     </extraargs>
                                 </wsdlOption>
 

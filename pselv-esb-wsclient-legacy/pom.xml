@@ -162,21 +162,6 @@
             </exclusions>
         </dependency>
 
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-pselv-navorgenhet</artifactId>
-            <version>8.4.1</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
     </dependencies>
 
     <build>
@@ -388,23 +373,6 @@
                                         <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo=no.nav.lib.pen.psakpselv.asbo</extraarg>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/inntekt=no.nav.lib.pen.psakpselv.fault.inntekt</extraarg>
-                                    </extraargs>
-                                </wsdlOption>
-
-                                <!-- PSELV NavOrgEnhet -->
-                                <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/PSELVNAVOrgEnhetWSEXP_PSELVNAVOrgEnhetHttp_Service.wsdl</wsdl>
-                                    <extraargs>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pselv-navorgenhet/no/nav/inf=no.nav.inf.pselv.navorgenhet</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pselv-navorgenhet/no/nav/inf/Binding=no.nav.inf.pselv.navorgenhet</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/navorgenhet=no.nav.lib.pen.psakpselv.asbo.navorgenhet</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo=no.nav.lib.pen.psakpselv.asbo</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/navorgenhet=no.nav.lib.pen.psakpselv.fault.navorgenhet</extraarg>
                                     </extraargs>
                                 </wsdlOption>
 
