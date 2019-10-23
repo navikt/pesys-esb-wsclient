@@ -59,21 +59,6 @@
         </dependency>
 
         <dependency>
-            <groupId>no.nav.esb.nav</groupId>
-            <artifactId>nav-tjeneste-sak</artifactId>
-            <version>1.1.8</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
             <groupId>no.nav.esb.layers.modules.cons</groupId>
             <artifactId>nav-cons-pen-pen-oppdrag</artifactId>
             <version>8.4.1</version>
@@ -337,11 +322,6 @@
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault=no.nav.lib.pen.psakpselv.fault</extraarg>
                                     </extraargs>
-                                </wsdlOption>
-
-                                <!-- PEN sak-tjeneste -->
-                                <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/no/nav/virksomhet/tjenester/sak/v1/Binding.wsdl</wsdl>
                                 </wsdlOption>
 
                                 <!-- PSAK Vedtak -->
