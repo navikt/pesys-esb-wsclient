@@ -65,21 +65,6 @@
 
         <dependency>
             <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-psak-medlemskapsunntak</artifactId>
-            <version>7.6.0</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
             <artifactId>nav-cons-pen-psak-ppen015</artifactId>
             <version>8.4.0</version>
             <classifier>wsdlif</classifier>
@@ -377,23 +362,6 @@
                                         <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/fullmakt=no.nav.lib.pen.psakpselv.asbo.fullmakt</extraarg>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/fullmakt=no.nav.lib.pen.psakpselv.fault.fullmakt</extraarg>
-                                    </extraargs>
-                                </wsdlOption>
-
-                                <!-- PSAK Medlemskapsunntak -->
-                                <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-psak-medlemskapsunntak_PSAKMedlemskapsunntakWSEXP.wsdl</wsdl>
-                                    <extraargs>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-psak-medlemskapsunntak/no/nav/inf=no.nav.inf.psak.medlemskapsunntak</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-psak-medlemskapsunntak/no/nav/inf/Binding=no.nav.inf.psak.medlemskapsunntak</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/medlemskapsunntak=no.nav.lib.pen.psakpselv.asbo.medlemskapsunntak</extraarg>
-                                       <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person=no.nav.lib.pen.psakpselv.asbo.person</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/medlemskapsunntak=no.nav.lib.pen.psakpselv.fault.medlemskapsunntak</extraarg>
                                     </extraargs>
                                 </wsdlOption>
 
