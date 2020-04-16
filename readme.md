@@ -1,6 +1,8 @@
 **Pesys 1./2. generasjonskontrakter**
 
-Repoet inneholder konfigurasjon for å bygge JAXWS-artifakter for benyttede ESB-tjenestekontraktene. Modulen er titulert 'legacy' ettersom disse tjenestene ansees for tenkisk gjeld, skal ikke tas i bruk på nye konsumenter, og i Pesys skal saneres til fordel for nyere ikke-buss tjenester.
+Repoet inneholder konfigurasjon for å bygge JAXWS-artifakter for benyttede ESB-tjenestekontraktene. Modulen er titulert 'legacy' ettersom disse tjenestene ansees for teknisk gjeld, skal ikke tas i bruk på nye konsumenter, og i Pesys skal saneres til fordel for nyere ikke-buss tjenester.
+
+Pr flytting til Github er de nødvendige kontraktene bundlet, i stedet for å hentes fra intern Nexus.
 
 *Kodegenerering*
 
