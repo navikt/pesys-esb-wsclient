@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo" targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/trekk">
+    <xsd:complexType name="ASBOPenHentTrekkListeRequest">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="debitorOffnr" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="kreditorOffnr" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="kreditorAvdelingsnr" nillable="true" type="xsd:int"/>
+      <xsd:element minOccurs="0" name="trekkgruppeKode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="trekktypeKode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="fagomradeKode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="visEndringer" nillable="true" type="xsd:boolean"/>
+      <xsd:element minOccurs="0" name="avsluttede" nillable="true" type="xsd:boolean"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

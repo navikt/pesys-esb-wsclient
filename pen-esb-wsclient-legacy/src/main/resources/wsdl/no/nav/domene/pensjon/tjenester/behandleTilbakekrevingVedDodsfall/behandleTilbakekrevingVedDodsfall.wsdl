@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://nav.no/domene/pensjon/tjenester/behandleTilbakekrevingVedDodsfall/v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="behandleTilbakekrevingVedDodsfall" targetNamespace="http://nav.no/domene/pensjon/tjenester/behandleTilbakekrevingVedDodsfall/v1">
+  <wsdl:types>
+    <xsd:schema xmlns:meldinger="http://nav.no/domene/pensjon/tjenester/behandleTilbakekrevingVedDodsfall/meldinger/v1" targetNamespace="http://nav.no/domene/pensjon/tjenester/behandleTilbakekrevingVedDodsfall/v1">
+      <xsd:import namespace="http://nav.no/domene/pensjon/tjenester/behandleTilbakekrevingVedDodsfall/meldinger/v1" schemaLocation="meldinger/meldinger.xsd" />
+      <xsd:element name="behandleTilbakekrevingVedDodsfall">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:BehandleTilbakekrevingVedDodsfallRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="behandleTilbakekrevingVedDodsfallResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="behandleTilbakekrevingVedDodsfallRequest">
+    <wsdl:part name="parameters" element="tns:behandleTilbakekrevingVedDodsfall">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="behandleTilbakekrevingVedDodsfallResponse">
+    <wsdl:part name="parameters" element="tns:behandleTilbakekrevingVedDodsfallResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="BehandleTilbakekrevingVedDodsfall">
+    <wsdl:operation name="behandleTilbakekrevingVedDodsfall">
+<wsdl:documentation>&lt;p&gt;&lt;/p&gt; </wsdl:documentation>
+      <wsdl:input message="tns:behandleTilbakekrevingVedDodsfallRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:behandleTilbakekrevingVedDodsfallResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

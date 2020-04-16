@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="PSELVHenvendelseWSEXP_PSELVHenvendelseHttp_Service" targetNamespace="http://nav-cons-pen-pselv-henvendelse/no/nav/inf/Binding" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:Port_0="http://nav-cons-pen-pselv-henvendelse/no/nav/inf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://nav-cons-pen-pselv-henvendelse/no/nav/inf/Binding">
+  <import namespace="http://nav-cons-pen-pselv-henvendelse/no/nav/inf" location="no/nav/inf/PSELVHenvendelse.wsdl">
+    </import>
+  <binding name="PSELVHenvendelseWSEXP_PSELVHenvendelseHttpBinding" type="Port_0:PSELVHenvendelse">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="opprettHenvendelseMedOppgave">
+      <soap:operation/>
+      <input name="opprettHenvendelseMedOppgaveRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="opprettHenvendelseMedOppgaveResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="hentHenvendelse">
+      <soap:operation/>
+      <input name="hentHenvendelseRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="hentHenvendelseResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultPenHenvendelseIkkeFunnet">
+        <soap:fault name="faultPenHenvendelseIkkeFunnet" use="literal"/>
+      </fault>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="hentHenvendelseListe">
+      <soap:operation/>
+      <input name="hentHenvendelseListeRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="hentHenvendelseListeResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+  <service name="PSELVHenvendelseWSEXP_PSELVHenvendelseHttpService">
+    <port name="PSELVHenvendelseWSEXP_PSELVHenvendelseHttpPort" binding="this:PSELVHenvendelseWSEXP_PSELVHenvendelseHttpBinding">
+      <soap:address location="http://localhost:9080/nav-cons-pen-pselv-henvendelseWeb/sca/PSELVHenvendelseWSEXP"/>
+    </port>
+  </service>
+</definitions>

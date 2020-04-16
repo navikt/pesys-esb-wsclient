@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://nav.no/virksomhet/tjenester/tilbakekreving/v2" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="tilbakekreving" targetNamespace="http://nav.no/virksomhet/tjenester/tilbakekreving/v2">
+  <wsdl:types>
+    <xsd:schema xmlns:feil="http://nav.no/virksomhet/tjenester/tilbakekreving/feil/v1" xmlns:meldinger="http://nav.no/virksomhet/tjenester/tilbakekreving/meldinger/v2" targetNamespace="http://nav.no/virksomhet/tjenester/tilbakekreving/v2">
+      <xsd:import namespace="http://nav.no/virksomhet/tjenester/tilbakekreving/feil/v1" schemaLocation="feil/feil.xsd" />
+      <xsd:import namespace="http://nav.no/virksomhet/tjenester/tilbakekreving/meldinger/v2" schemaLocation="meldinger/meldinger.xsd" />
+      <xsd:element name="finnTilbakekrevingsgrunnlagListe">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:FinnTilbakekrevingsgrunnlagListeRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="finnTilbakekrevingsgrunnlagListeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="response" type="meldinger:FinnTilbakekrevingsgrunnlagListeResponse" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="finnTilbakekrevingsgrunnlagListeserviceUnavailable" type="feil:ServiceUnavailable" />
+      <xsd:element name="hentTilbakekrevingsvedtak">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:HentTilbakekrevingsvedtakRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentTilbakekrevingsvedtakResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="response" type="meldinger:HentTilbakekrevingsvedtakResponse" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentTilbakekrevingsvedtakserviceUnavailable" type="feil:ServiceUnavailable" />
+      <xsd:element name="iverksettTilbakekrevingsvedtak">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:IverksettTilbakekrevingsvedtakRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="iverksettTilbakekrevingsvedtakserviceUnavailable" type="feil:ServiceUnavailable" />
+      <xsd:element name="iverksettTilbakekrevingsvedtakResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="annulerTilbakekrevingsvedtak">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:AnnulerTilbakekrevingsvedtakRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="annulerTilbakekrevingsvedtakResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="annulerTilbakekrevingsvedtakserviceUnavailable" type="feil:ServiceUnavailable" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="hentTilbakekrevingsvedtakResponse">
+    <wsdl:part name="parameters" element="tns:hentTilbakekrevingsvedtakResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="finnTilbakekrevingsgrunnlagListeResponse">
+    <wsdl:part name="parameters" element="tns:finnTilbakekrevingsgrunnlagListeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="finnTilbakekrevingsgrunnlagListeRequest">
+    <wsdl:part name="parameters" element="tns:finnTilbakekrevingsgrunnlagListe">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="annulerTilbakekrevingsvedtak_serviceUnavailable">
+    <wsdl:part name="serviceUnavailable" element="tns:annulerTilbakekrevingsvedtakserviceUnavailable">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="annulerTilbakekrevingsvedtakResponse">
+    <wsdl:part name="parameters" element="tns:annulerTilbakekrevingsvedtakResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="iverksettTilbakekrevingsvedtakRequest">
+    <wsdl:part name="parameters" element="tns:iverksettTilbakekrevingsvedtak">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="hentTilbakekrevingsvedtak_serviceUnavailable">
+    <wsdl:part name="serviceUnavailable" element="tns:hentTilbakekrevingsvedtakserviceUnavailable">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="iverksettTilbakekrevingsvedtak_serviceUnavailable">
+    <wsdl:part name="serviceUnavailable" element="tns:iverksettTilbakekrevingsvedtakserviceUnavailable">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="finnTilbakekrevingsgrunnlagListe_serviceUnavailable">
+    <wsdl:part name="serviceUnavailable" element="tns:finnTilbakekrevingsgrunnlagListeserviceUnavailable">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="hentTilbakekrevingsvedtakRequest">
+    <wsdl:part name="parameters" element="tns:hentTilbakekrevingsvedtak">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="annulerTilbakekrevingsvedtakRequest">
+    <wsdl:part name="parameters" element="tns:annulerTilbakekrevingsvedtak">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="iverksettTilbakekrevingsvedtakResponse">
+    <wsdl:part name="parameters" element="tns:iverksettTilbakekrevingsvedtakResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Tilbakekreving">
+    <wsdl:operation name="finnTilbakekrevingsgrunnlagListe">
+<wsdl:documentation>tilbakekreving/refdok/javadoc_v106/index.html tilbakekreving/Tilbakekreving-802_gammelt_design.doc </wsdl:documentation>
+      <wsdl:input message="tns:finnTilbakekrevingsgrunnlagListeRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:finnTilbakekrevingsgrunnlagListeResponse">
+    </wsdl:output>
+      <wsdl:fault name="serviceUnavailable" message="tns:finnTilbakekrevingsgrunnlagListe_serviceUnavailable">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="hentTilbakekrevingsvedtak">
+<wsdl:documentation>tilbakekreving/refdok/javadoc_v106/index.html tilbakekreving/Tilbakekreving-802_gammelt_design.doc </wsdl:documentation>
+      <wsdl:input message="tns:hentTilbakekrevingsvedtakRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:hentTilbakekrevingsvedtakResponse">
+    </wsdl:output>
+      <wsdl:fault name="serviceUnavailable" message="tns:hentTilbakekrevingsvedtak_serviceUnavailable">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="iverksettTilbakekrevingsvedtak">
+<wsdl:documentation>tilbakekreving/refdok/javadoc_v106/index.html tilbakekreving/Tilbakekreving-802_gammelt_design.doc </wsdl:documentation>
+      <wsdl:input message="tns:iverksettTilbakekrevingsvedtakRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:iverksettTilbakekrevingsvedtakResponse">
+    </wsdl:output>
+      <wsdl:fault name="serviceUnavailable" message="tns:iverksettTilbakekrevingsvedtak_serviceUnavailable">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="annulerTilbakekrevingsvedtak">
+<wsdl:documentation>&lt;p&gt;transtype = Transtype.OPPDATERVEDTAK&lt;br&gt;&lt;/br&gt;input objekt = TilbakekrevingsvedtaksIdVO&lt;br&gt;&lt;/br&gt;TilbakekrevingsvedtaksIdVO.kodeAksjon = 'A' &lt;br&gt;&lt;/br&gt;TilbakekrevingsvedtaksIdVO.vedtakid = input.vedtakId&lt;br&gt;&lt;/br&gt;TilbakekrevingsvedtaksIdVO.brukerId = input.saksbehandlerId&lt;/p&gt; tilbakekreving/refdok/javadoc_v106/index.html tilbakekreving/Tilbakekreving-802_gammelt_design.doc </wsdl:documentation>
+      <wsdl:input message="tns:annulerTilbakekrevingsvedtakRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:annulerTilbakekrevingsvedtakResponse">
+    </wsdl:output>
+      <wsdl:fault name="serviceUnavailable" message="tns:annulerTilbakekrevingsvedtak_serviceUnavailable">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

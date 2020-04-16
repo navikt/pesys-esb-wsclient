@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/brukerprofil">
+  <xsd:complexType name="ASBOPenEndagspassord">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="brukerId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="passord">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string"/>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="legitimasjonsKode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="annenLegitimasjonsBeskrivelse" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="paloggingsNivaKode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="antallFeilPalogginger" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="gyldig" type="xsd:boolean"/>
+      <xsd:element minOccurs="0" name="gyldigFOM" type="xsd:dateTime">
+      </xsd:element>
+      <xsd:element minOccurs="0" name="gyldigTOM" type="xsd:dateTime">
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

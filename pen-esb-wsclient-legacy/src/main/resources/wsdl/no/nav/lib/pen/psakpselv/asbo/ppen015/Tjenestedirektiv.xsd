@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+	targetNamespace="http://nav-cons-pen-pen-ppen015/no/nav/lib/pen/psakpselv/asbo/ppen015"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="Tjenestedirektiv">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="prioritet">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="BATCH"></xsd:enumeration>
+						<xsd:enumeration value="ONLINE"></xsd:enumeration>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/utbetaling"
+	xmlns:bons0="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/utbetaling">
+	<xsd:include schemaLocation="ASBOPenPosteringsdetaljer.xsd"></xsd:include>
+	<xsd:complexType name="ASBOPenBilag">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="bilagLopenr"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="ytelseKode"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="ytelseBeskrivelse"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="bilagKode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="fom" type="xsd:date" />
+			<xsd:element minOccurs="0" name="tom" type="xsd:date" />
+			<xsd:element minOccurs="0" name="melding"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="posteringsdetaljerListe"
+				type="bons0:ASBOPenPosteringsdetaljer" maxOccurs="unbounded">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

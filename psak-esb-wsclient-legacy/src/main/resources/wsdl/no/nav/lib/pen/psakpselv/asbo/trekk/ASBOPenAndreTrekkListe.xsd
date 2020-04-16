@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/trekk" targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/trekk">
+    <xsd:include schemaLocation="ASBOPenAndreTrekk.xsd"/>
+    <xsd:complexType name="ASBOPenAndreTrekkListe">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="trekkListe" type="bons0:ASBOPenAndreTrekk" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

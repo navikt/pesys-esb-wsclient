@@ -18,348 +18,10 @@
             <artifactId>pcom-esb-wsclient-legacy</artifactId>
             <version>${project.version}</version>
         </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-psak-navansatt</artifactId>
-            <version>8.4.1</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-pen-navorgenhet</artifactId>
-            <version>8.4.1</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-pen-tjenestepensjon</artifactId>
-            <version>8.4.1</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-pen-ppen003</artifactId>
-            <version>8.4.0</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-pen-fullmakt</artifactId>
-            <version>8.4.1</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-pen-ppen006</artifactId>
-            <version>8.4.0</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-pen-ppen008</artifactId>
-            <version>8.4.0</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-pen-ppen015</artifactId>
-            <version>8.4.0</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.nav</groupId>
-            <artifactId>nav-tjeneste-person</artifactId>
-            <version>2.4.5</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-pen-person</artifactId>
-            <version>8.4.1</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.nav</groupId>
-            <artifactId>nav-tjeneste-journal</artifactId>
-            <version>2.2.1</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.nav</groupId>
-            <artifactId>nav-tjeneste-trekk</artifactId>
-            <version>1.0.1</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.nav</groupId>
-            <artifactId>nav-tjeneste-journalbehandling</artifactId>
-            <version>1.3.2</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.nav</groupId>
-            <artifactId>nav-tjeneste-utbetaling</artifactId>
-            <version>1.1.9</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.pensjon</groupId>
-            <artifactId>pensjon-microflow-behandleTilbakekrevingVedDodsfallProxy</artifactId>
-            <version>1.1.1</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.nav</groupId>
-            <artifactId>nav-tjeneste-oppgavebehandling</artifactId>
-            <version>2.1.4</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.nav</groupId>
-            <artifactId>nav-tjeneste-medlemskap</artifactId>
-            <version>1.0.3</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.nav</groupId>
-            <artifactId>nav-tjeneste-behandleTrekk</artifactId>
-            <version>1.0.1</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.nav</groupId>
-            <artifactId>nav-tjeneste-tilbakekreving</artifactId>
-            <version>2.0.0</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-pen-inntekt</artifactId>
-            <version>8.4.1</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-pen-oppdrag</artifactId>
-            <version>8.4.1</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-pen-batch-oppdrag</artifactId>
-            <version>8.1.0</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-        </dependency>
-
     </dependencies>
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>unpack-dependency</id>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>unpack-dependencies</goal>
-                        </goals>
-                        <configuration>
-                            <includeGroupIds>no.nav.esb.nav,no.nav.esb.pensjon,no.nav.esb.layers.modules.cons</includeGroupIds>
-                            <outputDirectory>${project.build.outputDirectory}/wsdl</outputDirectory>
-                            <includes>**/*.wsdl,**/*.xsd</includes>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
             <plugin>
                 <groupId>org.apache.cxf</groupId>
                 <artifactId>cxf-codegen-plugin</artifactId>
@@ -384,7 +46,7 @@
 
                                 <!-- PEN Inntekt (shared domain with PSAK/PSELV versions -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pen-inntekt_PENInntektWSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pen-inntekt_PENInntektWSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-cons-pen-pen-inntekt/no/nav/inf=no.nav.inf.pen.inntekt</extraarg>
@@ -403,7 +65,7 @@
 
                                 <!-- PSAK NAV Ansatt-->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/PSAKNAVAnsattWSEXP_PSAKNAVAnsattHttp_Service.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/PSAKNAVAnsattWSEXP_PSAKNAVAnsattHttp_Service.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-cons-pen-psak-navansatt/no/nav/inf=no.nav.inf.psak.navansatt</extraarg>
@@ -426,7 +88,7 @@
 
                                 <!-- PEN NAV Org Enhet -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pen-navorgenhet_PENNAVOrgEnhetWSEXP.wsdl
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pen-navorgenhet_PENNAVOrgEnhetWSEXP.wsdl
                                     </wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
@@ -446,7 +108,7 @@
 
                                 <!-- Oppdrag: placed here for reuse of FaultPenServiceUnavailable -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pen-oppdrag_PENOppdragWSEXP.wsdl
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pen-oppdrag_PENOppdragWSEXP.wsdl
                                     </wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
@@ -466,7 +128,7 @@
 
                                 <!-- PEN Oppdrag Batch -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pen-batch-oppdrag_PENOppdragBatchWSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pen-batch-oppdrag_PENOppdragBatchWSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-cons-pen-pen-batch-oppdrag/no/nav/inf=no.nav.inf.pen.oppdragbatch</extraarg>
@@ -483,7 +145,7 @@
 
                                 <!-- Tjenestepensjon -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pen-tjenestepensjon_PENTjenestepensjonWSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pen-tjenestepensjon_PENTjenestepensjonWSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-cons-pen-pen-tjenestepensjon/no/nav/inf=no.nav.inf.pen.tjenestepensjon</extraarg>
@@ -502,7 +164,7 @@
 
                                 <!-- PEN PPEN003 -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pen-ppen003_PENPPEN003WSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pen-ppen003_PENPPEN003WSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-cons-pen-pen-ppen003/no/nav/inf=no.nav.inf.pen.ppen003</extraarg>
@@ -515,7 +177,7 @@
 
                                 <!-- PEN PPEN006 -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pen-ppen006_PENPPEN006WSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pen-ppen006_PENPPEN006WSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-cons-pen-pen-ppen006/no/nav/inf=no.nav.inf.pen.ppen006</extraarg>
@@ -528,7 +190,7 @@
 
                                 <!-- PEN PPEN008 -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/PPEN008WSEXP_PENPPEN008Http_Service.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/PPEN008WSEXP_PENPPEN008Http_Service.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-cons-pen-pen-ppen008/no/nav/inf/PENPPEN008=no.nav.inf.pen.ppen008</extraarg>
@@ -541,7 +203,7 @@
 
                                 <!-- PEN PPEN015 -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pen-ppen015_PENPPEN015WSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pen-ppen015_PENPPEN015WSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-cons-pen-pen-ppen015/no/nav/inf=no.nav.inf.pen.ppen015</extraarg>
@@ -556,7 +218,7 @@
 
                                 <!-- PEN Fullmakt -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pen-fullmakt_PENFullmaktWSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pen-fullmakt_PENFullmaktWSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-cons-pen-pen-fullmakt/no/nav/inf=no.nav.inf.pen.fullmakt</extraarg>
@@ -571,7 +233,7 @@
 
                                 <!-- PEN Person -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pen-person_PENPersonWSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pen-person_PENPersonWSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-cons-pen-pen-person/no/nav/inf/PENPerson=no.nav.inf.pen.person</extraarg>
@@ -586,52 +248,52 @@
 
                                 <!-- PEN Person v2 -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/no/nav/virksomhet/tjenester/person/v2/Binding.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/no/nav/virksomhet/tjenester/person/v2/Binding.wsdl</wsdl>
                                 </wsdlOption>
 
                                 <!-- PEN Journal v2 -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/no/nav/virksomhet/tjenester/arkiv/journal/v2/Binding.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/no/nav/virksomhet/tjenester/arkiv/journal/v2/Binding.wsdl</wsdl>
                                 </wsdlOption>
 
                                 <!-- PEN Journalbehandling -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/no/nav/virksomhet/tjenester/arkiv/journalbehandling/v1/Binding.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/no/nav/virksomhet/tjenester/arkiv/journalbehandling/v1/Binding.wsdl</wsdl>
                                 </wsdlOption>
 
                                 <!-- PEN Trekk -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-tjeneste-trekk_TrekkWSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-tjeneste-trekk_TrekkWSEXP.wsdl</wsdl>
                                 </wsdlOption>
 
                                 <!-- Utbetaling -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-tjeneste-utbetaling_UtbetalingWSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-tjeneste-utbetaling_UtbetalingWSEXP.wsdl</wsdl>
                                 </wsdlOption>
 
                                 <!-- PPEN009 -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/pensjon-microflow-behandleTilbakekrevingVedDodsfallProxy_BehandleTilbakekrevingVedDodsfallProxyWSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/pensjon-microflow-behandleTilbakekrevingVedDodsfallProxy_BehandleTilbakekrevingVedDodsfallProxyWSEXP.wsdl</wsdl>
                                 </wsdlOption>
 
                                 <!-- Oppgavebehandling -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/no/nav/virksomhet/tjenester/oppgavebehandling/v2/Binding.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/no/nav/virksomhet/tjenester/oppgavebehandling/v2/Binding.wsdl</wsdl>
                                 </wsdlOption>
 
                                 <!-- Medlemskap -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-tjeneste-medlemskap_MedlemskapWSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-tjeneste-medlemskap_MedlemskapWSEXP.wsdl</wsdl>
                                 </wsdlOption>
 
                                 <!-- BehandleTrekk -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-tjeneste-behandleTrekk_BehandleTrekkWSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-tjeneste-behandleTrekk_BehandleTrekkWSEXP.wsdl</wsdl>
                                 </wsdlOption>
 
                                 <!-- Tilbakekreving -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-tjeneste-tilbakekreving_TilbakekrevingWSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-tjeneste-tilbakekreving_TilbakekrevingWSEXP.wsdl</wsdl>
                                 </wsdlOption>
 
                             </wsdlOptions>

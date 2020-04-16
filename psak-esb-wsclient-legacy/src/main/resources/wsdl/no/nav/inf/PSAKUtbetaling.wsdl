@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons4="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:bons5="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/utbetaling" xmlns:tns="http://nav-cons-pen-psak-utbetaling/no/nav/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PSAKUtbetaling" targetNamespace="http://nav-cons-pen-psak-utbetaling/no/nav/inf">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://nav-cons-pen-psak-utbetaling/no/nav/inf" xmlns:bons4="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:bons5="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/utbetaling" xmlns:tns="http://nav-cons-pen-psak-utbetaling/no/nav/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/utbetaling" schemaLocation="../lib/pen/psakpselv/asbo/utbetaling/ASBOPenUtbetalingResponse.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/utbetaling" schemaLocation="../lib/pen/psakpselv/asbo/utbetaling/ASBOPenUtbetalingRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" schemaLocation="../lib/pen/psakpselv/fault/FaultPenGenerisk.xsd"/>
+            <xsd:element name="hentUtbetalingListe">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentUtbetalingListeRequest" nillable="true" type="bons5:ASBOPenUtbetalingRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentUtbetalingListeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentUtbetalingListeResponse" nillable="true" type="bons5:ASBOPenUtbetalingResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentUtbetalingListe_faultPenGeneriskS" type="bons4:FaultPenGenerisk"/>
+            <xsd:element name="hentPeriodisertUtbetalingListe">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentPeriodisertUtbetalingListeRequest" nillable="true" type="bons5:ASBOPenUtbetalingRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentPeriodisertUtbetalingListeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentPeriodisertUtbetalingListeResponse" nillable="true" type="bons5:ASBOPenUtbetalingResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+        </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="hentUtbetalingListeRequestMsg">
+    <wsdl:part element="tns:hentUtbetalingListe" name="hentUtbetalingListeParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentUtbetalingListeResponseMsg">
+    <wsdl:part element="tns:hentUtbetalingListeResponse" name="hentUtbetalingListeResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentUtbetalingListe_faultPenGeneriskSMsg">
+    <wsdl:part element="tns:hentUtbetalingListe_faultPenGeneriskS" name="faultPenGeneriskS"/>
+  </wsdl:message>
+    <wsdl:message name="hentPeriodisertUtbetalingListeRequestMsg">
+    <wsdl:part element="tns:hentPeriodisertUtbetalingListe" name="hentPeriodisertUtbetalingListeParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentPeriodisertUtbetalingListeResponseMsg">
+    <wsdl:part element="tns:hentPeriodisertUtbetalingListeResponse" name="hentPeriodisertUtbetalingListeResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentPeriodisertUtbetalingListe_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentUtbetalingListe_faultPenGeneriskS" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:portType name="PSAKUtbetaling">
+    <wsdl:operation name="hentUtbetalingListe">
+      <wsdl:input message="tns:hentUtbetalingListeRequestMsg" name="hentUtbetalingListeRequest"/>
+      <wsdl:output message="tns:hentUtbetalingListeResponseMsg" name="hentUtbetalingListeResponse"/>
+      <wsdl:fault message="tns:hentUtbetalingListe_faultPenGeneriskSMsg" name="faultPenGenerisk"/>
+    </wsdl:operation>
+        <wsdl:operation name="hentPeriodisertUtbetalingListe">
+      <wsdl:input message="tns:hentPeriodisertUtbetalingListeRequestMsg" name="hentPeriodisertUtbetalingListeRequest"/>
+      <wsdl:output message="tns:hentPeriodisertUtbetalingListeResponseMsg" name="hentPeriodisertUtbetalingListeResponse"/>
+      <wsdl:fault message="tns:hentPeriodisertUtbetalingListe_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+    </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

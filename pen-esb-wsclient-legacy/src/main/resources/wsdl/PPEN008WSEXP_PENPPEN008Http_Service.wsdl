@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="PPEN008WSEXP_PENPPEN008Http_Service" targetNamespace="http://nav-cons-pen-pen-ppen008/no/nav/inf/PENPPEN008/Binding" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:Port_0="http://nav-cons-pen-pen-ppen008/no/nav/inf/PENPPEN008" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://nav-cons-pen-pen-ppen008/no/nav/inf/PENPPEN008/Binding">
+  <import namespace="http://nav-cons-pen-pen-ppen008/no/nav/inf/PENPPEN008" location="no/nav/inf/PENPPEN008.wsdl">
+    </import>
+  <binding name="PPEN008WSEXP_PENPPEN008HttpBinding" type="Port_0:PENPPEN008">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="overforOmsorgspoeng">
+      <soap:operation/>
+      <input name="overforOmsorgspoengRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="overforOmsorgspoengResponse">
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="PPEN008WSEXP_PENPPEN008HttpService">
+    <port name="PPEN008WSEXP_PENPPEN008HttpPort" binding="this:PPEN008WSEXP_PENPPEN008HttpBinding">
+      <soap:address location="http://localhost:9080/nav-cons-pen-pen-ppen008Web/sca/PPEN008WSEXP"/>
+    </port>
+  </service>
+</definitions>

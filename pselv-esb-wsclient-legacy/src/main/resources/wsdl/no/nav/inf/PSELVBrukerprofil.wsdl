@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="PSELVBrukerprofil" targetNamespace="http://nav-cons-pen-pselv-brukerprofil/no/nav/inf" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/brukerprofil" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:bons5="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/brukerprofil" xmlns:tns="http://nav-cons-pen-pselv-brukerprofil/no/nav/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://nav-cons-pen-pselv-brukerprofil/no/nav/inf" xmlns:bons6="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:bons7="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/brukerprofil">
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/brukerprofil" schemaLocation="../lib/pen/psakpselv/asbo/brukerprofil/ASBOPenEpostmelding.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/brukerprofil" schemaLocation="../lib/pen/psakpselv/fault/brukerprofil/FaultPenPassordSperret.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" schemaLocation="../lib/pen/psakpselv/fault/FaultPenGenerisk.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/brukerprofil" schemaLocation="../lib/pen/psakpselv/fault/brukerprofil/FaultPenFeilPassordEllerBrukerId.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/brukerprofil" schemaLocation="../lib/pen/psakpselv/asbo/brukerprofil/ASBOPenEndagspassord.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/brukerprofil" schemaLocation="../lib/pen/psakpselv/fault/brukerprofil/FaultPenPassordUtlopt.xsd"/>
+            <xsd:element name="verifiserEndagspassord">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="verifiserEndagspassordRequest" nillable="true" type="bons1:ASBOPenEndagspassord"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="verifiserEndagspassordResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="verifiserEndagspassordResponse" nillable="true" type="bons1:ASBOPenEndagspassord"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="verifiserEndagspassord_faultPenGeneriskFf" type="bons2:FaultPenGenerisk"/>
+      <xsd:element name="hentEndagspassord">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentEndagspassordRequest" nillable="true" type="bons1:ASBOPenEndagspassord"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentEndagspassordResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentEndagspassordResponse" nillable="true" type="bons1:ASBOPenEndagspassord"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentEndagspassord_faultPenGenerisk" type="bons2:FaultPenGenerisk"/>
+            <xsd:element name="verifiserEndagspassord_faultFeilPassordEllerBrukerId" type="bons5:FaultPenFeilPassordEllerBrukerId"/>
+            <xsd:element name="verifiserEndagspassord_faultPassordUtlopt" type="bons5:FaultPenPassordUtlopt"/>
+            <xsd:element name="verifiserEndagspassord_faultPassordSperret" type="bons5:FaultPenPassordSperret"/>
+            <xsd:element name="sendEpostmelding">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="sendEpostmeldingRequest" nillable="true" type="bons1:ASBOPenEpostmelding"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="sendEpostmeldingResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="sendEpostmeldingResponse" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="sendEpostmelding_faultPenGenerisk" type="bons2:FaultPenGenerisk"/>
+        </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="verifiserEndagspassordRequestMsg">
+    <wsdl:part element="tns:verifiserEndagspassord" name="verifiserEndagspassordParameters"/>
+  </wsdl:message>
+    <wsdl:message name="verifiserEndagspassordResponseMsg">
+    <wsdl:part element="tns:verifiserEndagspassordResponse" name="verifiserEndagspassordResult"/>
+  </wsdl:message>
+    <wsdl:message name="verifiserEndagspassord_faultPenGeneriskFfMsg">
+    <wsdl:part element="tns:verifiserEndagspassord_faultPenGeneriskFf" name="faultPenGeneriskFf"/>
+  </wsdl:message>
+    <wsdl:message name="hentEndagspassordRequestMsg">
+    <wsdl:part element="tns:hentEndagspassord" name="hentEndagspassordParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentEndagspassordResponseMsg">
+    <wsdl:part element="tns:hentEndagspassordResponse" name="hentEndagspassordResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentEndagspassord_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentEndagspassord_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="verifiserEndagspassord_faultFeilPassordEllerBrukerIdMsg">
+    <wsdl:part element="tns:verifiserEndagspassord_faultFeilPassordEllerBrukerId" name="faultFeilPassordEllerBrukerId"/>
+  </wsdl:message>
+    <wsdl:message name="verifiserEndagspassord_faultPassordUtloptMsg">
+    <wsdl:part element="tns:verifiserEndagspassord_faultPassordUtlopt" name="faultPassordUtlopt"/>
+  </wsdl:message>
+    <wsdl:message name="verifiserEndagspassord_faultPassordSperretMsg">
+    <wsdl:part element="tns:verifiserEndagspassord_faultPassordSperret" name="faultPassordSperret"/>
+  </wsdl:message>
+    <wsdl:message name="sendEpostmeldingRequestMsg">
+    <wsdl:part element="tns:sendEpostmelding" name="sendEpostmeldingParameters"/>
+  </wsdl:message>
+    <wsdl:message name="sendEpostmeldingResponseMsg">
+    <wsdl:part element="tns:sendEpostmeldingResponse" name="sendEpostmeldingResult"/>
+  </wsdl:message>
+    <wsdl:message name="sendEpostmelding_faultPenGeneriskMsg">
+    <wsdl:part element="tns:sendEpostmelding_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:portType name="PSELVBrukerprofil">
+    <wsdl:operation name="verifiserEndagspassord">
+      <wsdl:input message="tns:verifiserEndagspassordRequestMsg" name="verifiserEndagspassordRequest"/>
+      <wsdl:output message="tns:verifiserEndagspassordResponseMsg" name="verifiserEndagspassordResponse"/>
+      <wsdl:fault message="tns:verifiserEndagspassord_faultPenGeneriskFfMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:verifiserEndagspassord_faultFeilPassordEllerBrukerIdMsg" name="faultFeilPassordEllerBrukerId"/>
+            <wsdl:fault message="tns:verifiserEndagspassord_faultPassordUtloptMsg" name="faultPassordUtlopt"/>
+            <wsdl:fault message="tns:verifiserEndagspassord_faultPassordSperretMsg" name="faultPassordSperret"/>
+        </wsdl:operation>
+    <wsdl:operation name="hentEndagspassord">
+      <wsdl:input message="tns:hentEndagspassordRequestMsg" name="hentEndagspassordRequest"/>
+      <wsdl:output message="tns:hentEndagspassordResponseMsg" name="hentEndagspassordResponse"/>
+      <wsdl:fault message="tns:hentEndagspassord_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+        </wsdl:operation>
+        <wsdl:operation name="sendEpostmelding">
+      <wsdl:input message="tns:sendEpostmeldingRequestMsg" name="sendEpostmeldingRequest"/>
+      <wsdl:output message="tns:sendEpostmeldingResponseMsg" name="sendEpostmeldingResponse"/>
+            <wsdl:fault message="tns:sendEpostmelding_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

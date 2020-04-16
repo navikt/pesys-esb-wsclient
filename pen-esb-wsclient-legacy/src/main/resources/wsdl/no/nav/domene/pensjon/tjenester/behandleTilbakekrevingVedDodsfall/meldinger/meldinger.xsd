@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://nav.no/domene/pensjon/tjenester/behandleTilbakekrevingVedDodsfall/meldinger/v1" version="1.0" xmlns:meldinger="http://nav.no/domene/pensjon/tjenester/behandleTilbakekrevingVedDodsfall/meldinger/v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="BehandleTilbakekrevingVedDodsfallRequest">
+    <xsd:sequence>
+      <xsd:element name="kravId" type="xsd:long">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Unik Id for kravet&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="PENPersonWSEXP_PENPersonHttp_Service" targetNamespace="http://nav-cons-pen-pen-person/no/nav/inf/PENPerson/Binding" xmlns:Port_0="http://nav-cons-pen-pen-person/no/nav/inf/PENPerson" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://nav-cons-pen-pen-person/no/nav/inf/PENPerson/Binding">
+  <wsdl:import namespace="http://nav-cons-pen-pen-person/no/nav/inf/PENPerson" location="no/nav/inf/PENPerson.wsdl">
+    </wsdl:import>
+  <wsdl:binding name="PENPersonWSEXP_PENPersonHttpBinding" type="Port_0:PENPerson">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="hentPerson">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="hentPersonRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hentPersonResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="hentHistorikk">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="hentHistorikkRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hentHistorikkResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="hentFamilierelasjoner">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="hentFamilierelasjonerRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hentFamilierelasjonerResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="hentFamilierelasjonsHistorikk">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="hentFamilierelasjonsHistorikkRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hentFamilierelasjonsHistorikkResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="finnAdresseListe">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="finnAdresseListeRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="finnAdresseListeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="hentPersonUtland">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="hentPersonUtlandRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hentPersonUtlandResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PENPersonWSEXP_PENPersonHttpService">
+    <wsdl:port name="PENPersonWSEXP_PENPersonHttpPort" binding="this:PENPersonWSEXP_PENPersonHttpBinding">
+      <soap:address location="http://localhost:9080/nav-cons-pen-pen-personWeb/sca/PENPersonWSEXP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

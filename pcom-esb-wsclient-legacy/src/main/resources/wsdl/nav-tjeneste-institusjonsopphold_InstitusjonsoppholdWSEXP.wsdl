@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="InstitusjonsoppholdWSEXP_InstitusjonsoppholdHttp_Service" targetNamespace="http://nav.no/virksomhet/tjenester/institusjonsopphold/v1/Binding" xmlns:Port_0="http://nav.no/virksomhet/tjenester/institusjonsopphold/v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://nav.no/virksomhet/tjenester/institusjonsopphold/v1/Binding">
+  <wsdl:import namespace="http://nav.no/virksomhet/tjenester/institusjonsopphold/v1" location="no/nav/virksomhet/tjenester/institusjonsopphold/institusjonsopphold.wsdl">
+    </wsdl:import>
+  <wsdl:binding name="InstitusjonsoppholdWSEXP_InstitusjonsoppholdHttpBinding" type="Port_0:Institusjonsopphold">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="hentInstitusjonsoppholdListe">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="samhandlerIkkeFunnet">
+        <soap:fault name="samhandlerIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="fnrIkkeFunnet">
+        <soap:fault name="fnrIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InstitusjonsoppholdWSEXP_InstitusjonsoppholdHttpService">
+    <wsdl:port name="InstitusjonsoppholdWSEXP_InstitusjonsoppholdHttpPort" binding="this:InstitusjonsoppholdWSEXP_InstitusjonsoppholdHttpBinding">
+      <soap:address location="http://localhost:9080/nav-tjeneste-institusjonsopphold_v1Web/sca/InstitusjonsoppholdWSEXP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

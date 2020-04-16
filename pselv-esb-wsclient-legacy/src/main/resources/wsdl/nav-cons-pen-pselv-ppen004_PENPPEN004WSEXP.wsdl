@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="PENPPEN004WSEXP_PENPPEN004Http_Service" targetNamespace="http://nav-cons-pen-pselv-ppen004/no/nav/inf/Binding" xmlns:Port_0="http://nav-cons-pen-pselv-ppen004/no/nav/inf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://nav-cons-pen-pselv-ppen004/no/nav/inf/Binding">
+  <wsdl:import namespace="http://nav-cons-pen-pselv-ppen004/no/nav/inf" location="no/nav/inf/PENPPEN004.wsdl">
+    </wsdl:import>
+  <wsdl:binding name="PENPPEN004WSEXP_PENPPEN004HttpBinding" type="Port_0:PENPPEN004">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="behandleEndringAvUttaksgrad">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="behandleEndringAvUttaksgradRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="behandleEndringAvUttaksgradResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PENPPEN004WSEXP_PENPPEN004HttpService">
+    <wsdl:port name="PENPPEN004WSEXP_PENPPEN004HttpPort" binding="this:PENPPEN004WSEXP_PENPPEN004HttpBinding">
+      <soap:address location="http://localhost:9080/nav-cons-pen-pselv-ppen004Web/sca/PENPPEN004WSEXP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

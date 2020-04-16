@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://nav.no/virksomhet/tjenester/medlemskap/v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="medlemskap" targetNamespace="http://nav.no/virksomhet/tjenester/medlemskap/v1">
+  <wsdl:types>
+    <xsd:schema xmlns:feil="http://nav.no/virksomhet/tjenester/medlemskap/feil/v1" xmlns:meldinger="http://nav.no/virksomhet/tjenester/medlemskap/meldinger/v1" targetNamespace="http://nav.no/virksomhet/tjenester/medlemskap/v1">
+      <xsd:import namespace="http://nav.no/virksomhet/tjenester/medlemskap/feil/v1" schemaLocation="feil/feil.xsd" />
+      <xsd:import namespace="http://nav.no/virksomhet/tjenester/medlemskap/meldinger/v1" schemaLocation="meldinger/meldinger.xsd" />
+      <xsd:element name="hentPeriodeListe">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:HentPeriodeListeRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentPeriodeListeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="response" type="meldinger:HentPeriodeListeResponse" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentPeriodeListepersonIkkeFunnet" type="feil:PersonIkkeFunnet" />
+      <xsd:element name="hentPeriode">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:HentPeriodeRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentPeriodeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="response" type="meldinger:HentPeriodeResponse" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="hentPeriodeListeRequest">
+    <wsdl:part name="parameters" element="tns:hentPeriodeListe">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="hentPeriodeResponse">
+    <wsdl:part name="parameters" element="tns:hentPeriodeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="hentPeriodeRequest">
+    <wsdl:part name="parameters" element="tns:hentPeriode">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="hentPeriodeListe_personIkkeFunnet">
+    <wsdl:part name="personIkkeFunnet" element="tns:hentPeriodeListepersonIkkeFunnet">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="hentPeriodeListeResponse">
+    <wsdl:part name="parameters" element="tns:hentPeriodeListeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Medlemskap">
+    <wsdl:operation name="hentPeriodeListe">
+<wsdl:documentation>&lt;p&gt;Operasjonen skal tilby å hente en liste med medlemskapsperioder til en person.&lt;/p&gt; </wsdl:documentation>
+      <wsdl:input message="tns:hentPeriodeListeRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:hentPeriodeListeResponse">
+    </wsdl:output>
+      <wsdl:fault name="personIkkeFunnet" message="tns:hentPeriodeListe_personIkkeFunnet">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="hentPeriode">
+<wsdl:documentation>&lt;p&gt;Operasjonen skal tilby å hente en medlemskapsperiode.&lt;/p&gt; </wsdl:documentation>
+      <wsdl:input message="tns:hentPeriodeRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:hentPeriodeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

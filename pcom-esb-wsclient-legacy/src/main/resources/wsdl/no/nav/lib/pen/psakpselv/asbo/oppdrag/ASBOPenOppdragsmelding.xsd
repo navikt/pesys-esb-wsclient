@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/oppdrag" targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/oppdrag">
+    <xsd:include schemaLocation="ASBOPenSimuleringsresultatlinje.xsd"/>
+    <xsd:include schemaLocation="ASBOPenSimuleringsperiode.xsd"/>
+    <xsd:include schemaLocation="ASBOPenOppdrag.xsd"/>
+    <xsd:include schemaLocation="ASBOPenOppdragkjorestatus.xsd"/>
+    <xsd:complexType name="ASBOPenOppdragsmelding">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="oppdragKjorestatus" type="bons1:ASBOPenOppdragkjorestatus"/>
+      <xsd:element minOccurs="0" name="oppdrag" type="bons1:ASBOPenOppdrag"/>
+      <xsd:element minOccurs="0" name="simuleringsperiode" type="bons1:ASBOPenSimuleringsperiode"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="simuleringsresultatlinjeListe" type="bons1:ASBOPenSimuleringsresultatlinje"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

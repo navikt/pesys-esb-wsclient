@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/inntekt" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:bons3="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/inntekt" xmlns:tns="http://nav-cons-pen-psak-inntekt/no/nav/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PSAKInntekt" targetNamespace="http://nav-cons-pen-psak-inntekt/no/nav/inf">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://nav-cons-pen-psak-inntekt/no/nav/inf" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/inntekt" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:bons3="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/inntekt" xmlns:tns="http://nav-cons-pen-psak-inntekt/no/nav/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/inntekt" schemaLocation="../lib/pen/psakpselv/fault/inntekt/FaultPenInntektIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/inntekt" schemaLocation="../lib/pen/psakpselv/fault/inntekt/FaultPenFeilKilde.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/inntekt" schemaLocation="../lib/pen/psakpselv/asbo/inntekt/ASBOPenHentInntektListeRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" schemaLocation="../lib/pen/psakpselv/fault/FaultPenGenerisk.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/inntekt" schemaLocation="../lib/pen/psakpselv/asbo/inntekt/ASBOPenInntektListe.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/inntekt" schemaLocation="../lib/pen/psakpselv/asbo/inntekt/ASBOPenInntekt.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/inntekt" schemaLocation="../lib/pen/psakpselv/fault/inntekt/FaultPenInntektAlleredeRegistret.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/inntekt" schemaLocation="../lib/pen/psakpselv/fault/inntekt/FaultPenUkjentInntektType.xsd"/>
+            <xsd:element name="opprettBrukerOppgittInntekt">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="opprettBrukerOppgittInntektRequest" nillable="true" type="bons1:ASBOPenInntekt"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="opprettBrukerOppgittInntektResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="opprettBrukerOppgittInntektResponse" nillable="true" type="bons1:ASBOPenInntekt"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentInntektListe">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentInntektListeRequest" nillable="true" type="bons1:ASBOPenHentInntektListeRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentInntektListeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentInntektListeResponse" nillable="true" type="bons1:ASBOPenInntektListe"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentDetaljertInntekt">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentDetaljertInntektRequest" nillable="true" type="bons1:ASBOPenInntekt"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentDetaljertInntektResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentDetaljertInntektResponse" nillable="true" type="bons1:ASBOPenInntekt"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="slettBrukerOppgittInntekt">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="slettBrukerOppgittInntektRequest" nillable="true" type="bons1:ASBOPenInntekt"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="slettBrukerOppgittInntektResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="opprettBrukerOppgittInntekt_faultPenGenerisk" type="bons2:FaultPenGenerisk"/>
+            <xsd:element name="hentInntektListe_faultPenGenerisk" type="bons2:FaultPenGenerisk"/>
+            <xsd:element name="hentDetaljertInntekt_faultPenGenerisk" type="bons2:FaultPenGenerisk"/>
+            <xsd:element name="slettBrukerOppgittInntekt_faultPenGenerisk" type="bons2:FaultPenGenerisk"/>
+            <xsd:element name="opprettBrukerOppgittInntekt_faultPenInntektAlleredeRegistrert" type="bons3:FaultPenInntektAlleredeRegistret"/>
+            <xsd:element name="hentDetaljertInntekt_faultPenInntektIkkeFunnet" type="bons3:FaultPenInntektIkkeFunnet"/>
+            <xsd:element name="slettBrukerOppgittInntekt_faultPenInntektIkkeFunnetF" type="bons3:FaultPenInntektIkkeFunnet"/>
+            <xsd:element name="slettBrukerOppgittInntekt_faultPenFeilKilde" type="bons3:FaultPenFeilKilde"/>
+            <xsd:element name="opprettBrukerOppgittInntekt_faultPenUkjentInntektType" type="bons3:FaultPenUkjentInntektType"/>
+            <xsd:element name="hentInntektListe_faultPenUkjentInntektType" type="bons3:FaultPenUkjentInntektType"/>
+            <xsd:element name="hentDetaljertInntekt_faultPenUkjentInntektType" type="bons3:FaultPenUkjentInntektType"/>
+        </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="opprettBrukerOppgittInntektRequestMsg">
+    <wsdl:part element="tns:opprettBrukerOppgittInntekt" name="opprettBrukerOppgittInntektParameters"/>
+  </wsdl:message>
+    <wsdl:message name="opprettBrukerOppgittInntektResponseMsg">
+    <wsdl:part element="tns:opprettBrukerOppgittInntektResponse" name="opprettBrukerOppgittInntektResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentInntektListeRequestMsg">
+    <wsdl:part element="tns:hentInntektListe" name="hentInntektListeParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentInntektListeResponseMsg">
+    <wsdl:part element="tns:hentInntektListeResponse" name="hentInntektListeResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentDetaljertInntektRequestMsg">
+    <wsdl:part element="tns:hentDetaljertInntekt" name="hentDetaljertInntektParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentDetaljertInntektResponseMsg">
+    <wsdl:part element="tns:hentDetaljertInntektResponse" name="hentDetaljertInntektResult"/>
+  </wsdl:message>
+    <wsdl:message name="slettBrukerOppgittInntektRequestMsg">
+    <wsdl:part element="tns:slettBrukerOppgittInntekt" name="slettBrukerOppgittInntektParameters"/>
+  </wsdl:message>
+    <wsdl:message name="slettBrukerOppgittInntektResponseMsg">
+    <wsdl:part element="tns:slettBrukerOppgittInntektResponse" name="slettBrukerOppgittInntektResult"/>
+  </wsdl:message>
+    <wsdl:message name="opprettBrukerOppgittInntekt_faultPenGeneriskMsg">
+    <wsdl:part element="tns:opprettBrukerOppgittInntekt_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="hentInntektListe_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentInntektListe_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="hentDetaljertInntekt_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentDetaljertInntekt_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="slettBrukerOppgittInntekt_faultPenGeneriskMsg">
+    <wsdl:part element="tns:slettBrukerOppgittInntekt_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="opprettBrukerOppgittInntekt_faultPenInntektAlleredeRegistrertMsg">
+    <wsdl:part element="tns:opprettBrukerOppgittInntekt_faultPenInntektAlleredeRegistrert" name="faultPenInntektAlleredeRegistrert"/>
+  </wsdl:message>
+    <wsdl:message name="hentDetaljertInntekt_faultPenInntektIkkeFunnetMsg">
+    <wsdl:part element="tns:hentDetaljertInntekt_faultPenInntektIkkeFunnet" name="faultPenInntektIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="slettBrukerOppgittInntekt_faultPenInntektIkkeFunnetFMsg">
+    <wsdl:part element="tns:slettBrukerOppgittInntekt_faultPenInntektIkkeFunnetF" name="faultPenInntektIkkeFunnetF"/>
+  </wsdl:message>
+    <wsdl:message name="slettBrukerOppgittInntekt_faultPenFeilKildeMsg">
+    <wsdl:part element="tns:slettBrukerOppgittInntekt_faultPenFeilKilde" name="faultPenFeilKilde"/>
+  </wsdl:message>
+    <wsdl:portType name="PSAKInntekt">
+    <wsdl:operation name="opprettBrukerOppgittInntekt">
+      <wsdl:input message="tns:opprettBrukerOppgittInntektRequestMsg" name="opprettBrukerOppgittInntektRequest"/>
+      <wsdl:output message="tns:opprettBrukerOppgittInntektResponseMsg" name="opprettBrukerOppgittInntektResponse"/>
+            <wsdl:fault message="tns:opprettBrukerOppgittInntekt_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:opprettBrukerOppgittInntekt_faultPenInntektAlleredeRegistrertMsg" name="faultPenInntektAlleredeRegistrert"/>
+        </wsdl:operation>
+    <wsdl:operation name="hentInntektListe">
+      <wsdl:input message="tns:hentInntektListeRequestMsg" name="hentInntektListeRequest"/>
+      <wsdl:output message="tns:hentInntektListeResponseMsg" name="hentInntektListeResponse"/>
+            <wsdl:fault message="tns:hentInntektListe_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+        </wsdl:operation>
+    <wsdl:operation name="hentDetaljertInntekt">
+      <wsdl:input message="tns:hentDetaljertInntektRequestMsg" name="hentDetaljertInntektRequest"/>
+      <wsdl:output message="tns:hentDetaljertInntektResponseMsg" name="hentDetaljertInntektResponse"/>
+            <wsdl:fault message="tns:hentDetaljertInntekt_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:hentDetaljertInntekt_faultPenInntektIkkeFunnetMsg" name="faultPenInntektIkkeFunnet"/>
+        </wsdl:operation>
+    <wsdl:operation name="slettBrukerOppgittInntekt">
+      <wsdl:input message="tns:slettBrukerOppgittInntektRequestMsg" name="slettBrukerOppgittInntektRequest"/>
+      <wsdl:output message="tns:slettBrukerOppgittInntektResponseMsg" name="slettBrukerOppgittInntektResponse"/>
+            <wsdl:fault message="tns:slettBrukerOppgittInntekt_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:slettBrukerOppgittInntekt_faultPenInntektIkkeFunnetFMsg" name="faultPenInntektIkkeFunnet"/>
+            <wsdl:fault message="tns:slettBrukerOppgittInntekt_faultPenFeilKildeMsg" name="faultPenFeilKilde"/>
+        </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

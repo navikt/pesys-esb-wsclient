@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="PSELVBrukerprofilWSEXP_PSELVBrukerprofilHttp_Service" targetNamespace="http://nav-cons-pen-pselv-brukerprofil/no/nav/inf/Binding" xmlns:Port_0="http://nav-cons-pen-pselv-brukerprofil/no/nav/inf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:bons0="http://nav-cons-pen-pselv-brukerprofil/no/nav/inf/Binding">
+  <wsdl:import namespace="http://nav-cons-pen-pselv-brukerprofil/no/nav/inf" location="no/nav/inf/PSELVBrukerprofil.wsdl">
+    </wsdl:import>
+  <wsdl:binding name="PSELVBrukerprofilWSEXP_PSELVBrukerprofilHttpBinding" type="Port_0:PSELVBrukerprofil">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="verifiserEndagspassord">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="verifiserEndagspassordRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="verifiserEndagspassordResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultFeilPassordEllerBrukerId">
+        <soap:fault name="faultFeilPassordEllerBrukerId" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPassordSperret">
+        <soap:fault name="faultPassordSperret" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPassordUtlopt">
+        <soap:fault name="faultPassordUtlopt" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="hentEndagspassord">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="hentEndagspassordRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hentEndagspassordResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="sendEpostmelding">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="sendEpostmeldingRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="sendEpostmeldingResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PSELVBrukerprofilWSEXP_PSELVBrukerprofilHttpService">
+    <wsdl:port name="PSELVBrukerprofilWSEXP_PSELVBrukerprofilHttpPort" binding="bons0:PSELVBrukerprofilWSEXP_PSELVBrukerprofilHttpBinding">
+      <soap:address location="http://localhost:9080/nav-cons-pen-pselv-brukerprofilWeb/sca/PSELVBrukerprofilWSEXP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

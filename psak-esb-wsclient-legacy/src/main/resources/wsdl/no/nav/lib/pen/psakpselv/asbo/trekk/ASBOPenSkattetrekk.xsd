@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/trekk" targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/trekk">
+    <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo" schemaLocation="../ASBOPenEndringsInfo.xsd"/>
+    <xsd:include schemaLocation="ASBOPenTrekk.xsd"/>
+    <xsd:complexType name="ASBOPenSkattetrekk">
+    <xsd:complexContent>
+      <xsd:extension base="bons2:ASBOPenTrekk">
+                <xsd:sequence>
+      <xsd:element minOccurs="0" name="skattekommunenr" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="skattekommunenavn" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="tabellnr" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="prosentsats" nillable="true" type="xsd:int"/>
+      <xsd:element minOccurs="0" name="fribelopGrense" nillable="true" type="xsd:int"/>
+      <xsd:element minOccurs="0" name="fribelopHittilUtbetalt" nillable="true" type="xsd:int"/>
+      <xsd:element minOccurs="0" name="frikortFom" type="xsd:date"/>
+      <xsd:element minOccurs="0" name="frikortTom" type="xsd:date"/>
+      <xsd:element minOccurs="0" name="tabellFagomrade" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="tabellFagomradeBeskrivelse" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="endringsInfo" type="bons1:ASBOPenEndringsInfo"/>
+    </xsd:sequence>
+                  
+            </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

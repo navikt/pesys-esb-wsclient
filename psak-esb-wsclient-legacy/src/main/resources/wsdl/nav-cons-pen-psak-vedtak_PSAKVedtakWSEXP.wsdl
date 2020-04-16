@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="PSAKVedtakWSEXP_PSAKVedtakHttp_Service" targetNamespace="http://nav-cons-pen-psak-vedtak/no/nav/inf/PSAKVedtak/Binding" xmlns:Port_0="http://nav-cons-pen-psak-vedtak/no/nav/inf/PSAKVedtak" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://nav-cons-pen-psak-vedtak/no/nav/inf/PSAKVedtak/Binding">
+  <wsdl:import namespace="http://nav-cons-pen-psak-vedtak/no/nav/inf/PSAKVedtak" location="no/nav/inf/PSAKVedtak.wsdl">
+    </wsdl:import>
+  <wsdl:binding name="PSAKVedtakWSEXP_PSAKVedtakHttpBinding" type="Port_0:PSAKVedtak">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="simulerVedtaksutbetaling">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="simulerVedtaksutbetalingRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="simulerVedtaksutbetalingResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenFeilIOppdrag">
+        <soap:fault name="faultPenFeilIOppdrag" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenServiceUnavailable">
+        <soap:fault name="faultPenServiceUnavailable" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PSAKVedtakWSEXP_PSAKVedtakHttpService">
+    <wsdl:port name="PSAKVedtakWSEXP_PSAKVedtakHttpPort" binding="this:PSAKVedtakWSEXP_PSAKVedtakHttpBinding">
+      <soap:address location="http://localhost:9080/nav-cons-pen-psak-vedtakWeb/sca/PSAKVedtakWSEXP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="PENPPEN015WSEXP_PENPPEN015Http_Service" targetNamespace="http://nav-cons-pen-pen-ppen015/no/nav/inf/Binding" xmlns:Port_0="http://nav-cons-pen-pen-ppen015/no/nav/inf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://nav-cons-pen-pen-ppen015/no/nav/inf/Binding">
+  <wsdl:import namespace="http://nav-cons-pen-pen-ppen015/no/nav/inf" location="no/nav/inf/PENPPEN015.wsdl">
+    </wsdl:import>
+  <wsdl:binding name="PENPPEN015WSEXP_PENPPEN015HttpBinding" type="Port_0:PENPPEN015">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="iverksettVedtak">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="iverksettVedtakRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="iverksettVedtakResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isAlive">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="isAliveRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="isAliveResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PENPPEN015WSEXP_PENPPEN015HttpService">
+    <wsdl:port name="PENPPEN015WSEXP_PENPPEN015HttpPort" binding="this:PENPPEN015WSEXP_PENPPEN015HttpBinding">
+      <soap:address location="http://localhost:9080/nav-cons-pen-pen-ppen015Web/sca/PENPPEN015WSEXP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="BehandleTilbakekrevingVedDodsfallProxyWSEXP_BehandleTilbakekrevingVedDodsfallHttp_Service" targetNamespace="http://nav.no/domene/pensjon/tjenester/behandleTilbakekrevingVedDodsfall/v1/Binding" xmlns:Port_0="http://nav.no/domene/pensjon/tjenester/behandleTilbakekrevingVedDodsfall/v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://nav.no/domene/pensjon/tjenester/behandleTilbakekrevingVedDodsfall/v1/Binding">
+  <wsdl:import namespace="http://nav.no/domene/pensjon/tjenester/behandleTilbakekrevingVedDodsfall/v1" location="no/nav/domene/pensjon/tjenester/behandleTilbakekrevingVedDodsfall/behandleTilbakekrevingVedDodsfall.wsdl">
+    </wsdl:import>
+  <wsdl:binding name="BehandleTilbakekrevingVedDodsfallProxyWSEXP_BehandleTilbakekrevingVedDodsfallHttpBinding" type="Port_0:BehandleTilbakekrevingVedDodsfall">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="behandleTilbakekrevingVedDodsfall">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BehandleTilbakekrevingVedDodsfallProxyWSEXP_BehandleTilbakekrevingVedDodsfallHttpService">
+    <wsdl:port name="BehandleTilbakekrevingVedDodsfallProxyWSEXP_BehandleTilbakekrevingVedDodsfallHttpPort" binding="this:BehandleTilbakekrevingVedDodsfallProxyWSEXP_BehandleTilbakekrevingVedDodsfallHttpBinding">
+      <soap:address location="http://localhost:9080/pensjon-microflow-behandleTilbakekrevingVedDodsfallProxyWeb/sca/BehandleTilbakekrevingVedDodsfallProxyWSEXP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

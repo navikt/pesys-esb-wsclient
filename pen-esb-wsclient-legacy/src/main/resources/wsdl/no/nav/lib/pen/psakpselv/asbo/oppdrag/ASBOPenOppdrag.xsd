@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/oppdrag"
+	targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/oppdrag"
+	xmlns:bons2="http://nav-cons-pen-pen-batch-oppdrag/no/nav/lib/pen/psakpselv/asbo/oppdrag">
+	<xsd:import schemaLocation="ASBOPenAvstemmingtransaksjon.xsd"
+		namespace="http://nav-cons-pen-pen-batch-oppdrag/no/nav/lib/pen/psakpselv/asbo/oppdrag">
+	</xsd:import>
+	<xsd:include schemaLocation="ASBOPenOppdragslinje.xsd" />
+	<xsd:include schemaLocation="ASBOPenTekst.xsd" />
+	<xsd:include schemaLocation="ASBOPenBelopsgrense.xsd" />
+	<xsd:include schemaLocation="ASBOPenOppdragsenhet.xsd" />
+	<xsd:complexType name="ASBOPenOppdrag">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="aksjonKode"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="endringKode"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="statusKode"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="statusFom" type="xsd:date" />
+			<xsd:element minOccurs="0" name="fagomradeKode"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="fagsystemId"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="oppdragsId"
+				type="xsd:long" />
+			<xsd:element minOccurs="0" name="utbetalingsfrekvens"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="forfallsdato"
+				type="xsd:date" />
+			<xsd:element minOccurs="0" name="stonadId"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="oppdragGjelderId"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="oppdragGjelderFom"
+				type="xsd:date" />
+			<xsd:element minOccurs="0" name="saksbehandlerId"
+				type="xsd:string" />
+			<xsd:element maxOccurs="unbounded" minOccurs="0"
+				name="oppdragsenhetListe" type="bons1:ASBOPenOppdragsenhet" />
+			<xsd:element maxOccurs="unbounded" minOccurs="0"
+				name="belopsgrenseListe" type="bons1:ASBOPenBelopsgrense" />
+			<xsd:element maxOccurs="unbounded" minOccurs="0"
+				name="tekstListe" type="bons1:ASBOPenTekst" />
+			<xsd:element maxOccurs="unbounded" minOccurs="0"
+				name="oppdragslinjeListe" type="bons1:ASBOPenOppdragslinje" />
+			<xsd:element minOccurs="0" name="avstemmingtransaksjon"
+				type="bons2:ASBOPenAvstemmingtransaksjon">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

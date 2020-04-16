@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="PENOppdrag" targetNamespace="http://nav-cons-pen-pen-oppdrag/no/nav/inf" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/oppdrag" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/oppdrag" xmlns:bons3="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:tns="http://nav-cons-pen-pen-oppdrag/no/nav/inf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://nav-cons-pen-pen-oppdrag/no/nav/inf">
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" schemaLocation="../lib/pen/psakpselv/fault/FaultPenGenerisk.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/oppdrag" schemaLocation="../lib/pen/psakpselv/asbo/oppdrag/ASBOPenOppdragsmelding.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/oppdrag" schemaLocation="../lib/pen/psakpselv/asbo/oppdrag/ASBOPenSimuleringsresultatLinjeListe.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/oppdrag" schemaLocation="../lib/pen/psakpselv/asbo/oppdrag/ASBOPenSendAsynkOppdragsavstemmingListeRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" schemaLocation="../lib/pen/psakpselv/fault/FaultPenServiceUnavailable.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/oppdrag" schemaLocation="../lib/pen/psakpselv/fault/oppdrag/FaultPenFeilIOppdrag.xsd"/>
+      <xsd:element name="sendAsynkronOppdragsavstemmingListe">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="sendAsynkronOppdragsavstemmingListeRequest" nillable="true" type="bons1:ASBOPenSendAsynkOppdragsavstemmingListeRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sendAsynkronOppdragsavstemmingListeResponse">
+        <xsd:complexType>
+          <xsd:sequence/>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="sendAsynkronOppdragsavstemmingListe_faultPenGenerisk" type="bons3:FaultPenGenerisk"/>
+            <xsd:element name="hentOppdragSimulering_faultPenGenerisk" type="bons3:FaultPenGenerisk"/>
+            <xsd:element name="hentOppdragSimulering">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentOppdragSimuleringRequest" nillable="true" type="bons1:ASBOPenOppdragsmelding"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentOppdragSimuleringResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentOppdragSimuleringResponse" nillable="true" type="bons1:ASBOPenSimuleringsresultatLinjeListe"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="FaultPenFeilIOppdrag_element" nillable="true" type="bons2:FaultPenFeilIOppdrag"/>
+            <xsd:element name="FaultPenServiceUnavailable_element" nillable="true" type="bons3:FaultPenServiceUnavailable"/>
+        </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="sendAsynkronOppdragsavstemmingListeRequestMsg">
+    <wsdl:part element="tns:sendAsynkronOppdragsavstemmingListe" name="sendAsynkronOppdragsavstemmingListeParameters"/>
+  </wsdl:message>
+    <wsdl:message name="sendAsynkronOppdragsavstemmingListeResponseMsg">
+    <wsdl:part element="tns:sendAsynkronOppdragsavstemmingListeResponse" name="sendAsynkronOppdragsavstemmingListeResult"/>
+  </wsdl:message>
+    <wsdl:message name="sendAsynkronOppdragsavstemmingListe_faultPenGeneriskMsg">
+    <wsdl:part element="tns:sendAsynkronOppdragsavstemmingListe_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="hentOppdragSimuleringRequestMsg">
+    <wsdl:part element="tns:hentOppdragSimulering" name="hentOppdragSimuleringParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentOppdragSimuleringResponseMsg">
+    <wsdl:part element="tns:hentOppdragSimuleringResponse" name="hentOppdragSimuleringResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentOppdragSimulering_faultPenFeilIOppdragMsg">
+    <wsdl:part element="tns:FaultPenFeilIOppdrag_element" name="faultPenFeilIOppdrag"/>
+  </wsdl:message>
+    <wsdl:message name="hentOppdragSimulering_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentOppdragSimulering_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="hentOppdragSimulering_faultPenServiceUnavailableMsg">
+    <wsdl:part element="tns:FaultPenServiceUnavailable_element" name="faultPenServiceUnavailable"/>
+  </wsdl:message>
+    <wsdl:portType name="PENOppdrag">
+    <wsdl:operation name="sendAsynkronOppdragsavstemmingListe">
+      <wsdl:input message="tns:sendAsynkronOppdragsavstemmingListeRequestMsg" name="sendAsynkronOppdragsavstemmingListeRequest"/>
+      <wsdl:output message="tns:sendAsynkronOppdragsavstemmingListeResponseMsg" name="sendAsynkronOppdragsavstemmingListeResponse"/>
+            <wsdl:fault message="tns:sendAsynkronOppdragsavstemmingListe_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+        </wsdl:operation>
+        <wsdl:operation name="hentOppdragSimulering">
+      <wsdl:input message="tns:hentOppdragSimuleringRequestMsg" name="hentOppdragSimuleringRequest"/>
+      <wsdl:output message="tns:hentOppdragSimuleringResponseMsg" name="hentOppdragSimuleringResponse"/>
+            <wsdl:fault message="tns:hentOppdragSimulering_faultPenFeilIOppdragMsg" name="faultPenFeilIOppdrag"/>
+            <wsdl:fault message="tns:hentOppdragSimulering_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:hentOppdragSimulering_faultPenServiceUnavailableMsg" name="faultPenServiceUnavailable"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

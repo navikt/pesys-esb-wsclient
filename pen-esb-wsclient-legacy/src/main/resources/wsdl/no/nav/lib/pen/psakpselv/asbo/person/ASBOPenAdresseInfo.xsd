@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person"
+	xmlns:bons0="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person">
+	<xsd:include schemaLocation="ASBOPenTPSSvarStatus.xsd"></xsd:include>
+	<xsd:include schemaLocation="ASBOPenPerson.xsd"></xsd:include>
+	<xsd:complexType name="ASBOPenAdresseInfo">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="forespurtFnr"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="adresseKode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="svarStatus"
+				type="bons0:ASBOPenTPSSvarStatus">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="person"
+				type="bons0:ASBOPenPerson">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

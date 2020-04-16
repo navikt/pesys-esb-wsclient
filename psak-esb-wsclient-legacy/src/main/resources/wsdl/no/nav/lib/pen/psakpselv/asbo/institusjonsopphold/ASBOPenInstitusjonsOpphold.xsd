@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:bons0="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/institusjonsopphold" xmlns:bons1="http://nav-lib-cons-pen/no/nav/lib/pen/psakpselv/asbo/institusjonsopphold" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/institusjonsopphold">
+    <xsd:include schemaLocation="ASBOPenInstitusjon.xsd"/>
+    <xsd:complexType name="ASBOPenInstitusjonsOpphold">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="fnr" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="personId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="datoOpprettet" type="xsd:date"/>
+      <xsd:element minOccurs="0" name="opprettetAv" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="datoEndret" type="xsd:date"/>
+      <xsd:element minOccurs="0" name="endretAv" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="versjon" type="xsd:string"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="institusjoner" type="bons0:ASBOPenInstitusjon"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

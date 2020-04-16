@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="PSAKTrekkWSEXP_PSAKTrekkHttp_Service" targetNamespace="http://nav-cons-pen-psak-trekk/no/nav/inf/Binding" xmlns:Port_0="http://nav-cons-pen-psak-trekk/no/nav/inf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://nav-cons-pen-psak-trekk/no/nav/inf/Binding">
+  <wsdl:import namespace="http://nav-cons-pen-psak-trekk/no/nav/inf" location="no/nav/inf/PSAKTrekk.wsdl">
+    </wsdl:import>
+  <wsdl:binding name="PSAKTrekkWSEXP_PSAKTrekkHttpBinding" type="Port_0:PSAKTrekk">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="hentTrekkListe">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="hentTrekkListeRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hentTrekkListeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenIngenTrekkFunnet">
+        <soap:fault name="faultPenIngenTrekkFunnet" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenKreditorAvdMaaOppgis">
+        <soap:fault name="faultPenKreditorAvdMaaOppgis" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenKreditorIkkeReg">
+        <soap:fault name="faultPenKreditorIkkeReg" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="hentTrekktransaksjonListe">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="hentTrekktransaksjonListeRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hentTrekktransaksjonListeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenIngenTransaksjonerFunnet">
+        <soap:fault name="faultPenIngenTransaksjonerFunnet" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenTrekkvedtakIkkeFunnet">
+        <soap:fault name="faultPenTrekkvedtakIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="hentSkattOgTrekk">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="hentSkattOgTrekkRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hentSkattOgTrekkResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenIngenVedtaksopplysningerFunnet">
+        <soap:fault name="faultPenIngenVedtaksopplysningerFunnet" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PSAKTrekkWSEXP_PSAKTrekkHttpService">
+    <wsdl:port name="PSAKTrekkWSEXP_PSAKTrekkHttpPort" binding="this:PSAKTrekkWSEXP_PSAKTrekkHttpBinding">
+      <soap:address location="http://localhost:9080/nav-cons-pen-psak-trekkWeb/sca/PSAKTrekkWSEXP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons1="http://nav-cons-pen-pen-batch-oppdrag/no/nav/inf" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:bons3="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/oppdrag" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PENOppdragBatch" targetNamespace="http://nav-cons-pen-pen-batch-oppdrag/no/nav/inf">
+    <wsdl:types>
+    <xsd:schema xmlns:tns="http://nav-cons-pen-pen-batch-oppdrag/no/nav/inf" targetNamespace="http://nav-cons-pen-pen-batch-oppdrag/no/nav/inf" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:bons3="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/oppdrag" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/oppdrag" schemaLocation="../lib/pen/psakpselv/asbo/oppdrag/ASBOPenSendAsynkOppdragsavstemmingListeRequest.xsd"/>
+      <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/oppdrag" schemaLocation="../lib/pen/psakpselv/asbo/oppdrag/ASBOPenSendAsynkOppdragsmeldingListeRequest.xsd"/>
+      <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" schemaLocation="../lib/pen/psakpselv/fault/FaultPenGenerisk.xsd"/>
+      <xsd:element name="sendAsynkronOppdragsmeldingListe">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="sendAsynkronOppdragsmeldingListeRequest" nillable="true" type="bons3:ASBOPenSendAsynkOppdragsmeldingListeRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sendAsynkronOppdragsmeldingListeResponse">
+        <xsd:complexType>
+          <xsd:sequence/>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FaultPenGenerisk_element" nillable="true" type="bons2:FaultPenGenerisk"/>
+      <xsd:element name="sendAsynkronOppdragsavstemmingListe">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="sendAsynkronOppdragsavstemmingListeRequest" nillable="true" type="bons3:ASBOPenSendAsynkOppdragsavstemmingListeRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sendAsynkronOppdragsavstemmingListeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+        </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="sendAsynkronOppdragsmeldingListeRequestMsg">
+    <wsdl:part element="bons1:sendAsynkronOppdragsmeldingListe" name="sendAsynkronOppdragsmeldingListeParameters"/>
+  </wsdl:message>
+    <wsdl:message name="sendAsynkronOppdragsmeldingListeResponseMsg">
+    <wsdl:part element="bons1:sendAsynkronOppdragsmeldingListeResponse" name="sendAsynkronOppdragsmeldingListeResult"/>
+  </wsdl:message>
+    <wsdl:message name="sendAsynkronOppdragsmeldingListe_faultPenGeneriskMsg">
+    <wsdl:part element="bons1:FaultPenGenerisk_element" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="sendAsynkronOppdragsavstemmingListeRequestMsg">
+    <wsdl:part element="bons1:sendAsynkronOppdragsavstemmingListe" name="sendAsynkronOppdragsavstemmingListeParameters"/>
+  </wsdl:message>
+    <wsdl:message name="sendAsynkronOppdragsavstemmingListeResponseMsg">
+    <wsdl:part element="bons1:sendAsynkronOppdragsavstemmingListeResponse" name="sendAsynkronOppdragsavstemmingListeResult"/>
+  </wsdl:message>
+    <wsdl:message name="sendAsynkronOppdragsavstemmingListe_faultPenGeneriskMsg">
+    <wsdl:part element="bons1:FaultPenGenerisk_element" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:portType name="PENOppdragBatch">
+    <wsdl:operation name="sendAsynkronOppdragsmeldingListe">
+      <wsdl:input message="bons1:sendAsynkronOppdragsmeldingListeRequestMsg" name="sendAsynkronOppdragsmeldingListeRequest"/>
+      <wsdl:output message="bons1:sendAsynkronOppdragsmeldingListeResponseMsg" name="sendAsynkronOppdragsmeldingListeResponse"/>
+      <wsdl:fault message="bons1:sendAsynkronOppdragsmeldingListe_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+    </wsdl:operation>
+    <wsdl:operation name="sendAsynkronOppdragsavstemmingListe">
+      <wsdl:input message="bons1:sendAsynkronOppdragsavstemmingListeRequestMsg" name="sendAsynkronOppdragsavstemmingListeRequest"/>
+      <wsdl:output message="bons1:sendAsynkronOppdragsavstemmingListeResponseMsg" name="sendAsynkronOppdragsavstemmingListeResponse"/>
+            <wsdl:fault message="bons1:sendAsynkronOppdragsavstemmingListe_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+        </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

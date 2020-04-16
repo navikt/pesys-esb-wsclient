@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:bons3="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/trekk" xmlns:bons4="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/trekk" xmlns:tns="http://nav-cons-pen-psak-trekk/no/nav/inf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Trekk" targetNamespace="http://nav-cons-pen-psak-trekk/no/nav/inf">
+  <wsdl:types>
+    <xsd:schema xmlns:bons0="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/trekk" xmlns:bons7="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:bons8="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/trekk" targetNamespace="http://nav-cons-pen-psak-trekk/no/nav/inf" xmlns:bons3="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/trekk" xmlns:bons4="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/trekk" xmlns:tns="http://nav-cons-pen-psak-trekk/no/nav/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/trekk" schemaLocation="../lib/pen/psakpselv/asbo/trekk/ASBOPenAndreTrekkListe.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/trekk" schemaLocation="../lib/pen/psakpselv/asbo/trekk/ASBOPenHentSkattOgTrekkRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/trekk" schemaLocation="../lib/pen/psakpselv/asbo/trekk/ASBOPenHentTrekkListeRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/trekk" schemaLocation="../lib/pen/psakpselv/asbo/trekk/ASBOPenSkattOgTrekk.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/trekk" schemaLocation="../lib/pen/psakpselv/asbo/trekk/ASBOPenHentTrekktransaksjonListeRequest.xsd"/>
+			<xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/trekk" schemaLocation="../lib/pen/psakpselv/asbo/trekk/ASBOPenTrekktransaksjonListe.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" schemaLocation="../lib/pen/psakpselv/fault/FaultPenGenerisk.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" schemaLocation="../lib/pen/psakpselv/fault/FaultPenGenerisk.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/trekk" schemaLocation="../lib/pen/psakpselv/fault/trekk/FaultPenIngenTrekkFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/trekk" schemaLocation="../lib/pen/psakpselv/fault/trekk/FaultPenKreditorIkkeReg.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/trekk" schemaLocation="../lib/pen/psakpselv/fault/trekk/FaultPenKreditorAvdMaaOppgis.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/trekk" schemaLocation="../lib/pen/psakpselv/fault/trekk/FaultPenTrekkvedtakIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/trekk" schemaLocation="../lib/pen/psakpselv/fault/trekk/FaultPenIngenVedtaksopplysningerFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/trekk" schemaLocation="../lib/pen/psakpselv/fault/trekk/FaultPenIngenTransaksjonerFunnet.xsd"/>
+            
+
+                        <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/trekk" schemaLocation="../lib/pen/psakpselv/fault/trekk/FaultPenIngenVedtaksopplysningerFunnet.xsd"/>
+            <xsd:element name="hentTrekkListe">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentTrekkListeRequest" nillable="true" type="bons0:ASBOPenHentTrekkListeRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentSkattOgTrekk">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentSkattOgTrekkRequest" nillable="true" type="bons0:ASBOPenHentSkattOgTrekkRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentTrekktransaksjonListe">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentTrekktransaksjonListeRequest" nillable="true" type="bons0:ASBOPenHentTrekktransaksjonListeRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentTrekkListeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentTrekkListeResponse" nillable="true" type="bons0:ASBOPenAndreTrekkListe"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentTrekkListe_faultPenGenerisk" type="bons7:FaultPenGenerisk"/>
+            <xsd:element name="hentSkattOgTrekkResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentSkattOgTrekkResponse" nillable="true" type="bons0:ASBOPenSkattOgTrekk"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentSkattOgTrekk_faultPenGenerisk" type="bons7:FaultPenGenerisk"/>
+            <xsd:element name="hentTrekktransaksjonListeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentTrekktransaksjonListeResponse" nillable="true" type="bons0:ASBOPenTrekktransaksjonListe"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentTrekktransaksjonListe_faultPenGenerisk" type="bons7:FaultPenGenerisk"/>
+            <xsd:element name="hentTrekkListe_faultPenIngenTrekkFunnet" type="bons3:FaultPenIngenTrekkFunnet"/>
+            <xsd:element name="hentTrekkListe_faultPenKreditorIkkeReg" type="bons3:FaultPenKreditorIkkeReg"/>
+            <xsd:element name="hentTrekkListe_faultPenKreditorAvdMaaOppgis" type="bons3:FaultPenKreditorAvdMaaOppgis"/>
+            <xsd:element name="hentTrekktransaksjonListe_faultPenTrekkvedtakIkkeFunnet" type="bons3:FaultPenTrekkvedtakIkkeFunnet"/>
+            <xsd:element name="hentTrekktransaksjonListe_faultPenIngenTransaksjonerFunnet" type="bons3:FaultPenIngenTransaksjonerFunnet"/>
+            <xsd:element name="hentSkattOgTrekk_faultPenIngenVedtaksopplysningerFunnet" type="bons3:FaultPenIngenVedtaksopplysningerFunnet"/>
+        </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="hentTrekkListeRequestMsg">
+    <wsdl:part element="tns:hentTrekkListe" name="hentTrekkListeParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentTrekkListeResponseMsg">
+    <wsdl:part element="tns:hentTrekkListeResponse" name="hentTrekkListeResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentSkattOgTrekkRequestMsg">
+    <wsdl:part element="tns:hentSkattOgTrekk" name="hentSkattOgTrekkParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentSkattOgTrekkResponseMsg">
+    <wsdl:part element="tns:hentSkattOgTrekkResponse" name="hentSkattOgTrekkResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentTrekktransaksjonListeRequestMsg">
+    <wsdl:part element="tns:hentTrekktransaksjonListe" name="hentTrekktransaksjonListeParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentTrekktransaksjonListeResponseMsg">
+    <wsdl:part element="tns:hentTrekktransaksjonListeResponse" name="hentTrekktransaksjonListeResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentTrekkListe_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentTrekkListe_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="hentSkattOgTrekk_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentSkattOgTrekk_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="hentTrekktransaksjonListe_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentTrekktransaksjonListe_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="hentTrekkListe_faultPenIngenTrekkFunnetMsg">
+    <wsdl:part element="tns:hentTrekkListe_faultPenIngenTrekkFunnet" name="faultPenIngenTrekkFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="hentTrekkListe_faultPenKreditorIkkeRegMsg">
+    <wsdl:part element="tns:hentTrekkListe_faultPenKreditorIkkeReg" name="faultPenKreditorIkkeReg"/>
+  </wsdl:message>
+    <wsdl:message name="hentTrekkListe_faultPenKreditorAvdMaaOppgisMsg">
+    <wsdl:part element="tns:hentTrekkListe_faultPenKreditorAvdMaaOppgis" name="faultPenKreditorAvdMaaOppgis"/>
+  </wsdl:message>
+    <wsdl:message name="hentTrekktransaksjonListe_faultPenTrekkvedtakIkkeFunnetMsg">
+    <wsdl:part element="tns:hentTrekktransaksjonListe_faultPenTrekkvedtakIkkeFunnet" name="faultPenTrekkvedtakIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="hentTrekktransaksjonListe_faultPenIngenTransaksjonerFunnetMsg">
+    <wsdl:part element="tns:hentTrekktransaksjonListe_faultPenIngenTransaksjonerFunnet" name="faultPenIngenTransaksjonerFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="hentSkattOgTrekk_faultPenIngenVedtaksopplysningerFunnetMsg">
+    <wsdl:part element="tns:hentSkattOgTrekk_faultPenIngenVedtaksopplysningerFunnet" name="faultPenIngenVedtaksopplysningerFunnet"/>
+  </wsdl:message>
+    <wsdl:portType name="PSAKTrekk">
+        <wsdl:operation name="hentTrekkListe">
+            <wsdl:input message="tns:hentTrekkListeRequestMsg" name="hentTrekkListeRequest"/>
+      <wsdl:output message="tns:hentTrekkListeResponseMsg" name="hentTrekkListeResponse"/>
+            <wsdl:fault message="tns:hentTrekkListe_faultPenIngenTrekkFunnetMsg" name="faultPenIngenTrekkFunnet"/>
+            <wsdl:fault message="tns:hentTrekkListe_faultPenKreditorIkkeRegMsg" name="faultPenKreditorIkkeReg"/>
+            <wsdl:fault message="tns:hentTrekkListe_faultPenKreditorAvdMaaOppgisMsg" name="faultPenKreditorAvdMaaOppgis"/>
+            <wsdl:fault message="tns:hentTrekkListe_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+        </wsdl:operation>
+        <wsdl:operation name="hentTrekktransaksjonListe">
+            <wsdl:input message="tns:hentTrekktransaksjonListeRequestMsg" name="hentTrekktransaksjonListeRequest"/>
+      <wsdl:output message="tns:hentTrekktransaksjonListeResponseMsg" name="hentTrekktransaksjonListeResponse"/>
+            <wsdl:fault message="tns:hentTrekktransaksjonListe_faultPenTrekkvedtakIkkeFunnetMsg" name="faultPenTrekkvedtakIkkeFunnet"/>
+            <wsdl:fault message="tns:hentTrekktransaksjonListe_faultPenIngenTransaksjonerFunnetMsg" name="faultPenIngenTransaksjonerFunnet"/>
+            <wsdl:fault message="tns:hentTrekktransaksjonListe_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+        </wsdl:operation>
+        <wsdl:operation name="hentSkattOgTrekk">
+            <wsdl:input message="tns:hentSkattOgTrekkRequestMsg" name="hentSkattOgTrekkRequest"/>
+      <wsdl:output message="tns:hentSkattOgTrekkResponseMsg" name="hentSkattOgTrekkResponse"/>
+            <wsdl:fault message="tns:hentSkattOgTrekk_faultPenIngenVedtaksopplysningerFunnetMsg" name="faultPenIngenVedtaksopplysningerFunnet"/>
+            <wsdl:fault message="tns:hentSkattOgTrekk_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

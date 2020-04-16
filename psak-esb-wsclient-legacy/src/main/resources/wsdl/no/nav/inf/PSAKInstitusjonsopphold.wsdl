@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="PSAKInstitusjonsopphold" targetNamespace="http://nav-cons-pen-psak-institusjonsopphold/no/nav/inf" xmlns:bons5="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/institusjonsopphold" xmlns:bons6="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/institusjonsopphold" xmlns:bons7="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:tns="http://nav-cons-pen-psak-institusjonsopphold/no/nav/inf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://nav-cons-pen-psak-institusjonsopphold/no/nav/inf">     
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/institusjonsopphold" schemaLocation="../lib/pen/psakpselv/asbo/institusjonsopphold/ASBOPenInstitusjonsOpphold.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/institusjonsopphold" schemaLocation="../lib/pen/psakpselv/fault/institusjonsopphold/FaultPenFnrIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/institusjonsopphold" schemaLocation="../lib/pen/psakpselv/fault/institusjonsopphold/FaultPenInstitusjonsoppholdIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/institusjonsopphold" schemaLocation="../lib/pen/psakpselv/fault/institusjonsopphold/FaultPenOppholdPeriodeIdIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/samhandler" schemaLocation="../lib/pen/psakpselv/fault/samhandler/FaultPenSamhandlerIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" schemaLocation="../lib/pen/psakpselv/fault/FaultPenGenerisk.xsd"/>
+      <xsd:element name="lagreInstitusjonsopphold">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreInstitusjonsoppholdRequest" nillable="true" type="bons5:ASBOPenInstitusjonsOpphold"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="lagreInstitusjonsoppholdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreInstitusjonsoppholdResponse" nillable="true" type="bons5:ASBOPenInstitusjonsOpphold"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="lagreInstitusjonsopphold_faultPenFnrIkkeFunnet" type="bons6:FaultPenFnrIkkeFunnet"/>
+      <xsd:element name="lagreInstitusjonsopphold_faultPenOppholdPeriodeIdIkkeFunnet" type="bons6:FaultPenOppholdPeriodeIdIkkeFunnet"/>
+      <xsd:element name="lagreInstitusjonsopphold_faultPenGenerisk" type="bons7:FaultPenGenerisk"/>
+      <xsd:element name="opprettInstitusjonsopphold">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="opprettInstitusjonsoppholdRequest" nillable="true" type="bons5:ASBOPenInstitusjonsOpphold"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="opprettInstitusjonsoppholdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="opprettInstitusjonsoppholdResponse" nillable="true" type="bons5:ASBOPenInstitusjonsOpphold"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="opprettInstitusjonsopphold_faultPenFnrIkkeFunnet" type="bons6:FaultPenFnrIkkeFunnet"/>
+      <xsd:element name="opprettInstitusjonsopphold_faultPenGenerisk" type="bons7:FaultPenGenerisk"/>
+      <xsd:element name="slettInstitusjonsopphold">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="slettInstitusjonsoppholdRequest" nillable="true" type="bons5:ASBOPenInstitusjonsOpphold"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="slettInstitusjonsoppholdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="tomResponse" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="slettInstitusjonsopphold_faultPenInstitusjonsoppholdIkkeFunnet" type="bons6:FaultPenInstitusjonsoppholdIkkeFunnet"/>
+      <xsd:element name="slettInstitusjonsopphold_faultPenGenerisk" type="bons7:FaultPenGenerisk"/>
+        </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="lagreInstitusjonsoppholdRequestMsg">
+    <wsdl:part element="tns:lagreInstitusjonsopphold" name="lagreInstitusjonsoppholdParameters"/>
+  </wsdl:message>
+    <wsdl:message name="lagreInstitusjonsoppholdResponseMsg">
+    <wsdl:part element="tns:lagreInstitusjonsoppholdResponse" name="lagreInstitusjonsoppholdResult"/>
+  </wsdl:message>
+    <wsdl:message name="lagreInstitusjonsopphold_faultPenFnrIkkeFunnetMsg">
+    <wsdl:part element="tns:lagreInstitusjonsopphold_faultPenFnrIkkeFunnet" name="faultPenFnrIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="lagreInstitusjonsopphold_faultPenOppholdPeriodeIdIkkeFunnetMsg">
+    <wsdl:part element="tns:lagreInstitusjonsopphold_faultPenOppholdPeriodeIdIkkeFunnet" name="faultPenOppholdPeriodeIdIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="lagreInstitusjonsopphold_faultPenGeneriskMsg">
+    <wsdl:part element="tns:lagreInstitusjonsopphold_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="opprettInstitusjonsoppholdRequestMsg">
+    <wsdl:part element="tns:opprettInstitusjonsopphold" name="opprettInstitusjonsoppholdParameters"/>
+  </wsdl:message>
+    <wsdl:message name="opprettInstitusjonsoppholdResponseMsg">
+    <wsdl:part element="tns:opprettInstitusjonsoppholdResponse" name="opprettInstitusjonsoppholdResult"/>
+  </wsdl:message>
+    <wsdl:message name="opprettInstitusjonsopphold_faultPenFnrIkkeFunnetMsg">
+    <wsdl:part element="tns:opprettInstitusjonsopphold_faultPenFnrIkkeFunnet" name="faultPenFnrIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="opprettInstitusjonsopphold_faultPenGeneriskMsg">
+    <wsdl:part element="tns:opprettInstitusjonsopphold_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="slettInstitusjonsoppholdRequestMsg">
+    <wsdl:part element="tns:slettInstitusjonsopphold" name="slettInstitusjonsoppholdParameters"/>
+  </wsdl:message>
+    <wsdl:message name="slettInstitusjonsoppholdResponseMsg">
+    <wsdl:part element="tns:slettInstitusjonsoppholdResponse" name="slettInstitusjonsoppholdResult"/>
+  </wsdl:message>
+    <wsdl:message name="slettInstitusjonsopphold_faultPenInstitusjonsoppholdIkkeFunnetMsg">
+    <wsdl:part element="tns:slettInstitusjonsopphold_faultPenInstitusjonsoppholdIkkeFunnet" name="faultPenInstitusjonsoppholdIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="slettInstitusjonsopphold_faultPenGeneriskMsg">
+    <wsdl:part element="tns:slettInstitusjonsopphold_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:portType name="PSAKInstitusjonsopphold">
+    <wsdl:operation name="lagreInstitusjonsopphold">
+      <wsdl:input message="tns:lagreInstitusjonsoppholdRequestMsg" name="lagreInstitusjonsoppholdRequest"/>
+      <wsdl:output message="tns:lagreInstitusjonsoppholdResponseMsg" name="lagreInstitusjonsoppholdResponse"/>
+      <wsdl:fault message="tns:lagreInstitusjonsopphold_faultPenFnrIkkeFunnetMsg" name="faultPenFnrIkkeFunnet"/>
+      <wsdl:fault message="tns:lagreInstitusjonsopphold_faultPenOppholdPeriodeIdIkkeFunnetMsg" name="faultPenOppholdPeriodeIdIkkeFunnet"/>
+      <wsdl:fault message="tns:lagreInstitusjonsopphold_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+    </wsdl:operation>
+    <wsdl:operation name="opprettInstitusjonsopphold">
+      <wsdl:input message="tns:opprettInstitusjonsoppholdRequestMsg" name="opprettInstitusjonsoppholdRequest"/>
+      <wsdl:output message="tns:opprettInstitusjonsoppholdResponseMsg" name="opprettInstitusjonsoppholdResponse"/>
+      <wsdl:fault message="tns:opprettInstitusjonsopphold_faultPenFnrIkkeFunnetMsg" name="faultPenFnrIkkeFunnet"/>
+      <wsdl:fault message="tns:opprettInstitusjonsopphold_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+    </wsdl:operation>
+    <wsdl:operation name="slettInstitusjonsopphold">
+      <wsdl:input message="tns:slettInstitusjonsoppholdRequestMsg" name="slettInstitusjonsoppholdRequest"/>
+      <wsdl:output message="tns:slettInstitusjonsoppholdResponseMsg" name="slettInstitusjonsoppholdResponse"/>
+      <wsdl:fault message="tns:slettInstitusjonsopphold_faultPenInstitusjonsoppholdIkkeFunnetMsg" name="faultPenInstitusjonsoppholdIkkeFunnet"/>
+      <wsdl:fault message="tns:slettInstitusjonsopphold_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

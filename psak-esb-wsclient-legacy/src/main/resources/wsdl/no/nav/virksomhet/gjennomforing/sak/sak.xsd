@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav.no/virksomhet/gjennomforing/sak/v1" version="1.0" xmlns:sak="http://nav.no/virksomhet/gjennomforing/sak/v1">
+  <xsd:complexType name="BrukerUtvidelse1">
+    <xsd:complexContent>
+      <xsd:extension base="sak:Utvidelse"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Endringsinfo">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="endretAvId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="endretAvNavn" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="endretAvEnhetId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="endretAvEnhetNavn" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="opprettetAvId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="opprettetAvNavn" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="opprettetAvEnhetId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="opprettetAvEnhetNavn" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="endretDato" type="xsd:dateTime"/>
+      <xsd:element minOccurs="0" name="opprettetDato" type="xsd:dateTime"/>
+      <xsd:element minOccurs="0" name="kildeId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="kildeNavn" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="avsluttetDato" type="xsd:date"/>
+      <xsd:element minOccurs="0" name="avsluttetAvId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="avsluttetAvNavn" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="utvidelse" type="sak:EndringsinfoUtvidelse1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GenerellSak">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="sakId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="fagomradeKode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Fagområdet i GSAK &lt;/p&gt;&lt;table border="1"&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;b&gt;Kode&lt;/b&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;b&gt;Beskrivelse&lt;/b&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;BAR&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Barnetrygd&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;BID&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;1 - Bidrag&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;BII&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;2 - Bidrag innkreving&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;BIL&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Bil&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;ENF&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Enslig forsørger&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;FOR&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Foreldre- og svangerskapspenger&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;GRA&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Gravferdsstønad&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;GRU&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Grunn- og hjelpestønad&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;HJE&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Hjelpemidker&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;KON&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Kontantstøtte&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;MOT&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;3 - Skanning&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;OKO&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Økonomi&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;OMS&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Omsorgspenger, Pleiepenger og opplæringspenger&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;OVR&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;4 - Øvrig kundesenter&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;PEN&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Pensjon&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;SUP&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Supplerende stønad&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;YRK&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Yrkesskade / Menerstatning&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="fagsystemKode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Fagsystemet hvor saken er laget, GSAK hvis generell sak&lt;/p&gt;&lt;table border="1"&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;b&gt;Kode&lt;/b&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;b&gt;Beskrivelse&lt;/b&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;GSAK&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Generell sak&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="endringsinfo" type="sak:Endringsinfo"/>
+      <xsd:element minOccurs="0" name="sakstypeKode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Sakstypen i GSAK&lt;/p&gt;&lt;table border="1"&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;b&gt;Kode&lt;/b&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;b&gt;Beskrivelse&lt;/b&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;GEN&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Generell&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;MFS&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Med fagsak&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="statusKode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;&lt;/p&gt;&lt;table border="1"&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;b&gt;Kode&lt;/b&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;b&gt;Beskrivelse&lt;/b&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;APEN&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Åpen&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;AVSL&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Avsluttet&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="saksbehandlerId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="saksbehandlendeEnhetId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="saksbehandlendeEnhetNavn" type="xsd:string"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="gjelderListe" type="sak:Bruker">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Liste av brukere som saken gjelder&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="eksternOppgaveId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;OppgaveId for oppgave i evt eksternt fagsystem&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="oppgaveId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;OppgaveId for evt tilhørende oppgaveId i GSAK&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="fagsystemSakId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Sammensatt id av saksnummer og fagsystem&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="versjon" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Felt for optimistisk låsing. Når en sak lagres må versjon være likt det som ligger lagret i databasen. For hver gang en sak er lagret inkrementeres versjon (+1).&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="utvidelse" type="sak:GenerellSakUtvidelse1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="EndringsinfoUtvidelse1">
+    <xsd:complexContent>
+      <xsd:extension base="sak:Utvidelse"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="GenerellSakUtvidelse1">
+    <xsd:complexContent>
+      <xsd:extension base="sak:Utvidelse"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Bruker">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="brukerId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Unik id til brukeren, kan være fnr, orgnr, etc.&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="brukertypeKode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Hvilken type bruker.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;table border="1"&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;b&gt;Kode&lt;/b&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;b&gt;Beskrivelse&lt;/b&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;PERSON&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Person&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;ORGANISASJON&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Organisasjon&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;SAMHANDLER&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Samhandler&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;APPBRUKER&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Applikasjonsbruker&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="rolleKode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;&lt;/p&gt;&lt;table border="1"&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;b&gt;Kode&lt;/b&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;b&gt;Beskrivelse&lt;/b&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;PRI&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Primær&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;SEK&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Sekundær&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="utvidelse" type="sak:BrukerUtvidelse1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType abstract="true" name="Utvidelse">
+    <xsd:sequence>
+      <xsd:any maxOccurs="unbounded" minOccurs="0" namespace="##any" processContents="lax"/>
+    </xsd:sequence>
+    <xsd:anyAttribute namespace="##any" processContents="lax"/>
+  </xsd:complexType>
+</xsd:schema>

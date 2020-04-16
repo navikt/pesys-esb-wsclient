@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="PENPPEN006" targetNamespace="http://nav-cons-pen-pen-ppen006/no/nav/inf" xmlns:bons1="http://nav-cons-pen-pen-ppen006/no/nav/inf" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/ppen006" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <wsdl:types>
+    <xsd:schema targetNamespace="http://nav-cons-pen-pen-ppen006/no/nav/inf" xmlns:tns="http://nav-cons-pen-pen-ppen006/no/nav/inf">
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/ppen006" schemaLocation="../lib/pen/psakpselv/asbo/ppen006/ASBOPenPPEN006Request.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/ppen006" schemaLocation="../lib/pen/psakpselv/asbo/ppen006/ASBOPenPPEN006Response.xsd"/>
+      <xsd:element name="behandleAfpPrivat">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="behandleAfpPrivatRequest" nillable="true" type="bons2:ASBOPenPPEN006Request"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="behandleAfpPrivatResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="behandleAfpPrivatResponse" nillable="true" type="bons2:ASBOPenPPEN006Response"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="behandleAfpPrivatRequestMsg">
+    <wsdl:part element="bons1:behandleAfpPrivat" name="behandleAfpPrivatParameters"/>
+  </wsdl:message>
+    <wsdl:message name="behandleAfpPrivatResponseMsg">
+    <wsdl:part element="bons1:behandleAfpPrivatResponse" name="behandleAfpPrivatResult"/>
+  </wsdl:message>
+    <wsdl:portType name="PENPPEN006">
+    <wsdl:operation name="behandleAfpPrivat">
+      <wsdl:input message="bons1:behandleAfpPrivatRequestMsg" name="behandleAfpPrivatRequest"/>
+      <wsdl:output message="bons1:behandleAfpPrivatResponseMsg" name="behandleAfpPrivatResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

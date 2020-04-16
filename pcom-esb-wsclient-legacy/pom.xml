@@ -12,204 +12,8 @@
     <artifactId>pcom-esb-wsclient-legacy</artifactId>
     <description>JAXWS for ESB wsdls used by several Pensjon modules</description>
 
-    <dependencies>
-        <dependency>
-            <groupId>no.nav.esb.pensjon</groupId>
-            <artifactId>pensjon-tjeneste-iverksattVedtakBehandling</artifactId>
-            <version>1.1.2</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.pensjon</groupId>
-            <artifactId>pensjon-tjeneste-samordning</artifactId>
-            <version>1.1.4</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-psak-tjenestepensjon</artifactId>
-            <version>8.4.1</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-pen-oppdrag</artifactId>
-            <version>8.4.1</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-pen-batch-oppdrag</artifactId>
-            <version>8.1.0</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-psak-samordning</artifactId>
-            <version>8.4.1</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-psak-vedtak</artifactId>
-            <version>8.4.1</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.nav</groupId>
-            <artifactId>nav-tjeneste-institusjonsopphold</artifactId>
-            <version>1.2.8</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-pen-inntekt</artifactId>
-            <version>8.4.1</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-psak-utbetaling</artifactId>
-            <version>8.4.1</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <!-- Shared domain PSAK/PSELV -->
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-psak-samhandler</artifactId>
-            <version>8.4.1</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-psak-henvendelse</artifactId>
-            <version>8.4.1</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-    </dependencies>
-
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>unpack-dependency</id>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>unpack-dependencies</goal>
-                        </goals>
-                        <configuration>
-                            <includeGroupIds>no.nav.esb.nav,no.nav.esb.pensjon,no.nav.esb.layers.modules.cons</includeGroupIds>
-                            <outputDirectory>${project.build.outputDirectory}/wsdl</outputDirectory>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
             <plugin>
                 <groupId>org.apache.cxf</groupId>
                 <artifactId>cxf-codegen-plugin</artifactId>
@@ -222,7 +26,7 @@
                                     <bindingFile>src/main/resources/bindings.xjb</bindingFile>
                                 </bindingFiles>
                                 <extraargs>
-                                    <extraarg>-verbose</extraarg>
+<!--                                    <extraarg>-verbose</extraarg>-->
                                     <!--change Boolean type getters to getXXX (to ensure status quo with starting point) -->
                                     <extraarg>-xjc-Xbg</extraarg>
                                     <!-- Add namespace on element, not on package level -->
@@ -234,17 +38,17 @@
 
                                 <!-- Iverksett Vedtak Behandling -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/no/nav/domene/pensjon/tjenester/iverksattVedtakBehandling/v1/Binding.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/no/nav/domene/pensjon/tjenester/iverksattVedtakBehandling/v1/Binding.wsdl</wsdl>
                                 </wsdlOption>
 
                                 <!-- Samordning -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/pensjon-tjeneste-samordning_SamordningWSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/pensjon-tjeneste-samordning_SamordningWSEXP.wsdl</wsdl>
                                 </wsdlOption>
 
                                 <!-- Oppdrag: placed here for reuse of FaultPenServiceUnavailable -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pen-oppdrag_PENOppdragWSEXP.wsdl
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pen-oppdrag_PENOppdragWSEXP.wsdl
                                     </wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
@@ -264,7 +68,7 @@
 
                                 <!-- PEN Oppdrag Batch -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pen-batch-oppdrag_PENOppdragBatchWSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pen-batch-oppdrag_PENOppdragBatchWSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-cons-pen-pen-batch-oppdrag/no/nav/inf=no.nav.inf.pen.oppdragbatch</extraarg>
@@ -281,7 +85,7 @@
 
                                 <!-- PSAK Samordning: placed here (for now) due to PCOM converter stuff -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-psak-samordning_PSAKSamordningWSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-psak-samordning_PSAKSamordningWSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-cons-pen-psak-samordning/no/nav/inf=no.nav.inf.psak.samordning</extraarg>
@@ -306,7 +110,7 @@
 
                                 <!-- Tjenestepensjon - placed here to reuse types for PSAK and PSELV versions -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/PSAKTjenestepensjonWSEXP_PSAKTjenestepensjonHttp_Service.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/PSAKTjenestepensjonWSEXP_PSAKTjenestepensjonHttp_Service.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-bareMethods</extraarg>
                                         <extraarg>-p</extraarg>
@@ -326,7 +130,7 @@
 
                                 <!-- PSAK Vedtak -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-psak-vedtak_PSAKVedtakWSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-psak-vedtak_PSAKVedtakWSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-cons-pen-psak-vedtak/no/nav/inf/PSAKVedtak=no.nav.inf.psak.vedtak</extraarg>
@@ -343,7 +147,7 @@
 
                                 <!-- PEN/PSELV Institusjonsopphold -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-tjeneste-institusjonsopphold_InstitusjonsoppholdWSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-tjeneste-institusjonsopphold_InstitusjonsoppholdWSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <!--change Boolean type getters to  getXXX-->
                                         <extraarg>-xjc-Xbg</extraarg>
@@ -352,7 +156,7 @@
 
                                 <!-- PEN Inntekt (shared domain with PSAK/PSELV versions -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pen-inntekt_PENInntektWSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pen-inntekt_PENInntektWSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-cons-pen-pen-inntekt/no/nav/inf=no.nav.inf.pen.inntekt</extraarg>
@@ -371,7 +175,7 @@
 
                                 <!-- PSAK Utbetaling (shared domain with PSELV Utbetaling) -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-psak-utbetaling_PSAKUtbetalingWSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-psak-utbetaling_PSAKUtbetalingWSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-cons-pen-psak-utbetaling/no/nav/inf=no.nav.inf.psak.utbetaling</extraarg>
@@ -386,7 +190,7 @@
 
                                 <!-- PSAK Samhandler -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/PSAKSamhandlerWSEXP_PSAKSamhandlerHttp_Service.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/PSAKSamhandlerWSEXP_PSAKSamhandlerHttp_Service.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-cons-pen-psak-samhandler/no/nav/inf=no.nav.inf.psak.samhandler</extraarg>
@@ -405,7 +209,7 @@
 
                                 <!-- PSAK Henvendelse (due to PCOM domain dep, inf in psak-module ) -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/PSAKHenvendelseWSEXP_PSAKHenvendelseHttp_Service.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/PSAKHenvendelseWSEXP_PSAKHenvendelseHttp_Service.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-xjc-Xbg</extraarg>
                                         <extraarg>-nexclude</extraarg>

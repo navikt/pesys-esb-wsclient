@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/fullmakt"
+	xmlns:bons0="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/fullmakt">
+	<xsd:include schemaLocation="ASBOPenKodefullmaktType.xsd"></xsd:include>
+	<xsd:include schemaLocation="ASBOPenFullmaktsgiver.xsd"></xsd:include>
+	<xsd:complexType name="ASBOPenFinnFullmaktmottagereRequest">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="fullmaktsgiverListe"
+				type="bons0:ASBOPenFullmaktsgiver" maxOccurs="unbounded">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="kodefullmaktTypeListe"
+				type="bons0:ASBOPenKodefullmaktType" maxOccurs="unbounded">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="datoGyldig"
+				type="xsd:date">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

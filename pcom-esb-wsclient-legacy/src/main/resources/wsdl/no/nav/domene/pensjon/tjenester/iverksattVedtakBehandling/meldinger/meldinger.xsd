@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://nav.no/domene/pensjon/tjenester/iverksattVedtakBehandling/meldinger/v1" version="1.0" xmlns:meldinger="http://nav.no/domene/pensjon/tjenester/iverksattVedtakBehandling/meldinger/v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="EndreIverksattVedtakRequest">
+    <xsd:sequence>
+      <xsd:element name="vedtakId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Id på vedtaket som skal stoppes/reaktiveres&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="aksjonKode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Aksjonskode, gyldige verdier:&lt;/p&gt;&lt;p&gt;STOPP / REAK&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="prioritet" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Prioritet, &lt;span&gt;gyldige verdier&lt;/span&gt;:&lt;/p&gt;&lt;p&gt;BATCH / ONLINE&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

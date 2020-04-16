@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="PSAKPPEN015WSEXP_PSAKPPEN015Http_Service" targetNamespace="http://nav-cons-pen-psak-ppen015/no/nav/inf/PSAKPPEN015/Binding" xmlns:Port_0="http://nav-cons-pen-psak-ppen015/no/nav/inf/PSAKPPEN015" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://nav-cons-pen-psak-ppen015/no/nav/inf/PSAKPPEN015/Binding">
+  <wsdl:import namespace="http://nav-cons-pen-psak-ppen015/no/nav/inf/PSAKPPEN015" location="no/nav/inf/PSAKPPEN015.wsdl">
+    </wsdl:import>
+  <wsdl:binding name="PSAKPPEN015WSEXP_PSAKPPEN015HttpBinding" type="Port_0:PSAKPPEN015">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="iverksettVedtak">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="iverksettVedtakRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="iverksettVedtakResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PSAKPPEN015WSEXP_PSAKPPEN015HttpService">
+    <wsdl:port name="PSAKPPEN015WSEXP_PSAKPPEN015HttpPort" binding="this:PSAKPPEN015WSEXP_PSAKPPEN015HttpBinding">
+      <soap:address location="http://localhost:9080/nav-cons-pen-psak-ppen015Web/sca/PSAKPPEN015WSEXP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

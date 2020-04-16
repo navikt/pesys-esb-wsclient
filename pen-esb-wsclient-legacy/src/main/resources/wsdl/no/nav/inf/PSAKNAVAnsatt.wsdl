@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/navorgenhet" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/asbo" xmlns:bons3="http://nav-lib-cons-pen/no/nav/lib/pen/fault" xmlns:bons4="http://nav-lib-cons-pen/no/nav/lib/pen/fault/navansatt" xmlns:bons5="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/navorgenhet" xmlns:tns="http://nav-cons-pen-psak-navansatt/no/nav/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PSAKNAVAnsatt" targetNamespace="http://nav-cons-pen-psak-navansatt/no/nav/inf">
+  <wsdl:types>
+    <xsd:schema xmlns:bons0="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/navorgenhet" xmlns:bons10="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/navansatt" xmlns:bons2="http://nav-lib-cons-pen/no/nav/lib/pen/asbo" xmlns:bons6="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:bons7="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo" xmlns:bons8="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/samhandler" xmlns:bons9="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/navansatt" targetNamespace="http://nav-cons-pen-psak-navansatt/no/nav/inf" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/navorgenhet" xmlns:bons3="http://nav-lib-cons-pen/no/nav/lib/pen/fault" xmlns:bons4="http://nav-lib-cons-pen/no/nav/lib/pen/fault/navansatt" xmlns:bons5="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/navorgenhet" xmlns:tns="http://nav-cons-pen-psak-navansatt/no/nav/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/navansatt" schemaLocation="../lib/pen/psakpselv/asbo/navansatt/ASBOPenNAVAnsattListe.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/navorgenhet" schemaLocation="../lib/pen/psakpselv/asbo/navorgenhet/ASBOPenNAVEnhetListe.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/navorgenhet" schemaLocation="../lib/pen/psakpselv/fault/navorgenhet/FaultPenNAVEnhetIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/navansatt" schemaLocation="../lib/pen/psakpselv/fault/navansatt/FaultPenNAVAnsattIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo" schemaLocation="../lib/pen/psakpselv/asbo/ASBOPenFagomradeListe.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" schemaLocation="../lib/pen/psakpselv/fault/FaultPenGenerisk.xsd"/>
+            <xsd:element name="hentNAVAnsattListe">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentNAVAnsattListeRequest" nillable="true" type="bons1:ASBOPenNAVEnhet"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentNAVAnsattEnhetListe">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentNAVAnsattEnhetListeRequest" nillable="true" type="bons10:ASBOPenNAVAnsatt"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentNAVAnsattFagomradeListe">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentNAVAnsattFagomradeListeRequest" nillable="true" type="bons10:ASBOPenNAVAnsatt"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentNAVAnsattListeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentNAVAnsattListeResponse" nillable="true" type="bons10:ASBOPenNAVAnsattListe"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentNAVAnsattListe_faultPenGenerisks" type="bons6:FaultPenGenerisk"/>
+      <xsd:element name="hentNAVAnsattEnhetListeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentNAVAnsattEnhetListeResponse" nillable="true" type="bons1:ASBOPenNAVEnhetListe"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentNAVAnsattEnhetListe_faultPenGenerisk" type="bons6:FaultPenGenerisk"/>
+      <xsd:element name="hentNAVAnsattFagomradeListeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentNAVAnsattFagomradeListeResponse" nillable="true" type="bons7:ASBOPenFagomradeListe"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentNAVAnsattFagomradeListe_faultPenGenerisks" type="bons6:FaultPenGenerisk"/>
+            <xsd:element name="hentNAVAnsatt">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentNAVAnsattRequest" nillable="true" type="bons10:ASBOPenNAVAnsatt"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentNAVAnsattResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentNAVAnsattResponse" nillable="true" type="bons10:ASBOPenNAVAnsatt"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentNAVAnsatt_faultPenGenerisk" type="bons6:FaultPenGenerisk"/>
+            <xsd:element name="hentNAVAnsattEnhetListe_faultPenNAVAnsattIkkeFunnet" type="bons9:FaultPenNAVAnsattIkkeFunnet"/>
+            <xsd:element name="hentNAVAnsattListe_faultPenNAVEnhetIkkeFunnet" type="bons0:FaultPenNAVEnhetIkkeFunnet"/>
+            <xsd:element name="hentNAVAnsattFagomradeListe_faultPenNAVAnsattIkkeFunnet" type="bons9:FaultPenNAVAnsattIkkeFunnet"/>
+            <xsd:element name="hentNAVAnsatt_faultPenNAVAnsattIkkeFunnet" type="bons9:FaultPenNAVAnsattIkkeFunnet"/>
+        </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="hentNAVAnsattListeRequestMsg">
+    <wsdl:part element="tns:hentNAVAnsattListe" name="hentNAVAnsattListeParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentNAVAnsattListeResponseMsg">
+    <wsdl:part element="tns:hentNAVAnsattListeResponse" name="hentNAVAnsattListeResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentNAVAnsattEnhetListeRequestMsg">
+    <wsdl:part element="tns:hentNAVAnsattEnhetListe" name="hentNAVAnsattEnhetListeParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentNAVAnsattEnhetListeResponseMsg">
+    <wsdl:part element="tns:hentNAVAnsattEnhetListeResponse" name="hentNAVAnsattEnhetListeResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentNAVAnsattFagomradeListeRequestMsg">
+    <wsdl:part element="tns:hentNAVAnsattFagomradeListe" name="hentNAVAnsattFagomradeListeParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentNAVAnsattFagomradeListeResponseMsg">
+    <wsdl:part element="tns:hentNAVAnsattFagomradeListeResponse" name="hentNAVAnsattFagomradeListeResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentNAVAnsattListe_faultPenGenerisksMsg">
+    <wsdl:part element="tns:hentNAVAnsattListe_faultPenGenerisks" name="faultPenGenerisks"/>
+  </wsdl:message>
+    <wsdl:message name="hentNAVAnsattEnhetListe_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentNAVAnsattEnhetListe_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="hentNAVAnsattFagomradeListe_faultPenGenerisksMsg">
+    <wsdl:part element="tns:hentNAVAnsattFagomradeListe_faultPenGenerisks" name="faultPenGenerisks"/>
+  </wsdl:message>
+    <wsdl:message name="hentNAVAnsattRequestMsg">
+    <wsdl:part element="tns:hentNAVAnsatt" name="hentNAVAnsattParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentNAVAnsattResponseMsg">
+    <wsdl:part element="tns:hentNAVAnsattResponse" name="hentNAVAnsattResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentNAVAnsatt_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentNAVAnsatt_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="hentNAVAnsattEnhetListe_faultPenNAVAnsattIkkeFunnetMsg">
+    <wsdl:part element="tns:hentNAVAnsattEnhetListe_faultPenNAVAnsattIkkeFunnet" name="faultPenNAVAnsattIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="hentNAVAnsattListe_faultPenNAVEnhetIkkeFunnetMsg">
+    <wsdl:part element="tns:hentNAVAnsattListe_faultPenNAVEnhetIkkeFunnet" name="faultPenNAVEnhetIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="hentNAVAnsattFagomradeListe_faultPenNAVAnsattIkkeFunnetMsg">
+    <wsdl:part element="tns:hentNAVAnsattFagomradeListe_faultPenNAVAnsattIkkeFunnet" name="faultPenNAVAnsattIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="hentNAVAnsatt_faultPenNAVAnsattIkkeFunnetMsg">
+    <wsdl:part element="tns:hentNAVAnsatt_faultPenNAVAnsattIkkeFunnet" name="faultPenNAVAnsattIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:portType name="PSAKNAVAnsatt">
+    <wsdl:operation name="hentNAVAnsattListe">
+      <wsdl:input message="tns:hentNAVAnsattListeRequestMsg" name="hentNAVAnsattListeRequest"/>
+      <wsdl:output message="tns:hentNAVAnsattListeResponseMsg" name="hentNAVAnsattListeResponse"/>
+      <wsdl:fault message="tns:hentNAVAnsattListe_faultPenGenerisksMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:hentNAVAnsattListe_faultPenNAVEnhetIkkeFunnetMsg" name="faultPenNAVEnhetIkkeFunnet"/>
+        </wsdl:operation>
+    <wsdl:operation name="hentNAVAnsattEnhetListe">
+      <wsdl:input message="tns:hentNAVAnsattEnhetListeRequestMsg" name="hentNAVAnsattEnhetListeRequest"/>
+      <wsdl:output message="tns:hentNAVAnsattEnhetListeResponseMsg" name="hentNAVAnsattEnhetListeResponse"/>
+      <wsdl:fault message="tns:hentNAVAnsattEnhetListe_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:hentNAVAnsattEnhetListe_faultPenNAVAnsattIkkeFunnetMsg" name="faultPenNAVAnsattIkkeFunnet"/>
+        </wsdl:operation>
+    <wsdl:operation name="hentNAVAnsattFagomradeListe">
+      <wsdl:input message="tns:hentNAVAnsattFagomradeListeRequestMsg" name="hentNAVAnsattFagomradeListeRequest"/>
+      <wsdl:output message="tns:hentNAVAnsattFagomradeListeResponseMsg" name="hentNAVAnsattFagomradeListeResponse"/>
+      <wsdl:fault message="tns:hentNAVAnsattFagomradeListe_faultPenGenerisksMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:hentNAVAnsattFagomradeListe_faultPenNAVAnsattIkkeFunnetMsg" name="faultPenNAVAnsattIkkeFunnet"/>
+        </wsdl:operation>
+        <wsdl:operation name="hentNAVAnsatt">
+      <wsdl:input message="tns:hentNAVAnsattRequestMsg" name="hentNAVAnsattRequest"/>
+      <wsdl:output message="tns:hentNAVAnsattResponseMsg" name="hentNAVAnsattResponse"/>
+      <wsdl:fault message="tns:hentNAVAnsatt_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:hentNAVAnsatt_faultPenNAVAnsattIkkeFunnetMsg" name="faultPenNAVAnsattIkkeFunnet"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

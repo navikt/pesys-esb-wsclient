@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/trekk" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo" targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/trekk">
+    <xsd:include schemaLocation="ASBOPenTrekk.xsd"/>
+    <xsd:complexType name="ASBOPenTrekktransaksjon">
+    <xsd:complexContent>
+      <xsd:extension base="bons0:ASBOPenTrekk">
+                <xsd:sequence>
+      <xsd:element minOccurs="0" name="kreditorOffnr" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="kreditorAvdelingsnr" nillable="true" type="xsd:int"/>
+      <xsd:element minOccurs="0" name="kreditorNavn" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="datoTrukket" type="xsd:date"/>
+      <xsd:element minOccurs="0" name="belopTrukket" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="fagomradeKode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="fagomradeBeskrivelse" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="bilagsnrUtbetaling" nillable="true" type="xsd:int"/>
+      <xsd:element minOccurs="0" name="statusUtbetalingKode" nillable="true" type="xsd:int"/>
+      <xsd:element minOccurs="0" name="behandlendeEnhetsId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="bostedEnhetsId" type="xsd:string"/>
+    </xsd:sequence>
+                  
+            </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

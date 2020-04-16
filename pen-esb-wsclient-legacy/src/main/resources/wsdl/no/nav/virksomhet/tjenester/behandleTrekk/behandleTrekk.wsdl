@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://nav.no/virksomhet/tjenester/behandleTrekk/v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="behandleTrekk" targetNamespace="http://nav.no/virksomhet/tjenester/behandleTrekk/v1">
+  <wsdl:types>
+    <xsd:schema xmlns:feil="http://nav.no/virksomhet/tjenester/behandleTrekk/feil/v1" xmlns:meldinger="http://nav.no/virksomhet/tjenester/behandleTrekk/meldinger/v1" targetNamespace="http://nav.no/virksomhet/tjenester/behandleTrekk/v1">
+      <xsd:import namespace="http://nav.no/virksomhet/tjenester/behandleTrekk/feil/v1" schemaLocation="feil/feil.xsd" />
+      <xsd:import namespace="http://nav.no/virksomhet/tjenester/behandleTrekk/meldinger/v1" schemaLocation="meldinger/meldinger.xsd" />
+      <xsd:element name="oppdaterAndreTrekk">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:OppdaterAndreTrekkRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="oppdaterAndreTrekkResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="oppdaterAndreTrekkdebitorFinnesIkke" type="feil:DebitorFinnesIkke" />
+      <xsd:element name="oppdaterAndreTrekkfagomradeIkkeGyldig" type="feil:FagomradeIkkeGyldig" />
+      <xsd:element name="oppdaterAndreTrekkfagomradeIkkeTillatt" type="feil:FagomradeIkkeTillatt" />
+      <xsd:element name="oppdaterAndreTrekkfeilregistreringIkkeOppdatert" type="feil:FeilregistreringIkkeOppdatert" />
+      <xsd:element name="oppdaterAndreTrekkkreditorFinnesIkke" type="feil:KreditorFinnesIkke" />
+      <xsd:element name="oppdaterAndreTrekkkreditorHarFlereAvdelinger" type="feil:KreditorHarFlereAvdelinger" />
+      <xsd:element name="oppdaterAndreTrekkminstEtUgyldigFagomrade" type="feil:MinstEtUgyldigFagomrade" />
+      <xsd:element name="oppdaterAndreTrekktrekkvedtakIkkeFunnet" type="feil:TrekkvedtakIkkeFunnet" />
+      <xsd:element name="opphorAndreTrekk">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:OpphorAndreTrekkRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="opphorAndreTrekkResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="opphorAndreTrekktrekkvedtakIkkeFunnet" type="feil:TrekkvedtakIkkeFunnet" />
+      <xsd:element name="opprettAndreTrekk">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:OpprettAndreTrekkRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="opprettAndreTrekkResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="response" type="meldinger:OpprettAndreTrekkResponse" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="opprettAndreTrekkdebitorFinnesIkke" type="feil:DebitorFinnesIkke" />
+      <xsd:element name="opprettAndreTrekkfagomradeIkkeGyldig" type="feil:FagomradeIkkeGyldig" />
+      <xsd:element name="opprettAndreTrekkfagomradeIkkeTillatt" type="feil:FagomradeIkkeTillatt" />
+      <xsd:element name="opprettAndreTrekkfeilregistreringIkkeOppdatert" type="feil:FeilregistreringIkkeOppdatert" />
+      <xsd:element name="opprettAndreTrekkkreditorFinnesIkke" type="feil:KreditorFinnesIkke" />
+      <xsd:element name="opprettAndreTrekkkreditorHarFlereAvdelinger" type="feil:KreditorHarFlereAvdelinger" />
+      <xsd:element name="opprettAndreTrekkminstEtUgyldigFagomrade" type="feil:MinstEtUgyldigFagomrade" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="opphorAndreTrekkRequest">
+    <wsdl:part name="parameters" element="tns:opphorAndreTrekk">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="oppdaterAndreTrekkResponse">
+    <wsdl:part name="parameters" element="tns:oppdaterAndreTrekkResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="opphorAndreTrekkResponse">
+    <wsdl:part name="parameters" element="tns:opphorAndreTrekkResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="opprettAndreTrekk_minstEtUgyldigFagomrade">
+    <wsdl:part name="minstEtUgyldigFagomrade" element="tns:opprettAndreTrekkminstEtUgyldigFagomrade">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="opprettAndreTrekk_kreditorHarFlereAvdelinger">
+    <wsdl:part name="kreditorHarFlereAvdelinger" element="tns:opprettAndreTrekkkreditorHarFlereAvdelinger">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="opprettAndreTrekk_kreditorFinnesIkke">
+    <wsdl:part name="kreditorFinnesIkke" element="tns:opprettAndreTrekkkreditorFinnesIkke">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="opprettAndreTrekk_feilregistreringIkkeOppdatert">
+    <wsdl:part name="feilregistreringIkkeOppdatert" element="tns:opprettAndreTrekkfeilregistreringIkkeOppdatert">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="opprettAndreTrekkResponse">
+    <wsdl:part name="parameters" element="tns:opprettAndreTrekkResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="opprettAndreTrekk_fagomradeIkkeGyldig">
+    <wsdl:part name="fagomradeIkkeGyldig" element="tns:opprettAndreTrekkfagomradeIkkeGyldig">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="opprettAndreTrekk_fagomradeIkkeTillatt">
+    <wsdl:part name="fagomradeIkkeTillatt" element="tns:opprettAndreTrekkfagomradeIkkeTillatt">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="opprettAndreTrekk_debitorFinnesIkke">
+    <wsdl:part name="debitorFinnesIkke" element="tns:opprettAndreTrekkdebitorFinnesIkke">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="opphorAndreTrekk_trekkvedtakIkkeFunnet">
+    <wsdl:part name="trekkvedtakIkkeFunnet" element="tns:opphorAndreTrekktrekkvedtakIkkeFunnet">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="oppdaterAndreTrekk_fagomradeIkkeGyldig">
+    <wsdl:part name="fagomradeIkkeGyldig" element="tns:oppdaterAndreTrekkfagomradeIkkeGyldig">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="oppdaterAndreTrekk_feilregistreringIkkeOppdatert">
+    <wsdl:part name="feilregistreringIkkeOppdatert" element="tns:oppdaterAndreTrekkfeilregistreringIkkeOppdatert">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="oppdaterAndreTrekk_fagomradeIkkeTillatt">
+    <wsdl:part name="fagomradeIkkeTillatt" element="tns:oppdaterAndreTrekkfagomradeIkkeTillatt">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="oppdaterAndreTrekkRequest">
+    <wsdl:part name="parameters" element="tns:oppdaterAndreTrekk">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="oppdaterAndreTrekk_kreditorHarFlereAvdelinger">
+    <wsdl:part name="kreditorHarFlereAvdelinger" element="tns:oppdaterAndreTrekkkreditorHarFlereAvdelinger">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="opprettAndreTrekkRequest">
+    <wsdl:part name="parameters" element="tns:opprettAndreTrekk">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="oppdaterAndreTrekk_kreditorFinnesIkke">
+    <wsdl:part name="kreditorFinnesIkke" element="tns:oppdaterAndreTrekkkreditorFinnesIkke">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="oppdaterAndreTrekk_debitorFinnesIkke">
+    <wsdl:part name="debitorFinnesIkke" element="tns:oppdaterAndreTrekkdebitorFinnesIkke">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="oppdaterAndreTrekk_trekkvedtakIkkeFunnet">
+    <wsdl:part name="trekkvedtakIkkeFunnet" element="tns:oppdaterAndreTrekktrekkvedtakIkkeFunnet">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="oppdaterAndreTrekk_minstEtUgyldigFagomrade">
+    <wsdl:part name="minstEtUgyldigFagomrade" element="tns:oppdaterAndreTrekkminstEtUgyldigFagomrade">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="BehandleTrekk">
+    <wsdl:operation name="oppdaterAndreTrekk">
+      <wsdl:input message="tns:oppdaterAndreTrekkRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:oppdaterAndreTrekkResponse">
+    </wsdl:output>
+      <wsdl:fault name="fagomradeIkkeGyldig" message="tns:oppdaterAndreTrekk_fagomradeIkkeGyldig">
+    </wsdl:fault>
+      <wsdl:fault name="fagomradeIkkeTillatt" message="tns:oppdaterAndreTrekk_fagomradeIkkeTillatt">
+    </wsdl:fault>
+      <wsdl:fault name="feilregistreringIkkeOppdatert" message="tns:oppdaterAndreTrekk_feilregistreringIkkeOppdatert">
+    </wsdl:fault>
+      <wsdl:fault name="kreditorFinnesIkke" message="tns:oppdaterAndreTrekk_kreditorFinnesIkke">
+    </wsdl:fault>
+      <wsdl:fault name="kreditorHarFlereAvdelinger" message="tns:oppdaterAndreTrekk_kreditorHarFlereAvdelinger">
+    </wsdl:fault>
+      <wsdl:fault name="minstEtUgyldigFagomrade" message="tns:oppdaterAndreTrekk_minstEtUgyldigFagomrade">
+    </wsdl:fault>
+      <wsdl:fault name="trekkvedtakIkkeFunnet" message="tns:oppdaterAndreTrekk_trekkvedtakIkkeFunnet">
+    </wsdl:fault>
+      <wsdl:fault name="debitorFinnesIkke" message="tns:oppdaterAndreTrekk_debitorFinnesIkke">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="opphorAndreTrekk">
+      <wsdl:input message="tns:opphorAndreTrekkRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:opphorAndreTrekkResponse">
+    </wsdl:output>
+      <wsdl:fault name="trekkvedtakIkkeFunnet" message="tns:opphorAndreTrekk_trekkvedtakIkkeFunnet">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="opprettAndreTrekk">
+      <wsdl:input message="tns:opprettAndreTrekkRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:opprettAndreTrekkResponse">
+    </wsdl:output>
+      <wsdl:fault name="kreditorHarFlereAvdelinger" message="tns:opprettAndreTrekk_kreditorHarFlereAvdelinger">
+    </wsdl:fault>
+      <wsdl:fault name="minstEtUgyldigFagomrade" message="tns:opprettAndreTrekk_minstEtUgyldigFagomrade">
+    </wsdl:fault>
+      <wsdl:fault name="feilregistreringIkkeOppdatert" message="tns:opprettAndreTrekk_feilregistreringIkkeOppdatert">
+    </wsdl:fault>
+      <wsdl:fault name="kreditorFinnesIkke" message="tns:opprettAndreTrekk_kreditorFinnesIkke">
+    </wsdl:fault>
+      <wsdl:fault name="fagomradeIkkeTillatt" message="tns:opprettAndreTrekk_fagomradeIkkeTillatt">
+    </wsdl:fault>
+      <wsdl:fault name="debitorFinnesIkke" message="tns:opprettAndreTrekk_debitorFinnesIkke">
+    </wsdl:fault>
+      <wsdl:fault name="fagomradeIkkeGyldig" message="tns:opprettAndreTrekk_fagomradeIkkeGyldig">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

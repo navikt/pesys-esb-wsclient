@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://nav.no/virksomhet/tjenester/behandleTrekk/meldinger/v1" version="1.0" xmlns:meldinger="http://nav.no/virksomhet/tjenester/behandleTrekk/meldinger/v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="Fagomrade">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="trekkgruppeKode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Hvis trekkgruppeKode er utfylt vil Trekkomponenten opprette fagområdene som hører til denne gruppen. Uttrekket er snapshot fra dagen designet ble skrevet, og oppdatert liste finnes hos baksystem.&lt;/p&gt;&lt;p &gt;Objekt som arver fra Kodetabell, representerer kode og dekode. Se under for gyldige koder og dekoder. Uttrekket er snapshot fra dagen designet ble skrevet, og oppdatert liste finnes hos baksystem.&lt;/p&gt;&lt;p &gt;&lt;/p&gt;&lt;table  border="1"&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;Kode&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Dekode&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;ALLE&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Alle fagområder&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;IT12&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Trekkgruppe for konverterte trekk&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;LIV&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Trekkgruppe for livsoppholdsytelser&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;PEAF&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Refusjonkrav i AFP&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;PEAP&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Refusjonskrav i alderspensjon&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;PEBP&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Refusjonskrav i barnepensjon&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;PEGJ&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Refusjonskrav i gjenlevendepensjon&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;PEGY&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Refusjonskrav i gammel yrke&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;PEKP&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Refusjonskrav i krigspensjon&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;PEN&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Pensjonytelser (alle, også eksterne)&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;PEPP&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Refusjonskrav i AFP Privat&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;PESY&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Psys-ytelser (NAVs egne)&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;PEUP&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Refusjonskrav i uførepensjon&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;SPK&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Trekkgruppe for SPK&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;BA&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Barnetrygd&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;KS&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Kontantstøtte&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;GS&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Gravferdstønad&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;TAMT&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Omfatter alle testfagområder&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;TGR1&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Omfatter TYM1&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;TGR2&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Alle faggrp, med tilhørende fagområder, frekvens MND&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;TGR3&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Ett fagområde fra alle faggrupper&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;TGR4&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Min ett fagomr pr faggrp, for motregning&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p &gt;&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="fagomradeKode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Fagområdet dette trekket skal gjelde for. Skal ikke være utfylt hvis trekkgruppeKode er utfylt.&lt;/p&gt;&lt;p &gt;Objekt som arver fra Kodetabell. Har i tillegg et sporingsfelt. Se under for gyldige koder og dekoder. Uttrekket er snapshot fra dagen designet ble skrevet, og oppdatert liste finnes hos baksystem.&lt;/p&gt;&lt;p &gt;&lt;/p&gt;&lt;table  border="1"&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;Kode&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Dekode&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;BIDRINKR&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Bidragsreskontro tilbakebetaling&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;BIDRRESK&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Bidragsreskontro forskudd/bidrag&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;BISYS&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Bidragssystemet&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;ERESEPT&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Apotek og bandasjistoppgjør&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;FRIKORT1&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;EGENANDELSREFUSJON FRIKORT TAK 1&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;INGENOPP&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Ikke trekkoppgjør&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;INTERNTR&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Interne trekk&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;IT05&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Barnetrygd&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;IT18&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Kontantstøtte&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;IT24&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Menerstatning Yrkesskade&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;IT26&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Tidsbegrenset uførestønad&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;IT27&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Supplerende stønad&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;IT28&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Grunnstønad&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;IT29&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Hjelpestønad&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;IT30BT&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Enslig forsørger - Barnetilsyn&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;IT30FL&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Enslig forsørger - Tilskott til flytting&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;IT30OG&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Enslig forsørger - Overgangsstønad&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;IT30UT&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Enslig forsørger - Utdanningsstønad&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;IT31&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Gjenlevendepensjon Virkemidler&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;IT32&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Familiepleier Virkemidler&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;ITGS&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Gravferdsstønad&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;KREDDISP&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Kreditoroppgjør(disponerer)&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;KREDREF&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Kreditoroppgjør(ordinær)&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MIT05&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Barnetrygd manuell postering&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MIT18&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Kontantstøtte manuell postering&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MIT24&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Menerstatning Yrkesskade - Manuell postering&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MIT28&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Grunnstønad - Manuell postering&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MIT29&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Hjelpestønad - Manuell postering&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MIT30BT&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Enslig forsørger - Barnetilsyn - Manuell&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MIT30FL&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Enslig forsørger - Tilskott til flyting - Manuell&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MIT30OG&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Enslig forsørger - Overgangsstønad - Manuell&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MIT30UT&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Enslig forsørger - Utdanningsstønad - Manuell&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MIT31&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Gjenlevendepensjon Virkemidler manuell postering&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MIT32&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Familiepleier Virkemidler manuell postering&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MITGS&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Gravferdstønad manuell postering&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MPENAFP&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Avtalefestet pensjon manuell postering&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MPENAFPP&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Avtalefestet pensjon i privat sektor manuell post&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MPENALLE&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Kontoplan pensjon&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MPENAND&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Andre utbetalinger&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;table  border="1"&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MPENAP&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Alderspensjon manuell postering&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MPENBAL&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Balansekonti&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MPENBP&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Barnepensjon manuell postering&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MPENDIV&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Diverse utbetalinger&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MPENFP&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Tidligere familiepleierpensjon manuell postering&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MPENGJ&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Gjenlevendepensjon manuell postering&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MPENGY&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Gammel yrkesskadepensjon manuell postering&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MPENKP&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Krigspensjon manuell postering&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MPENNODU&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Nødutbetaling&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MPENOSLO&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Oslo kommune tilleggspensjon manuell postering&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MPENPTS&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Pensjonstrygden for sjømenn manuell postering&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MPENSPK&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Statens pensjonskasse manuell postering&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MPENUP&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Uførepensjon manuell postering&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MSKATT&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Manuell opprydding skatt&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MSRALLE&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Kontoplan sentralisering regnskap&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MSRBAL&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Balansekonti sentralisering regnskap&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;MTREKK&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Manuell opprydding trekk&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;NEGKRED&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Negative trekkoppgjør&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;NEGSKATT&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Negative skatteoppgjør&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;NODUBA&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Nødutbetaling barnetrygd&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;table  border="1"&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;NODUKS&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Nødutbetaling kontantstøtte&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;PENAFP&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Avtalefestet pensjon&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;PENAFPP&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Avtalefestet pensjon i privat sektor&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;PENAP&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Alderspensjon&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;PENBP&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Barnepensjon&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;PENFP&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Tidligere familiepleierpensjon&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;PENGJ&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Gjenlevendepensjon&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;PENGY&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Gammel yrkesskadepensjon&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;PENKP&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Krigspensjon&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;PENOSLO&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Oslo kommune tilleggspensjon&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;PENPTS&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Pensjonstrygden for sjømenn&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;PENSPK&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Statens pensjonskasse&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;PENUP&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Uførepensjon&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;PREDATOR&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Interne trekk til TI&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;SAPO01&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Behandleroppgjør&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;SKATOPPG&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Skatteoppgjør&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;SVALSKAT&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Svalbardskatt&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;TBAFP&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;AFP ikke innkreving&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;TBAFPKR&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;AFP til innkreving&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;TBAFPP&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;AFP Privat ikke innkreving&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;TBAFPPKR&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;AFP Privat til innkreving&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;TBAP&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Alder ikke innkreving&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;TBAPKR&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Alder til innkreving&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;TBBP&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Barnepensjon ikke innkreving&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;TBBPKR&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Barnepensjon til innkreving&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;TBFP&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Familiepleier ikke innkreving&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;TBFPKR&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Familiepleier til innkreving&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;TBGJ&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Gjenlevende ikke innkreving&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;TBGJKR&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Gjenlevende til innkreving&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;TBGY&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Gammel Yrkesskade ikke innkreving&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;TBGYKR&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Gammel Yrkesskade til innkreving&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;TBKP&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Krigspensjon ikke innkreving&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;TBKPKR&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Krigspensjon til innkreving&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;TBKRAV&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Tilbakekrevingskrav&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;TBUP&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Uførepensjon ikke innkreving&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;TBUPKR&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;Uførepensjon til innkreving&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;TYD11&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;TYD_1_1&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;TYH11&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;TYH_1_1&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;TYM11&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;TYM_1_1&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;TYM12&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;TYM_1_2&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;table  border="1"&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;tr&gt;&lt;td &gt;&lt;p &gt;TYU11&lt;/p&gt;&lt;/td&gt;&lt;td &gt;&lt;p &gt;TYU_1_1&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p &gt;&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="erFeilregistrert" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Mulighet for å angi at fagområdet skal feilregistreres. Sett verdi True for å feilregistrere&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Satsperiode">
+    <xsd:annotation>
+      <xsd:documentation>&lt;p&gt;En person kan ikke ha mer enn 80 aktive satsperioder. Før nye trekkvedtak/perioder legges inn må i så fall noen av de eksisterende vedtakene/satsperiodene avsluttes/ugyldiggjøres.&lt;/p&gt;</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="fom" type="xsd:date">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Når satsen gjelder fra&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="tom" type="xsd:date">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Når satsen gjelder til&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="sats" type="xsd:double">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Trekkbeløpet, evt. trekkprosenten&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AndreTrekk">
+    <xsd:sequence>
+      <xsd:element name="ansvarligEnhetId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Hvilken enhet som er ansvarlig for oppfølging av trekkvedtaket. &lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="belopSaldotrekk" type="xsd:double">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Hvor mye som totalt skal trekkes på saldotrekk&lt;/p&gt;&lt;p&gt;Se trekkalternativKode, må være utfylt hvis saldotrekk&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="datoOppfolging" type="xsd:date">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Eventuell dato for oppfølging av trekket.&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="gyldigTom" type="xsd:date">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Siste dato trekket er gyldig.&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="debitorOffnr" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Fnr/orgnr til den det trekkes fra&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="trekkalternativKode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Om trekk er saldotrekk, fast beløp eller dagsats. Uttrekket er snapshot fra dagen designet ble skrevet, og oppdatert liste finnes hos baksystem.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;table border="1"&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;Kode&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Dekode&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;LOPD&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;løpende trekk dagsats&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;LOPM&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;løpende trekk månedssats&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;LOPP&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;løpende trekk prosentsats&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;SALD&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;saldotrekk dagsats&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;SALM&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;saldotrekk månedssats&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;table border="1"&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;SALP&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;saldotrekk prosentsats&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="trekktypeKode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Type trekk. Uttrekket er snapshot fra dagen designet ble skrevet, og oppdatert liste finnes hos baksystem.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;table border="1"&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;Kode&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Dekode&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;AKON&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Akontotrekk&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;BGEB&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Fastsettelsesgebyr&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;BIDR&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Bidragstrekk&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;BSKT&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Sosialkontor disponerer&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;DIVE&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Andre trekk, hjelpekto ved korreksjoner&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;DIV2&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Andre trekk, reduksjon skattegr.l.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;FAGF&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Fagforeningstrekk&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;FEIA&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Trekk feilutbetaling, AFP&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;FEIL&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Trekk feilutbetaling, legeoppgjør&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;FEIS&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Trekk feilutbetaling, stønad&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;FRIS&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Frivillig skattetrekk&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;FSKT&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Forskuddskatt&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;GEBY&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Gebyr (eksterne) (årskontroll ol.)&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;KRED&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Kreditortrekk (eksterne)&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;KRE2&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Kreditortrekk, reduksjon skattegr.l.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;MOTR&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Motregningstrekk&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;PSKT&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Påleggstrekk skatt&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;SALD&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Saldooverføring&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;SSKT&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Svaldbardskatt&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;TAVG&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Trygdeavgift&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;UTLT&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Trekk til utenlandsk mottaker&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;VEDE&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Vederlagstrekk&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="tssEksternId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Intern id av kreditor i samhandlerbasen TSS.&lt;/p&gt;&lt;p&gt;KreditorOffnr (og evt. kreditorAvdelingsnr) eller tssEksternId må være utfylt hvis trekktype er ULIK ”FRIS” – frivillig skattetrekk. Hvis trekktype = ”FRIS”, så skal ikke feltet være utfylt.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="kreditorKid" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;KID spesifisert på det enkelte trekkvedtak (pr skyldner). Feltene kreditorKid og kreditorRef kan ikke være utfylt samtidig.&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="kreditorRef" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Kreditors identifikasjon av trekket (saksknytning, fnr etc.). Feltene kreditorKid og kreditorRef kan ikke være utfylt samtidig.&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="prioritetFom" type="xsd:date">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Prioritet fra og med. Når trekket opprinnelig gjaldt fra (pga prioritering).&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element maxOccurs="unbounded" name="satsperiodeListe" type="meldinger:Satsperiode">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Se meldingsobjekt Satsperiode under. Må inneholde minst én satsperiode. Feltet satsperiode.sats må være prosent eller kronebeløp for alle satsperioder i denne listen. Om det er prosent eller kronebeløp styres av trekkalternativKode&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="fagomradeListe" type="meldinger:Fagomrade">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Se meldingsobjekt Fagomrade under. Trenger kun å sende inn endrede og nye fagområder&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="OppdaterAndreTrekkRequest">
+    <xsd:sequence>
+      <xsd:element name="trekkvedtakId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Intern ID på trekkvedtaket i Trekk komponenten.&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="andreTrekk" type="meldinger:AndreTrekk">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Felter på AndreTrekk. Både endrede og uendrede felter skal være satt. Se meldingsobjekt AndreTrekk under for felter.&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="OpphorAndreTrekkRequest">
+    <xsd:sequence>
+      <xsd:element name="trekkvedtakId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Intern ID på trekkvedtaket i Trekk komponenten.&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="opphorFom" type="xsd:date">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Dato for når trekkvedtaket skal opphøre fra&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="OpprettAndreTrekkRequest">
+    <xsd:sequence>
+      <xsd:element name="andreTrekk" type="meldinger:AndreTrekk">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Felter på AndreTrekk. Både endrede og uendrede felter skal være satt. Se meldingsobjekt AndreTrekk i kap 3.1.1.1 for felter.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Utvidelse">
+    <xsd:sequence>
+      <xsd:any maxOccurs="unbounded" minOccurs="0" namespace="##any"/>
+    </xsd:sequence>
+    <xsd:anyAttribute namespace="##any"/>
+  </xsd:complexType>
+  <xsd:complexType name="OpprettAndreTrekkUtvidelse1">
+    <xsd:complexContent>
+      <xsd:extension base="meldinger:Utvidelse"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="OpprettAndreTrekkResponse">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="trekkvedtakId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Id fra baksystemet for trekkvedtaket som ble opprettet.&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="utvidelse" type="meldinger:OpprettAndreTrekkUtvidelse1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

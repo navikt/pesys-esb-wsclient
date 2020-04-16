@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://nav.no/virksomhet/tjenester/utbetaling/v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="utbetaling" targetNamespace="http://nav.no/virksomhet/tjenester/utbetaling/v1">
+  <wsdl:types>
+    <xsd:schema xmlns:meldinger="http://nav.no/virksomhet/tjenester/utbetaling/meldinger/v1" targetNamespace="http://nav.no/virksomhet/tjenester/utbetaling/v1">
+      <xsd:import namespace="http://nav.no/virksomhet/tjenester/utbetaling/meldinger/v1" schemaLocation="meldinger/meldinger.xsd" />
+      <xsd:element name="hentUtbetalingListe">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:HentUtbetalingListeRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentUtbetalingListeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="response" type="meldinger:HentUtbetalingListeResponse" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="hentUtbetalingListeResponse">
+    <wsdl:part name="parameters" element="tns:hentUtbetalingListeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="hentUtbetalingListeRequest">
+    <wsdl:part name="parameters" element="tns:hentUtbetalingListe">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Utbetaling">
+    <wsdl:operation name="hentUtbetalingListe">
+<wsdl:documentation>&lt;p&gt;I input til baksystemet settes følgende parametre:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;'Y’ -&gt; VIS_MELD (Flagg for om utbetalingsmelding skal hentes eller ikke)&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;’URDATA’ -&gt; KODE_AKSJON&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Hentes fra kontekst -&gt; KILDE&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Hentes fra kontekst -&gt; BRUKERID&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;’308’ -&gt; LENGDE&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Dagens dato -&gt; DATO&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Nåværende tidspunkt -&gt; TID&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;’PPA1’ -&gt; ROUTINE_ID&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;’1’ -&gt; ROUTINE_ANTALL&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt; </wsdl:documentation>
+      <wsdl:input message="tns:hentUtbetalingListeRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:hentUtbetalingListeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

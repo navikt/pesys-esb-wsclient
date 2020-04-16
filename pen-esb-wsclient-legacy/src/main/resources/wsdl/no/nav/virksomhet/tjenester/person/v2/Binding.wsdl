@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="Binding" targetNamespace="http://nav.no/virksomhet/tjenester/person/v2/Binding/" xmlns:person="http://nav.no/virksomhet/tjenester/person/v2" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://nav.no/virksomhet/tjenester/person/v2/Binding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:import namespace="http://nav.no/virksomhet/tjenester/person/v2" location="../person.wsdl">
+    </wsdl:import>
+  <wsdl:binding name="PersonBinding" type="person:Person">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsaw:UsingAddressing/>
+    <wsdl:operation name="registrereAdresseForDodsbo">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="personHarUtlandsadresse">
+        <soap:fault name="personHarUtlandsadresse" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="kunneIkkeRegistrereAdresseForDodsbo">
+        <soap:fault name="kunneIkkeRegistrereAdresseForDodsbo" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="hentPerson">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="personIkkeFunnet">
+        <soap:fault name="personIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="hentUtenlandskIdentitetListe">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="personIkkeFunnet">
+        <soap:fault name="personIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Person">
+    <wsdl:port name="PersonPort" binding="tns:PersonBinding">
+      <soap:address location="http://localhost:9080/nav-tjeneste-person_v2Web/sca/PersonWSEXP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

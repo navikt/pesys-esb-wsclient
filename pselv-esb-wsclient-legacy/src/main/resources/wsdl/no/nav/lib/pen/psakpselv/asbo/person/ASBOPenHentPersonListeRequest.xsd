@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/tjenestepensjon" targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person">
+    <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/tjenestepensjon" schemaLocation="../tjenestepensjon/ASBOPenFodselsnummer.xsd"/>
+    <xsd:complexType name="ASBOPenHentPersonListeRequest">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="fnrListe" type="bons0:ASBOPenFodselsnummer"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/samhandler">
+  <xsd:complexType name="ASBOPenEksternTilkobling">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="eksternTSSId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="tjenesteKode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="tjenesteId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="tjenesteNavn" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="statusKode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="aktivertFom" type="xsd:date"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

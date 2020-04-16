@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/navorgenhet" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/navorgenhet" xmlns:bons3="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:tns="http://nav-cons-pen-pen-navorgenhet/no/nav/inf/PENNAVOrgEnhet" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PENNAVOrgEnhet" targetNamespace="http://nav-cons-pen-pen-navorgenhet/no/nav/inf/PENNAVOrgEnhet">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://nav-cons-pen-pen-navorgenhet/no/nav/inf/PENNAVOrgEnhet" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/navorgenhet" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/navorgenhet" xmlns:bons3="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:tns="http://nav-cons-pen-pen-navorgenhet/no/nav/inf/PENNAVOrgEnhet" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/navorgenhet" schemaLocation="../lib/pen/psakpselv/fault/navorgenhet/FaultPenPersonManglerEnhet.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/navorgenhet" schemaLocation="../lib/pen/psakpselv/asbo/navorgenhet/ASBOPenHentForvaltningsenhetTilPersonListeRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/navorgenhet" schemaLocation="../lib/pen/psakpselv/asbo/navorgenhet/ASBOPenHentSpesialEnhetTilPersonRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/navorgenhet" schemaLocation="../lib/pen/psakpselv/asbo/navorgenhet/ASBOPenNAVEnhet.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" schemaLocation="../lib/pen/psakpselv/fault/FaultPenPersonIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" schemaLocation="../lib/pen/psakpselv/fault/FaultPenGenerisk.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/navorgenhet" schemaLocation="../lib/pen/psakpselv/fault/navorgenhet/FaultPenNAVEnhetIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/navorgenhet" schemaLocation="../lib/pen/psakpselv/asbo/navorgenhet/ASBOPenNAVEnhetListe.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/navorgenhet" schemaLocation="../lib/pen/psakpselv/asbo/navorgenhet/ASBOPenHentNAVEnhetListeRequest.xsd"/>
+      <xsd:element name="hentNAVEnhet">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentNAVEnhetRequest" nillable="true" type="bons1:ASBOPenNAVEnhet"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentNAVEnhetResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentNAVEnhetResponse" nillable="true" type="bons1:ASBOPenNAVEnhet"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentNAVEnhet_faultPenNAVEnhetIkkeFunnet" type="bons2:FaultPenNAVEnhetIkkeFunnet"/>
+      <xsd:element name="hentNAVEnhet_faultPenGenerisk" type="bons3:FaultPenGenerisk"/>
+      <xsd:element name="hentSpesialenhetTilPerson">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentSpesialenhetTilPersonRequest" nillable="true" type="bons1:ASBOPenHentSpesialEnhetTilPersonRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentSpesialenhetTilPersonResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentSpesialenhetTilPersonResponse" nillable="true" type="bons1:ASBOPenNAVEnhetListe"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentSpesialenhetTilPerson_faultPenPersonIkkeFunnet" type="bons3:FaultPenPersonIkkeFunnet"/>
+      <xsd:element name="hentSpesialenhetTilPerson_faultPenNAVEnhetIkkeFunnet" type="bons2:FaultPenNAVEnhetIkkeFunnet"/>
+      <xsd:element name="hentSpesialenhetTilPerson_faultPenGenerisk" type="bons3:FaultPenGenerisk"/>
+            <xsd:element name="hentNAVEnhetListe">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentNAVEnhetListeRequest" nillable="true" type="bons1:ASBOPenHentNAVEnhetListeRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentNAVEnhetListeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentNAVEnhetListeResponse" nillable="true" type="bons1:ASBOPenNAVEnhetListe"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentForvaltningsenhetTilPersonListe">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentForvaltningsenhetTilPersonListeRequest" nillable="true" type="bons1:ASBOPenHentForvaltningsenhetTilPersonListeRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentForvaltningsenhetTilPersonListeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentForvaltningsenhetTilPersonListeResponse" nillable="true" type="bons1:ASBOPenNAVEnhetListe"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="FaultPenPersonManglerEnhet_element" nillable="true" type="bons2:FaultPenPersonManglerEnhet"/>
+        </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="hentNAVEnhetRequestMsg">
+    <wsdl:part element="tns:hentNAVEnhet" name="hentNAVEnhetParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentNAVEnhetResponseMsg">
+    <wsdl:part element="tns:hentNAVEnhetResponse" name="hentNAVEnhetResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentNAVEnhet_faultPenNAVEnhetIkkeFunnetMsg">
+    <wsdl:part element="tns:hentNAVEnhet_faultPenNAVEnhetIkkeFunnet" name="faultPenNAVEnhetIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="hentNAVEnhet_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentNAVEnhet_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="hentSpesialenhetTilPersonRequestMsg">
+    <wsdl:part element="tns:hentSpesialenhetTilPerson" name="hentSpesialenhetTilPersonParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentSpesialenhetTilPersonResponseMsg">
+    <wsdl:part element="tns:hentSpesialenhetTilPersonResponse" name="hentSpesialenhetTilPersonResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentSpesialenhetTilPerson_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:hentSpesialenhetTilPerson_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="hentSpesialenhetTilPerson_faultPenNAVEnhetIkkeFunnetMsg">
+    <wsdl:part element="tns:hentSpesialenhetTilPerson_faultPenNAVEnhetIkkeFunnet" name="faultPenNAVEnhetIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="hentSpesialenhetTilPerson_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentSpesialenhetTilPerson_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="hentNAVEnhetListeRequestMsg">
+    <wsdl:part element="tns:hentNAVEnhetListe" name="hentNAVEnhetListeParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentNAVEnhetListeResponseMsg">
+    <wsdl:part element="tns:hentNAVEnhetListeResponse" name="hentNAVEnhetListeResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentNAVEnhetListe_faultPenNAVEnhetIkkeFunnetMsg">
+    <wsdl:part element="tns:hentNAVEnhet_faultPenNAVEnhetIkkeFunnet" name="faultPenNAVEnhetIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="hentNAVEnhetListe_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentNAVEnhet_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="hentForvaltningsenhetTilPersonListeRequestMsg">
+    <wsdl:part element="tns:hentForvaltningsenhetTilPersonListe" name="hentForvaltningsenhetTilPersonListeParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentForvaltningsenhetTilPersonListeResponseMsg">
+    <wsdl:part element="tns:hentForvaltningsenhetTilPersonListeResponse" name="hentForvaltningsenhetTilPersonListeResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentForvaltningsenhetTilPersonListe_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:hentSpesialenhetTilPerson_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="hentForvaltningsenhetTilPersonListe_faultPenNAVEnhetIkkeFunnetMsg">
+    <wsdl:part element="tns:hentNAVEnhet_faultPenNAVEnhetIkkeFunnet" name="faultPenNAVEnhetIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="hentForvaltningsenhetTilPersonListe_faultPenPersonManglerEnhetMsg">
+    <wsdl:part element="tns:FaultPenPersonManglerEnhet_element" name="faultPenPersonManglerEnhet"/>
+  </wsdl:message>
+    <wsdl:portType name="PENNAVOrgEnhet">
+    <wsdl:operation name="hentNAVEnhet">
+      <wsdl:input message="tns:hentNAVEnhetRequestMsg" name="hentNAVEnhetRequest"/>
+      <wsdl:output message="tns:hentNAVEnhetResponseMsg" name="hentNAVEnhetResponse"/>
+      <wsdl:fault message="tns:hentNAVEnhet_faultPenNAVEnhetIkkeFunnetMsg" name="faultPenNAVEnhetIkkeFunnet"/>
+      <wsdl:fault message="tns:hentNAVEnhet_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+    </wsdl:operation>
+    <wsdl:operation name="hentSpesialenhetTilPerson">
+      <wsdl:input message="tns:hentSpesialenhetTilPersonRequestMsg" name="hentSpesialenhetTilPersonRequest"/>
+      <wsdl:output message="tns:hentSpesialenhetTilPersonResponseMsg" name="hentSpesialenhetTilPersonResponse"/>
+      <wsdl:fault message="tns:hentSpesialenhetTilPerson_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+      <wsdl:fault message="tns:hentSpesialenhetTilPerson_faultPenNAVEnhetIkkeFunnetMsg" name="faultPenNAVEnhetIkkeFunnet"/>
+      <wsdl:fault message="tns:hentSpesialenhetTilPerson_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+    </wsdl:operation>
+        <wsdl:operation name="hentNAVEnhetListe">
+      <wsdl:input message="tns:hentNAVEnhetListeRequestMsg" name="hentNAVEnhetListeRequest"/>
+      <wsdl:output message="tns:hentNAVEnhetListeResponseMsg" name="hentNAVEnhetListeResponse"/>
+      <wsdl:fault message="tns:hentNAVEnhetListe_faultPenNAVEnhetIkkeFunnetMsg" name="faultPenNAVEnhetIkkeFunnet"/>
+      <wsdl:fault message="tns:hentNAVEnhetListe_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+    </wsdl:operation>
+        <wsdl:operation name="hentForvaltningsenhetTilPersonListe">
+      <wsdl:input message="tns:hentForvaltningsenhetTilPersonListeRequestMsg" name="hentForvaltningsenhetTilPersonListeRequest"/>
+      <wsdl:output message="tns:hentForvaltningsenhetTilPersonListeResponseMsg" name="hentForvaltningsenhetTilPersonListeResponse"/>
+      <wsdl:fault message="tns:hentForvaltningsenhetTilPersonListe_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+      <wsdl:fault message="tns:hentForvaltningsenhetTilPersonListe_faultPenNAVEnhetIkkeFunnetMsg" name="faultPenNAVEnhetIkkeFunnet"/>
+      <wsdl:fault message="tns:hentForvaltningsenhetTilPersonListe_faultPenPersonManglerEnhetMsg" name="faultPenPersonManglerEnhet"/>
+    </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

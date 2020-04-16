@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="PSAKInntektWSEXP_PSAKInntektHttp_Service" targetNamespace="http://nav-cons-pen-psak-inntekt/no/nav/inf/Binding" xmlns:Port_0="http://nav-cons-pen-psak-inntekt/no/nav/inf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://nav-cons-pen-psak-inntekt/no/nav/inf/Binding">
+  <wsdl:import namespace="http://nav-cons-pen-psak-inntekt/no/nav/inf" location="no/nav/inf/PSAKInntekt.wsdl">
+    </wsdl:import>
+  <wsdl:binding name="PSAKInntektWSEXP_PSAKInntektHttpBinding" type="Port_0:PSAKInntekt">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="opprettBrukerOppgittInntekt">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="opprettBrukerOppgittInntektRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="opprettBrukerOppgittInntektResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenInntektAlleredeRegistrert">
+        <soap:fault name="faultPenInntektAlleredeRegistrert" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="hentInntektListe">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="hentInntektListeRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hentInntektListeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="hentDetaljertInntekt">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="hentDetaljertInntektRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hentDetaljertInntektResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenInntektIkkeFunnet">
+        <soap:fault name="faultPenInntektIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="slettBrukerOppgittInntekt">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="slettBrukerOppgittInntektRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="slettBrukerOppgittInntektResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenFeilKilde">
+        <soap:fault name="faultPenFeilKilde" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenInntektIkkeFunnet">
+        <soap:fault name="faultPenInntektIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PSAKInntektWSEXP_PSAKInntektHttpService">
+    <wsdl:port name="PSAKInntektWSEXP_PSAKInntektHttpPort" binding="this:PSAKInntektWSEXP_PSAKInntektHttpBinding">
+      <soap:address location="http://localhost:9080/nav-cons-pen-psak-inntektWeb/sca/PSAKInntektWSEXP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

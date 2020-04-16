@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:bons0="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/brukerprofil" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/brukerprofil">
+    <xsd:include schemaLocation="ASBOPenEpostadresse.xsd"/>
+    <xsd:complexType name="ASBOPenEpostmelding">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="fra" type="xsd:string"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="tilListe" type="bons0:ASBOPenEpostadresse"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="kopiListe" type="bons0:ASBOPenEpostadresse"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="blindkopiListe" type="bons0:ASBOPenEpostadresse"/>
+      <xsd:element minOccurs="0" name="emne" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="melding" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="erHtml" type="xsd:boolean"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

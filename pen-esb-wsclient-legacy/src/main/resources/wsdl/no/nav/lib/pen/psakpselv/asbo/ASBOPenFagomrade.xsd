@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo" targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo">
+    <xsd:include schemaLocation="ASBOPenEndringsInfo.xsd"/>
+    <xsd:complexType name="ASBOPenFagomrade">
+    <xsd:sequence>
+            <xsd:element minOccurs="0" name="trekkgruppeKode" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="fagomradeKode" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="fagomradeBeskrivelse" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="gyldig" type="xsd:boolean"/>
+            <xsd:element minOccurs="0" name="endringsInfo" type="bons0:ASBOPenEndringsInfo"/>
+        </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

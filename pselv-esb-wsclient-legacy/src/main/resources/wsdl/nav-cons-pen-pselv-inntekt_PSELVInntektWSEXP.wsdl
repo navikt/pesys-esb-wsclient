@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="PSELVInntektWSEXP_PSELVInntektHttp_Service" targetNamespace="http://nav-cons-pen-pselv-inntekt/no/nav/inf/Binding" xmlns:Port_0="http://nav-cons-pen-pselv-inntekt/no/nav/inf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://nav-cons-pen-pselv-inntekt/no/nav/inf/Binding">
+  <wsdl:import namespace="http://nav-cons-pen-pselv-inntekt/no/nav/inf" location="no/nav/inf/PSELVInntekt.wsdl">
+    </wsdl:import>
+  <wsdl:binding name="PSELVInntektWSEXP_PSELVInntektHttpBinding" type="Port_0:PSELVInntekt">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="hentInntektListe">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="hentInntektListeRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hentInntektListeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="opprettBrukerOppgittInntekt">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="opprettBrukerOppgittInntektRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="opprettBrukerOppgittInntektResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenInntektAlleredeRegistrert">
+        <soap:fault name="faultPenInntektAlleredeRegistrert" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PSELVInntektWSEXP_PSELVInntektHttpService">
+    <wsdl:port name="PSELVInntektWSEXP_PSELVInntektHttpPort" binding="this:PSELVInntektWSEXP_PSELVInntektHttpBinding">
+      <soap:address location="http://localhost:9080/nav-cons-pen-pselv-inntektWeb/sca/PSELVInntektWSEXP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

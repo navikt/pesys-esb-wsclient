@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="Binding" targetNamespace="http://nav.no/virksomhet/tjenester/arkiv/journalbehandling/v1/Binding" xmlns:journal="http://nav.no/virksomhet/tjenester/arkiv/journalbehandling/v1" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://nav.no/virksomhet/tjenester/arkiv/journalbehandling/v1/Binding" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:import namespace="http://nav.no/virksomhet/tjenester/arkiv/journalbehandling/v1" location="../journalbehandling.wsdl">
+    </wsdl:import>
+  <wsdl:binding name="JournalbehandlingBinding" type="journal:Journalbehandling">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsaw:UsingAddressing/>
+    <wsdl:operation name="lagreDokumentOgOpprettJournalpost">
+      <soap:operation soapAction="http://nav.no/virksomhet/tjenester/arkiv/journalbehandling/v1/Journalbehandling/lagreDokumentOgOpprettJournalpostRequest"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ugyldigDokumentInfoId">
+        <soap:fault name="ugyldigDokumentInfoId" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="ugyldigJournalstatus">
+        <soap:fault name="ugyldigJournalstatus" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="oppdaterJournal">
+      <soap:operation soapAction="http://nav.no/virksomhet/tjenester/arkiv/journalbehandling/v1/Journalbehandling/oppdaterJournalRequest"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ugyldigDokumentInfoId">
+        <soap:fault name="ugyldigDokumentInfoId" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="ugyldigStatusovergang">
+        <soap:fault name="ugyldigStatusovergang" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="ugyldigJournalpostId">
+        <soap:fault name="ugyldigJournalpostId" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ferdigstillRedigerbartDokumentOgJournalpost">
+      <soap:operation soapAction="http://nav.no/virksomhet/tjenester/arkiv/journalbehandling/v1/Journalbehandling/ferdigstillRedigerbartDokumentOgJournalpostRequest"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ikkeFerdigstiltVedlegg">
+        <soap:fault name="ikkeFerdigstiltVedlegg" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="ugyldigJournalstatus">
+        <soap:fault name="ugyldigJournalstatus" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="gjenbrukRedigerbartDokument">
+      <soap:operation soapAction="http://nav.no/virksomhet/tjenester/arkiv/journalbehandling/v1/Journalbehandling/gjenbrukRedigerbartDokumentRequest"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ugyldigJournalstatus">
+        <soap:fault name="ugyldigJournalstatus" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="lagreRedigerbartDokumentOgOpprettJournalpost">
+      <soap:operation soapAction="http://nav.no/virksomhet/tjenester/arkiv/journalbehandling/v1/Journalbehandling/lagreRedigerbartDokumentOgOpprettJournalpostRequest"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mellomlagreRedigerbartDokument">
+      <soap:operation soapAction="http://nav.no/virksomhet/tjenester/arkiv/journalbehandling/v1/Journalbehandling/mellomlagreRedigerbartDokumentRequest"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ugyldigJournalstatus">
+        <soap:fault name="ugyldigJournalstatus" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="kopierDokumentSomRedigerbartVedlegg">
+      <soap:operation soapAction="http://nav.no/virksomhet/tjenester/arkiv/journalbehandling/v1/Journalbehandling/kopierDokumentSomRedigerbartVedleggRequest"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ugyldigJournalstatusPaJournalpostDetKopieresFra">
+        <soap:fault name="ugyldigJournalstatusPaJournalpostDetKopieresFra" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="ugyldigJournalstatusPaJournalpostDetKopieresTil">
+        <soap:fault name="ugyldigJournalstatusPaJournalpostDetKopieresTil" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ferdigstillRedigerbartVedlegg">
+      <soap:operation soapAction="http://nav.no/virksomhet/tjenester/arkiv/journalbehandling/v1/Journalbehandling/ferdigstillRedigerbartVedleggRequest"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ugyldigJournalstatus">
+        <soap:fault name="ugyldigJournalstatus" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="slettVedleggFraUtgaendeJournalpost">
+      <soap:operation soapAction="http://nav.no/virksomhet/tjenester/arkiv/journalbehandling/v1/Journalbehandling/slettVedleggFraUtgaendeJournalpostRequest"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ugyldigJournalstatus">
+        <soap:fault name="ugyldigJournalstatus" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="avbrytJournalpost">
+      <soap:operation soapAction="http://nav.no/virksomhet/tjenester/arkiv/journalbehandling/v1/Journalbehandling/avbrytJournalpostRequest"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="journalpostUnderDistribusjonEllerDistribuert">
+        <soap:fault name="journalpostUnderDistribusjonEllerDistribuert" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="avvikshandterOgDelDokument">
+      <soap:operation soapAction="http://nav.no/virksomhet/tjenester/arkiv/journalbehandling/v1/Journalbehandling/avvikshandterOgDelDokumentRequest"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ugyldigInput">
+        <soap:fault name="ugyldigInput" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ping">
+      <soap:operation soapAction="http://nav.no/virksomhet/tjenester/arkiv/journalbehandling/v1/Journalbehandling/pingRequest"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Journalbehandling">
+    <wsdl:port name="JournalbehandlingPort" binding="tns:JournalbehandlingBinding">
+      <soap:address location="http://localhost:9080/nav-tjeneste-journalbehandling_v1Web/sca/JournalbehandlingWSEXP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

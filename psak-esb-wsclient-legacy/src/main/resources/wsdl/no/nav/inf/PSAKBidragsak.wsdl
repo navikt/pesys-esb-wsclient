@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/bidragsak" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:tns="http://nav-cons-pen-psak-bidragsak/no/nav/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PSAKBidragsak" targetNamespace="http://nav-cons-pen-psak-bidragsak/no/nav/inf">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://nav-cons-pen-psak-bidragsak/no/nav/inf" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/bidragsak" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:tns="http://nav-cons-pen-psak-bidragsak/no/nav/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" schemaLocation="../lib/pen/psakpselv/fault/FaultPenGenerisk.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/bidragsak" schemaLocation="../lib/pen/psakpselv/asbo/bidragsak/ASBOPenHentForskuddRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/bidragsak" schemaLocation="../lib/pen/psakpselv/asbo/bidragsak/ASBOPenForskuddSak.xsd"/>
+            <xsd:element name="hentForskudd">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentForskuddRequest" nillable="true" type="bons1:ASBOPenHentForskuddRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentForskuddResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentForskuddResponse" nillable="true" type="bons1:ASBOPenForskuddSak"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentForskudd_faultPenGenerisk" type="bons2:FaultPenGenerisk"/>
+    </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="hentForskuddRequestMsg">
+    <wsdl:part element="tns:hentForskudd" name="hentForskuddParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentForskuddResponseMsg">
+    <wsdl:part element="tns:hentForskuddResponse" name="hentForskuddResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentForskudd_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentForskudd_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:portType name="PSAKBidragsak">
+    <wsdl:operation name="hentForskudd">
+      <wsdl:input message="tns:hentForskuddRequestMsg" name="hentForskuddRequest"/>
+      <wsdl:output message="tns:hentForskuddResponseMsg" name="hentForskuddResponse"/>
+      <wsdl:fault message="tns:hentForskudd_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

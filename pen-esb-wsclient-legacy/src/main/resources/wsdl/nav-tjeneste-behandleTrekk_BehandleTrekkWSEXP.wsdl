@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="BehandleTrekkWSEXP_BehandleTrekkHttp_Service" targetNamespace="http://nav.no/virksomhet/tjenester/behandleTrekk/v1/Binding" xmlns:Port_0="http://nav.no/virksomhet/tjenester/behandleTrekk/v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://nav.no/virksomhet/tjenester/behandleTrekk/v1/Binding">
+  <wsdl:import namespace="http://nav.no/virksomhet/tjenester/behandleTrekk/v1" location="no/nav/virksomhet/tjenester/behandleTrekk/behandleTrekk.wsdl">
+    </wsdl:import>
+  <wsdl:binding name="BehandleTrekkWSEXP_BehandleTrekkHttpBinding" type="Port_0:BehandleTrekk">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="oppdaterAndreTrekk">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="minstEtUgyldigFagomrade">
+        <soap:fault name="minstEtUgyldigFagomrade" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="debitorFinnesIkke">
+        <soap:fault name="debitorFinnesIkke" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="kreditorHarFlereAvdelinger">
+        <soap:fault name="kreditorHarFlereAvdelinger" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="kreditorFinnesIkke">
+        <soap:fault name="kreditorFinnesIkke" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="feilregistreringIkkeOppdatert">
+        <soap:fault name="feilregistreringIkkeOppdatert" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="trekkvedtakIkkeFunnet">
+        <soap:fault name="trekkvedtakIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="fagomradeIkkeTillatt">
+        <soap:fault name="fagomradeIkkeTillatt" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="fagomradeIkkeGyldig">
+        <soap:fault name="fagomradeIkkeGyldig" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="opphorAndreTrekk">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="trekkvedtakIkkeFunnet">
+        <soap:fault name="trekkvedtakIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="opprettAndreTrekk">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="minstEtUgyldigFagomrade">
+        <soap:fault name="minstEtUgyldigFagomrade" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="debitorFinnesIkke">
+        <soap:fault name="debitorFinnesIkke" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="kreditorHarFlereAvdelinger">
+        <soap:fault name="kreditorHarFlereAvdelinger" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="kreditorFinnesIkke">
+        <soap:fault name="kreditorFinnesIkke" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="feilregistreringIkkeOppdatert">
+        <soap:fault name="feilregistreringIkkeOppdatert" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="fagomradeIkkeTillatt">
+        <soap:fault name="fagomradeIkkeTillatt" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="fagomradeIkkeGyldig">
+        <soap:fault name="fagomradeIkkeGyldig" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BehandleTrekkWSEXP_BehandleTrekkHttpService">
+    <wsdl:port name="BehandleTrekkWSEXP_BehandleTrekkHttpPort" binding="this:BehandleTrekkWSEXP_BehandleTrekkHttpBinding">
+      <soap:address location="http://localhost:9080/nav-tjeneste-behandleTrekk_v1Web/sca/BehandleTrekkWSEXP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

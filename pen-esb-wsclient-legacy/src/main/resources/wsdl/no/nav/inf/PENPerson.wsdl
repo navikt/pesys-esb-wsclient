@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:tns="http://nav-cons-pen-pen-person/no/nav/inf/PENPerson" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PENPerson" targetNamespace="http://nav-cons-pen-pen-person/no/nav/inf/PENPerson">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://nav-cons-pen-pen-person/no/nav/inf/PENPerson" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:tns="http://nav-cons-pen-pen-person/no/nav/inf/PENPerson" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person" schemaLocation="../lib/pen/psakpselv/asbo/person/ASBOPenFinnAdresseListeResponse.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person" schemaLocation="../lib/pen/psakpselv/asbo/person/ASBOPenFinnAdresseListeRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" schemaLocation="../lib/pen/psakpselv/fault/FaultPenPersonIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person" schemaLocation="../lib/pen/psakpselv/asbo/person/ASBOPenHentPersonRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person" schemaLocation="../lib/pen/psakpselv/asbo/person/ASBOPenPerson.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person" schemaLocation="../lib/pen/psakpselv/asbo/person/ASBOPenHentHistorikkRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person" schemaLocation="../lib/pen/psakpselv/asbo/person/ASBOPenHentFamilierelasjonerRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person" schemaLocation="../lib/pen/psakpselv/asbo/person/ASBOPenHentFamilierelasjonsHistorikkRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" schemaLocation="../lib/pen/psakpselv/fault/FaultPenGenerisk.xsd"/>
+      <xsd:element name="hentPerson">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentPersonRequest" nillable="true" type="bons1:ASBOPenHentPersonRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentPersonResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentPersonResponse" nillable="true" type="bons1:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentPerson_faultPenGenerisk" type="bons2:FaultPenGenerisk"/>
+      <xsd:element name="hentPerson_faultPenPersonIkkeFunnet" type="bons2:FaultPenPersonIkkeFunnet"/>
+      <xsd:element name="hentHistorikk">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentHistorikkRequest" nillable="true" type="bons1:ASBOPenHentHistorikkRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentHistorikkResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentHistorikkResponse" nillable="true" type="bons1:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentHistorikk_faultPenGenerisk" type="bons2:FaultPenGenerisk"/>
+      <xsd:element name="hentHistorikk_faultPenPersonIkkeFunnet" type="bons2:FaultPenPersonIkkeFunnet"/>
+      <xsd:element name="hentFamilierelasjoner">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentFamilierelasjonerRequest" nillable="true" type="bons1:ASBOPenHentFamilierelasjonerRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentFamilierelasjonerResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentFamilierelasjonerResponse" nillable="true" type="bons1:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentFamilierelasjoner_faultPenGenerisk" type="bons2:FaultPenGenerisk"/>
+      <xsd:element name="hentFamilierelasjoner_faultPenPersonIkkeFunnet" type="bons2:FaultPenPersonIkkeFunnet"/>
+            <xsd:element name="hentFamilierelasjonsHistorikk">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentFamilierelasjonsHistorikkRequest" nillable="true" type="bons1:ASBOPenHentFamilierelasjonsHistorikkRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentFamilierelasjonsHistorikkResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentFamilierelasjonsHistorikkResponse" nillable="true" type="bons1:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentFamilierelasjonsHistorikk_faultPenGenerisk" type="bons2:FaultPenGenerisk"/>
+            <xsd:element name="hentFamilierelasjonsHistorikk_faultPenPersonIkkeFunnet" type="bons2:FaultPenPersonIkkeFunnet"/>
+            <xsd:element name="finnAdresseListe">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="finnAdresseListeRequest" nillable="true" type="bons1:ASBOPenFinnAdresseListeRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="finnAdresseListeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="finnAdresseListeResponse" nillable="true" type="bons1:ASBOPenFinnAdresseListeResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentPersonUtland">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentPersonUtlandRequest" nillable="true" type="bons1:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentPersonUtlandResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentPersonUtlandResponse" nillable="true" type="bons1:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+        </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="hentPersonRequestMsg">
+    <wsdl:part element="tns:hentPerson" name="hentPersonParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonResponseMsg">
+    <wsdl:part element="tns:hentPersonResponse" name="hentPersonResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentPerson_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentPerson_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="hentPerson_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:hentPerson_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="hentHistorikkRequestMsg">
+    <wsdl:part element="tns:hentHistorikk" name="hentHistorikkParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentHistorikkResponseMsg">
+    <wsdl:part element="tns:hentHistorikkResponse" name="hentHistorikkResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentHistorikk_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentHistorikk_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="hentHistorikk_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:hentHistorikk_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="hentFamilierelasjonerRequestMsg">
+    <wsdl:part element="tns:hentFamilierelasjoner" name="hentFamilierelasjonerParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentFamilierelasjonerResponseMsg">
+    <wsdl:part element="tns:hentFamilierelasjonerResponse" name="hentFamilierelasjonerResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentFamilierelasjoner_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentFamilierelasjoner_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="hentFamilierelasjoner_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:hentFamilierelasjoner_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="hentFamilierelasjonsHistorikkRequestMsg">
+    <wsdl:part element="tns:hentFamilierelasjonsHistorikk" name="hentFamilierelasjonsHistorikkParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentFamilierelasjonsHistorikkResponseMsg">
+    <wsdl:part element="tns:hentFamilierelasjonsHistorikkResponse" name="hentFamilierelasjonsHistorikkResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentFamilierelasjonsHistorikk_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentFamilierelasjonsHistorikk_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="hentFamilierelasjonsHistorikk_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:hentFamilierelasjonsHistorikk_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="finnAdresseListeRequestMsg">
+    <wsdl:part element="tns:finnAdresseListe" name="finnAdresseListeParameters"/>
+  </wsdl:message>
+    <wsdl:message name="finnAdresseListeResponseMsg">
+    <wsdl:part element="tns:finnAdresseListeResponse" name="finnAdresseListeResult"/>
+  </wsdl:message>
+    <wsdl:message name="finnAdresseListe_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentPerson_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonUtlandRequestMsg">
+    <wsdl:part element="tns:hentPersonUtland" name="hentPersonUtlandParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonUtlandResponseMsg">
+    <wsdl:part element="tns:hentPersonUtlandResponse" name="hentPersonUtlandResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonUtland_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentPerson_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonUtland_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:hentPerson_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:portType name="PENPerson">
+    <wsdl:operation name="hentPerson">
+      <wsdl:input message="tns:hentPersonRequestMsg" name="hentPersonRequest"/>
+      <wsdl:output message="tns:hentPersonResponseMsg" name="hentPersonResponse"/>
+      <wsdl:fault message="tns:hentPerson_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+      <wsdl:fault message="tns:hentPerson_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+    </wsdl:operation>
+    <wsdl:operation name="hentHistorikk">
+      <wsdl:input message="tns:hentHistorikkRequestMsg" name="hentHistorikkRequest"/>
+      <wsdl:output message="tns:hentHistorikkResponseMsg" name="hentHistorikkResponse"/>
+      <wsdl:fault message="tns:hentHistorikk_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+      <wsdl:fault message="tns:hentHistorikk_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+    </wsdl:operation>
+    <wsdl:operation name="hentFamilierelasjoner">
+      <wsdl:input message="tns:hentFamilierelasjonerRequestMsg" name="hentFamilierelasjonerRequest"/>
+      <wsdl:output message="tns:hentFamilierelasjonerResponseMsg" name="hentFamilierelasjonerResponse"/>
+      <wsdl:fault message="tns:hentFamilierelasjoner_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+      <wsdl:fault message="tns:hentFamilierelasjoner_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+    </wsdl:operation>
+        <wsdl:operation name="hentFamilierelasjonsHistorikk">
+      <wsdl:input message="tns:hentFamilierelasjonsHistorikkRequestMsg" name="hentFamilierelasjonsHistorikkRequest"/>
+      <wsdl:output message="tns:hentFamilierelasjonsHistorikkResponseMsg" name="hentFamilierelasjonsHistorikkResponse"/>
+      <wsdl:fault message="tns:hentFamilierelasjonsHistorikk_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+      <wsdl:fault message="tns:hentFamilierelasjonsHistorikk_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+    </wsdl:operation>
+        <wsdl:operation name="finnAdresseListe">
+      <wsdl:input message="tns:finnAdresseListeRequestMsg" name="finnAdresseListeRequest"/>
+      <wsdl:output message="tns:finnAdresseListeResponseMsg" name="finnAdresseListeResponse"/>
+      <wsdl:fault message="tns:finnAdresseListe_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+    </wsdl:operation>
+        <wsdl:operation name="hentPersonUtland">
+      <wsdl:input message="tns:hentPersonUtlandRequestMsg" name="hentPersonUtlandRequest"/>
+      <wsdl:output message="tns:hentPersonUtlandResponseMsg" name="hentPersonUtlandResponse"/>
+      <wsdl:fault message="tns:hentPersonUtland_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+      <wsdl:fault message="tns:hentPersonUtland_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+    </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

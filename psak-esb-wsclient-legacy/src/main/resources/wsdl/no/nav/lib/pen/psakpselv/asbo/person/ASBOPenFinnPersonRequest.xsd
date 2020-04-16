@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person">
+    <xsd:include schemaLocation="ASBOPenAdressesokRequest.xsd"/>
+    <xsd:include schemaLocation="ASBOPenKontonummersokRequest.xsd"/>
+    <xsd:include schemaLocation="ASBOPenFodselsdatosokRequest.xsd"/>
+    <xsd:include schemaLocation="ASBOPenNavnesokRequest.xsd"/>
+    <xsd:complexType name="ASBOPenFinnPersonRequest">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="fodselsnummer" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="navnesok" type="bons2:ASBOPenNavnesokRequest"/>
+      <xsd:element minOccurs="0" name="adressesok" type="bons2:ASBOPenAdressesokRequest"/>
+      <xsd:element minOccurs="0" name="fodselsdatosok" type="bons2:ASBOPenFodselsdatosokRequest"/>
+      <xsd:element minOccurs="0" name="kontonummersok" type="bons2:ASBOPenKontonummersokRequest"/>
+            <xsd:element minOccurs="0" name="buffNr" type="xsd:string"/>
+        </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

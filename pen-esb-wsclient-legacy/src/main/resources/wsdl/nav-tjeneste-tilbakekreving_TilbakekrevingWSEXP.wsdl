@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="TilbakekrevingWSEXP_TilbakekrevingHttp_Service" targetNamespace="http://nav.no/virksomhet/tjenester/tilbakekreving/v2/Binding" xmlns:Port_0="http://nav.no/virksomhet/tjenester/tilbakekreving/v2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://nav.no/virksomhet/tjenester/tilbakekreving/v2/Binding">
+  <wsdl:import namespace="http://nav.no/virksomhet/tjenester/tilbakekreving/v2" location="no/nav/virksomhet/tjenester/tilbakekreving/tilbakekreving.wsdl">
+    </wsdl:import>
+  <wsdl:binding name="TilbakekrevingWSEXP_TilbakekrevingHttpBinding" type="Port_0:Tilbakekreving">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="finnTilbakekrevingsgrunnlagListe">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="serviceUnavailable">
+        <soap:fault name="serviceUnavailable" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="hentTilbakekrevingsvedtak">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="serviceUnavailable">
+        <soap:fault name="serviceUnavailable" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="iverksettTilbakekrevingsvedtak">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="serviceUnavailable">
+        <soap:fault name="serviceUnavailable" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="annulerTilbakekrevingsvedtak">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="serviceUnavailable">
+        <soap:fault name="serviceUnavailable" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TilbakekrevingWSEXP_TilbakekrevingHttpService">
+    <wsdl:port name="TilbakekrevingWSEXP_TilbakekrevingHttpPort" binding="this:TilbakekrevingWSEXP_TilbakekrevingHttpBinding">
+      <soap:address location="http://localhost:9080/nav-tjeneste-tilbakekreving_v2Web/sca/TilbakekrevingWSEXP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

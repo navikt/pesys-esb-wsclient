@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/samhandler" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/ppen008" xmlns:tns="http://nav-cons-pen-pen-ppen008/no/nav/inf/PENPPEN008" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PENPPEN008" targetNamespace="http://nav-cons-pen-pen-ppen008/no/nav/inf/PENPPEN008">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://nav-cons-pen-pen-ppen008/no/nav/inf/PENPPEN008" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/samhandler" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/ppen008" xmlns:tns="http://nav-cons-pen-pen-ppen008/no/nav/inf/PENPPEN008" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/ppen008" schemaLocation="../lib/pen/psakpselv/asbo/ppen008/ASBOPenPPEN008Response.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/ppen008" schemaLocation="../lib/pen/psakpselv/asbo/ppen008/ASBOPenPPEN008Request.xsd"/>
+            <xsd:element name="overforOmsorgspoeng">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="overforOmsorgspoengRequest" nillable="true" type="bons2:ASBOPenPPEN008Request"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="overforOmsorgspoengResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="overforOmsorgspoengResponse" nillable="true" type="bons2:ASBOPenPPEN008Response"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="overforOmsorgspoengRequestMsg">
+    <wsdl:part element="tns:overforOmsorgspoeng" name="overforOmsorgspoengParameters"/>
+  </wsdl:message>
+    <wsdl:message name="overforOmsorgspoengResponseMsg">
+    <wsdl:part element="tns:overforOmsorgspoengResponse" name="overforOmsorgspoengResult"/>
+  </wsdl:message>
+    <wsdl:portType name="PENPPEN008">
+    <wsdl:operation name="overforOmsorgspoeng">
+      <wsdl:input message="tns:overforOmsorgspoengRequestMsg" name="overforOmsorgspoengRequest"/>
+      <wsdl:output message="tns:overforOmsorgspoengResponseMsg" name="overforOmsorgspoengResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

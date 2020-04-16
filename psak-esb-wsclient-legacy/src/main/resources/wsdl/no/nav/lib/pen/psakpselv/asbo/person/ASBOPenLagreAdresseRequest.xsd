@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person">
+    <xsd:include schemaLocation="ASBOPenAnnenAdresse.xsd"/>
+    <xsd:complexType name="ASBOPenLagreAdresseRequest">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="fodselsnummer" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="adresseType" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="tilleggsAdresse" type="bons2:ASBOPenAnnenAdresse"/>
+            <xsd:element minOccurs="0" name="utenlandsAdresse" type="bons2:ASBOPenAnnenAdresse"/>
+        </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

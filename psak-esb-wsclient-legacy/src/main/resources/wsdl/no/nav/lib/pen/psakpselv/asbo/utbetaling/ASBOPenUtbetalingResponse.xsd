@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/utbetaling" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/utbetaling/asbo" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/utbetaling">
+    <xsd:include schemaLocation="ASBOPenUtbetaling.xsd"/>
+    <xsd:complexType name="ASBOPenUtbetalingResponse">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="utbetalinger" type="bons1:ASBOPenUtbetaling"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://nav.no/virksomhet/tjenester/utbetaling/meldinger/v1" version="1.0" xmlns:meldinger="http://nav.no/virksomhet/tjenester/utbetaling/meldinger/v1" xmlns:utbetaling="http://nav.no/virksomhet/okonomi/utbetaling/v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import namespace="http://nav.no/virksomhet/okonomi/utbetaling/v1" schemaLocation="../../../okonomi/utbetaling/utbetaling.xsd"/>
+  <xsd:complexType name="HentUtbetalingListeRequest">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="fom" type="xsd:date">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Fra hvilken dato skal søket gå fra, datoformat: ”YYYY-MM-DD”. &lt;/p&gt;&lt;p&gt;HVIS visHistorikk er lik ’N’ eller ikke satt SÅ er det kun mulig å begrense søket i inneværende år.&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="fnr" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Fødselsnummer på person som skal hentes utbetalinger til&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="tom" type="xsd:date">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Til hvilken dato skal søket gå til, datoformat: ”YYYY-MM-DD”. &lt;/p&gt;&lt;p&gt;HVIS visHistorikk er lik ’N’ eller ikke satt SÅ er det kun mulig å begrense søket i inneværende år.&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="ytelseKode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Hvis satt, filtrer søket til angitt ytelse. For gyldige koder se Bilag i domenemodellen.&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="visHistorikk" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Flagg om det skal søkes i historike data (data tidligere enn inneværende år). &lt;/p&gt;&lt;p&gt;Mulige koder er: ’Y’ og ’N’ Default = 'N'&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="HentUtbetalingListeUtvidelse1">
+    <xsd:complexContent>
+      <xsd:extension base="utbetaling:Utvidelse"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="HentUtbetalingListeResponse">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="utbetalingListe" type="utbetaling:Utbetaling">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="utvidelse" type="meldinger:HentUtbetalingListeUtvidelse1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

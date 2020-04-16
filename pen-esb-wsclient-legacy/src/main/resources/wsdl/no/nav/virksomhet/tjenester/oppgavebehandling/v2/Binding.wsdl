@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="Binding" targetNamespace="http://nav.no/virksomhet/tjenester/oppgavebehandling/v2/Binding/" xmlns:oppgavebehandling="http://nav.no/virksomhet/tjenester/oppgavebehandling/v2" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://nav.no/virksomhet/tjenester/oppgavebehandling/v2/Binding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:import namespace="http://nav.no/virksomhet/tjenester/oppgavebehandling/v2" location="../oppgavebehandling.wsdl">
+    </wsdl:import>
+  <wsdl:binding name="OppgavebehandlingBinding" type="oppgavebehandling:Oppgavebehandling">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsaw:UsingAddressing/>
+    <wsdl:operation name="feilregistrerOppgave">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="oppgaveIkkeFunnet">
+        <soap:fault name="oppgaveIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="ulovligStatusOvergang">
+        <soap:fault name="ulovligStatusOvergang" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="lagreOppgave">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="oppgaveIkkeFunnet">
+        <soap:fault name="oppgaveIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="opprettOppgave">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="opprettOppgaveBolk">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ferdigstillOppgaveBolk">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="opprettMappe">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lagreMappe">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="mappeIkkeFunnet">
+        <soap:fault name="mappeIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="slettMappe">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="mappeIkkeFunnet">
+        <soap:fault name="mappeIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="mappeIkkeTom">
+        <soap:fault name="mappeIkkeTom" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="lagreOppgaveBolk">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bestillOppgave">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="personInaktiv">
+        <soap:fault name="personInaktiv" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="personIkkeFunnet">
+        <soap:fault name="personIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="ikkeEntydigSaksopprettelse">
+        <soap:fault name="ikkeEntydigSaksopprettelse" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="ukjentArbeidsgiver">
+        <soap:fault name="ukjentArbeidsgiver" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Oppgavebehandling">
+    <wsdl:port name="OppgavebehandlingPort" binding="tns:OppgavebehandlingBinding">
+      <soap:address location="http://localhost:9080/nav-tjeneste-oppgavebehandling_v2Web/sca/OppgavebehandlingWSEXP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

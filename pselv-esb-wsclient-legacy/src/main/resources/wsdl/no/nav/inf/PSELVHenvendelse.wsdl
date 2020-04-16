@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons1="http://nav-lib-cons-pen/no/nav/lib/sak/asbo" xmlns:bons2="http://nav-lib-cons-pen/no/nav/lib/pen/asbo" xmlns:bons3="http://nav-lib-cons-pen/no/nav/lib/pen/fault" xmlns:bons4="http://nav-lib-cons-pen/no/nav/lib/pen/fault/henvendelse" xmlns:bons5="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/henvendelse" xmlns:bons6="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:tns="http://nav-cons-pen-pselv-henvendelse/no/nav/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PSELVHenvendelse" targetNamespace="http://nav-cons-pen-pselv-henvendelse/no/nav/inf">
+  <wsdl:types>
+    <xsd:schema xmlns:Q1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/henvendelse" xmlns:bons0="http://nav-lib-cons-pen/no/nav/lib/pen/psakpselv/fault" targetNamespace="http://nav-cons-pen-pselv-henvendelse/no/nav/inf" xmlns:bons1="http://nav-lib-cons-pen/no/nav/lib/sak/asbo" xmlns:bons2="http://nav-lib-cons-pen/no/nav/lib/pen/asbo" xmlns:bons3="http://nav-lib-cons-pen/no/nav/lib/pen/fault" xmlns:bons5="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/henvendelse" xmlns:bons6="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:tns="http://nav-cons-pen-pselv-henvendelse/no/nav/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/henvendelse" schemaLocation="../lib/pen/psakpselv/asbo/henvendelse/ASBOPenHenvendelseListe.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/henvendelse" schemaLocation="../lib/pen/psakpselv/fault/henvendelse/FaultPenHenvendelseIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" schemaLocation="../lib/pen/psakpselv/fault/FaultPenGenerisk.xsd"/>
+            <xsd:element name="opprettHenvendelseMedOppgave">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="opprettHenvendelseMedOppgaveRequest" nillable="true" type="bons5:ASBOPenHenvendelse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="opprettHenvendelseMedOppgaveResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="opprettHenvendelseMedOppgaveResponse" nillable="true" type="bons5:ASBOPenHenvendelse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="opprettHenvendelseMedOppgave_faultPenGenerisk" type="bons6:FaultPenGenerisk"/>
+            <xsd:element name="hentHenvendelse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentHenvendelseRequest" nillable="true" type="bons5:ASBOPenHenvendelse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentHenvendelseResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentHenvendelseRequest" nillable="true" type="bons5:ASBOPenHenvendelse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentHenvendelse_faultPenGenerisk" type="bons6:FaultPenGenerisk"/>
+            <xsd:element name="hentHenvendelse_faultPenHenvendelseIkkeFunnet" type="Q1:FaultPenHenvendelseIkkeFunnet"/>
+            <xsd:element name="hentHenvendelseListe">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentHenvendelseListeRequest" nillable="true" type="bons5:ASBOPenHenvendelse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentHenvendelseListeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentHenvendelseListeResponse" nillable="true" type="bons5:ASBOPenHenvendelseListe"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentHenvendelseListe_faultPenGenerisk" type="bons6:FaultPenGenerisk"/>
+        </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="opprettHenvendelseMedOppgaveRequestMsg">
+    <wsdl:part element="tns:opprettHenvendelseMedOppgave" name="opprettHenvendelseMedOppgaveParameters"/>
+  </wsdl:message>
+    <wsdl:message name="opprettHenvendelseMedOppgaveResponseMsg">
+    <wsdl:part element="tns:opprettHenvendelseMedOppgaveResponse" name="opprettHenvendelseMedOppgaveResult"/>
+  </wsdl:message>
+    <wsdl:message name="opprettHenvendelseMedOppgave_faultPenGeneriskMsg">
+    <wsdl:part element="tns:opprettHenvendelseMedOppgave_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="hentHenvendelseRequestMsg">
+    <wsdl:part element="tns:hentHenvendelse" name="hentHenvendelseParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentHenvendelseResponseMsg">
+    <wsdl:part element="tns:hentHenvendelseResponse" name="hentHenvendelseResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentHenvendelse_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentHenvendelse_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="hentHenvendelse_faultPenHenvendelseIkkeFunnetMsg">
+    <wsdl:part element="tns:hentHenvendelse_faultPenHenvendelseIkkeFunnet" name="faultPenHenvendelseIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="hentHenvendelseListeRequestMsg">
+    <wsdl:part element="tns:hentHenvendelseListe" name="hentHenvendelseListeParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentHenvendelseListeResponseMsg">
+    <wsdl:part element="tns:hentHenvendelseListeResponse" name="hentHenvendelseListeResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentHenvendelseListe_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentHenvendelseListe_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:portType name="PSELVHenvendelse">
+    <wsdl:operation name="opprettHenvendelseMedOppgave">
+      <wsdl:input message="tns:opprettHenvendelseMedOppgaveRequestMsg" name="opprettHenvendelseMedOppgaveRequest"/>
+      <wsdl:output message="tns:opprettHenvendelseMedOppgaveResponseMsg" name="opprettHenvendelseMedOppgaveResponse"/>
+      <wsdl:fault message="tns:opprettHenvendelseMedOppgave_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+        </wsdl:operation>
+        <wsdl:operation name="hentHenvendelse">
+      <wsdl:input message="tns:hentHenvendelseRequestMsg" name="hentHenvendelseRequest"/>
+      <wsdl:output message="tns:hentHenvendelseResponseMsg" name="hentHenvendelseResponse"/>
+      <wsdl:fault message="tns:hentHenvendelse_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:hentHenvendelse_faultPenHenvendelseIkkeFunnetMsg" name="faultPenHenvendelseIkkeFunnet"/>
+        </wsdl:operation>
+        <wsdl:operation name="hentHenvendelseListe">
+      <wsdl:input message="tns:hentHenvendelseListeRequestMsg" name="hentHenvendelseListeRequest"/>
+      <wsdl:output message="tns:hentHenvendelseListeResponseMsg" name="hentHenvendelseListeResponse"/>
+      <wsdl:fault message="tns:hentHenvendelseListe_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+    </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

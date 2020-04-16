@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="PSAKDokBrevSCAEXP_PSAKDokBrevHttp_Service" targetNamespace="http://nav-cons-pen-psak-dokbrev/no/nav/inf/PSAKDokBrev/Binding" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:Port_0="http://nav-cons-pen-psak-dokbrev/no/nav/inf/PSAKDokBrev" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://nav-cons-pen-psak-dokbrev/no/nav/inf/PSAKDokBrev/Binding">
+  <import namespace="http://nav-cons-pen-psak-dokbrev/no/nav/inf/PSAKDokBrev" location="no/nav/inf/PSAKDokBrev.wsdl">
+    </import>
+  <binding name="PSAKDokBrevSCAEXP_PSAKDokBrevHttpBinding" type="Port_0:PSAKDokBrev">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="hentBrevklientURL">
+      <soap:operation/>
+      <input name="hentBrevklientURLRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="hentBrevklientURLResponse">
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="PSAKDokBrevSCAEXP_PSAKDokBrevHttpService">
+    <port name="PSAKDokBrevSCAEXP_PSAKDokBrevHttpPort" binding="this:PSAKDokBrevSCAEXP_PSAKDokBrevHttpBinding">
+      <soap:address location="http://localhost:9080/nav-cons-pen-psak-dokbrevWeb/sca/PSAKDokBrevSCAEXP"/>
+    </port>
+  </service>
+</definitions>

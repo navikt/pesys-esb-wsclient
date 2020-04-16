@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person"
+	xmlns:bons0="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo">
+	<xsd:import schemaLocation="../ASBOPenEndringsInfo.xsd"
+		namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo">
+	</xsd:import>
+	<xsd:complexType name="ASBOPenHistorikkInfo">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="kode" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="beskrivelse"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="fom" type="xsd:date"></xsd:element>
+			<xsd:element minOccurs="0" name="tom" type="xsd:date"></xsd:element>
+			<xsd:element minOccurs="0" name="endringsInfo"
+				type="bons0:ASBOPenEndringsInfo">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

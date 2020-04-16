@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/fullmakt" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:tns="http://nav-cons-pen-pen-fullmakt/no/nav/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PENFullmakt" targetNamespace="http://nav-cons-pen-pen-fullmakt/no/nav/inf">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://nav-cons-pen-pen-fullmakt/no/nav/inf" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/fullmakt" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:tns="http://nav-cons-pen-pen-fullmakt/no/nav/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/fullmakt" schemaLocation="../lib/pen/psakpselv/asbo/fullmakt/ASBOPenFinnFulmaktmottagereRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/fullmakt" schemaLocation="../lib/pen/psakpselv/asbo/fullmakt/ASBOPenFullmaktListe.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" schemaLocation="../lib/pen/psakpselv/fault/FaultPenGenerisk.xsd"/>
+      <xsd:element name="hentFullmaktListe_faultPenGenerisk" type="bons2:FaultPenGenerisk"/>
+            <xsd:element name="finnFullmaktmottagere">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="finnFullmaktmottagereRequest" nillable="true" type="bons1:ASBOPenFinnFullmaktmottagereRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="finnFullmaktmottagereResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="finnFullmaktmottagereResponse" nillable="true" type="bons1:ASBOPenFullmaktListe"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+        </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="finnFullmaktmottagereRequestMsg">
+    <wsdl:part element="tns:finnFullmaktmottagere" name="finnFullmaktmottagereParameters"/>
+  </wsdl:message>
+    <wsdl:message name="finnFullmaktmottagereResponseMsg">
+    <wsdl:part element="tns:finnFullmaktmottagereResponse" name="finnFullmaktmottagereResult"/>
+  </wsdl:message>
+    <wsdl:message name="finnFullmaktmottagere_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentFullmaktListe_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:portType name="PENFullmakt">
+        <wsdl:operation name="finnFullmaktmottagere">
+      <wsdl:input message="tns:finnFullmaktmottagereRequestMsg" name="finnFullmaktmottagereRequest"/>
+      <wsdl:output message="tns:finnFullmaktmottagereResponseMsg" name="finnFullmaktmottagereResponse"/>
+      <wsdl:fault message="tns:finnFullmaktmottagere_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+    </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

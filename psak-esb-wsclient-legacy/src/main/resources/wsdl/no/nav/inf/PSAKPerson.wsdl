@@ -1,0 +1,1093 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons3="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person" xmlns:bons4="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:bons5="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo" xmlns:bons7="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/person" xmlns:tns="http://nav-cons-pen-psak-person/no/nav/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PSAKPerson" targetNamespace="http://nav-cons-pen-psak-person/no/nav/inf">
+  <wsdl:types>
+    <xsd:schema xmlns:bons10="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person" xmlns:bons9="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" targetNamespace="http://nav-cons-pen-psak-person/no/nav/inf" xmlns:bons3="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person" xmlns:bons4="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:bons5="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo" xmlns:bons7="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/person" xmlns:tns="http://nav-cons-pen-psak-person/no/nav/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person" schemaLocation="../lib/pen/psakpselv/asbo/person/ASBOPenUtlandHistorikk.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person" schemaLocation="../lib/pen/psakpselv/asbo/person/ASBOPenHentPersonUtlandsHistorikkListeRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/person" schemaLocation="../lib/pen/psakpselv/fault/person/FaultPenSamboerforholdIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/person" schemaLocation="../lib/pen/psakpselv/fault/person/FaultPenKorrigertPersonIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/person" schemaLocation="../lib/pen/psakpselv/fault/person/FaultPenDatoerStemmerIkkeMedRegistrertSamboerforhold.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/person" schemaLocation="../lib/pen/psakpselv/fault/person/FaultPenSamboerIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person" schemaLocation="../lib/pen/psakpselv/asbo/person/ASBOPenHentSamboerforholdRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/person" schemaLocation="../lib/pen/psakpselv/fault/person/FaultPenAlleredeRegistrertSamboerforhold.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" schemaLocation="../lib/pen/psakpselv/fault/FaultPenPersonIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person" schemaLocation="../lib/pen/psakpselv/asbo/person/ASBOPenLagreTelefonnumreRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person" schemaLocation="../lib/pen/psakpselv/asbo/person/ASBOPenFinnPersonResponse.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person" schemaLocation="../lib/pen/psakpselv/asbo/person/ASBOPenSlettAdresseRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/person" schemaLocation="../lib/pen/psakpselv/fault/person/FaultPenSamboerDod.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person" schemaLocation="../lib/pen/psakpselv/asbo/person/ASBOPenFinnPersonRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/person" schemaLocation="../lib/pen/psakpselv/fault/person/FaultPenRelasjonTilSegSelv.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/person" schemaLocation="../lib/pen/psakpselv/fault/person/FaultPenAlleredeRegistrertFostermor.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person" schemaLocation="../lib/pen/psakpselv/asbo/person/ASBOPenLagreAdresseRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person" schemaLocation="../lib/pen/psakpselv/asbo/person/ASBOPenHentFamilierelasjonerRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/person" schemaLocation="../lib/pen/psakpselv/fault/person/FaultPenSamboerIFamilie.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person" schemaLocation="../lib/pen/psakpselv/asbo/person/ASBOPenHentHistorikkRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/person" schemaLocation="../lib/pen/psakpselv/fault/person/FaultPenBrukerprofilIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo" schemaLocation="../lib/pen/psakpselv/asbo/ASBOPenTomRespons.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person" schemaLocation="../lib/pen/psakpselv/asbo/person/ASBOPenHentPersonRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/person" schemaLocation="../lib/pen/psakpselv/fault/person/FaultPenAlleredeRegistrertMor.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/person" schemaLocation="../lib/pen/psakpselv/fault/person/FaultPenStatusIkkeUtvandret.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/person" schemaLocation="../lib/pen/psakpselv/fault/person/FaultPenAlleredeRegistrertFosterfar.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/person" schemaLocation="../lib/pen/psakpselv/fault/person/FaultPenSamboerValideringFeilet.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" schemaLocation="../lib/pen/psakpselv/fault/FaultPenGenerisk.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person" schemaLocation="../lib/pen/psakpselv/asbo/person/ASBOPenPerson.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person" schemaLocation="../lib/pen/psakpselv/asbo/person/ASBOPenLagreHistoriskSamboerforholdRequest.xsd"/>
+            <xsd:element name="hentPerson">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentPersonRequest" nillable="true" type="bons10:ASBOPenHentPersonRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentPersonResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentPersonResponse" nillable="true" type="bons10:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentPerson_faultPenGenerisk" type="bons4:FaultPenGenerisk"/>
+      <xsd:element name="hentKontoinformasjon">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentKontoinformasjonRequest" nillable="true" type="bons10:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentKontoinformasjonResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentKontoinformasjonsResponse" nillable="true" type="bons10:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentKontoinformasjon_faultPenGenerisk" type="bons4:FaultPenGenerisk"/>
+      <xsd:element name="hentPersonUtland">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentPersonUtlandRequest" nillable="true" type="bons10:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentPersonUtlandResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentPersonUtlandResponse" nillable="true" type="bons10:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentPersonUtland_faultPenGenerisk" type="bons4:FaultPenGenerisk"/>
+      <xsd:element name="hentHistorikk">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentHistorikkRequest" nillable="true" type="bons10:ASBOPenHentHistorikkRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentHistorikkResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentHistorikkResponse" nillable="true" type="bons10:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentHistorikk_faultPenGenerisk" type="bons4:FaultPenGenerisk"/>
+      <xsd:element name="hentBrukerprofil">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentBrukerprofilRequest" nillable="true" type="bons10:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentBrukerprofilResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentBrukerprofilResponse" nillable="true" type="bons10:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentBrukerprofil_faultPenGenerisk" type="bons4:FaultPenGenerisk"/>
+      <xsd:element name="lagreEpost">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreEpostRequest" nillable="true" type="bons10:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="lagreEpostResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreEpostResponse" nillable="true" type="bons5:ASBOPenTomRespons"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="lagreEpost_faultPenGenerisk" type="bons4:FaultPenGenerisk"/>
+      <xsd:element name="lagreTelefonnumre">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreTelefonnumreRequest" nillable="true" type="bons10:ASBOPenLagreTelefonnumreRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="lagreTelefonnumreResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreTelefonnumreResponse" nillable="true" type="bons5:ASBOPenTomRespons"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="lagreTelefonnumre_faultPenGenerisk" type="bons4:FaultPenGenerisk"/>
+      <xsd:element name="lagreSprak">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreSprakRequest" nillable="true" type="bons10:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="lagreSprakResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreSprakResponse" nillable="true" type="bons5:ASBOPenTomRespons"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="lagreSprak_faultPenGenerisk" type="bons4:FaultPenGenerisk"/>
+      <xsd:element name="lagreAdresse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreAdresseRequest" nillable="true" type="bons10:ASBOPenLagreAdresseRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="lagreAdresseResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreAdresseResponse" nillable="true" type="bons5:ASBOPenTomRespons"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="lagreAdresse_faultPenGenerisk" type="bons4:FaultPenGenerisk"/>
+      <xsd:element name="lagreKontoinformasjon">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreKontoinformasjonRequest" nillable="true" type="bons10:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="lagreKontoinformasjonResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagrekontoinformasjonResponse" nillable="true" type="bons5:ASBOPenTomRespons"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="lagreKontoinformasjon_faultPenGenerisk" type="bons4:FaultPenGenerisk"/>
+      <xsd:element name="lagreBrukerprofil">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreBrukerprofilRequest" nillable="true" type="bons10:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="lagreBrukerprofilResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreBrukerprofilResponse" nillable="true" type="bons5:ASBOPenTomRespons"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="lagreBrukerprofil_faultPenGenerisk" type="bons4:FaultPenGenerisk"/>
+      <xsd:element name="finnPerson">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="finnPersonRequest" nillable="true" type="bons10:ASBOPenFinnPersonRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="finnPersonResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="finnPersonResponse" nillable="true" type="bons10:ASBOPenFinnPersonResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="finnPerson_faultPenGenerisk" type="bons4:FaultPenGenerisk"/>
+      <xsd:element name="erEgenansatt">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="erEgenansattRequest" nillable="true" type="bons10:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="erEgenansattResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="erEgenansattResponse" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="erEgenansatt_faultPenGenerisk" type="bons4:FaultPenGenerisk"/>
+            <xsd:element name="hentSamboerforhold">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentSamboerforholdRequest" nillable="true" type="bons10:ASBOPenHentSamboerforholdRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentSamboerforholdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentSamboerforholdResponse" nillable="true" type="bons10:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentSamboerforhold_faultPenGenerisk" type="bons4:FaultPenGenerisk"/>
+            <xsd:element name="hentPerson_faultPenPersonIkkeFunnet" type="bons4:FaultPenPersonIkkeFunnet"/>
+            <xsd:element name="hentKontoinformasjon_faultPenPersonIkkeFunnet" type="bons4:FaultPenPersonIkkeFunnet"/>
+            <xsd:element name="hentPersonUtland_faultPenPersonIkkeFunnet" type="bons4:FaultPenPersonIkkeFunnet"/>
+            <xsd:element name="hentHistorikk_faultPenPersonIkkeFunnet" type="bons4:FaultPenPersonIkkeFunnet"/>
+            <xsd:element name="hentBrukerprofil_faultPenBrukerprofilIkkeFunnet" type="bons7:FaultPenBrukerprofilIkkeFunnet"/>
+            <xsd:element name="lagreEpost_faultPenPersonIkkeFunnet" type="bons4:FaultPenPersonIkkeFunnet"/>
+            <xsd:element name="lagreTelefonnumre_faultPenPersonIkkeFunnet" type="bons4:FaultPenPersonIkkeFunnet"/>
+            <xsd:element name="lagreSprak_faultPenPersonIkkeFunnet" type="bons4:FaultPenPersonIkkeFunnet"/>
+            <xsd:element name="lagreAdresse_faultPenPersonIkkeFunnet" type="bons4:FaultPenPersonIkkeFunnet"/>
+            <xsd:element name="lagreKontoinformasjon_faultPenPersonIkkeFunnet" type="bons4:FaultPenPersonIkkeFunnet"/>
+            <xsd:element name="lagreBrukerprofil_faultPenPersonIkkeFunnet" type="bons4:FaultPenPersonIkkeFunnet"/>
+            <xsd:element name="erEgenansatt_faultPenPersonIkkeFunnet" type="bons4:FaultPenPersonIkkeFunnet"/>
+            <xsd:element name="hentSamboerforhold_faultPenPersonIkkeFunnet" type="bons4:FaultPenPersonIkkeFunnet"/>
+            <xsd:element name="hentEnhetId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentEnhetIdRequest" nillable="true" type="bons10:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentEnhetIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentEnhetIdResponse" nillable="true" type="bons10:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentEnhetId_faultPenGenerisk" type="bons4:FaultPenGenerisk"/>
+            <xsd:element name="hentEnhetId_faultPenPersonIkkeFunnet" type="bons4:FaultPenPersonIkkeFunnet"/>
+            <xsd:element name="hentFamilierelasjoner">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentFamilierelasjonerRequest" nillable="true" type="bons10:ASBOPenHentFamilierelasjonerRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentFamilierelasjonerResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentFamilierelasjonerResponse" nillable="true" type="bons10:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentFamilierelasjoner_faultPenGenerisk" type="bons4:FaultPenGenerisk"/>
+            <xsd:element name="hentFamilierelasjoner_faultPenPersonIkkeFunnet" type="bons4:FaultPenPersonIkkeFunnet"/>
+            <xsd:element name="opprettSamboerforhold">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="opprettSamboerforholdRequest" nillable="true" type="bons10:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="opprettSamboerforholdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="opprettSamboerforholdResponse" nillable="true" type="bons5:ASBOPenTomRespons"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="lagreSamboerforhold">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreSamboerforholdRequest" nillable="true" type="bons10:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="lagreSamboerforholdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreSamboerforholdResponse" nillable="true" type="bons5:ASBOPenTomRespons"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="slettSamboerforhold">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="slettSamboerforholdRequest" nillable="true" type="bons10:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="slettSamboerforholdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="slettSamboerforholdResponse" nillable="true" type="bons5:ASBOPenTomRespons"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="lagreSamboerforhold_faultPenGenerisk" type="bons4:FaultPenGenerisk"/>
+            <xsd:element name="lagreSamboerforhold_faultPenPersonIkkeFunnet" type="bons4:FaultPenPersonIkkeFunnet"/>
+            <xsd:element name="lagreSamboerforhold_faultPenSamboerIkkeFunnet" type="bons7:FaultPenSamboerIkkeFunnet"/>
+            <xsd:element name="lagreSamboerforhold_faultPenSamboerIFamilie" type="bons7:FaultPenSamboerIFamilie"/>
+            <xsd:element name="lagreSamboerforhold_faultPenSamboerDod" type="bons7:FaultPenSamboerDod"/>
+            <xsd:element name="opprettSamboerforhold_faultPenGenerisk" type="bons4:FaultPenGenerisk"/>
+            <xsd:element name="opprettSamboerforhold_faultPenPersonIkkeFunnet" type="bons4:FaultPenPersonIkkeFunnet"/>
+            <xsd:element name="opprettSamboerforhold_faultPenSamboerIkkeFunnet" type="bons7:FaultPenSamboerIkkeFunnet"/>
+            <xsd:element name="opprettSamboerforhold_faultPenSamboerIFamilie" type="bons7:FaultPenSamboerIFamilie"/>
+            <xsd:element name="opprettSamboerforhold_faultPenSamboerDod" type="bons7:FaultPenSamboerDod"/>
+            <xsd:element name="opprettSamboerforhold_faultPenAlleredeRegistrertSamboerforhold" type="bons7:FaultPenAlleredeRegistrertSamboerforhold"/>
+            <xsd:element name="lagreSamboerforhold_faultPenAlleredeRegistrertSamboer" type="bons7:FaultPenAlleredeRegistrertSamboerforhold"/>
+            <xsd:element name="slettSamboerforhold_faultPenGenerisk" type="bons4:FaultPenGenerisk"/>
+            <xsd:element name="slettSamboerforhold_faultPenPersonIkkeFunnet" type="bons4:FaultPenPersonIkkeFunnet"/>
+            <xsd:element name="slettSamboerforhold_faultPenSamboerIkkeFunnet" type="bons7:FaultPenSamboerIkkeFunnet"/>
+            <xsd:element name="slettAdresse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="slettAdresseRequest" nillable="true" type="bons10:ASBOPenSlettAdresseRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="slettAdresseResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="slettAdresseResponse" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="slettAdresse_faultPenGenerisk" type="bons4:FaultPenGenerisk"/>
+            <xsd:element name="slettAdresse_faultPenPersonIkkeFunnet" type="bons4:FaultPenPersonIkkeFunnet"/>
+            <xsd:element name="lagreStatsborgerskap">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreStatsborgerskapRequest" nillable="true" type="bons10:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="lagreStatsborgerskapResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreStatsborgerskapResponse" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="lagreStatsborgerskap_faultPenGenerisk" type="bons4:FaultPenGenerisk"/>
+            <xsd:element name="lagreStatsborgerskap_faultPenPersonIkkeFunnet" type="bons4:FaultPenPersonIkkeFunnet"/>
+            <xsd:element name="lagreDodsdato">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreDodsdatoRequest" nillable="true" type="bons10:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="lagreDodsdatoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreDodsdatoResponse" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="lagreDodsdato_faultPenGenerisk" type="bons4:FaultPenGenerisk"/>
+            <xsd:element name="lagreDodsdato_faultPenPersonIkkeFunnet" type="bons4:FaultPenPersonIkkeFunnet"/>
+            <xsd:element name="lagreSivilstand">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreSivilstandRequest" nillable="true" type="bons10:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="lagreSivilstandResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreSivilstandResponse" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="lagreSivilstand_faultPenGenerisk" type="bons4:FaultPenGenerisk"/>
+            <xsd:element name="lagreSivilstand_faultPenPersonIkkeFunnet" type="bons4:FaultPenPersonIkkeFunnet"/>
+            <xsd:element name="lagreNavn">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreNavnRequest" nillable="true" type="bons10:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="lagreNavnResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreNavnResponse" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="lagreNavn_faultPenGenerisk" type="bons4:FaultPenGenerisk"/>
+            <xsd:element name="lagreNavn_faultPenPersonIkkeFunnet" type="bons4:FaultPenPersonIkkeFunnet"/>
+            <xsd:element name="lagreFamilierelasjon">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreFamilierelasjonRequest" nillable="true" type="bons10:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="lagreFamilierelasjonResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreFamilierelasjonResponse" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="lagreFamilierelasjon_faultPenGenerisk" type="bons4:FaultPenGenerisk"/>
+            <xsd:element name="lagreFamilierelasjon_faultPenPersonIkkeFunnet" type="bons4:FaultPenPersonIkkeFunnet"/>
+            <xsd:element name="opprettFamilierelasjon">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="opprettFamilierelasjonRequest" nillable="true" type="bons10:ASBOPenPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="opprettFamilierelasjonResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="opprettFamilierelasjonResponse" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="opprettFamilierelasjon_faultPenGenerisk" type="bons4:FaultPenGenerisk"/>
+            <xsd:element name="opprettFamilierelasjon_faultPenPersonIkkeFunnet" type="bons4:FaultPenPersonIkkeFunnet"/>
+            <xsd:element name="opprettSamboerforhold_faultPenSamboerValideringFeilet" type="bons7:FaultPenSamboerValideringFeilet"/>
+            <xsd:element name="lagreFamilierelasjon_faultPenStatusIkkeUtvandret" type="bons7:FaultPenStatusIkkeUtvandret"/>
+            <xsd:element name="lagreFamilierelasjon_faultPenAlleredeRegistrertMor" type="bons7:FaultPenAlleredeRegistrertMor"/>
+            <xsd:element name="lagreFamilierelasjon_faultPenRelasjonTilSegSelv" type="bons7:FaultPenRelasjonTilSegSelv"/>
+            <xsd:element name="lagreFamilierelasjon_faultPenAllerdeRegistrertFosterfar" type="bons7:FaultPenAlleredeRegistrertFosterfar"/>
+            <xsd:element name="lagreFamilierelasjon_faultPenAlleredeRegistrertFostermor" type="bons7:FaultPenAlleredeRegistrertFostermor"/>
+            <xsd:element name="opprettFamilierelasjon_faultPenStatusIkkeUtvandret" type="bons7:FaultPenStatusIkkeUtvandret"/>
+            <xsd:element name="opprettFamilierelasjon_faultPenAlleredeRegistrertMor" type="bons7:FaultPenAlleredeRegistrertMor"/>
+            <xsd:element name="opprettFamilierelasjon_faultPenRelasjonTilSegSelv" type="bons7:FaultPenRelasjonTilSegSelv"/>
+            <xsd:element name="opprettFamilierelasjon_faultPenAllerdeRegistrertFosterfar" type="bons7:FaultPenAlleredeRegistrertFosterfar"/>
+            <xsd:element name="opprettFamilierelasjon_faultPenAlleredeRegistrertFostermor" type="bons7:FaultPenAlleredeRegistrertFostermor"/>
+            <xsd:element name="lagreHistoriskSamboerforhold">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreHistoriskSamboerforholdRequest" nillable="true" type="bons10:ASBOPenLagreHistoriskSamboerforholdRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="lagreHistoriskSamboerforholdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreHistoriskSamboerforholdResponse" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="FaultPenDatoerStemmerIkkeMedRegistrertSamboerforhold_element" nillable="true" type="bons7:FaultPenDatoerStemmerIkkeMedRegistrertSamboerforhold"/>
+            <xsd:element name="FaultPenKorrigertPersonIkkeFunnet_element" nillable="true" type="bons7:FaultPenKorrigertPersonIkkeFunnet"/>
+            <xsd:element name="FaultPenSamboerforholdIkkeFunnet_element" nillable="true" type="bons7:FaultPenSamboerforholdIkkeFunnet"/>
+            <xsd:element name="hentPersonUtlandHistorikkListe">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentPersonUtlandHistorikkListeRequest" nillable="true" type="bons10:ASBOPenHentPersonUtlandsHistorikkListeRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentPersonUtlandHistorikkListeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentPersonUtlandHistorikkListeResponse" nillable="true" type="bons10:ASBOPenUtlandHistorikk"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+        </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="hentPersonRequestMsg">
+    <wsdl:part element="tns:hentPerson" name="hentPersonParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonResponseMsg">
+    <wsdl:part element="tns:hentPersonResponse" name="hentPersonResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentPerson_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentPerson_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="hentKontoinformasjonRequestMsg">
+    <wsdl:part element="tns:hentKontoinformasjon" name="hentKontoinformasjonParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentKontoinformasjonResponseMsg">
+    <wsdl:part element="tns:hentKontoinformasjonResponse" name="hentKontoinformasjonResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentKontoinformasjon_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentKontoinformasjon_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonUtlandRequestMsg">
+    <wsdl:part element="tns:hentPersonUtland" name="hentPersonUtlandParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonUtlandResponseMsg">
+    <wsdl:part element="tns:hentPersonUtlandResponse" name="hentPersonUtlandResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonUtland_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentPersonUtland_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="hentHistorikkRequestMsg">
+    <wsdl:part element="tns:hentHistorikk" name="hentHistorikkParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentHistorikkResponseMsg">
+    <wsdl:part element="tns:hentHistorikkResponse" name="hentHistorikkResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentHistorikk_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentHistorikk_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="hentBrukerprofilRequestMsg">
+    <wsdl:part element="tns:hentBrukerprofil" name="hentBrukerprofilParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentBrukerprofilResponseMsg">
+    <wsdl:part element="tns:hentBrukerprofilResponse" name="hentBrukerprofilResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentBrukerprofil_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentBrukerprofil_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="lagreEpostRequestMsg">
+    <wsdl:part element="tns:lagreEpost" name="lagreEpostParameters"/>
+  </wsdl:message>
+    <wsdl:message name="lagreEpostResponseMsg">
+    <wsdl:part element="tns:lagreEpostResponse" name="lagreEpostResult"/>
+  </wsdl:message>
+    <wsdl:message name="lagreEpost_faultPenGeneriskMsg">
+    <wsdl:part element="tns:lagreEpost_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="lagreTelefonnumreRequestMsg">
+    <wsdl:part element="tns:lagreTelefonnumre" name="lagreTelefonnumreParameters"/>
+  </wsdl:message>
+    <wsdl:message name="lagreTelefonnumreResponseMsg">
+    <wsdl:part element="tns:lagreTelefonnumreResponse" name="lagreTelefonnumreResult"/>
+  </wsdl:message>
+    <wsdl:message name="lagreTelefonnumre_faultPenGeneriskMsg">
+    <wsdl:part element="tns:lagreTelefonnumre_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="lagreSprakRequestMsg">
+    <wsdl:part element="tns:lagreSprak" name="lagreSprakParameters"/>
+  </wsdl:message>
+    <wsdl:message name="lagreSprakResponseMsg">
+    <wsdl:part element="tns:lagreSprakResponse" name="lagreSprakResult"/>
+  </wsdl:message>
+    <wsdl:message name="lagreSprak_faultPenGeneriskMsg">
+    <wsdl:part element="tns:lagreSprak_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="lagreAdresseRequestMsg">
+    <wsdl:part element="tns:lagreAdresse" name="lagreAdresseParameters"/>
+  </wsdl:message>
+    <wsdl:message name="lagreAdresseResponseMsg">
+    <wsdl:part element="tns:lagreAdresseResponse" name="lagreAdresseResult"/>
+  </wsdl:message>
+    <wsdl:message name="lagreAdresse_faultPenGeneriskMsg">
+    <wsdl:part element="tns:lagreAdresse_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="lagreKontoinformasjonRequestMsg">
+    <wsdl:part element="tns:lagreKontoinformasjon" name="lagreKontoinformasjonParameters"/>
+  </wsdl:message>
+    <wsdl:message name="lagreKontoinformasjonResponseMsg">
+    <wsdl:part element="tns:lagreKontoinformasjonResponse" name="lagreKontoinformasjonResult"/>
+  </wsdl:message>
+    <wsdl:message name="lagreKontoinformasjon_faultPenGeneriskMsg">
+    <wsdl:part element="tns:lagreKontoinformasjon_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="lagreBrukerprofilRequestMsg">
+    <wsdl:part element="tns:lagreBrukerprofil" name="lagreBrukerprofilParameters"/>
+  </wsdl:message>
+    <wsdl:message name="lagreBrukerprofilResponseMsg">
+    <wsdl:part element="tns:lagreBrukerprofilResponse" name="lagreBrukerprofilResult"/>
+  </wsdl:message>
+    <wsdl:message name="lagreBrukerprofil_faultPenGeneriskMsg">
+    <wsdl:part element="tns:lagreBrukerprofil_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="finnPersonRequestMsg">
+    <wsdl:part element="tns:finnPerson" name="finnPersonParameters"/>
+  </wsdl:message>
+    <wsdl:message name="finnPersonResponseMsg">
+    <wsdl:part element="tns:finnPersonResponse" name="finnPersonResult"/>
+  </wsdl:message>
+    <wsdl:message name="finnPerson_faultPenGeneriskMsg">
+    <wsdl:part element="tns:finnPerson_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="erEgenansattRequestMsg">
+    <wsdl:part element="tns:erEgenansatt" name="erEgenansattParameters"/>
+  </wsdl:message>
+    <wsdl:message name="erEgenansattResponseMsg">
+    <wsdl:part element="tns:erEgenansattResponse" name="erEgenansattResult"/>
+  </wsdl:message>
+    <wsdl:message name="erEgenansatt_faultPenGeneriskMsg">
+    <wsdl:part element="tns:erEgenansatt_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="hentSamboerforholdRequestMsg">
+    <wsdl:part element="tns:hentSamboerforhold" name="hentSamboerforholdParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentSamboerforholdResponseMsg">
+    <wsdl:part element="tns:hentSamboerforholdResponse" name="hentSamboerforholdResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentSamboerforhold_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentSamboerforhold_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="hentPerson_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:hentPerson_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="hentKontoinformasjon_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:hentKontoinformasjon_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonUtland_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:hentPersonUtland_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="hentHistorikk_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:hentHistorikk_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="hentBrukerprofil_faultPenBrukerprofilIkkeFunnetMsg">
+    <wsdl:part element="tns:hentBrukerprofil_faultPenBrukerprofilIkkeFunnet" name="faultPenBrukerprofilIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="lagreEpost_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:lagreEpost_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="lagreTelefonnumre_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:lagreTelefonnumre_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="lagreSprak_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:lagreSprak_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="lagreAdresse_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:lagreAdresse_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="lagreKontoinformasjon_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:lagreKontoinformasjon_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="lagreBrukerprofil_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:lagreBrukerprofil_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="erEgenansatt_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:erEgenansatt_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="hentSamboerforhold_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:hentSamboerforhold_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="hentEnhetIdRequestMsg">
+    <wsdl:part element="tns:hentEnhetId" name="hentEnhetIdParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentEnhetIdResponseMsg">
+    <wsdl:part element="tns:hentEnhetIdResponse" name="hentEnhetIdResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentEnhetId_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentEnhetId_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="hentEnhetId_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:hentEnhetId_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="hentFamilierelasjonerRequestMsg">
+    <wsdl:part element="tns:hentFamilierelasjoner" name="hentFamilierelasjonerParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentFamilierelasjonerResponseMsg">
+    <wsdl:part element="tns:hentFamilierelasjonerResponse" name="hentFamilierelasjonerResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentFamilierelasjoner_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentFamilierelasjoner_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="hentFamilierelasjoner_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:hentFamilierelasjoner_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="opprettSamboerforholdRequestMsg">
+    <wsdl:part element="tns:opprettSamboerforhold" name="opprettSamboerforholdParameters"/>
+  </wsdl:message>
+    <wsdl:message name="opprettSamboerforholdResponseMsg">
+    <wsdl:part element="tns:opprettSamboerforholdResponse" name="opprettSamboerforholdResult"/>
+  </wsdl:message>
+    <wsdl:message name="lagreSamboerforholdRequestMsg">
+    <wsdl:part element="tns:lagreSamboerforhold" name="lagreSamboerforholdParameters"/>
+  </wsdl:message>
+    <wsdl:message name="lagreSamboerforholdResponseMsg">
+    <wsdl:part element="tns:lagreSamboerforholdResponse" name="lagreSamboerforholdResult"/>
+  </wsdl:message>
+    <wsdl:message name="slettSamboerforholdRequestMsg">
+    <wsdl:part element="tns:slettSamboerforhold" name="slettSamboerforholdParameters"/>
+  </wsdl:message>
+    <wsdl:message name="slettSamboerforholdResponseMsg">
+    <wsdl:part element="tns:slettSamboerforholdResponse" name="slettSamboerforholdResult"/>
+  </wsdl:message>
+    <wsdl:message name="lagreSamboerforhold_faultPenGeneriskMsg">
+    <wsdl:part element="tns:lagreSamboerforhold_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="lagreSamboerforhold_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:lagreSamboerforhold_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="lagreSamboerforhold_faultPenSamboerIkkeFunnetMsg">
+    <wsdl:part element="tns:lagreSamboerforhold_faultPenSamboerIkkeFunnet" name="faultPenSamboerIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="lagreSamboerforhold_faultPenSamboerIFamilieMsg">
+    <wsdl:part element="tns:lagreSamboerforhold_faultPenSamboerIFamilie" name="faultPenSamboerIFamilie"/>
+  </wsdl:message>
+    <wsdl:message name="lagreSamboerforhold_faultPenSamboerDodMsg">
+    <wsdl:part element="tns:lagreSamboerforhold_faultPenSamboerDod" name="faultPenSamboerDod"/>
+  </wsdl:message>
+    <wsdl:message name="opprettSamboerforhold_faultPenGeneriskMsg">
+    <wsdl:part element="tns:opprettSamboerforhold_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="opprettSamboerforhold_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:opprettSamboerforhold_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="opprettSamboerforhold_faultPenSamboerIkkeFunnetMsg">
+    <wsdl:part element="tns:opprettSamboerforhold_faultPenSamboerIkkeFunnet" name="faultPenSamboerIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="opprettSamboerforhold_faultPenSamboerIFamilieMsg">
+    <wsdl:part element="tns:opprettSamboerforhold_faultPenSamboerIFamilie" name="faultPenSamboerIFamilie"/>
+  </wsdl:message>
+    <wsdl:message name="opprettSamboerforhold_faultPenSamboerDodMsg">
+    <wsdl:part element="tns:opprettSamboerforhold_faultPenSamboerDod" name="faultPenSamboerDod"/>
+  </wsdl:message>
+    <wsdl:message name="opprettSamboerforhold_faultPenAlleredeRegistrertSamboerforholdMsg">
+    <wsdl:part element="tns:opprettSamboerforhold_faultPenAlleredeRegistrertSamboerforhold" name="faultPenAlleredeRegistrertSamboerforhold"/>
+  </wsdl:message>
+    <wsdl:message name="lagreSamboerforhold_faultPenAlleredeRegistrertSamboerMsg">
+    <wsdl:part element="tns:lagreSamboerforhold_faultPenAlleredeRegistrertSamboer" name="faultPenAlleredeRegistrertSamboer"/>
+  </wsdl:message>
+    <wsdl:message name="slettSamboerforhold_faultPenGeneriskMsg">
+    <wsdl:part element="tns:slettSamboerforhold_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="slettSamboerforhold_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:slettSamboerforhold_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="slettSamboerforhold_faultPenSamboerIkkeFunnetMsg">
+    <wsdl:part element="tns:slettSamboerforhold_faultPenSamboerIkkeFunnet" name="faultPenSamboerIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="slettAdresseRequestMsg">
+    <wsdl:part element="tns:slettAdresse" name="slettAdresseParameters"/>
+  </wsdl:message>
+    <wsdl:message name="slettAdresseResponseMsg">
+    <wsdl:part element="tns:slettAdresseResponse" name="slettAdresseResult"/>
+  </wsdl:message>
+    <wsdl:message name="slettAdresse_faultPenGeneriskMsg">
+    <wsdl:part element="tns:slettAdresse_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="slettAdresse_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:slettAdresse_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="lagreStatsborgerskapRequestMsg">
+    <wsdl:part element="tns:lagreStatsborgerskap" name="lagreStatsborgerskapParameters"/>
+  </wsdl:message>
+    <wsdl:message name="lagreStatsborgerskapResponseMsg">
+    <wsdl:part element="tns:lagreStatsborgerskapResponse" name="lagreStatsborgerskapResult"/>
+  </wsdl:message>
+    <wsdl:message name="lagreStatsborgerskap_faultPenGeneriskMsg">
+    <wsdl:part element="tns:lagreStatsborgerskap_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="lagreStatsborgerskap_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:lagreStatsborgerskap_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="lagreDodsdatoRequestMsg">
+    <wsdl:part element="tns:lagreDodsdato" name="lagreDodsdatoParameters"/>
+  </wsdl:message>
+    <wsdl:message name="lagreDodsdatoResponseMsg">
+    <wsdl:part element="tns:lagreDodsdatoResponse" name="lagreDodsdatoResult"/>
+  </wsdl:message>
+    <wsdl:message name="lagreDodsdato_faultPenGeneriskMsg">
+    <wsdl:part element="tns:lagreDodsdato_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="lagreDodsdato_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:lagreDodsdato_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="lagreSivilstandRequestMsg">
+    <wsdl:part element="tns:lagreSivilstand" name="lagreSivilstandParameters"/>
+  </wsdl:message>
+    <wsdl:message name="lagreSivilstandResponseMsg">
+    <wsdl:part element="tns:lagreSivilstandResponse" name="lagreSivilstandResult"/>
+  </wsdl:message>
+    <wsdl:message name="lagreSivilstand_faultPenGeneriskMsg">
+    <wsdl:part element="tns:lagreSivilstand_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="lagreSivilstand_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:lagreSivilstand_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="lagreNavnRequestMsg">
+    <wsdl:part element="tns:lagreNavn" name="lagreNavnParameters"/>
+  </wsdl:message>
+    <wsdl:message name="lagreNavnResponseMsg">
+    <wsdl:part element="tns:lagreNavnResponse" name="lagreNavnResult"/>
+  </wsdl:message>
+    <wsdl:message name="lagreNavn_faultPenGeneriskMsg">
+    <wsdl:part element="tns:lagreNavn_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="lagreNavn_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:lagreNavn_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="lagreFamilierelasjonRequestMsg">
+    <wsdl:part element="tns:lagreFamilierelasjon" name="lagreFamilierelasjonParameters"/>
+  </wsdl:message>
+    <wsdl:message name="lagreFamilierelasjonResponseMsg">
+    <wsdl:part element="tns:lagreFamilierelasjonResponse" name="lagreFamilierelasjonResult"/>
+  </wsdl:message>
+    <wsdl:message name="lagreFamilierelasjon_faultPenGeneriskMsg">
+    <wsdl:part element="tns:lagreFamilierelasjon_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="lagreFamilierelasjon_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:lagreFamilierelasjon_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="opprettFamilierelasjonRequestMsg">
+    <wsdl:part element="tns:opprettFamilierelasjon" name="opprettFamilierelasjonParameters"/>
+  </wsdl:message>
+    <wsdl:message name="opprettFamilierelasjonResponseMsg">
+    <wsdl:part element="tns:opprettFamilierelasjonResponse" name="opprettFamilierelasjonResult"/>
+  </wsdl:message>
+    <wsdl:message name="opprettFamilierelasjon_faultPenGeneriskMsg">
+    <wsdl:part element="tns:opprettFamilierelasjon_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="opprettFamilierelasjon_faultPenPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:opprettFamilierelasjon_faultPenPersonIkkeFunnet" name="faultPenPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="opprettSamboerforhold_faultPenSamboerValideringFeiletMsg">
+    <wsdl:part element="tns:opprettSamboerforhold_faultPenSamboerValideringFeilet" name="faultPenSamboerValideringFeilet"/>
+  </wsdl:message>
+    <wsdl:message name="lagreFamilierelasjon_faultPenStatusIkkeUtvandretMsg">
+    <wsdl:part element="tns:lagreFamilierelasjon_faultPenStatusIkkeUtvandret" name="faultPenStatusIkkeUtvandret"/>
+  </wsdl:message>
+    <wsdl:message name="lagreFamilierelasjon_faultPenAlleredeRegistrertMorMsg">
+    <wsdl:part element="tns:lagreFamilierelasjon_faultPenAlleredeRegistrertMor" name="faultPenAlleredeRegistrertMor"/>
+  </wsdl:message>
+    <wsdl:message name="lagreFamilierelasjon_faultPenRelasjonTilSegSelvMsg">
+    <wsdl:part element="tns:lagreFamilierelasjon_faultPenRelasjonTilSegSelv" name="faultPenRelasjonTilSegSelv"/>
+  </wsdl:message>
+    <wsdl:message name="lagreFamilierelasjon_faultPenAllerdeRegistrertFosterfarMsg">
+    <wsdl:part element="tns:lagreFamilierelasjon_faultPenAllerdeRegistrertFosterfar" name="faultPenAllerdeRegistrertFosterfar"/>
+  </wsdl:message>
+    <wsdl:message name="lagreFamilierelasjon_faultPenAlleredeRegistrertFostermorMsg">
+    <wsdl:part element="tns:lagreFamilierelasjon_faultPenAlleredeRegistrertFostermor" name="faultPenAlleredeRegistrertFostermor"/>
+  </wsdl:message>
+    <wsdl:message name="opprettFamilierelasjon_faultPenStatusIkkeUtvandretMsg">
+    <wsdl:part element="tns:opprettFamilierelasjon_faultPenStatusIkkeUtvandret" name="faultPenStatusIkkeUtvandret"/>
+  </wsdl:message>
+    <wsdl:message name="opprettFamilierelasjon_faultPenAlleredeRegistrertMorMsg">
+    <wsdl:part element="tns:opprettFamilierelasjon_faultPenAlleredeRegistrertMor" name="faultPenAlleredeRegistrertMor"/>
+  </wsdl:message>
+    <wsdl:message name="opprettFamilierelasjon_faultPenRelasjonTilSegSelvMsg">
+    <wsdl:part element="tns:opprettFamilierelasjon_faultPenRelasjonTilSegSelv" name="faultPenRelasjonTilSegSelv"/>
+  </wsdl:message>
+    <wsdl:message name="opprettFamilierelasjon_faultPenAllerdeRegistrertFosterfarMsg">
+    <wsdl:part element="tns:opprettFamilierelasjon_faultPenAllerdeRegistrertFosterfar" name="faultPenAllerdeRegistrertFosterfar"/>
+  </wsdl:message>
+    <wsdl:message name="opprettFamilierelasjon_faultPenAlleredeRegistrertFostermorMsg">
+    <wsdl:part element="tns:opprettFamilierelasjon_faultPenAlleredeRegistrertFostermor" name="faultPenAlleredeRegistrertFostermor"/>
+  </wsdl:message>
+    <wsdl:message name="lagreHistoriskSamboerforholdRequestMsg">
+    <wsdl:part element="tns:lagreHistoriskSamboerforhold" name="lagreHistoriskSamboerforholdParameters"/>
+  </wsdl:message>
+    <wsdl:message name="lagreHistoriskSamboerforholdResponseMsg">
+    <wsdl:part element="tns:lagreHistoriskSamboerforholdResponse" name="lagreHistoriskSamboerforholdResult"/>
+  </wsdl:message>
+    <wsdl:message name="lagreHistoriskSamboerforhold_faultPenDatoerStemmerIkkeMedRegistrertSamboerforholdMsg">
+    <wsdl:part element="tns:FaultPenDatoerStemmerIkkeMedRegistrertSamboerforhold_element" name="faultPenDatoerStemmerIkkeMedRegistrertSamboerforhold"/>
+  </wsdl:message>
+    <wsdl:message name="lagreHistoriskSamboerforhold_faultPenKorrigertPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:FaultPenKorrigertPersonIkkeFunnet_element" name="faultPenKorrigertPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="lagreHistoriskSamboerforhold_faultPenSamboerforholdIkkeFunnetMsg">
+    <wsdl:part element="tns:FaultPenSamboerforholdIkkeFunnet_element" name="faultPenSamboerforholdIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="lagreHistoriskSamboerforhold_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentPerson_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="lagreHistoriskSamboerforhold_faultPenAlleredeRegistrertSamboerforholdMsg">
+    <wsdl:part element="tns:opprettSamboerforhold_faultPenAlleredeRegistrertSamboerforhold" name="faultPenAlleredeRegistrertSamboerforhold"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonUtlandHistorikkListeRequestMsg">
+    <wsdl:part element="tns:hentPersonUtlandHistorikkListe" name="hentPersonUtlandHistorikkListeParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonUtlandHistorikkListeResponseMsg">
+    <wsdl:part element="tns:hentPersonUtlandHistorikkListeResponse" name="hentPersonUtlandHistorikkListeResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonUtlandHistorikkListe_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentPerson_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:portType name="PSAKPerson">
+    <wsdl:operation name="hentPerson">
+      <wsdl:input message="tns:hentPersonRequestMsg" name="hentPersonRequest"/>
+      <wsdl:output message="tns:hentPersonResponseMsg" name="hentPersonResponse"/>
+      <wsdl:fault message="tns:hentPerson_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:hentPerson_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+        </wsdl:operation>
+    <wsdl:operation name="hentKontoinformasjon">
+      <wsdl:input message="tns:hentKontoinformasjonRequestMsg" name="hentKontoinformasjonRequest"/>
+      <wsdl:output message="tns:hentKontoinformasjonResponseMsg" name="hentKontoinformasjonResponse"/>
+      <wsdl:fault message="tns:hentKontoinformasjon_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:hentKontoinformasjon_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+        </wsdl:operation>
+    <wsdl:operation name="hentPersonUtland">
+      <wsdl:input message="tns:hentPersonUtlandRequestMsg" name="hentPersonUtlandRequest"/>
+      <wsdl:output message="tns:hentPersonUtlandResponseMsg" name="hentPersonUtlandResponse"/>
+      <wsdl:fault message="tns:hentPersonUtland_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:hentPersonUtland_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+        </wsdl:operation>
+    <wsdl:operation name="hentHistorikk">
+      <wsdl:input message="tns:hentHistorikkRequestMsg" name="hentHistorikkRequest"/>
+      <wsdl:output message="tns:hentHistorikkResponseMsg" name="hentHistorikkResponse"/>
+      <wsdl:fault message="tns:hentHistorikk_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:hentHistorikk_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+        </wsdl:operation>
+    <wsdl:operation name="hentBrukerprofil">
+      <wsdl:input message="tns:hentBrukerprofilRequestMsg" name="hentBrukerprofilRequest"/>
+      <wsdl:output message="tns:hentBrukerprofilResponseMsg" name="hentBrukerprofilResponse"/>
+      <wsdl:fault message="tns:hentBrukerprofil_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:hentBrukerprofil_faultPenBrukerprofilIkkeFunnetMsg" name="faultPenBrukerprofilIkkeFunnet"/>
+        </wsdl:operation>
+    <wsdl:operation name="lagreEpost">
+      <wsdl:input message="tns:lagreEpostRequestMsg" name="lagreEpostRequest"/>
+      <wsdl:output message="tns:lagreEpostResponseMsg" name="lagreEpostResponse"/>
+      <wsdl:fault message="tns:lagreEpost_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:lagreEpost_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+        </wsdl:operation>
+    <wsdl:operation name="lagreTelefonnumre">
+      <wsdl:input message="tns:lagreTelefonnumreRequestMsg" name="lagreTelefonnumreRequest"/>
+      <wsdl:output message="tns:lagreTelefonnumreResponseMsg" name="lagreTelefonnumreResponse"/>
+      <wsdl:fault message="tns:lagreTelefonnumre_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:lagreTelefonnumre_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+        </wsdl:operation>
+    <wsdl:operation name="lagreSprak">
+      <wsdl:input message="tns:lagreSprakRequestMsg" name="lagreSprakRequest"/>
+      <wsdl:output message="tns:lagreSprakResponseMsg" name="lagreSprakResponse"/>
+      <wsdl:fault message="tns:lagreSprak_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:lagreSprak_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+        </wsdl:operation>
+    <wsdl:operation name="lagreAdresse">
+      <wsdl:input message="tns:lagreAdresseRequestMsg" name="lagreAdresseRequest"/>
+      <wsdl:output message="tns:lagreAdresseResponseMsg" name="lagreAdresseResponse"/>
+      <wsdl:fault message="tns:lagreAdresse_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:lagreAdresse_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+        </wsdl:operation>
+    <wsdl:operation name="lagreKontoinformasjon">
+      <wsdl:input message="tns:lagreKontoinformasjonRequestMsg" name="lagreKontoinformasjonRequest"/>
+      <wsdl:output message="tns:lagreKontoinformasjonResponseMsg" name="lagreKontoinformasjonResponse"/>
+      <wsdl:fault message="tns:lagreKontoinformasjon_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:lagreKontoinformasjon_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+        </wsdl:operation>
+    <wsdl:operation name="lagreBrukerprofil">
+      <wsdl:input message="tns:lagreBrukerprofilRequestMsg" name="lagreBrukerprofilRequest"/>
+      <wsdl:output message="tns:lagreBrukerprofilResponseMsg" name="lagreBrukerprofilResponse"/>
+      <wsdl:fault message="tns:lagreBrukerprofil_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:lagreBrukerprofil_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+        </wsdl:operation>
+    <wsdl:operation name="finnPerson">
+      <wsdl:input message="tns:finnPersonRequestMsg" name="finnPersonRequest"/>
+      <wsdl:output message="tns:finnPersonResponseMsg" name="finnPersonResponse"/>
+      <wsdl:fault message="tns:finnPerson_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+    </wsdl:operation>
+    <wsdl:operation name="erEgenansatt">
+      <wsdl:input message="tns:erEgenansattRequestMsg" name="erEgenansattRequest"/>
+      <wsdl:output message="tns:erEgenansattResponseMsg" name="erEgenansattResponse"/>
+      <wsdl:fault message="tns:erEgenansatt_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:erEgenansatt_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+        </wsdl:operation>
+        <wsdl:operation name="hentSamboerforhold">
+      <wsdl:input message="tns:hentSamboerforholdRequestMsg" name="hentSamboerforholdRequest"/>
+      <wsdl:output message="tns:hentSamboerforholdResponseMsg" name="hentSamboerforholdResponse"/>
+      <wsdl:fault message="tns:hentSamboerforhold_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:hentSamboerforhold_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+        </wsdl:operation>
+        <wsdl:operation name="hentEnhetId">
+      <wsdl:input message="tns:hentEnhetIdRequestMsg" name="hentEnhetIdRequest"/>
+      <wsdl:output message="tns:hentEnhetIdResponseMsg" name="hentEnhetIdResponse"/>
+      <wsdl:fault message="tns:hentEnhetId_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+      <wsdl:fault message="tns:hentEnhetId_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+    </wsdl:operation>
+        <wsdl:operation name="hentFamilierelasjoner">
+      <wsdl:input message="tns:hentFamilierelasjonerRequestMsg" name="hentFamilierelasjonerRequest"/>
+      <wsdl:output message="tns:hentFamilierelasjonerResponseMsg" name="hentFamilierelasjonerResponse"/>
+            <wsdl:fault message="tns:hentFamilierelasjoner_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:hentFamilierelasjoner_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+        </wsdl:operation>
+        <wsdl:operation name="opprettSamboerforhold">
+      <wsdl:input message="tns:opprettSamboerforholdRequestMsg" name="opprettSamboerforholdRequest"/>
+      <wsdl:output message="tns:opprettSamboerforholdResponseMsg" name="opprettSamboerforholdResponse"/>
+      <wsdl:fault message="tns:opprettSamboerforhold_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+      <wsdl:fault message="tns:opprettSamboerforhold_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+      <wsdl:fault message="tns:opprettSamboerforhold_faultPenSamboerIkkeFunnetMsg" name="faultPenSamboerIkkeFunnet"/>
+      <wsdl:fault message="tns:opprettSamboerforhold_faultPenSamboerIFamilieMsg" name="faultPenSamboerIFamilie"/>
+      <wsdl:fault message="tns:opprettSamboerforhold_faultPenSamboerDodMsg" name="faultPenSamboerDod"/>
+      <wsdl:fault message="tns:opprettSamboerforhold_faultPenAlleredeRegistrertSamboerforholdMsg" name="faultPenAlleredeRegistrertSamboerforhold"/>
+            <wsdl:fault message="tns:opprettSamboerforhold_faultPenSamboerValideringFeiletMsg" name="faultPenSamboerValideringFeilet"/>
+        </wsdl:operation>
+        <wsdl:operation name="lagreSamboerforhold">
+      <wsdl:input message="tns:lagreSamboerforholdRequestMsg" name="lagreSamboerforholdRequest"/>
+      <wsdl:output message="tns:lagreSamboerforholdResponseMsg" name="lagreSamboerforholdResponse"/>
+      <wsdl:fault message="tns:lagreSamboerforhold_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+      <wsdl:fault message="tns:lagreSamboerforhold_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+      <wsdl:fault message="tns:lagreSamboerforhold_faultPenSamboerIkkeFunnetMsg" name="faultPenSamboerIkkeFunnet"/>
+      <wsdl:fault message="tns:lagreSamboerforhold_faultPenSamboerIFamilieMsg" name="faultPenSamboerIFamilie"/>
+      <wsdl:fault message="tns:lagreSamboerforhold_faultPenSamboerDodMsg" name="faultPenSamboerDod"/>
+            <wsdl:fault message="tns:lagreSamboerforhold_faultPenAlleredeRegistrertSamboerMsg" name="faultPenAlleredeRegistrertSamboer"/>
+        </wsdl:operation>
+        <wsdl:operation name="slettSamboerforhold">
+      <wsdl:input message="tns:slettSamboerforholdRequestMsg" name="slettSamboerforholdRequest"/>
+      <wsdl:output message="tns:slettSamboerforholdResponseMsg" name="slettSamboerforholdResponse"/>
+            <wsdl:fault message="tns:slettSamboerforhold_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:slettSamboerforhold_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+            <wsdl:fault message="tns:slettSamboerforhold_faultPenSamboerIkkeFunnetMsg" name="faultPenSamboerIkkeFunnet"/>
+        </wsdl:operation>
+        <wsdl:operation name="slettAdresse">
+      <wsdl:input message="tns:slettAdresseRequestMsg" name="slettAdresseRequest"/>
+      <wsdl:output message="tns:slettAdresseResponseMsg" name="slettAdresseResponse"/>
+      <wsdl:fault message="tns:slettAdresse_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:slettAdresse_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+        </wsdl:operation>
+        <wsdl:operation name="lagreStatsborgerskap">
+      <wsdl:input message="tns:lagreStatsborgerskapRequestMsg" name="lagreStatsborgerskapRequest"/>
+      <wsdl:output message="tns:lagreStatsborgerskapResponseMsg" name="lagreStatsborgerskapResponse"/>
+      <wsdl:fault message="tns:lagreStatsborgerskap_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+      <wsdl:fault message="tns:lagreStatsborgerskap_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+    </wsdl:operation>
+        <wsdl:operation name="lagreDodsdato">
+      <wsdl:input message="tns:lagreDodsdatoRequestMsg" name="lagreDodsdatoRequest"/>
+      <wsdl:output message="tns:lagreDodsdatoResponseMsg" name="lagreDodsdatoResponse"/>
+      <wsdl:fault message="tns:lagreDodsdato_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+      <wsdl:fault message="tns:lagreDodsdato_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+    </wsdl:operation>
+        <wsdl:operation name="lagreSivilstand">
+      <wsdl:input message="tns:lagreSivilstandRequestMsg" name="lagreSivilstandRequest"/>
+      <wsdl:output message="tns:lagreSivilstandResponseMsg" name="lagreSivilstandResponse"/>
+            <wsdl:fault message="tns:lagreSivilstand_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:lagreSivilstand_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+        </wsdl:operation>
+        <wsdl:operation name="lagreNavn">
+      <wsdl:input message="tns:lagreNavnRequestMsg" name="lagreNavnRequest"/>
+      <wsdl:output message="tns:lagreNavnResponseMsg" name="lagreNavnResponse"/>
+      <wsdl:fault message="tns:lagreNavn_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+      <wsdl:fault message="tns:lagreNavn_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+    </wsdl:operation>
+        <wsdl:operation name="lagreFamilierelasjon">
+      <wsdl:input message="tns:lagreFamilierelasjonRequestMsg" name="lagreFamilierelasjonRequest"/>
+      <wsdl:output message="tns:lagreFamilierelasjonResponseMsg" name="lagreFamilierelasjonResponse"/>
+      <wsdl:fault message="tns:lagreFamilierelasjon_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+      <wsdl:fault message="tns:lagreFamilierelasjon_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+            <wsdl:fault message="tns:lagreFamilierelasjon_faultPenStatusIkkeUtvandretMsg" name="faultPenStatusIkkeUtvandret"/>
+            <wsdl:fault message="tns:lagreFamilierelasjon_faultPenAlleredeRegistrertMorMsg" name="faultPenAlleredeRegistrertMor"/>
+            <wsdl:fault message="tns:lagreFamilierelasjon_faultPenRelasjonTilSegSelvMsg" name="faultPenRelasjonTilSegSelv"/>
+            <wsdl:fault message="tns:lagreFamilierelasjon_faultPenAllerdeRegistrertFosterfarMsg" name="faultPenAllerdeRegistrertFosterfar"/>
+            <wsdl:fault message="tns:lagreFamilierelasjon_faultPenAlleredeRegistrertFostermorMsg" name="faultPenAlleredeRegistrertFostermor"/>
+        </wsdl:operation>
+        <wsdl:operation name="opprettFamilierelasjon">
+      <wsdl:input message="tns:opprettFamilierelasjonRequestMsg" name="opprettFamilierelasjonRequest"/>
+      <wsdl:output message="tns:opprettFamilierelasjonResponseMsg" name="opprettFamilierelasjonResponse"/>
+      <wsdl:fault message="tns:opprettFamilierelasjon_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+      <wsdl:fault message="tns:opprettFamilierelasjon_faultPenPersonIkkeFunnetMsg" name="faultPenPersonIkkeFunnet"/>
+            <wsdl:fault message="tns:opprettFamilierelasjon_faultPenStatusIkkeUtvandretMsg" name="faultPenStatusIkkeUtvandret"/>
+            <wsdl:fault message="tns:opprettFamilierelasjon_faultPenAlleredeRegistrertMorMsg" name="faultPenAlleredeRegistrertMor"/>
+            <wsdl:fault message="tns:opprettFamilierelasjon_faultPenRelasjonTilSegSelvMsg" name="faultPenRelasjonTilSegSelv"/>
+            <wsdl:fault message="tns:opprettFamilierelasjon_faultPenAllerdeRegistrertFosterfarMsg" name="faultPenAllerdeRegistrertFosterfar"/>
+            <wsdl:fault message="tns:opprettFamilierelasjon_faultPenAlleredeRegistrertFostermorMsg" name="faultPenAlleredeRegistrertFostermor"/>
+        </wsdl:operation>
+        <wsdl:operation name="lagreHistoriskSamboerforhold">
+      <wsdl:input message="tns:lagreHistoriskSamboerforholdRequestMsg" name="lagreHistoriskSamboerforholdRequest"/>
+      <wsdl:output message="tns:lagreHistoriskSamboerforholdResponseMsg" name="lagreHistoriskSamboerforholdResponse"/>
+      <wsdl:fault message="tns:lagreHistoriskSamboerforhold_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+      <wsdl:fault message="tns:lagreHistoriskSamboerforhold_faultPenDatoerStemmerIkkeMedRegistrertSamboerforholdMsg" name="faultPenDatoerStemmerIkkeMedRegistrertSamboerforhold"/>
+      <wsdl:fault message="tns:lagreHistoriskSamboerforhold_faultPenKorrigertPersonIkkeFunnetMsg" name="faultPenKorrigertPersonIkkeFunnet"/>
+      <wsdl:fault message="tns:lagreHistoriskSamboerforhold_faultPenSamboerforholdIkkeFunnetMsg" name="faultPenSamboerforholdIkkeFunnet"/>
+            <wsdl:fault message="tns:lagreHistoriskSamboerforhold_faultPenAlleredeRegistrertSamboerforholdMsg" name="faultPenAlleredeRegistrertSamboerforhold"/>
+        </wsdl:operation>
+        <wsdl:operation name="hentPersonUtlandHistorikkListe">
+      <wsdl:input message="tns:hentPersonUtlandHistorikkListeRequestMsg" name="hentPersonUtlandHistorikkListeRequest"/>
+      <wsdl:output message="tns:hentPersonUtlandHistorikkListeResponseMsg" name="hentPersonUtlandHistorikkListeResponse"/>
+            <wsdl:fault message="tns:hentPersonUtlandHistorikkListe_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/trekk" targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/trekk">
+    <xsd:include schemaLocation="ASBOPenAndreTrekk.xsd"/>
+    <xsd:include schemaLocation="ASBOPenSkattetrekk.xsd"/>
+    <xsd:complexType name="ASBOPenSkattOgTrekk">
+    <xsd:sequence>
+      <xsd:element maxOccurs="1" minOccurs="0" name="skattetrekk" type="bons1:ASBOPenSkattetrekk"/>
+      <xsd:element maxOccurs="1" minOccurs="0" name="andreTrekk" type="bons1:ASBOPenAndreTrekk"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

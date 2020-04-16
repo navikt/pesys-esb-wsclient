@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/oppgave" xmlns:bons3="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/henvendelse" targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/oppgave">
+    <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/henvendelse" schemaLocation="../henvendelse/ASBOPenHenvendelse.xsd"/>
+    <xsd:include schemaLocation="ASBOPenOppgaveId.xsd"/>
+    <xsd:complexType name="ASBOPenOppgave">
+    <xsd:sequence>
+            <xsd:element minOccurs="0" name="oppgaveId" type="bons2:ASBOPenOppgaveId"/>
+            <xsd:element minOccurs="0" name="fodselsnummer" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="aktivFra" type="xsd:date"/>
+            <xsd:element minOccurs="0" name="aktivTil" type="xsd:date"/>
+            <xsd:element minOccurs="0" name="ansvarligId" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="ansvarligEnhetId" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="ansvarligEnhetNavn" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="opprettetEnhetId" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="opprettetEnhetNavn" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="endretAvEnhetId" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="endretAvEnhetNavn" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="fagomrade" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="underkategori" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="oppgaveType" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="beskrivelse" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="oppfolging" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="prioritet" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="versjon" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="lest" type="xsd:boolean"/>
+            <xsd:element minOccurs="0" name="opprettetAv" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="opprettetDato" type="xsd:date"/>
+            <xsd:element minOccurs="0" name="endretAv" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="endretDato" type="xsd:date"/>
+            <xsd:element minOccurs="0" name="henvendelse" type="bons3:ASBOPenHenvendelse"/>
+            <xsd:element minOccurs="0" name="saksnummer" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="dokumentId" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="kravId" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="soknadsId" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="skannetDato" type="xsd:date"/>
+            <xsd:element minOccurs="0" name="mottattDato" type="xsd:date"/>
+        </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

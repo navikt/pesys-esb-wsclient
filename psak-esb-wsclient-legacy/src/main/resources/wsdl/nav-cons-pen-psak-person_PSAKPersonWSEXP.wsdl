@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="PSAKPersonWSEXP_PSAKPersonHttp_Service" targetNamespace="http://nav-cons-pen-psak-person/no/nav/inf/Binding" xmlns:Port_0="http://nav-cons-pen-psak-person/no/nav/inf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://nav-cons-pen-psak-person/no/nav/inf/Binding">
+  <wsdl:import namespace="http://nav-cons-pen-psak-person/no/nav/inf" location="no/nav/inf/PSAKPerson.wsdl">
+    </wsdl:import>
+  <wsdl:binding name="PSAKPersonWSEXP_PSAKPersonHttpBinding" type="Port_0:PSAKPerson">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="hentPerson">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="hentPersonRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hentPersonResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="hentKontoinformasjon">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="hentKontoinformasjonRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hentKontoinformasjonResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="hentPersonUtland">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="hentPersonUtlandRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hentPersonUtlandResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="hentHistorikk">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="hentHistorikkRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hentHistorikkResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="hentBrukerprofil">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="hentBrukerprofilRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hentBrukerprofilResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenBrukerprofilIkkeFunnet">
+        <soap:fault name="faultPenBrukerprofilIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="lagreEpost">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="lagreEpostRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="lagreEpostResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="lagreTelefonnumre">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="lagreTelefonnumreRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="lagreTelefonnumreResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="lagreSprak">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="lagreSprakRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="lagreSprakResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="lagreAdresse">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="lagreAdresseRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="lagreAdresseResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="lagreKontoinformasjon">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="lagreKontoinformasjonRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="lagreKontoinformasjonResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="lagreBrukerprofil">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="lagreBrukerprofilRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="lagreBrukerprofilResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="finnPerson">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="finnPersonRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="finnPersonResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="erEgenansatt">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="erEgenansattRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="erEgenansattResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="hentSamboerforhold">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="hentSamboerforholdRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hentSamboerforholdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="hentEnhetId">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="hentEnhetIdRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hentEnhetIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="hentFamilierelasjoner">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="hentFamilierelasjonerRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hentFamilierelasjonerResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="opprettSamboerforhold">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="opprettSamboerforholdRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="opprettSamboerforholdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenSamboerDod">
+        <soap:fault name="faultPenSamboerDod" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenSamboerValideringFeilet">
+        <soap:fault name="faultPenSamboerValideringFeilet" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenSamboerIkkeFunnet">
+        <soap:fault name="faultPenSamboerIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenSamboerIFamilie">
+        <soap:fault name="faultPenSamboerIFamilie" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenAlleredeRegistrertSamboerforhold">
+        <soap:fault name="faultPenAlleredeRegistrertSamboerforhold" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="lagreSamboerforhold">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="lagreSamboerforholdRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="lagreSamboerforholdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenSamboerDod">
+        <soap:fault name="faultPenSamboerDod" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenAlleredeRegistrertSamboer">
+        <soap:fault name="faultPenAlleredeRegistrertSamboer" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenSamboerIkkeFunnet">
+        <soap:fault name="faultPenSamboerIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenSamboerIFamilie">
+        <soap:fault name="faultPenSamboerIFamilie" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="slettSamboerforhold">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="slettSamboerforholdRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="slettSamboerforholdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenSamboerIkkeFunnet">
+        <soap:fault name="faultPenSamboerIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="slettAdresse">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="slettAdresseRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="slettAdresseResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="lagreStatsborgerskap">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="lagreStatsborgerskapRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="lagreStatsborgerskapResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="lagreDodsdato">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="lagreDodsdatoRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="lagreDodsdatoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="lagreSivilstand">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="lagreSivilstandRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="lagreSivilstandResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="lagreNavn">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="lagreNavnRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="lagreNavnResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="lagreFamilierelasjon">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="lagreFamilierelasjonRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="lagreFamilierelasjonResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenRelasjonTilSegSelv">
+        <soap:fault name="faultPenRelasjonTilSegSelv" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenStatusIkkeUtvandret">
+        <soap:fault name="faultPenStatusIkkeUtvandret" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenAlleredeRegistrertMor">
+        <soap:fault name="faultPenAlleredeRegistrertMor" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenAlleredeRegistrertFostermor">
+        <soap:fault name="faultPenAlleredeRegistrertFostermor" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenAllerdeRegistrertFosterfar">
+        <soap:fault name="faultPenAllerdeRegistrertFosterfar" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="opprettFamilierelasjon">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="opprettFamilierelasjonRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="opprettFamilierelasjonResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenRelasjonTilSegSelv">
+        <soap:fault name="faultPenRelasjonTilSegSelv" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenStatusIkkeUtvandret">
+        <soap:fault name="faultPenStatusIkkeUtvandret" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenAlleredeRegistrertMor">
+        <soap:fault name="faultPenAlleredeRegistrertMor" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenAlleredeRegistrertFostermor">
+        <soap:fault name="faultPenAlleredeRegistrertFostermor" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenAllerdeRegistrertFosterfar">
+        <soap:fault name="faultPenAllerdeRegistrertFosterfar" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="lagreHistoriskSamboerforhold">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="lagreHistoriskSamboerforholdRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="lagreHistoriskSamboerforholdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenKorrigertPersonIkkeFunnet">
+        <soap:fault name="faultPenKorrigertPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenDatoerStemmerIkkeMedRegistrertSamboerforhold">
+        <soap:fault name="faultPenDatoerStemmerIkkeMedRegistrertSamboerforhold" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenAlleredeRegistrertSamboerforhold">
+        <soap:fault name="faultPenAlleredeRegistrertSamboerforhold" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenSamboerforholdIkkeFunnet">
+        <soap:fault name="faultPenSamboerforholdIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="hentPersonUtlandHistorikkListe">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="hentPersonUtlandHistorikkListeRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hentPersonUtlandHistorikkListeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PSAKPersonWSEXP_PSAKPersonHttpService">
+    <wsdl:port name="PSAKPersonWSEXP_PSAKPersonHttpPort" binding="this:PSAKPersonWSEXP_PSAKPersonHttpBinding">
+      <soap:address location="http://localhost:9080/nav-cons-pen-psak-personWeb/sca/PSAKPersonWSEXP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

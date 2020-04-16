@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://nav.no/virksomhet/tjenester/trekk/v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="trekk" targetNamespace="http://nav.no/virksomhet/tjenester/trekk/v1">
+  <wsdl:types>
+    <xsd:schema xmlns:feil="http://nav.no/virksomhet/tjenester/trekk/feil/v1" xmlns:meldinger="http://nav.no/virksomhet/tjenester/trekk/meldinger/v1" targetNamespace="http://nav.no/virksomhet/tjenester/trekk/v1">
+      <xsd:import namespace="http://nav.no/virksomhet/tjenester/trekk/feil/v1" schemaLocation="feil/feil.xsd" />
+      <xsd:import namespace="http://nav.no/virksomhet/tjenester/trekk/meldinger/v1" schemaLocation="meldinger/meldinger.xsd" />
+      <xsd:element name="hentSkattOgTrekk">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:HentSkattOgTrekkRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentSkattOgTrekkResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="response" type="meldinger:HentSkattOgTrekkResponse" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="finnTrekkListe">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:FinnTrekkListeRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="finnTrekkListeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="response" type="meldinger:FinnTrekkListeResponse" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="finnTrekkListekreditorFinnesIkke" type="feil:KreditorFinnesIkke" />
+      <xsd:element name="finnTrekkListekreditorHarFlereAvdelinger" type="feil:KreditorHarFlereAvdelinger" />
+      <xsd:element name="hentTrekktransaksjonListe">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:HentTrekktransaksjonListeRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentTrekktransaksjonListeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="response" type="meldinger:HentTrekktransaksjonListeResponse" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="finnTrekkListe_kreditorHarFlereAvdelinger">
+    <wsdl:part name="kreditorHarFlereAvdelinger" element="tns:finnTrekkListekreditorHarFlereAvdelinger">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="hentTrekktransaksjonListeRequest">
+    <wsdl:part name="parameters" element="tns:hentTrekktransaksjonListe">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="hentSkattOgTrekkRequest">
+    <wsdl:part name="parameters" element="tns:hentSkattOgTrekk">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="hentTrekktransaksjonListeResponse">
+    <wsdl:part name="parameters" element="tns:hentTrekktransaksjonListeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="finnTrekkListeResponse">
+    <wsdl:part name="parameters" element="tns:finnTrekkListeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="finnTrekkListeRequest">
+    <wsdl:part name="parameters" element="tns:finnTrekkListe">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="hentSkattOgTrekkResponse">
+    <wsdl:part name="parameters" element="tns:hentSkattOgTrekkResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="finnTrekkListe_kreditorFinnesIkke">
+    <wsdl:part name="kreditorFinnesIkke" element="tns:finnTrekkListekreditorFinnesIkke">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Trekk">
+    <wsdl:operation name="hentSkattOgTrekk">
+<wsdl:documentation>&lt;p&gt;Henter ett Skattetrekk eller AndreTrekk utafra trekkvedtaks-id fra listen.&lt;/p&gt; </wsdl:documentation>
+      <wsdl:input message="tns:hentSkattOgTrekkRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:hentSkattOgTrekkResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="finnTrekkListe">
+<wsdl:documentation>&lt;p&gt;Tjenesten hente alle trekkene til en gitt person/organisasjon eller samhandler. Retur inkluderer både andre trekk (inkludert frivillig skattetrekk) og skattetrekk. Feltene som vil være fylt ut for skattetrekk er: &lt;/p&gt;&lt;p&gt;•        trekkvedtakId - Trekkvedtakets id&lt;/p&gt;&lt;p&gt;•        trekktype – Trekktype &lt;/p&gt;&lt;p&gt;•        trekkperiodeFom og tom - Perioden som trekket gjelder for&lt;/p&gt;&lt;p&gt;•        trekkstatus - Status på trekket&lt;/p&gt;&lt;p&gt;&lt;/p&gt; </wsdl:documentation>
+      <wsdl:input message="tns:finnTrekkListeRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:finnTrekkListeResponse">
+    </wsdl:output>
+      <wsdl:fault name="kreditorFinnesIkke" message="tns:finnTrekkListe_kreditorFinnesIkke">
+    </wsdl:fault>
+      <wsdl:fault name="kreditorHarFlereAvdelinger" message="tns:finnTrekkListe_kreditorHarFlereAvdelinger">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="hentTrekktransaksjonListe">
+<wsdl:documentation>&lt;p&gt;Henter trekk og transaksjonsdetaljer fra UR knyttet til trekket.&lt;/p&gt; </wsdl:documentation>
+      <wsdl:input message="tns:hentTrekktransaksjonListeRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:hentTrekktransaksjonListeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

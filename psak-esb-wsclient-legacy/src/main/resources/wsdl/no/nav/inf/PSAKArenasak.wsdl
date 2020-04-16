@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/arenasak" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:bons3="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/arenasak" xmlns:tns="http://nav-cons-pen-psak-arenasak/no/nav/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PSAKArenasak" targetNamespace="http://nav-cons-pen-psak-arenasak/no/nav/inf">
+  <wsdl:types>
+    <xsd:schema xmlns:bons0="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo" targetNamespace="http://nav-cons-pen-psak-arenasak/no/nav/inf" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/arenasak" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:bons3="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/arenasak" xmlns:tns="http://nav-cons-pen-psak-arenasak/no/nav/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" schemaLocation="../lib/pen/psakpselv/fault/FaultPenGenerisk.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo" schemaLocation="../lib/pen/psakpselv/asbo/ASBOPenSaksInfoListe.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo" schemaLocation="../lib/pen/psakpselv/asbo/ASBOPenSaksInfo.xsd"/>
+            <xsd:element name="hentSaksInfoListe">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentSakListeRequest" nillable="true" type="bons0:ASBOPenSaksInfo"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentSaksInfoListeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentSakListeResponse" nillable="true" type="bons0:ASBOPenSaksInfoListe"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentSaksInfoListe_faultPenGenerisk" type="bons2:FaultPenGenerisk"/>
+        </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="hentSaksInfoListeRequestMsg">
+    <wsdl:part element="tns:hentSaksInfoListe" name="hentSaksInfoListeParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentSaksInfoListeResponseMsg">
+    <wsdl:part element="tns:hentSaksInfoListeResponse" name="hentSaksInfoListeResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentSaksInfoListe_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentSaksInfoListe_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:portType name="PSAKArenasak">
+    <wsdl:operation name="hentSaksInfoListe">
+      <wsdl:input message="tns:hentSaksInfoListeRequestMsg" name="hentSaksInfoListeRequest"/>
+      <wsdl:output message="tns:hentSaksInfoListeResponseMsg" name="hentSaksInfoListeResponse"/>
+      <wsdl:fault message="tns:hentSaksInfoListe_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+        </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+	xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/utbetaling"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/utbetaling">
+	<xsd:include schemaLocation="ASBOPenBilag.xsd"></xsd:include>
+	<xsd:include schemaLocation="ASBOPenPosteringsdetaljer.xsd" />
+	<xsd:complexType name="ASBOPenUtbetaling">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="utbetalingsId"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="delNokkel"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="utbetalingsAr"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="bilagsnrSerie"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="bilagsnummer"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="datoUtbetaling"
+				type="xsd:date" />
+			<xsd:element minOccurs="0" name="statusDato"
+				type="xsd:date" />
+			<xsd:element minOccurs="0" name="kodeYtelse"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="tekstYtelse"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="utbetalingsKode"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="bilagsKode"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="datoFOM" type="xsd:date" />
+			<xsd:element minOccurs="0" name="datoTOM" type="xsd:date" />
+			<xsd:element minOccurs="0" name="status" type="xsd:string" />
+			<xsd:element minOccurs="0" name="statusTekst"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="gironr" type="xsd:string" />
+			<xsd:element minOccurs="0" name="mottakerFnr"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="mottakerNavn"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="brutto" type="xsd:float" />
+			<xsd:element minOccurs="0" name="trekk" type="xsd:float" />
+			<xsd:element minOccurs="0" name="netto" type="xsd:float" />
+			<xsd:element minOccurs="0" name="valuta" type="xsd:string" />
+			<xsd:element maxOccurs="unbounded" minOccurs="0"
+				name="posteringsdetaljer" type="bons2:ASBOPenPosteringsdetaljer" />
+			<xsd:element minOccurs="0" name="Melding" type="xsd:string" />
+			<xsd:element minOccurs="0" name="bilagListe"
+				type="bons2:ASBOPenBilag" maxOccurs="unbounded">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

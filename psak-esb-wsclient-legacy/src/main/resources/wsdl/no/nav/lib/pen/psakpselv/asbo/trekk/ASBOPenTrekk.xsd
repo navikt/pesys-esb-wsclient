@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo" targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/trekk">
+    <xsd:complexType name="ASBOPenTrekk">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="trekkvedtakId" nillable="true" type="xsd:long"/>
+      <xsd:element minOccurs="0" name="debitorOffnr" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="debitorNavn" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="trekktypeKode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="trekktypeBeskrivelse" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="trekkperiodeFom" type="xsd:date"/>
+      <xsd:element minOccurs="0" name="trekkperiodeTom" type="xsd:date"/>
+      <xsd:element minOccurs="0" name="trekkstatusKode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="trekkstatusBeskrivelse" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

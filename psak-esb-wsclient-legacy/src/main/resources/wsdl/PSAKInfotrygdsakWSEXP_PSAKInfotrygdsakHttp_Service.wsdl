@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="PSAKInfotrygdsakWSEXP_PSAKInfotrygdsakHttp_Service" targetNamespace="http://nav-cons-pen-psak-infotrygdsak/no/nav/inf/Binding" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:Port_0="http://nav-cons-pen-psak-infotrygdsak/no/nav/inf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://nav-cons-pen-psak-infotrygdsak/no/nav/inf/Binding">
+  <import namespace="http://nav-cons-pen-psak-infotrygdsak/no/nav/inf" location="no/nav/inf/PSAKInfotrygdsak.wsdl">
+    </import>
+  <binding name="PSAKInfotrygdsakWSEXP_PSAKInfotrygdsakHttpBinding" type="Port_0:PSAKInfotrygdsak">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="hentSaksInfoListe">
+      <soap:operation/>
+      <input name="hentSaksInfoListeRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="hentSaksInfoListeResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+      <fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+  <service name="PSAKInfotrygdsakWSEXP_PSAKInfotrygdsakHttpService">
+    <port name="PSAKInfotrygdsakWSEXP_PSAKInfotrygdsakHttpPort" binding="this:PSAKInfotrygdsakWSEXP_PSAKInfotrygdsakHttpBinding">
+      <soap:address location="http://localhost:9080/nav-cons-pen-psak-infotrygdsakWeb/sca/PSAKInfotrygdsakWSEXP"/>
+    </port>
+  </service>
+</definitions>

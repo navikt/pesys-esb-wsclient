@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:bons0="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/arenasak" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo">
+    <xsd:include schemaLocation="ASBOPenSaksInfo.xsd"/>
+    <xsd:complexType name="ASBOPenSaksInfoListe">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="saksInfoListe" type="bons1:ASBOPenSaksInfo"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

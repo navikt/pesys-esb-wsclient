@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo" xmlns:bons1="http://nav-lib-cons-pen/no/nav/lib/frg/asbo" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/navorgenhet" targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/navansatt">
+    <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/navorgenhet" schemaLocation="../navorgenhet/ASBOPenNAVEnhet.xsd"/>
+    <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo" schemaLocation="../ASBOPenFagomrade.xsd"/>
+    <xsd:complexType name="ASBOPenNAVAnsatt">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="ansattId" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="ansattNavn" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="fornavn" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="etternavn" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="enheter" type="bons2:ASBOPenNAVEnhet"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="fagomrader" type="bons0:ASBOPenFagomrade"/>
+        </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

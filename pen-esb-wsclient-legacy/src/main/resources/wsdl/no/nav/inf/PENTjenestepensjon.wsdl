@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="PENTjenestepensjon" targetNamespace="http://nav-cons-pen-pen-tjenestepensjon/no/nav/inf" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/tjenestepensjon" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/tjenestepensjon" xmlns:bons3="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:tns="http://nav-cons-pen-pen-tjenestepensjon/no/nav/inf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://nav-cons-pen-pen-tjenestepensjon/no/nav/inf">
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" schemaLocation="../lib/pen/psakpselv/fault/FaultPenGenerisk.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/tjenestepensjon" schemaLocation="../lib/pen/psakpselv/fault/tjenestepensjon/FaultPenTomDatoForanFomDato.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/tjenestepensjon" schemaLocation="../lib/pen/psakpselv/fault/tjenestepensjon/FaultPenElementetFinnesIkke.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/tjenestepensjon" schemaLocation="../lib/pen/psakpselv/asbo/tjenestepensjon/ASBOPenTjenestepensjon.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/tjenestepensjon" schemaLocation="../lib/pen/psakpselv/asbo/tjenestepensjon/ASBOPenFinnTjenestepensjonForholdRequest.xsd"/>
+            <xsd:element name="finnTjenestepensjonsForhold">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="finnTjenestepensjonForholdRequest" nillable="true" type="bons1:ASBOPenFinnTjenestepensjonForholdRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="finnTjenestepensjonsForholdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="finnTjenestepensjonForholdResponse" nillable="true" type="bons1:ASBOPenTjenestepensjon"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="finnTjenestepensjonsForhold_faultElementetFinnesIkke" type="bons2:FaultPenElementetFinnesIkke"/>
+      <xsd:element name="finnTjenestepensjonsForhold_faultTomDatoForanFromDato" type="bons2:FaultPenTomDatoForanFomDato"/>
+      <xsd:element name="finnTjenestepensjonsForhold_faultPenGenerisk" type="bons3:FaultPenGenerisk"/>
+        </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="finnTjenestepensjonsForholdRequestMsg">
+    <wsdl:part element="tns:finnTjenestepensjonsForhold" name="finnTjenestepensjonsForholdParameters"/>
+  </wsdl:message>
+    <wsdl:message name="finnTjenestepensjonsForholdResponseMsg">
+    <wsdl:part element="tns:finnTjenestepensjonsForholdResponse" name="finnTjenestepensjonsForholdResult"/>
+  </wsdl:message>
+    <wsdl:message name="finnTjenestepensjonsForhold_faultElementetFinnesIkkeMsg">
+    <wsdl:part element="tns:finnTjenestepensjonsForhold_faultElementetFinnesIkke" name="faultElementetFinnesIkke"/>
+  </wsdl:message>
+    <wsdl:message name="finnTjenestepensjonsForhold_faultTomDatoForanFromDatoMsg">
+    <wsdl:part element="tns:finnTjenestepensjonsForhold_faultTomDatoForanFromDato" name="faultTomDatoForanFromDato"/>
+  </wsdl:message>
+    <wsdl:message name="finnTjenestepensjonsForhold_faultPenGeneriskMsg">
+    <wsdl:part element="tns:finnTjenestepensjonsForhold_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:portType name="PENTjenestepensjon">
+    <wsdl:operation name="finnTjenestepensjonsForhold">
+      <wsdl:input message="tns:finnTjenestepensjonsForholdRequestMsg" name="finnTjenestepensjonsForholdRequest"/>
+      <wsdl:output message="tns:finnTjenestepensjonsForholdResponseMsg" name="finnTjenestepensjonsForholdResponse"/>
+      <wsdl:fault message="tns:finnTjenestepensjonsForhold_faultElementetFinnesIkkeMsg" name="faultElementetFinnesIkke"/>
+      <wsdl:fault message="tns:finnTjenestepensjonsForhold_faultTomDatoForanFromDatoMsg" name="faultTomDatoForanFromDato"/>
+      <wsdl:fault message="tns:finnTjenestepensjonsForhold_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+    </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

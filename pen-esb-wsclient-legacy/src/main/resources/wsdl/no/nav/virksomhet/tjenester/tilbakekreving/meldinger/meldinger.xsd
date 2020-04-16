@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://nav.no/virksomhet/tjenester/tilbakekreving/meldinger/v2" version="2.0" xmlns:felles="http://nav.no/virksomhet/tjenester/felles/v1" xmlns:meldinger="http://nav.no/virksomhet/tjenester/tilbakekreving/meldinger/v2" xmlns:tilbakekreving="http://nav.no/virksomhet/okonomi/tilbakekreving/v2" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import namespace="http://nav.no/virksomhet/tjenester/felles/v1" schemaLocation="../../felles/felles.xsd"/>
+  <xsd:import namespace="http://nav.no/virksomhet/okonomi/tilbakekreving/v2" schemaLocation="../../../okonomi/tilbakekreving/tilbakekreving.xsd"/>
+  <xsd:complexType name="FinnTilbakekrevingsgrunnlagListeRequest">
+    <xsd:sequence>
+      <xsd:element form="qualified" name="aksjonKode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Aksjonskode for å finne Tilbakekrevingsgrunnlag til danning av nytt tilbakekrevingsvedtak eller omgjøring av tilbakekrevingsvedtak.&lt;/p&gt;&lt;p&gt;&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element form="qualified" name="ansvarligNavEnhetId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Ansvarlig enhet som skal behandle tilbakekrevingsvedtaket.&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element form="qualified" name="fagomradeKode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Fagområde&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element form="qualified" name="fagsystemId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Referanse til fagsystemets identifikasjon på feilutbetalingen&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element form="qualified" minOccurs="0" name="gjelder" type="tilbakekreving:Bruker">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Rettighetshaver, vanligvis stønadsmottaker (fnr/orgnr)&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element form="qualified" minOccurs="0" name="utbetalesTilId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Mottaker av pengene&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element form="qualified" minOccurs="0" name="faggruppeKode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Faggruppe&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="FinnTilbakekrevingsgrunnlagListeUtvidelse1">
+    <xsd:complexContent>
+      <xsd:extension base="felles:Utvidelse"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="FinnTilbakekrevingsgrunnlagListeResponse">
+    <xsd:sequence>
+      <xsd:element form="qualified" maxOccurs="unbounded" minOccurs="0" name="tilbakekrevingsgrunnlagListe" type="tilbakekreving:Tilbakekrevingsgrunnlag"/>
+      <xsd:element minOccurs="0" name="utvidelse" type="meldinger:FinnTilbakekrevingsgrunnlagListeUtvidelse1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="HentTilbakekrevingsvedtakRequest">
+    <xsd:sequence>
+      <xsd:element form="qualified" name="aksjonKode" type="xsd:string"/>
+      <xsd:element form="qualified" name="ansvarligNavEnhetId" type="xsd:string"/>
+      <xsd:element form="qualified" name="tilbakekrevingsgrunnlagId" type="xsd:long"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="HentTilbakekrevingsvedtakUtvidelse1">
+    <xsd:complexContent>
+      <xsd:extension base="felles:Utvidelse"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="HentTilbakekrevingsvedtakResponse">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="tilbakekrevingsvedtak" type="tilbakekreving:Tilbakekrevingsvedtak"/>
+      <xsd:element minOccurs="0" name="utvidelse" type="meldinger:HentTilbakekrevingsvedtakUtvidelse1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="IverksettTilbakekrevingsvedtakRequest">
+    <xsd:sequence>
+      <xsd:element form="qualified" name="tilbakekrevingsvedtak" type="tilbakekreving:Tilbakekrevingsvedtak"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="AnnulerTilbakekrevingsvedtakRequest">
+    <xsd:annotation>
+      <xsd:documentation>&lt;p&gt;Bruk Transtype.OPPDATERVEDTAK i executeQuery&lt;/p&gt;</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="vedtakId" type="xsd:long">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Identifikasjon av tilbakekrevingsvedtaket (det samme vedtaket som ble returnert ved kall til HentTilbakekrevingsvedtak-tjenesten)&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="saksbehandlerId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Saksbehandlers brukerident.&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

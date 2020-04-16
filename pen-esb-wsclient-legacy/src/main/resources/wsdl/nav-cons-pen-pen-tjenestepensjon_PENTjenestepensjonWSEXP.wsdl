@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="PENTjenestepensjonWSEXP_PENTjenestepensjonHttp_Service" targetNamespace="http://nav-cons-pen-pen-tjenestepensjon/no/nav/inf/Binding" xmlns:Port_0="http://nav-cons-pen-pen-tjenestepensjon/no/nav/inf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://nav-cons-pen-pen-tjenestepensjon/no/nav/inf/Binding">
+  <wsdl:import namespace="http://nav-cons-pen-pen-tjenestepensjon/no/nav/inf" location="no/nav/inf/PENTjenestepensjon.wsdl">
+    </wsdl:import>
+  <wsdl:binding name="PENTjenestepensjonWSEXP_PENTjenestepensjonHttpBinding" type="Port_0:PENTjenestepensjon">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="finnTjenestepensjonsForhold">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="finnTjenestepensjonsForholdRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="finnTjenestepensjonsForholdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultTomDatoForanFromDato">
+        <soap:fault name="faultTomDatoForanFromDato" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultElementetFinnesIkke">
+        <soap:fault name="faultElementetFinnesIkke" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PENTjenestepensjonWSEXP_PENTjenestepensjonHttpService">
+    <wsdl:port name="PENTjenestepensjonWSEXP_PENTjenestepensjonHttpPort" binding="this:PENTjenestepensjonWSEXP_PENTjenestepensjonHttpBinding">
+      <soap:address location="http://localhost:9080/nav-cons-pen-pen-tjenestepensjonWeb/sca/PENTjenestepensjonWSEXP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

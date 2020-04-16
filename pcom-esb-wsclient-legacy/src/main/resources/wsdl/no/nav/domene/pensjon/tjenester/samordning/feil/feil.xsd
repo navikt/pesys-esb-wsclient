@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://nav.no/domene/pensjon/tjenester/samordning/feil/v1" version="1.0" xmlns:feil="http://nav.no/domene/pensjon/tjenester/samordning/feil/v1" xmlns:felles="http://nav.no/domene/pensjon/tjenester/felles/v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import namespace="http://nav.no/domene/pensjon/tjenester/felles/v1" schemaLocation="../../felles/felles.xsd"/>
+  <xsd:complexType name="SamordningFunksjonellFeil">
+    <xsd:annotation>
+      <xsd:documentation>&lt;p&gt;Personen finnes ikke.&lt;/p&gt;</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="felles:StelvioFault"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="VedtakIkkeFunnet">
+    <xsd:annotation>
+      <xsd:documentation>&lt;p&gt;Vedtak eksisterer ikke.&lt;/p&gt;</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="felles:StelvioFault"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

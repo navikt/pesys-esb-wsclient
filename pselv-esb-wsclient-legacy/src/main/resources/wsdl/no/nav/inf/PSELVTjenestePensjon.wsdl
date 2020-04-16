@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="PSELVTjenestePensjon" targetNamespace="http://nav-cons-pen-pselv-tjenestepensjon/no/nav/inf" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/tjenestepensjon" xmlns:bons3="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/tjenestepensjon" xmlns:tns="http://nav-cons-pen-pselv-tjenestepensjon/no/nav/inf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://nav-cons-pen-pselv-tjenestepensjon/no/nav/inf">
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/tjenestepensjon" schemaLocation="../lib/pen/psakpselv/asbo/tjenestepensjon/ASBOPenTjenestepensjonSimulering.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/tjenestepensjon" schemaLocation="../lib/pen/psakpselv/asbo/tjenestepensjon/ASBOPenFinnTjenestepensjonForholdRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/tjenestepensjon" schemaLocation="../lib/pen/psakpselv/fault/tjenestepensjon/FaultPenElementetFinnesIkke.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/tjenestepensjon" schemaLocation="../lib/pen/psakpselv/asbo/tjenestepensjon/ASBOPenTjenestepensjonForhold.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/tjenestepensjon" schemaLocation="../lib/pen/psakpselv/fault/tjenestepensjon/FaultPenElementetErUgyldig.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/tjenestepensjon" schemaLocation="../lib/pen/psakpselv/fault/tjenestepensjon/FaultPenElementetErDuplikat.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" schemaLocation="../lib/pen/psakpselv/fault/FaultPenGenerisk.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/tjenestepensjon" schemaLocation="../lib/pen/psakpselv/asbo/tjenestepensjon/ASBOPenTjenestepensjon.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/tjenestepensjon" schemaLocation="../lib/pen/psakpselv/fault/tjenestepensjon/FaultPenTomDatoForanFomDato.xsd"/>
+            <xsd:element name="lagreTjenestepensjonForhold">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreTjenestepensjonForholdRequest" nillable="true" type="bons3:ASBOPenTjenestepensjon"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="lagreTjenestepensjonForholdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreTjenestepensjonForholdResponse" nillable="true" type="bons3:ASBOPenTjenestepensjonForhold"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="opprettTjenestepensjonForhold">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="opprettTjenestepensjonForholdRequest" nillable="true" type="bons3:ASBOPenTjenestepensjon"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="opprettTjenestepensjonForholdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="opprettTjenestepensjonForholdResponse" nillable="true" type="bons3:ASBOPenTjenestepensjonForhold"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="lagreTjenestepensjonForhold_faultPenGenerisk" type="bons1:FaultPenGenerisk"/>
+            <xsd:element name="finnTjenestepensjonForhold">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="finnTjenestepensjonForholdRequest" nillable="true" type="bons3:ASBOPenFinnTjenestepensjonForholdRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="finnTjenestepensjonForholdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="finnTjenestepensjonForholdResponse" nillable="true" type="bons3:ASBOPenTjenestepensjon"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="finnTjenestepensjonForhold_faultElementetFinnesIkke" type="bons2:FaultPenElementetFinnesIkke"/>
+            <xsd:element name="finnTjenestepensjonForhold_faultTomDatoForanFromDato" type="bons2:FaultPenTomDatoForanFomDato"/>
+            <xsd:element name="lagreTjenestepensjonForhold_faultElementetErDuplikat" type="bons2:FaultPenElementetErDuplikat"/>
+            <xsd:element name="finnTjenestepensjonForhold_faultPenGenerisk" type="bons1:FaultPenGenerisk"/>
+            <xsd:element name="opprettTjenestepensjonForhold_faultPenGenerisk" type="bons1:FaultPenGenerisk"/>
+            <xsd:element name="opprettTjenestepensjonForhold_faultElementetErDuplikat" type="bons2:FaultPenElementetErDuplikat"/>
+            <xsd:element name="opprettTjenestepensjonSimulering">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="opprettTjenestepensjonSimuleringRequest" nillable="true" type="bons3:ASBOPenTjenestepensjonForhold"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="opprettTjenestepensjonSimuleringResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="opprettTjenestepensjonSimuleringResponse" nillable="true" type="bons3:ASBOPenTjenestepensjonSimulering"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="opprettTjenestepensjonSimulering_faultElementetErDuplikat" type="bons2:FaultPenElementetErDuplikat"/>
+            <xsd:element name="lagreTjenestepensjonSimulering">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreTjenestepensjonSimuleringRequest" nillable="true" type="bons3:ASBOPenTjenestepensjonSimulering"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="lagreTjenestepensjonSimuleringResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreTjenestepensjonSimuleringResponse" nillable="true" type="bons3:ASBOPenTjenestepensjonSimulering"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="lagreTjenestepensjonSimulering_faultElementetErDuplikat" type="bons2:FaultPenElementetErDuplikat"/>
+            <xsd:element name="lagreTjenestepensjonSimulering_faultPenGenerisk" type="bons1:FaultPenGenerisk"/>
+            <xsd:element name="opprettTjenestepensjonSimulering_faultPenGenerisk" type="bons1:FaultPenGenerisk"/>
+            <xsd:element name="slettTjenestepensjonForhold">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="slettTjenestepensjonForholdRequest" nillable="true" type="bons3:ASBOPenTjenestepensjonForhold"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="slettTjenestepensjonForholdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="slettTjenestepensjonForholdRequest" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="slettTjenestepensjonForhold_faultElementetErUgyldig" type="bons2:FaultPenElementetErUgyldig"/>
+            <xsd:element name="slettTjenestepensjonForhold_faultPenGenerisk" type="bons1:FaultPenGenerisk"/>
+        </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="lagreTjenestepensjonForholdRequestMsg">
+    <wsdl:part element="tns:lagreTjenestepensjonForhold" name="lagreTjenestepensjonForholdParameters"/>
+  </wsdl:message>
+    <wsdl:message name="lagreTjenestepensjonForholdResponseMsg">
+    <wsdl:part element="tns:lagreTjenestepensjonForholdResponse" name="lagreTjenestepensjonForholdResult"/>
+  </wsdl:message>
+    <wsdl:message name="opprettTjenestepensjonForholdRequestMsg">
+    <wsdl:part element="tns:opprettTjenestepensjonForhold" name="opprettTjenestepensjonForholdParameters"/>
+  </wsdl:message>
+    <wsdl:message name="opprettTjenestepensjonForholdResponseMsg">
+    <wsdl:part element="tns:opprettTjenestepensjonForholdResponse" name="opprettTjenestepensjonForholdResult"/>
+  </wsdl:message>
+    <wsdl:message name="lagreTjenestepensjonForhold_faultPenGeneriskMsg">
+    <wsdl:part element="tns:lagreTjenestepensjonForhold_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="finnTjenestepensjonForholdRequestMsg">
+    <wsdl:part element="tns:finnTjenestepensjonForhold" name="finnTjenestepensjonForholdParameters"/>
+  </wsdl:message>
+    <wsdl:message name="finnTjenestepensjonForholdResponseMsg">
+    <wsdl:part element="tns:finnTjenestepensjonForholdResponse" name="finnTjenestepensjonForholdResult"/>
+  </wsdl:message>
+    <wsdl:message name="finnTjenestepensjonForhold_faultElementetFinnesIkkeMsg">
+    <wsdl:part element="tns:finnTjenestepensjonForhold_faultElementetFinnesIkke" name="faultElementetFinnesIkke"/>
+  </wsdl:message>
+    <wsdl:message name="finnTjenestepensjonForhold_faultTomDatoForanFromDatoMsg">
+    <wsdl:part element="tns:finnTjenestepensjonForhold_faultTomDatoForanFromDato" name="faultTomDatoForanFromDato"/>
+  </wsdl:message>
+    <wsdl:message name="lagreTjenestepensjonForhold_faultElementetErDuplikatMsg">
+    <wsdl:part element="tns:lagreTjenestepensjonForhold_faultElementetErDuplikat" name="faultElementetErDuplikat"/>
+  </wsdl:message>
+    <wsdl:message name="finnTjenestepensjonForhold_faultPenGeneriskMsg">
+    <wsdl:part element="tns:finnTjenestepensjonForhold_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="opprettTjenestepensjonForhold_faultPenGeneriskMsg">
+    <wsdl:part element="tns:opprettTjenestepensjonForhold_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="opprettTjenestepensjonForhold_faultElementetErDuplikatMsg">
+    <wsdl:part element="tns:opprettTjenestepensjonForhold_faultElementetErDuplikat" name="faultElementetErDuplikat"/>
+  </wsdl:message>
+    <wsdl:message name="opprettTjenestepensjonSimuleringRequestMsg">
+    <wsdl:part element="tns:opprettTjenestepensjonSimulering" name="opprettTjenestepensjonSimuleringParameters"/>
+  </wsdl:message>
+    <wsdl:message name="opprettTjenestepensjonSimuleringResponseMsg">
+    <wsdl:part element="tns:opprettTjenestepensjonSimuleringResponse" name="opprettTjenestepensjonSimuleringResult"/>
+  </wsdl:message>
+    <wsdl:message name="opprettTjenestepensjonSimulering_faultElementetErDuplikatMsg">
+    <wsdl:part element="tns:opprettTjenestepensjonSimulering_faultElementetErDuplikat" name="faultElementetErDuplikat"/>
+  </wsdl:message>
+    <wsdl:message name="lagreTjenestepensjonSimuleringRequestMsg">
+    <wsdl:part element="tns:lagreTjenestepensjonSimulering" name="lagreTjenestepensjonSimuleringParameters"/>
+  </wsdl:message>
+    <wsdl:message name="lagreTjenestepensjonSimuleringResponseMsg">
+    <wsdl:part element="tns:lagreTjenestepensjonSimuleringResponse" name="lagreTjenestepensjonSimuleringResult"/>
+  </wsdl:message>
+    <wsdl:message name="lagreTjenestepensjonSimulering_faultElementetErDuplikatMsg">
+    <wsdl:part element="tns:lagreTjenestepensjonSimulering_faultElementetErDuplikat" name="faultElementetErDuplikat"/>
+  </wsdl:message>
+    <wsdl:message name="lagreTjenestepensjonSimulering_faultPenGeneriskMsg">
+    <wsdl:part element="tns:lagreTjenestepensjonSimulering_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="opprettTjenestepensjonSimulering_faultPenGeneriskMsg">
+    <wsdl:part element="tns:opprettTjenestepensjonSimulering_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="slettTjenestepensjonForholdRequestMsg">
+    <wsdl:part element="tns:slettTjenestepensjonForhold" name="slettTjenestepensjonForholdParameters"/>
+  </wsdl:message>
+    <wsdl:message name="slettTjenestepensjonForholdResponseMsg">
+    <wsdl:part element="tns:slettTjenestepensjonForholdResponse" name="slettTjenestepensjonForholdResult"/>
+  </wsdl:message>
+    <wsdl:message name="slettTjenestepensjonForhold_faultElementetErUgyldigMsg">
+    <wsdl:part element="tns:slettTjenestepensjonForhold_faultElementetErUgyldig" name="faultElementetErUgyldig"/>
+  </wsdl:message>
+    <wsdl:message name="slettTjenestepensjonForhold_faultPenGeneriskMsg">
+    <wsdl:part element="tns:slettTjenestepensjonForhold_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:portType name="PSELVTjenestePensjon">
+        <wsdl:operation name="lagreTjenestepensjonForhold">
+      <wsdl:input message="tns:lagreTjenestepensjonForholdRequestMsg" name="lagreTjenestepensjonForholdRequest"/>
+      <wsdl:output message="tns:lagreTjenestepensjonForholdResponseMsg" name="lagreTjenestepensjonForholdResponse"/>
+      <wsdl:fault message="tns:lagreTjenestepensjonForhold_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:lagreTjenestepensjonForhold_faultElementetErDuplikatMsg" name="faultElementetErDuplikat"/>
+        </wsdl:operation>
+        <wsdl:operation name="opprettTjenestepensjonForhold">
+      <wsdl:input message="tns:opprettTjenestepensjonForholdRequestMsg" name="opprettTjenestepensjonForholdRequest"/>
+      <wsdl:output message="tns:opprettTjenestepensjonForholdResponseMsg" name="opprettTjenestepensjonForholdResponse"/>
+            <wsdl:fault message="tns:opprettTjenestepensjonForhold_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:opprettTjenestepensjonForhold_faultElementetErDuplikatMsg" name="faultElementetErDuplikat"/>
+        </wsdl:operation>
+        <wsdl:operation name="finnTjenestepensjonForhold">
+      <wsdl:input message="tns:finnTjenestepensjonForholdRequestMsg" name="finnTjenestepensjonForholdRequest"/>
+      <wsdl:output message="tns:finnTjenestepensjonForholdResponseMsg" name="finnTjenestepensjonForholdResponse"/>
+      <wsdl:fault message="tns:finnTjenestepensjonForhold_faultElementetFinnesIkkeMsg" name="faultElementetFinnesIkke"/>
+      <wsdl:fault message="tns:finnTjenestepensjonForhold_faultTomDatoForanFromDatoMsg" name="faultTomDatoForanFromDato"/>
+      <wsdl:fault message="tns:finnTjenestepensjonForhold_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+    </wsdl:operation>
+        <wsdl:operation name="opprettTjenestepensjonSimulering">
+      <wsdl:input message="tns:opprettTjenestepensjonSimuleringRequestMsg" name="opprettTjenestepensjonSimuleringRequest"/>
+      <wsdl:output message="tns:opprettTjenestepensjonSimuleringResponseMsg" name="opprettTjenestepensjonSimuleringResponse"/>
+      <wsdl:fault message="tns:opprettTjenestepensjonSimulering_faultElementetErDuplikatMsg" name="faultElementetErDuplikat"/>
+            <wsdl:fault message="tns:opprettTjenestepensjonSimulering_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+        </wsdl:operation>
+        <wsdl:operation name="lagreTjenestepensjonSimulering">
+      <wsdl:input message="tns:lagreTjenestepensjonSimuleringRequestMsg" name="lagreTjenestepensjonSimuleringRequest"/>
+      <wsdl:output message="tns:lagreTjenestepensjonSimuleringResponseMsg" name="lagreTjenestepensjonSimuleringResponse"/>
+      <wsdl:fault message="tns:lagreTjenestepensjonSimulering_faultElementetErDuplikatMsg" name="faultElementetErDuplikat"/>
+            <wsdl:fault message="tns:lagreTjenestepensjonSimulering_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+        </wsdl:operation>
+        <wsdl:operation name="slettTjenestepensjonForhold">
+      <wsdl:input message="tns:slettTjenestepensjonForholdRequestMsg" name="slettTjenestepensjonForholdRequest"/>
+      <wsdl:output message="tns:slettTjenestepensjonForholdResponseMsg" name="slettTjenestepensjonForholdResponse"/>
+      <wsdl:fault message="tns:slettTjenestepensjonForhold_faultElementetErUgyldigMsg" name="faultElementetErUgyldig"/>
+      <wsdl:fault message="tns:slettTjenestepensjonForhold_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+    </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

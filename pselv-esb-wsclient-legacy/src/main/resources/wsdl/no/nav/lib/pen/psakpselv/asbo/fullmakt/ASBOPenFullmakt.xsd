@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/fullmakt">
+  <xsd:complexType name="ASBOPenFullmakt">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="fullmaktId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="kodefullmaktType" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="kodefullmaktNiva" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="opprettetAv" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="opprettetDato" type="xsd:date"/>
+      <xsd:element minOccurs="0" name="endretAv" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="endretDato" type="xsd:date"/>
+      <xsd:element minOccurs="0" name="fomDato" type="xsd:date"/>
+      <xsd:element minOccurs="0" name="tomDato" type="xsd:date"/>
+      <xsd:element minOccurs="0" name="gyldig" type="xsd:boolean"/>
+      <xsd:element minOccurs="0" name="versjon" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="fagomrade" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="fullmaktsgiver" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="fullmaktshaver" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="fullmaktsgiverKode" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="fullmaktshaverKode" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="fullmaktshaverNavn" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="fullmaktsgiverNavn" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="sistBrukt" type="xsd:date"/>
+        </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

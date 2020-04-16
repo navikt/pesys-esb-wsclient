@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="PSAKNAVAnsattWSEXP_PSAKNAVAnsattHttp_Service" targetNamespace="http://nav-cons-pen-psak-navansatt/no/nav/inf/Binding" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:Port_0="http://nav-cons-pen-psak-navansatt/no/nav/inf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://nav-cons-pen-psak-navansatt/no/nav/inf/Binding">
+  <import namespace="http://nav-cons-pen-psak-navansatt/no/nav/inf" location="no/nav/inf/PSAKNAVAnsatt.wsdl">
+    </import>
+  <binding name="PSAKNAVAnsattWSEXP_PSAKNAVAnsattHttpBinding" type="Port_0:PSAKNAVAnsatt">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="hentNAVAnsattListe">
+      <soap:operation/>
+      <input name="hentNAVAnsattListeRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="hentNAVAnsattListeResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultPenNAVEnhetIkkeFunnet">
+        <soap:fault name="faultPenNAVEnhetIkkeFunnet" use="literal"/>
+      </fault>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="hentNAVAnsattEnhetListe">
+      <soap:operation/>
+      <input name="hentNAVAnsattEnhetListeRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="hentNAVAnsattEnhetListeResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultPenNAVAnsattIkkeFunnet">
+        <soap:fault name="faultPenNAVAnsattIkkeFunnet" use="literal"/>
+      </fault>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="hentNAVAnsattFagomradeListe">
+      <soap:operation/>
+      <input name="hentNAVAnsattFagomradeListeRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="hentNAVAnsattFagomradeListeResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultPenNAVAnsattIkkeFunnet">
+        <soap:fault name="faultPenNAVAnsattIkkeFunnet" use="literal"/>
+      </fault>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="hentNAVAnsatt">
+      <soap:operation/>
+      <input name="hentNAVAnsattRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="hentNAVAnsattResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultPenNAVAnsattIkkeFunnet">
+        <soap:fault name="faultPenNAVAnsattIkkeFunnet" use="literal"/>
+      </fault>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+  <service name="PSAKNAVAnsattWSEXP_PSAKNAVAnsattHttpService">
+    <port name="PSAKNAVAnsattWSEXP_PSAKNAVAnsattHttpPort" binding="this:PSAKNAVAnsattWSEXP_PSAKNAVAnsattHttpBinding">
+      <soap:address location="http://10.33.1.56:9080/nav-cons-pen-psak-navansattWeb/sca/PSAKNAVAnsattWSEXP"/>
+    </port>
+  </service>
+</definitions>

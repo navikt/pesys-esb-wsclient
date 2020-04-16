@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/oppdrag" targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/oppdrag">
+    <xsd:include schemaLocation="ASBOPenValuta.xsd"/>
+    <xsd:include schemaLocation="ASBOPenAttestant.xsd"/>
+    <xsd:include schemaLocation="ASBOPenGrad.xsd"/>
+    <xsd:include schemaLocation="ASBOPenLinjeenhet.xsd"/>
+    <xsd:include schemaLocation="ASBOPenLinjetekst.xsd"/>
+    <xsd:complexType name="ASBOPenOppdragslinje">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="endringsKode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="statusKode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="statusFom" type="xsd:date"/>
+      <xsd:element minOccurs="0" name="vedtakId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="delytelseId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="linjeId" type="xsd:int"/>
+      <xsd:element minOccurs="0" name="klassifikasjonsKode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="klasssifikasjonFom" type="xsd:date"/>
+      <xsd:element minOccurs="0" name="vedtakFom" type="xsd:date"/>
+      <xsd:element minOccurs="0" name="vedtakTom" type="xsd:date"/>
+      <xsd:element minOccurs="0" name="sats" type="xsd:double"/>
+      <xsd:element minOccurs="0" name="fradragTillegg" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="satsTypeKode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="skyldnerId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="skyldnerFom" type="xsd:date"/>
+      <xsd:element minOccurs="0" name="kravhaverId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="kravhaverFom" type="xsd:date"/>
+      <xsd:element minOccurs="0" name="kid" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="kidFom" type="xsd:date"/>
+      <xsd:element minOccurs="0" name="brukKjoreplan" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="saksbehandlerId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="utbetalesTilId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="utbetalesTilIdFom" type="xsd:date"/>
+      <xsd:element minOccurs="0" name="arbeidsgiverKode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="henvisning" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="soknadsTypeKode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="refFagsystemId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="refOppdragsId" type="xsd:int"/>
+      <xsd:element minOccurs="0" name="refDelytelseId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="refLinjeId" type="xsd:int"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="linjetekstListe" type="bons1:ASBOPenLinjetekst"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="linjeenhetListe" type="bons1:ASBOPenLinjeenhet"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="gradListe" type="bons1:ASBOPenGrad"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="attestantListe" type="bons1:ASBOPenAttestant"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="valutaListe" type="bons1:ASBOPenValuta"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

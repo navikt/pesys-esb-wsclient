@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://nav.no/domene/pensjon/felles/v1" version="1.0" xmlns:felles="http://nav.no/domene/pensjon/felles/v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="Utvidelse">
+    <xsd:sequence>
+      <xsd:any maxOccurs="unbounded" minOccurs="0" namespace="##any"/>
+    </xsd:sequence>
+    <xsd:anyAttribute namespace="##any"/>
+  </xsd:complexType>
+</xsd:schema>

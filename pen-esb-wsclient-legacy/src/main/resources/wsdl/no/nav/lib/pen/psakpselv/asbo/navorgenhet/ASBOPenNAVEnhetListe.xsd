@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:bons0="http://nav-lib-cons-pen/no/nav/lib/frg/asbo" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/navorgenhet" targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/navorgenhet">
+    <xsd:include schemaLocation="ASBOPenNAVEnhet.xsd"/>
+    <xsd:complexType name="ASBOPenNAVEnhetListe">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="NAVEnheter" type="bons1:ASBOPenNAVEnhet"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

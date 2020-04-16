@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="PENNAVOrgEnhetWSEXP_PENNAVOrgEnhetHttp_Service" targetNamespace="http://nav-cons-pen-pen-navorgenhet/no/nav/inf/PENNAVOrgEnhet/Binding" xmlns:Port_0="http://nav-cons-pen-pen-navorgenhet/no/nav/inf/PENNAVOrgEnhet" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://nav-cons-pen-pen-navorgenhet/no/nav/inf/PENNAVOrgEnhet/Binding">
+  <wsdl:import namespace="http://nav-cons-pen-pen-navorgenhet/no/nav/inf/PENNAVOrgEnhet" location="no/nav/inf/PENNAVOrgEnhet.wsdl">
+    </wsdl:import>
+  <wsdl:binding name="PENNAVOrgEnhetWSEXP_PENNAVOrgEnhetHttpBinding" type="Port_0:PENNAVOrgEnhet">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="hentNAVEnhet">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="hentNAVEnhetRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hentNAVEnhetResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenNAVEnhetIkkeFunnet">
+        <soap:fault name="faultPenNAVEnhetIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="hentSpesialenhetTilPerson">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="hentSpesialenhetTilPersonRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hentSpesialenhetTilPersonResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenNAVEnhetIkkeFunnet">
+        <soap:fault name="faultPenNAVEnhetIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="hentNAVEnhetListe">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="hentNAVEnhetListeRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hentNAVEnhetListeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenNAVEnhetIkkeFunnet">
+        <soap:fault name="faultPenNAVEnhetIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="hentForvaltningsenhetTilPersonListe">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="hentForvaltningsenhetTilPersonListeRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hentForvaltningsenhetTilPersonListeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenNAVEnhetIkkeFunnet">
+        <soap:fault name="faultPenNAVEnhetIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonManglerEnhet">
+        <soap:fault name="faultPenPersonManglerEnhet" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PENNAVOrgEnhetWSEXP_PENNAVOrgEnhetHttpService">
+    <wsdl:port name="PENNAVOrgEnhetWSEXP_PENNAVOrgEnhetHttpPort" binding="this:PENNAVOrgEnhetWSEXP_PENNAVOrgEnhetHttpBinding">
+      <soap:address location="http://localhost:9080/nav-cons-pen-pen-navorgenhetWeb/sca/PENNAVOrgEnhetWSEXP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

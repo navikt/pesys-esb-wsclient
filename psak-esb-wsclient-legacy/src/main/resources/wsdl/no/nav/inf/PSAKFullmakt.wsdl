@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/fullmakt" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:bons3="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/fullmakt" xmlns:tns="http://nav-cons-pen-psak-fullmakt/no/nav/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PSAKFullmakt" targetNamespace="http://nav-cons-pen-psak-fullmakt/no/nav/inf">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://nav-cons-pen-psak-fullmakt/no/nav/inf" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/fullmakt" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:bons3="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/fullmakt" xmlns:tns="http://nav-cons-pen-psak-fullmakt/no/nav/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/fullmakt" schemaLocation="../lib/pen/psakpselv/asbo/fullmakt/ASBOPenFullmaktListe.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/fullmakt" schemaLocation="../lib/pen/psakpselv/asbo/fullmakt/ASBOPenHentFullmaktListeRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" schemaLocation="../lib/pen/psakpselv/fault/FaultPenGenerisk.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/fullmakt" schemaLocation="../lib/pen/psakpselv/asbo/fullmakt/ASBOPenFullmakt.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/fullmakt" schemaLocation="../lib/pen/psakpselv/fault/fullmakt/FaultPenFullmaktIkkeFunnet.xsd"/>
+            <xsd:element name="hentFullmaktListe">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentFullmaktListeRequest" nillable="true" type="bons1:ASBOPenHentFullmaktListeRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentFullmaktListeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentFullmaktListeResponse" nillable="true" type="bons1:ASBOPenFullmaktListe"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="lagreFullmakt">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreFullmaktRequest" nillable="true" type="bons1:ASBOPenFullmakt"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="lagreFullmaktResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="lagreFullmaktResponse" nillable="true" type="bons1:ASBOPenFullmakt"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="opprettFullmakt">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="opprettFullmaktRequest" nillable="true" type="bons1:ASBOPenFullmakt"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="opprettFullmaktResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="opprettFullmaktResponse" nillable="true" type="bons1:ASBOPenFullmakt"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentFullmaktListe_faultPenGenerisk" type="bons2:FaultPenGenerisk"/>
+      <xsd:element name="lagreFullmakt_faultPenGenerisk" type="bons2:FaultPenGenerisk"/>
+      <xsd:element name="opprettFullmakt_faultPenGenerisk" type="bons2:FaultPenGenerisk"/>
+            <xsd:element name="slettFullmakt">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="slettFullmaktRequest" nillable="true" type="bons1:ASBOPenFullmakt"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="slettFullmaktResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="slettFullmaktResponse" nillable="true" type="bons1:ASBOPenFullmakt"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="slettFullmakt_faultPenFullmaktIkkeFunnet" type="bons3:FaultPenFullmaktIkkeFunnet"/>
+            <xsd:element name="slettFullmakt_faultPenGenerisk" type="bons2:FaultPenGenerisk"/>
+            <xsd:element name="lagreFullmakt_faultPenFullmaktIkkeFunnet" type="bons3:FaultPenFullmaktIkkeFunnet"/>
+        </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="hentFullmaktListeRequestMsg">
+    <wsdl:part element="tns:hentFullmaktListe" name="hentFullmaktListeParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentFullmaktListeResponseMsg">
+    <wsdl:part element="tns:hentFullmaktListeResponse" name="hentFullmaktListeResult"/>
+  </wsdl:message>
+    <wsdl:message name="lagreFullmaktRequestMsg">
+    <wsdl:part element="tns:lagreFullmakt" name="lagreFullmaktParameters"/>
+  </wsdl:message>
+    <wsdl:message name="lagreFullmaktResponseMsg">
+    <wsdl:part element="tns:lagreFullmaktResponse" name="lagreFullmaktResult"/>
+  </wsdl:message>
+    <wsdl:message name="opprettFullmaktRequestMsg">
+    <wsdl:part element="tns:opprettFullmakt" name="opprettFullmaktParameters"/>
+  </wsdl:message>
+    <wsdl:message name="opprettFullmaktResponseMsg">
+    <wsdl:part element="tns:opprettFullmaktResponse" name="opprettFullmaktResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentFullmaktListe_faultPenGeneriskMsg">
+    <wsdl:part element="tns:hentFullmaktListe_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="lagreFullmakt_faultPenGeneriskMsg">
+    <wsdl:part element="tns:lagreFullmakt_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="opprettFullmakt_faultPenGeneriskMsg">
+    <wsdl:part element="tns:opprettFullmakt_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="slettFullmaktRequestMsg">
+    <wsdl:part element="tns:slettFullmakt" name="slettFullmaktParameters"/>
+  </wsdl:message>
+    <wsdl:message name="slettFullmaktResponseMsg">
+    <wsdl:part element="tns:slettFullmaktResponse" name="slettFullmaktResult"/>
+  </wsdl:message>
+    <wsdl:message name="slettFullmakt_faultPenFullmaktIkkeFunnetMsg">
+    <wsdl:part element="tns:slettFullmakt_faultPenFullmaktIkkeFunnet" name="faultPenFullmaktIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="slettFullmakt_faultPenGeneriskMsg">
+    <wsdl:part element="tns:slettFullmakt_faultPenGenerisk" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="lagreFullmakt_faultPenFullmaktIkkeFunnetMsg">
+    <wsdl:part element="tns:lagreFullmakt_faultPenFullmaktIkkeFunnet" name="faultPenFullmaktIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:portType name="PSAKFullmakt">
+    <wsdl:operation name="hentFullmaktListe">
+      <wsdl:input message="tns:hentFullmaktListeRequestMsg" name="hentFullmaktListeRequest"/>
+      <wsdl:output message="tns:hentFullmaktListeResponseMsg" name="hentFullmaktListeResponse"/>
+      <wsdl:fault message="tns:hentFullmaktListe_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+    </wsdl:operation>
+    <wsdl:operation name="lagreFullmakt">
+      <wsdl:input message="tns:lagreFullmaktRequestMsg" name="lagreFullmaktRequest"/>
+      <wsdl:output message="tns:lagreFullmaktResponseMsg" name="lagreFullmaktResponse"/>
+      <wsdl:fault message="tns:lagreFullmakt_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:lagreFullmakt_faultPenFullmaktIkkeFunnetMsg" name="faultPenFullmaktIkkeFunnet"/>
+        </wsdl:operation>
+    <wsdl:operation name="opprettFullmakt">
+      <wsdl:input message="tns:opprettFullmaktRequestMsg" name="opprettFullmaktRequest"/>
+      <wsdl:output message="tns:opprettFullmaktResponseMsg" name="opprettFullmaktResponse"/>
+      <wsdl:fault message="tns:opprettFullmakt_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+    </wsdl:operation>
+        <wsdl:operation name="slettFullmakt">
+      <wsdl:input message="tns:slettFullmaktRequestMsg" name="slettFullmaktRequest"/>
+      <wsdl:output message="tns:slettFullmaktResponseMsg" name="slettFullmaktResponse"/>
+            <wsdl:fault message="tns:slettFullmakt_faultPenFullmaktIkkeFunnetMsg" name="faultPenFullmaktIkkeFunnet"/>
+            <wsdl:fault message="tns:slettFullmakt_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

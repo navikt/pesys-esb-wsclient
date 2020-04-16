@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="PSELVFullmaktWSEXP_PSELVFullmaktHttp_Service" targetNamespace="http://nav-cons-pen-pselv-fullmakt/no/nav/inf/Binding" xmlns:Port_0="http://nav-cons-pen-pselv-fullmakt/no/nav/inf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://nav-cons-pen-pselv-fullmakt/no/nav/inf/Binding">
+  <wsdl:import namespace="http://nav-cons-pen-pselv-fullmakt/no/nav/inf" location="no/nav/inf/PSELVFullmakt.wsdl">
+    </wsdl:import>
+  <wsdl:binding name="PSELVFullmaktWSEXP_PSELVFullmaktHttpBinding" type="Port_0:PSELVFullmakt">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="slettFullmakt">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="slettFullmaktRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="slettFullmaktResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenFullmaktIkkeFunnet">
+        <soap:fault name="faultPenFullmaktIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="lagreFullmaktSistBrukt">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="lagreFullmaktSistBruktRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="lagreFullmaktSistBruktResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenFullmaktIkkeFunnet">
+        <soap:fault name="faultPenFullmaktIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="opprettFullmakt">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="opprettFullmaktRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="opprettFullmaktResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="lagreFullmakt">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="lagreFullmaktRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="lagreFullmaktResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenFullmaktIkkeFunnet">
+        <soap:fault name="faultPenFullmaktIkkeFunnet" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="hentFullmaktListe">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="hentFullmaktListeRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hentFullmaktListeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PSELVFullmaktWSEXP_PSELVFullmaktHttpService">
+    <wsdl:port name="PSELVFullmaktWSEXP_PSELVFullmaktHttpPort" binding="this:PSELVFullmaktWSEXP_PSELVFullmaktHttpBinding">
+      <soap:address location="http://localhost:9080/nav-cons-pen-pselv-fullmaktWeb/sca/PSELVFullmaktWSEXP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

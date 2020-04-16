@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://nav.no/virksomhet/okonomi/utbetaling/v1" version="1.0" xmlns:utbetaling="http://nav.no/virksomhet/okonomi/utbetaling/v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType abstract="true" name="Utvidelse">
+    <xsd:sequence>
+      <xsd:any maxOccurs="unbounded" minOccurs="0" namespace="##any"/>
+    </xsd:sequence>
+    <xsd:anyAttribute namespace="##any"/>
+  </xsd:complexType>
+  <xsd:complexType name="PosteringsdetaljerUtvidelse1">
+    <xsd:complexContent>
+      <xsd:extension base="utbetaling:Utvidelse"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Posteringsdetaljer">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="kontoBeskrUnder" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Undernavn på konto&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="utvidelse" type="utbetaling:PosteringsdetaljerUtvidelse1"/>
+      <xsd:element minOccurs="0" name="belop" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Beløp på postering&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="kontonr" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Kontonummer for postering&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="posteringKode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;&lt;b&gt;&lt;/b&gt;&lt;/p&gt;&lt;table border="1"&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;b&gt;Kode &lt;/b&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;b&gt;Beskrivelse&lt;/b&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;T&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Trekk&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;S&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Stønad&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="kontoBeskrHoved" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Hovednavn på konto&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="BilagUtvidelse1">
+    <xsd:complexContent>
+      <xsd:extension base="utbetaling:Utvidelse"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Melding">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="meldingtekst" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Bilag">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="utvidelse" type="utbetaling:BilagUtvidelse1"/>
+      <xsd:element minOccurs="0" name="ytelseKode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Ytelsekode&lt;b&gt;&lt;/b&gt;&lt;b&gt;&lt;/b&gt;&lt;/p&gt;&lt;table border="1"&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;b&gt;Kode&lt;/b&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;b&gt;Beskrivel&lt;/b&gt;&lt;b&gt;se&lt;/b&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;UTBETALING U/YTELSESKODE&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;AL &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;ALØYSE&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;AT&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;ATTFØRING&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;BA&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;BARNETRYGD&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;BE &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;BEHANDLER OPPGJØR&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;FI &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;FISKERE&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;FR &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;FRIVILLIG TRYGD SELVSTENDIG N’RING&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;KS &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;KONTANTSTØTTE&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;LE &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;LEDSAGER&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;LØ &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;LØNNINGER&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;PE &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;PENSJONER&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;SB &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;REASSURANSE SMÅ BEDRIFTER&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;SK &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;SKADEKUR&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;SP &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;SYKEPENGER&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;YS &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;YRKESSKADE&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;FA &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;FØDSELS- OG ADOPSJONSPENGER&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;BS &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;STØNAD VED BARNS SYKDOM&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;YA &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;YRKESRETTET ATTFØRING&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;RP &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;REHABILITERINGSPENGER&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;TU &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;TIDSBEGRENSET UFØRESTØNAD&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;SH &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;SOSIALHJELPSUTBETALINGER&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;SU &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;SUPPLERENDE STØNAD&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;BR &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;BIDRAG&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;PR &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;PREDATOR - INTERNE TREKK&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;ST &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;SKATTETREKK&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;TR &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;KREDITORTREKK&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;SS &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Svalbardsskatt&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;BT &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Tilbakebetaling til bidragspliktig&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;TD &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Kreditor disponerer&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;PA &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Alderspensjon&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;PU &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Uførepensjon&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;PG &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Gjenlevendepensjon&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;PF &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Tidligere familiepleierpensjon&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;PB &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Barnepensjon&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;P0 &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Enslig forsørgerpensjon&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;PY &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Uførepensjon yrkesskade&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;P1 &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Gjenlevendepensjon yrkesskade&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;P2 &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Gammel yrkesskadepensjon&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;PK &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Krigspensjon&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;P3 &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Avtalefestet pensjon&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;P4 &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Pensjonstrygden for sjømenn&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;P5 &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Kommunal tilleggspensjon&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;P6 &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;Statens pensjonskasse&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="tom" type="xsd:date">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;TOM-dato&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="bilagKode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Bilagskode&lt;b&gt;&lt;/b&gt;&lt;/p&gt;&lt;table border="1"&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;b&gt;Kode&lt;/b&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;b&gt;Beskrivelse&lt;/b&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;A&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;AVREGNING FRA KONTOFØRER&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;K&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;KORREKSJONER (MEMORIALPOSTERINGER I INFOTRYGD)&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;R&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;RETURFØRING VIA RETURFØRINGSRUTINEN I FORSYSTEMET&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;U&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;UTBETALING&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;M&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;MOTBILAG&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="fom" type="xsd:date">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;FOM-dato&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="ytelseBeskrivelse" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Ytelse dekodet&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="posteringsdetaljerListe" type="utbetaling:Posteringsdetaljer">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="bilagLopenr" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Bilagsløpenummer&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="meldingListe" type="utbetaling:Melding">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Meldingstekst&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="UtbetalingUtvidelse1">
+    <xsd:complexContent>
+      <xsd:extension base="utbetaling:Utvidelse"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Utbetaling">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="bilagsnrSerie" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Settes ved å hente ut de fire neste tegnene (8-11) i utbetalingId&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="utbetalingAr" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Settes ved å hente ut de fire neste tegnene (4-7) i utbetalingId&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="delNokkel" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Settes ved å hente ut de fire første tegnene (0-3) i utbetalingId&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="utbetalingId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Intern id for utbetaling&lt;/p&gt;&lt;p&gt;Iden er sammensatt av følgende felter i UR i gitt rekkefølge:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;WS-UR-PART-KEY (4 tegn)&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;WS-UR-UTBET-AAR (4 tegn)&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;WS-UR-KODE-SERIE (Bilagsnr serie) (4 tegn)&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;WS-UR-BILAGSNR (9 tegn)&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="utvidelse" type="utbetaling:UtbetalingUtvidelse1"/>
+      <xsd:element minOccurs="0" name="bilagsnummer" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Settes ved å hente ut de ni siste tegnene (12-21) i utbetalingId&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="statusDato" type="xsd:date">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Dato for statusendring&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="utbetalingDato" type="xsd:date">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Dato for utbetaling&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="utbetalingKode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;&lt;b&gt;&lt;/b&gt;&lt;/p&gt;&lt;table border="1"&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;b&gt;Kode &lt;/b&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;b&gt;Beskrivelse&lt;/b&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;BKT &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;UTBETALINGER TIL BANKKONTO&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;PBK &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;UTBETALINGER TIL POSTBANKKONTO&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;DIR &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;DIREKTE UTBETALINGSKORT&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;UTD &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;UTENLANDSUTBETALINGER&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;UTK &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;UTBETALINGSKORT BANK&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;AVR &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;AVREGNINGSRETUR-UTBET IKKE FUNNET&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;INT &lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;INTERNE TREKK&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;BK1&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;UTBETALINGER TIL BANKKONTO&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="statusBeskrivelse" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Statustekst for utbetaling&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="gironr" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;&lt;b&gt;&lt;/b&gt;Utbetalings-kontonummer&lt;b&gt;&lt;/b&gt;&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="statusKode" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Statuskode for utbetaling&lt;b&gt;&lt;/b&gt;&lt;/p&gt;&lt;table border="1"&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;col width="50.0%"&gt;&lt;/col&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;&lt;b&gt;Kode &lt;/b&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;b&gt;Beskrivelse&lt;/b&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;1&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;AVVIK AVREGNINGSRETUR&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;2&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;AVVIK MOTTAKSRETUR&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;3&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;AVVIST KONTOFØRER VED AVREGNINGSRETUR&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;4&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;AVVIST KONTOFØRER VED MOTTAKSRETUR&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;5&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;FEIL AVDEKKET I POSTERINGSKONTROLLEN&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;6&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;FLERE STATUSER GYLDIGE&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;7&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;FORELDET UTBETALINGSKORT&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;8&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;b&gt;&lt;/b&gt;FØRT PÅ FEILKONTO&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;9&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;MOTTATT FRA FORSYSTEM&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;10&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;MOTTATT KONTOFØRER&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;11&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;NULLUTBETALING/KORREKSJON&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;12&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;SENDT KONTOFØRER&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;13&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;SJEKK&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;14&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt; STOPPEOPPDRAG SENDT KONTOFØRER&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;15&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;STOPPETRANSAKSJON REGISTRERT&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;16&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;STOPPETRANS AVVIST KONTOFØRER&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;17&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;STOPPETRANSAKSJON MOTTATT AV KONTOFØRER&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;18&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;UTBETALT&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;19&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;UTFØRT STOPPEOPPDRAG&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;20&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;KANSELERT&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;21&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;NEGATIV NETTO&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;22&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;RETURNERES FORSYSTEM&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;23&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;IKKE FUNNET&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;24&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;MANUELL RETURFØRING&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;25&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;AVVIST KONTOFØRER VED MOTTAK/AVREGNING URKL&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;26&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;RETURFØRT - NY UTBETALING URKL&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;27&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;RETURFØRT - KORRIGERT (IKKE UTBETALT)&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;28&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;AVREGNET - MANUELL RETUR&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;29&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;AVREGNET - MANUELL RETUR (J I NY UTBET)&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;30&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;AVREGNET - MANUELL RETUR (N I NY UTBET)&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;31&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;MANUELL RETURFØRING - BEHANDLET&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;99&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;åRSAVSLUTNINGSPOSTERINGER&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="mottakerNavn" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Mottakers navn&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="netto" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Nettobeløp&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="brutto" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Brutto utbetalt&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="trekk" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Trekkbeløp&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="bilagListe" type="utbetaling:Bilag">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="valuta" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Valuta for utbetaling&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" name="mottakerFnr" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Mottakers fødselsnummer&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

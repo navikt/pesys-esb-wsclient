@@ -17,173 +17,10 @@
             <artifactId>pcom-esb-wsclient-legacy</artifactId>
             <version>${project.version}</version>
         </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-pselv-ppen003</artifactId>
-            <version>8.4.0</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-pselv-ppen004</artifactId>
-            <version>8.4.0</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-pselv-tjenestepensjon</artifactId>
-            <version>8.4.1</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-pselv-person</artifactId>
-            <version>8.4.1</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-pselv-fullmakt</artifactId>
-            <version>8.4.1</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-pselv-brukerprofil</artifactId>
-            <version>8.7.0</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-pselv-samhandler</artifactId>
-            <version>8.4.1</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-pselv-henvendelse</artifactId>
-            <version>8.4.1</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-pselv-utbetaling</artifactId>
-            <version>8.4.1</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>no.nav.esb.layers.modules.cons</groupId>
-            <artifactId>nav-cons-pen-pselv-inntekt</artifactId>
-            <version>8.4.1</version>
-            <classifier>wsdlif</classifier>
-            <type>zip</type>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
     </dependencies>
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>unpack-dependency</id>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>unpack-dependencies</goal>
-                        </goals>
-                        <configuration>
-                            <includeGroupIds>no.nav.esb.pensjon,no.nav.esb.nav,no.nav.esb.layers.modules.cons</includeGroupIds>
-                            <outputDirectory>${project.build.outputDirectory}/wsdl</outputDirectory>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
             <plugin>
                 <groupId>org.apache.cxf</groupId>
                 <artifactId>cxf-codegen-plugin</artifactId>
@@ -196,7 +33,7 @@
                                     <bindingFile>src/main/resources/bindings.xjb</bindingFile>
                                 </bindingFiles>
                                 <extraargs>
-                                    <extraarg>-verbose</extraarg>
+<!--                                    <extraarg>-verbose</extraarg>-->
                                     <!--change Boolean type getters to getXXX (to ensure status quo with starting point) -->
                                     <extraarg>-xjc-Xbg</extraarg>
                                     <!-- Add namespace on element, not on package level -->
@@ -213,7 +50,7 @@
 
                                 <!-- PSELV PPEN004 -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pselv-ppen003_PSELVPPEN003WSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pselv-ppen003_PSELVPPEN003WSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-cons-pen-pselv-ppen003/no/nav/inf=no.nav.inf.pselv.ppen003</extraarg>
@@ -226,7 +63,7 @@
 
                                 <!-- PSELV PPEN004 -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pselv-ppen004_PENPPEN004WSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pselv-ppen004_PENPPEN004WSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-cons-pen-pselv-ppen004/no/nav/inf=no.nav.inf.pselv.ppen004</extraarg>
@@ -239,7 +76,7 @@
 
                                 <!-- Tjenestepensjon -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pselv-tjenestepensjon_PSELVTjenestepensjonWSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pselv-tjenestepensjon_PSELVTjenestepensjonWSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-cons-pen-pselv-tjenestepensjon/no/nav/inf=no.nav.inf.pselv.tjenestepensjon</extraarg>
@@ -257,7 +94,7 @@
 
                                 <!-- PSELV Person -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/PSELVPersonWSEXP_PSELVPersonHttp_Service.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/PSELVPersonWSEXP_PSELVPersonHttp_Service.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-cons-pen-pselv-person/no/nav/inf=no.nav.inf.pselv.person</extraarg>
@@ -282,7 +119,7 @@
 
                                 <!-- PSELV Fullmakt -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pselv-fullmakt_PSELVFullmaktWSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pselv-fullmakt_PSELVFullmaktWSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-cons-pen-pselv-fullmakt/no/nav/inf=no.nav.inf.pselv.fullmakt</extraarg>
@@ -297,7 +134,7 @@
 
                                 <!-- PSELV Brukerprofil -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pselv-brukerprofil_PSELVBrukerprofilWSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pselv-brukerprofil_PSELVBrukerprofilWSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-cons-pen-pselv-brukerprofil/no/nav/inf=no.nav.inf.pselv.brukerprofil</extraarg>
@@ -312,7 +149,7 @@
 
                                 <!-- PSELV Samhandler -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pselv-samhandler_PSELVSamhandlerWSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pselv-samhandler_PSELVSamhandlerWSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-cons-pen-pselv-samhandler/no/nav/inf=no.nav.inf.pselv.samhandler</extraarg>
@@ -329,7 +166,7 @@
 
                                 <!-- PSELV Henvendelse -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/PSELVHenvendelseWSEXP_PSELVHenvendelseHttp_Service.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/PSELVHenvendelseWSEXP_PSELVHenvendelseHttp_Service.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-cons-pen-pselv-henvendelse/no/nav/inf=no.nav.inf.pselv.henvendelse</extraarg>
@@ -348,7 +185,7 @@
 
                                 <!-- PSELV Utbetaling -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pselv-utbetaling_PSELVUtbetalingWSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pselv-utbetaling_PSELVUtbetalingWSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-cons-pen-pselv-utbetaling/no/nav/inf=no.nav.inf.pselv.utbetaling</extraarg>
@@ -361,7 +198,7 @@
 
                                 <!-- PSELV Inntekt -->
                                 <wsdlOption>
-                                    <wsdl>${project.build.outputDirectory}/wsdl/nav-cons-pen-pselv-inntekt_PSELVInntektWSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pselv-inntekt_PSELVInntektWSEXP.wsdl</wsdl>
                                     <extraargs>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-cons-pen-pselv-inntekt/no/nav/inf=no.nav.inf.pselv.inntekt</extraarg>

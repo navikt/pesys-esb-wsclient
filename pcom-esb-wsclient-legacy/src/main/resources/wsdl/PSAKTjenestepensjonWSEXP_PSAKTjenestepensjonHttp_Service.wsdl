@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="PSAKTjenestepensjonWSEXP_PSAKTjenestepensjonHttp_Service" targetNamespace="http://nav-cons-pen-psak-tjenestepensjon/no/nav/inf/Binding" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:Port_0="http://nav-cons-pen-psak-tjenestepensjon/no/nav/inf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://nav-cons-pen-psak-tjenestepensjon/no/nav/inf/Binding">
+  <import namespace="http://nav-cons-pen-psak-tjenestepensjon/no/nav/inf" location="no/nav/inf/PSAKTjenestepensjon.wsdl">
+    </import>
+  <binding name="PSAKTjenestepensjonWSEXP_PSAKTjenestepensjonHttpBinding" type="Port_0:PSAKTjenestepensjon">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="opprettTjenestepensjonForhold">
+      <soap:operation/>
+      <input name="opprettTjenestepensjonForholdRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="opprettTjenestepensjonForholdResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultElementetErDuplikat">
+        <soap:fault name="faultElementetErDuplikat" use="literal"/>
+      </fault>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="lagreTjenestepensjonForhold">
+      <soap:operation/>
+      <input name="lagreTjenestepensjonForholdRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="lagreTjenestepensjonForholdResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultElementetErDuplikat">
+        <soap:fault name="faultElementetErDuplikat" use="literal"/>
+      </fault>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="finnTjenestepensjonsForhold">
+      <soap:operation/>
+      <input name="finnTjenestepensjonsForholdRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="finnTjenestepensjonsForholdResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultElementetFinnesIkke">
+        <soap:fault name="faultElementetFinnesIkke" use="literal"/>
+      </fault>
+      <fault name="faultTomDatoForanFromDato">
+        <soap:fault name="faultTomDatoForanFromDato" use="literal"/>
+      </fault>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="slettTjenestepensjonForhold">
+      <soap:operation/>
+      <input name="slettTjenestepensjonForholdRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="slettTjenestepensjonForholdResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+      <fault name="faultElementetErUgyldig">
+        <soap:fault name="faultElementetErUgyldig" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+  <service name="PSAKTjenestepensjonWSEXP_PSAKTjenestepensjonHttpService">
+    <port name="PSAKTjenestepensjonWSEXP_PSAKTjenestepensjonHttpPort" binding="this:PSAKTjenestepensjonWSEXP_PSAKTjenestepensjonHttpBinding">
+      <soap:address location="http://localhost:9080/nav-cons-pen-psak-tjenestepensjonWeb/sca/PSAKTjenestepensjonWSEXP"/>
+    </port>
+  </service>
+</definitions>

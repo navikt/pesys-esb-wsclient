@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="PSELVTjenestepensjonWSEXP_PSELVTjenestePensjonHttp_Service" targetNamespace="http://nav-cons-pen-pselv-tjenestepensjon/no/nav/inf/Binding" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://nav-cons-pen-pselv-tjenestepensjon/no/nav/inf" xmlns:bons0="http://nav-cons-pen-pselv-tjenestepensjon/no/nav/inf/Binding">
+  <wsdl:import namespace="http://nav-cons-pen-pselv-tjenestepensjon/no/nav/inf" location="no/nav/inf/PSELVTjenestePensjon.wsdl">
+    </wsdl:import>
+  <wsdl:binding name="PSELVTjenestepensjonWSEXP_PSELVTjenestePensjonHttpBinding" type="this:PSELVTjenestePensjon">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="lagreTjenestepensjonForhold">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="lagreTjenestepensjonForholdRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="lagreTjenestepensjonForholdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultElementetErDuplikat">
+        <soap:fault name="faultElementetErDuplikat" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="opprettTjenestepensjonForhold">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="opprettTjenestepensjonForholdRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="opprettTjenestepensjonForholdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultElementetErDuplikat">
+        <soap:fault name="faultElementetErDuplikat" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="finnTjenestepensjonForhold">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="finnTjenestepensjonForholdRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="finnTjenestepensjonForholdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultTomDatoForanFromDato">
+        <soap:fault name="faultTomDatoForanFromDato" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultElementetFinnesIkke">
+        <soap:fault name="faultElementetFinnesIkke" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="opprettTjenestepensjonSimulering">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="opprettTjenestepensjonSimuleringRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="opprettTjenestepensjonSimuleringResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultElementetErDuplikat">
+        <soap:fault name="faultElementetErDuplikat" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="lagreTjenestepensjonSimulering">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="lagreTjenestepensjonSimuleringRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="lagreTjenestepensjonSimuleringResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultElementetErDuplikat">
+        <soap:fault name="faultElementetErDuplikat" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="slettTjenestepensjonForhold">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="slettTjenestepensjonForholdRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="slettTjenestepensjonForholdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultElementetErUgyldig">
+        <soap:fault name="faultElementetErUgyldig" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PSELVTjenestepensjonWSEXP_PSELVTjenestePensjonHttpService">
+    <wsdl:port name="PSELVTjenestepensjonWSEXP_PSELVTjenestePensjonHttpPort" binding="bons0:PSELVTjenestepensjonWSEXP_PSELVTjenestePensjonHttpBinding">
+      <soap:address location="http://localhost:9080/nav-cons-pen-pselv-tjenestepensjonWeb/sca/PSELVTjenestepensjonWSEXP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

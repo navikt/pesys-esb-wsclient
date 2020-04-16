@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/oppdrag"
+	xmlns:bons0="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault">
+	<xsd:import schemaLocation="../FaultPenBase.xsd"
+		namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault">
+	</xsd:import>
+	<xsd:complexType name="FaultPenFeilIOppdrag">
+		<xsd:complexContent>
+			<xsd:extension base="bons0:FaultPenBase">
+				<xsd:sequence />
+
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+</xsd:schema>

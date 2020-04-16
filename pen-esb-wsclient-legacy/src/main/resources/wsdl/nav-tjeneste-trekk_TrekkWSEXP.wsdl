@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="TrekkWSEXP_TrekkHttp_Service" targetNamespace="http://nav.no/virksomhet/tjenester/trekk/v1/Binding" xmlns:Port_0="http://nav.no/virksomhet/tjenester/trekk/v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://nav.no/virksomhet/tjenester/trekk/v1/Binding">
+  <wsdl:import namespace="http://nav.no/virksomhet/tjenester/trekk/v1" location="no/nav/virksomhet/tjenester/trekk/trekk.wsdl">
+    </wsdl:import>
+  <wsdl:binding name="TrekkWSEXP_TrekkHttpBinding" type="Port_0:Trekk">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="hentSkattOgTrekk">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="finnTrekkListe">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="kreditorHarFlereAvdelinger">
+        <soap:fault name="kreditorHarFlereAvdelinger" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="kreditorFinnesIkke">
+        <soap:fault name="kreditorFinnesIkke" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="hentTrekktransaksjonListe">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TrekkWSEXP_TrekkHttpService">
+    <wsdl:port name="TrekkWSEXP_TrekkHttpPort" binding="this:TrekkWSEXP_TrekkHttpBinding">
+      <soap:address location="http://localhost:9080/nav-tjeneste-trekk_v1Web/sca/TrekkWSEXP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

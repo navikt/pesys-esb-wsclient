@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:bons0="http://nav-lib-cons-pen/no/nav/lib/frg/asbo" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/person">
+    <xsd:include schemaLocation="ASBOPenPerson.xsd"/>
+    <xsd:complexType name="ASBOPenHentPersonRequest">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="person" type="bons2:ASBOPenPerson"/>
+      <xsd:element minOccurs="0" name="hentEgenAnsatt" type="xsd:boolean"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

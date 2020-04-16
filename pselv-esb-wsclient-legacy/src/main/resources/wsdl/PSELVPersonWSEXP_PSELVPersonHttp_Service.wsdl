@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="PSELVPersonWSEXP_PSELVPersonHttp_Service" targetNamespace="http://nav-cons-pen-pselv-person/no/nav/inf/Binding" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:Port_0="http://nav-cons-pen-pselv-person/no/nav/inf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://nav-cons-pen-pselv-person/no/nav/inf/Binding">
+  <import namespace="http://nav-cons-pen-pselv-person/no/nav/inf" location="no/nav/inf/PSELVPerson.wsdl">
+    </import>
+  <binding name="PSELVPersonWSEXP_PSELVPersonHttpBinding" type="Port_0:PSELVPerson">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="hentPerson">
+      <soap:operation soapAction=""/>
+      <input name="hentPersonRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="hentPersonResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+      <fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="hentBrukerprofil">
+      <soap:operation soapAction=""/>
+      <input name="hentBrukerprofilRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="hentBrukerprofilResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultPenBrukerprofilIkkeFunnet">
+        <soap:fault name="faultPenBrukerprofilIkkeFunnet" use="literal"/>
+      </fault>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="lagreEpost">
+      <soap:operation soapAction=""/>
+      <input name="lagreEpostRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="lagreEpostResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+      <fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="lagreTelefonnumre">
+      <soap:operation soapAction=""/>
+      <input name="lagreTelefonnumreRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="lagreTelefonnumreResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+      <fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="lagreSprak">
+      <soap:operation soapAction=""/>
+      <input name="lagreSprakRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="lagreSprakResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+      <fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="lagreAdresse">
+      <soap:operation soapAction=""/>
+      <input name="lagreAdresseRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="lagreAdresseResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+      <fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="lagreBrukerprofil">
+      <soap:operation soapAction=""/>
+      <input name="lagreBrukerprofilRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="lagreBrukerprofilResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+      <fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="hentSamboerforhold">
+      <soap:operation soapAction=""/>
+      <input name="hentSamboerforholdRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="hentSamboerforholdResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+      <fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="hentEnhetId">
+      <soap:operation soapAction=""/>
+      <input name="hentEnhetIdRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="hentEnhetIdResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+      <fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="opprettSamboerforhold">
+      <soap:operation soapAction=""/>
+      <input name="opprettSamboerforholdRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="opprettSamboerforholdResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultPenSamboerDod">
+        <soap:fault name="faultPenSamboerDod" use="literal"/>
+      </fault>
+      <fault name="faultPenSamboerValideringFeilet">
+        <soap:fault name="faultPenSamboerValideringFeilet" use="literal"/>
+      </fault>
+      <fault name="faultPenSamboerIkkeFunnet">
+        <soap:fault name="faultPenSamboerIkkeFunnet" use="literal"/>
+      </fault>
+      <fault name="faultPenSamboerIFamilie">
+        <soap:fault name="faultPenSamboerIFamilie" use="literal"/>
+      </fault>
+      <fault name="faultPenAlleredeRegistrertSamboerforhold">
+        <soap:fault name="faultPenAlleredeRegistrertSamboerforhold" use="literal"/>
+      </fault>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+      <fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="slettSamboerforhold">
+      <soap:operation soapAction=""/>
+      <input name="slettSamboerforholdRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="slettSamboerforholdResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultPenSamboerIkkeFunnet">
+        <soap:fault name="faultPenSamboerIkkeFunnet" use="literal"/>
+      </fault>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+      <fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="hentFamilierelasjoner">
+      <soap:operation soapAction=""/>
+      <input name="hentFamilierelasjonerRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="hentFamilierelasjonerResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+      <fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="slettAdresse">
+      <soap:operation soapAction=""/>
+      <input name="slettAdresseRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="slettAdresseResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+      <fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="hentFamilierelasjonsHistorikk">
+      <soap:operation soapAction=""/>
+      <input name="hentFamilierelasjonsHistorikkRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="hentFamilierelasjonsHistorikkResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+      <fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="erEgenansatt">
+      <soap:operation soapAction=""/>
+      <input name="erEgenansattRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="erEgenansattResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+      <fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="lagreKontoinformasjon">
+      <soap:operation soapAction=""/>
+      <input name="lagreKontoinformasjonRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="lagreKontoinformasjonResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+      <fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="hentKontoinformasjon">
+      <soap:operation soapAction=""/>
+      <input name="hentKontoinformasjonRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="hentKontoinformasjonResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+      <fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="hentPersonListe">
+      <soap:operation soapAction=""/>
+      <input name="hentPersonListeRequest">
+        <soap:body use="literal"/>
+      </input>
+      <output name="hentPersonListeResponse">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </fault>
+      <fault name="faultPenPersonIkkeFunnet">
+        <soap:fault name="faultPenPersonIkkeFunnet" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+  <service name="PSELVPersonWSEXP_PSELVPersonHttpService">
+    <port name="PSELVPersonWSEXP_PSELVPersonHttpPort" binding="this:PSELVPersonWSEXP_PSELVPersonHttpBinding">
+      <soap:address location="http://localhost:9080/nav-cons-pen-pselv-personWeb/sca/PSELVPersonWSEXP"/>
+    </port>
+  </service>
+</definitions>

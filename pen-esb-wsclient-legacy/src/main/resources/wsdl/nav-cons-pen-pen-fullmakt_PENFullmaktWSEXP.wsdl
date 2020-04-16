@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="PENFullmaktWSEXP_PENFullmaktHttp_Service" targetNamespace="http://nav-cons-pen-pen-fullmakt/no/nav/inf/Binding" xmlns:Port_0="http://nav-cons-pen-pen-fullmakt/no/nav/inf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://nav-cons-pen-pen-fullmakt/no/nav/inf/Binding">
+  <wsdl:import namespace="http://nav-cons-pen-pen-fullmakt/no/nav/inf" location="no/nav/inf/PENFullmakt.wsdl">
+    </wsdl:import>
+  <wsdl:binding name="PENFullmaktWSEXP_PENFullmaktHttpBinding" type="Port_0:PENFullmakt">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="finnFullmaktmottagere">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="finnFullmaktmottagereRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="finnFullmaktmottagereResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PENFullmaktWSEXP_PENFullmaktHttpService">
+    <wsdl:port name="PENFullmaktWSEXP_PENFullmaktHttpPort" binding="this:PENFullmaktWSEXP_PENFullmaktHttpBinding">
+      <soap:address location="http://localhost:9080/nav-cons-pen-pen-fullmaktWeb/sca/PENFullmaktWSEXP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

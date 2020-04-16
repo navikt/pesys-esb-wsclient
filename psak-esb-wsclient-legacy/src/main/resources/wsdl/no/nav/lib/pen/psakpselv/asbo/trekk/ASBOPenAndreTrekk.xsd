@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/trekk" xmlns:bons2="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo" targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/trekk">
+    <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo" schemaLocation="../ASBOPenFagomrade.xsd"/>
+    <xsd:include schemaLocation="ASBOPenMaksbelop.xsd"/>
+    <xsd:include schemaLocation="ASBOPenTrekk.xsd"/>
+  <xsd:complexType name="ASBOPenAndreTrekk">
+    <xsd:complexContent>
+      <xsd:extension base="bons0:ASBOPenTrekk">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="kreditorOffnr" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="kreditorAvdelingsnr" nillable="true" type="xsd:int"/>
+          <xsd:element minOccurs="0" name="kreditorNavn" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="kreditorRef" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="kreditorKid" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="tssEksternId" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="prioritet" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="prioritetFom" type="xsd:date"/>
+          <xsd:element minOccurs="0" name="trekkAlternativKode" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="trekkAlternativBeskrivelse" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="sats" nillable="true" type="xsd:double"/>
+          <xsd:element minOccurs="0" name="belopSaldotrekk" nillable="true" type="xsd:double"/>
+          <xsd:element minOccurs="0" name="belopTrukket" nillable="true" type="xsd:double"/>
+          <xsd:element minOccurs="0" name="datoOppfolging" type="xsd:date"/>
+          <xsd:element minOccurs="0" name="endringsInfo" type="bons2:ASBOPenEndringsInfo"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="fagomradeListe" type="bons2:ASBOPenFagomrade"/>
+          <xsd:element minOccurs="0" name="maksbelop" type="bons0:ASBOPenMaksbelop"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

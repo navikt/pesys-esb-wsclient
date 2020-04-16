@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/vedtak" xmlns:bons3="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/vedtak" xmlns:bons4="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:bons5="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/oppdrag" xmlns:tns="http://nav-cons-pen-psak-vedtak/no/nav/inf/PSAKVedtak" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PSAKVedtak" targetNamespace="http://nav-cons-pen-psak-vedtak/no/nav/inf/PSAKVedtak">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://nav-cons-pen-psak-vedtak/no/nav/inf/PSAKVedtak" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/vedtak" xmlns:bons3="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/vedtak" xmlns:bons4="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" xmlns:bons5="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/oppdrag" xmlns:tns="http://nav-cons-pen-psak-vedtak/no/nav/inf/PSAKVedtak" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/vedtak" schemaLocation="../lib/pen/psakpselv/asbo/vedtak/ASBOPenSimulerVedtaksutbetalingRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/vedtak" schemaLocation="../lib/pen/psakpselv/asbo/vedtak/ASBOPenSimuleringsresultatLinjeListe.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" schemaLocation="../lib/pen/psakpselv/fault/FaultPenServiceUnavailable.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/oppdrag" schemaLocation="../lib/pen/psakpselv/fault/oppdrag/FaultPenFeilIOppdrag.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault" schemaLocation="../lib/pen/psakpselv/fault/FaultPenGenerisk.xsd"/>
+            <xsd:element name="simulerVedtaksutbetaling">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="simulerVedtaksutbetalingRequest" nillable="true" type="bons1:ASBOPenSimulerVedtaksutbetalingRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="simulerVedtaksutbetalingResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="simulerVedtaksutbetalingResponse" nillable="true" type="bons1:ASBOPenSimuleringsresultatLinjeListe"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="FaultPenGenerisk_element" nillable="true" type="bons4:FaultPenGenerisk"/>
+            <xsd:element name="FaultPenFeilIOppdrag_element" nillable="true" type="bons5:FaultPenFeilIOppdrag"/>
+            <xsd:element name="FaultPenServiceUnavailable_element" nillable="true" type="bons4:FaultPenServiceUnavailable"/>
+        </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="simulerVedtaksutbetalingRequestMsg">
+    <wsdl:part element="tns:simulerVedtaksutbetaling" name="simulerVedtaksutbetalingParameters"/>
+  </wsdl:message>
+    <wsdl:message name="simulerVedtaksutbetalingResponseMsg">
+    <wsdl:part element="tns:simulerVedtaksutbetalingResponse" name="simulerVedtaksutbetalingResult"/>
+  </wsdl:message>
+    <wsdl:message name="simulerVedtaksutbetaling_faultPenGeneriskMsg">
+    <wsdl:part element="tns:FaultPenGenerisk_element" name="faultPenGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="simulerVedtaksutbetaling_faultPenFeilIOppdragMsg">
+    <wsdl:part element="tns:FaultPenFeilIOppdrag_element" name="faultPenFeilIOppdrag"/>
+  </wsdl:message>
+    <wsdl:message name="simulerVedtaksutbetaling_faultPenServiceUnavailableMsg">
+    <wsdl:part element="tns:FaultPenServiceUnavailable_element" name="faultPenServiceUnavailable"/>
+  </wsdl:message>
+    <wsdl:portType name="PSAKVedtak">
+    <wsdl:operation name="simulerVedtaksutbetaling">
+      <wsdl:input message="tns:simulerVedtaksutbetalingRequestMsg" name="simulerVedtaksutbetalingRequest"/>
+      <wsdl:output message="tns:simulerVedtaksutbetalingResponseMsg" name="simulerVedtaksutbetalingResponse"/>
+            <wsdl:fault message="tns:simulerVedtaksutbetaling_faultPenGeneriskMsg" name="faultPenGenerisk"/>
+            <wsdl:fault message="tns:simulerVedtaksutbetaling_faultPenFeilIOppdragMsg" name="faultPenFeilIOppdrag"/>
+            <wsdl:fault message="tns:simulerVedtaksutbetaling_faultPenServiceUnavailableMsg" name="faultPenServiceUnavailable"/>
+        </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="PENOppdragWSEXP_PENOppdragHttp_Service" targetNamespace="http://nav-cons-pen-pen-oppdrag/no/nav/inf/Binding" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://nav-cons-pen-pen-oppdrag/no/nav/inf" xmlns:bons0="http://nav-cons-pen-pen-oppdrag/no/nav/inf/Binding">
+  <wsdl:import namespace="http://nav-cons-pen-pen-oppdrag/no/nav/inf" location="no/nav/inf/PENOppdrag.wsdl">
+    </wsdl:import>
+  <wsdl:binding name="PENOppdragWSEXP_PENOppdragHttpBinding" type="this:PENOppdrag">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="sendAsynkronOppdragsavstemmingListe">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="sendAsynkronOppdragsavstemmingListeRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="sendAsynkronOppdragsavstemmingListeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="hentOppdragSimulering">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="hentOppdragSimuleringRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="hentOppdragSimuleringResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="faultPenGenerisk">
+        <soap:fault name="faultPenGenerisk" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenFeilIOppdrag">
+        <soap:fault name="faultPenFeilIOppdrag" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="faultPenServiceUnavailable">
+        <soap:fault name="faultPenServiceUnavailable" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PENOppdragWSEXP_PENOppdragHttpService">
+    <wsdl:port name="PENOppdragWSEXP_PENOppdragHttpPort" binding="bons0:PENOppdragWSEXP_PENOppdragHttpBinding">
+      <soap:address location="http://localhost:9080/nav-cons-pen-pen-oppdragWeb/sca/PENOppdragWSEXP"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

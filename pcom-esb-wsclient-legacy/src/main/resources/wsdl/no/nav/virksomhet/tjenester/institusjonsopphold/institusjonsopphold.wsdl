@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://nav.no/virksomhet/tjenester/institusjonsopphold/v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="institusjonsopphold" targetNamespace="http://nav.no/virksomhet/tjenester/institusjonsopphold/v1">
+  <wsdl:types>
+    <xsd:schema xmlns:feil="http://nav.no/virksomhet/tjenester/institusjonsopphold/feil/v1" xmlns:meldinger="http://nav.no/virksomhet/tjenester/institusjonsopphold/meldinger/v1" targetNamespace="http://nav.no/virksomhet/tjenester/institusjonsopphold/v1">
+      <xsd:import namespace="http://nav.no/virksomhet/tjenester/institusjonsopphold/feil/v1" schemaLocation="feil/feil.xsd" />
+      <xsd:import namespace="http://nav.no/virksomhet/tjenester/institusjonsopphold/meldinger/v1" schemaLocation="meldinger/meldinger.xsd" />
+      <xsd:element name="hentInstitusjonsoppholdListe">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:HentInstitusjonsoppholdListeRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentInstitusjonsoppholdListeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="response" type="meldinger:HentInstitusjonsoppholdListeResponse" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentInstitusjonsoppholdListefnrIkkeFunnet" type="feil:FnrIkkeFunnet" />
+      <xsd:element name="hentInstitusjonsoppholdListesamhandlerIkkeFunnet" type="feil:SamhandlerIkkeFunnet" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="hentInstitusjonsoppholdListe_samhandlerIkkeFunnet">
+    <wsdl:part name="samhandlerIkkeFunnet" element="tns:hentInstitusjonsoppholdListesamhandlerIkkeFunnet">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="hentInstitusjonsoppholdListe_fnrIkkeFunnet">
+    <wsdl:part name="fnrIkkeFunnet" element="tns:hentInstitusjonsoppholdListefnrIkkeFunnet">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="hentInstitusjonsoppholdListeResponse">
+    <wsdl:part name="parameters" element="tns:hentInstitusjonsoppholdListeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="hentInstitusjonsoppholdListeRequest">
+    <wsdl:part name="parameters" element="tns:hentInstitusjonsoppholdListe">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Institusjonsopphold">
+    <wsdl:operation name="hentInstitusjonsoppholdListe">
+<wsdl:documentation>&lt;h3 &gt;Behandlingsregel for hentSamhandlerInfo&lt;/h3&gt;&lt;p&gt;Dersom hentSamhandlerInfo i input er true skal Samhandler.hentSamhandler kalles for hver institusjon i institusjonsListe med institusjon.tssEksternId i input til hentSamhandler.&lt;/p&gt; </wsdl:documentation>
+      <wsdl:input message="tns:hentInstitusjonsoppholdListeRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:hentInstitusjonsoppholdListeResponse">
+    </wsdl:output>
+      <wsdl:fault name="fnrIkkeFunnet" message="tns:hentInstitusjonsoppholdListe_fnrIkkeFunnet">
+    </wsdl:fault>
+      <wsdl:fault name="samhandlerIkkeFunnet" message="tns:hentInstitusjonsoppholdListe_samhandlerIkkeFunnet">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
