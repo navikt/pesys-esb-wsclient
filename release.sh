@@ -3,7 +3,7 @@ set -e
 
 TIME=$(TZ="Europe/Oslo" date +%Y.%m.%d-%H.%M)
 COMMIT=$(git rev-parse --short=12 HEAD)
-VERSION="0.1.5-$COMMIT"
+VERSION="0.1.6-$COMMIT"
 echo "Setting version $VERSION"
 
 mvn -B versions:set -DnewVersion="$VERSION"
