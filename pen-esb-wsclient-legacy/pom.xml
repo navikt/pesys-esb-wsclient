@@ -251,11 +251,6 @@
                                     <wsdl>${basedir}/src/main/resources/wsdl/no/nav/virksomhet/tjenester/person/v2/Binding.wsdl</wsdl>
                                 </wsdlOption>
 
-                                <!-- PEN Arkiv v1 -->
-                                <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-tjeneste-arkiv_ArkivWSEXP.wsdl</wsdl>
-                                </wsdlOption>
-
                                 <!-- PEN Journal v2 -->
                                 <wsdlOption>
                                     <wsdl>${basedir}/src/main/resources/wsdl/no/nav/virksomhet/tjenester/arkiv/journal/v2/Binding.wsdl</wsdl>
