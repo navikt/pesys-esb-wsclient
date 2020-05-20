@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/ppen003">
-	<xsd:complexType name="ASBOPenBehandleFleksibelAPSakRequest">
-		<xsd:sequence>
-			<xsd:element minOccurs="0" name="kravId" type="xsd:string">
-			</xsd:element>
-		</xsd:sequence>
-	</xsd:complexType>
-</xsd:schema>

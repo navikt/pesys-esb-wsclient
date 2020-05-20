@@ -296,6 +296,19 @@
                                     <wsdl>${basedir}/src/main/resources/wsdl/nav-tjeneste-tilbakekreving_TilbakekrevingWSEXP.wsdl</wsdl>
                                 </wsdlOption>
 
+                                <!-- PSELV PPEN003 -->
+                                <wsdlOption>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pselv-ppen003_PSELVPPEN003WSEXP.wsdl</wsdl>
+                                    <extraargs>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-cons-pen-pselv-ppen003/no/nav/inf=no.nav.inf.pselv.ppen003</extraarg>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-cons-pen-pselv-ppen003/no/nav/inf/Binding=no.nav.inf.pselv.ppen003</extraarg>
+                                        <extraarg>-p</extraarg>
+                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/ppen003=no.nav.lib.pen.psakpselv.asbo.ppen003</extraarg>
+                                    </extraargs>
+                                </wsdlOption>
+
                             </wsdlOptions>
                         </configuration>
                         <goals>
