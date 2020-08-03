@@ -12,17 +12,17 @@
       <wsdl:output>
         <soap:body use="literal"/>
       </wsdl:output>
-      <wsdl:fault name="adresseIkkeRegistrert">
-        <soap:fault name="adresseIkkeRegistrert" use="literal"/>
-      </wsdl:fault>
       <wsdl:fault name="manglerObligatoriskInput">
         <soap:fault name="manglerObligatoriskInput" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="henteBrevdataFeilet">
+        <soap:fault name="henteBrevdataFeilet" use="literal"/>
       </wsdl:fault>
       <wsdl:fault name="opprettelseJournalpostFeilet">
         <soap:fault name="opprettelseJournalpostFeilet" use="literal"/>
       </wsdl:fault>
-      <wsdl:fault name="henteBrevdataFeilet">
-        <soap:fault name="henteBrevdataFeilet" use="literal"/>
+      <wsdl:fault name="adresseIkkeRegistrert">
+        <soap:fault name="adresseIkkeRegistrert" use="literal"/>
       </wsdl:fault>
     </wsdl:operation>
   </wsdl:binding>

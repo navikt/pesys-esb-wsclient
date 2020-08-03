@@ -117,6 +117,11 @@
           <xsd:documentation>&lt;p&gt;Land det har kommet blankett fra eller som det skal sendes blankett til. Kun e-blanketter som skal til og fra utenlandske myndigheter.&lt;/p&gt;</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
+      <xsd:element minOccurs="0" name="saksbehandlerId" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>&lt;p&gt;Id på saksbehandler, settes av konsument. Innføres som en del av 2019-FL04&lt;/p&gt;</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
     </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="BestillBrevRequest">
