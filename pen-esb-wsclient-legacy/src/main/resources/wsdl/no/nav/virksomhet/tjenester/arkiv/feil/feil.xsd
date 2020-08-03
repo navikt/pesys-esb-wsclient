@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://nav.no/virksomhet/tjenester/arkiv/feil/v1" version="1.0" xmlns:feil="http://nav.no/virksomhet/tjenester/arkiv/feil/v1" xmlns:felles="http://nav.no/virksomhet/tjenester/felles/v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import namespace="http://nav.no/virksomhet/tjenester/felles/v1" schemaLocation="../../felles/felles-stelviofault.xsd"/>
+  <xsd:complexType name="AdresseIkkeRegistrert">
+    <xsd:annotation>
+      <xsd:documentation>&lt;p&gt;Kastes dersom bruker mangler adresse i TPS. (Fra SendPensjonStandardBrev)&lt;/p&gt;&lt;p&gt;NB: se behandlingsregel for validering av input&lt;/p&gt;</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="felles:StelvioFault"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="HenteBrevdataFeilet">
+    <xsd:annotation>
+      <xsd:documentation>&lt;p&gt;Kastes dersom hentBrevdata-tjenestene ikke returnerer alle påkrevde data for brev og journal.&lt;/p&gt;</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="felles:StelvioFault"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="ManglerObligatoriskInput">
+    <xsd:annotation>
+      <xsd:documentation>&lt;p&gt;Kastes dersom brevbestillingsrequesten mangler obligatorisk input.&lt;/p&gt;</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="felles:StelvioFault"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="OpprettelseJournalpostFeilet">
+    <xsd:annotation>
+      <xsd:documentation>&lt;p&gt;Kastes dersom noe går galt ved opprettelse av journalpost.&lt;/p&gt;</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="felles:StelvioFault"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>
