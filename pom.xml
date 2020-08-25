@@ -41,6 +41,7 @@
 
     <modules>
         <module>pcom-esb-wsclient-legacy</module>
+        <module>pen-arkiv-esb-wsclient-legacy</module>
         <module>pen-esb-wsclient-legacy</module>
         <module>psak-esb-wsclient-legacy</module>
         <module>pselv-esb-wsclient-legacy</module>

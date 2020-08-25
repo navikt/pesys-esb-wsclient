@@ -1,0 +1,5 @@
+src/main/resources/wsdl/no/nav/virksomhet/tjenester/arkiv/feil/feil.xsd text eol=lf
+src/main/resources/wsdl/no/nav/virksomhet/tjenester/arkiv/meldinger/meldinger.xsd text eol=lf
+src/main/resources/wsdl/no/nav/virksomhet/tjenester/arkiv/arkiv.wsdl text eol=lf
+src/main/resources/wsdl/no/nav/virksomhet/tjenester/felles/felles.xsd text eol=lf
+src/main/resources/wsdl/nav-tjeneste-arkiv_ArkivWSEXP.wsdl text eol=lf
