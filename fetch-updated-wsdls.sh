@@ -1,10 +1,13 @@
 #!/bin/bash
 
 function update() {
-  mkdir -p tmp
-  wget -O tmp/wsdl.zip $2
-  unzip -d "$1/src/main/wsdl" tmp/wsdl.zip
-  rm tmp/wsdl.zip
-  rm -r tmp
+  local destination=$1/$2
+  local url=$3
+  local tmpfile=$(mktemp)
+
+  mkdir -p $destination
+
+  curl -s -o $tmpfile $url && unzip -o -d $destination $tmpfile && rm $tmpfile
 }
-update "arkiv" "http://maven.adeo.no/nexus/content/groups/public/no/nav/esb/nav/nav-tjeneste-arkiv/1.2.1/nav-tjeneste-arkiv-1.2.1-wsdlif.zip"
+
+update "pen-arkiv-esb-wsclient-legacy" "src/main/resources/wsdl" "https://repo.adeo.no/repository/maven-public/no/nav/esb/nav/nav-tjeneste-arkiv/1.2.1/nav-tjeneste-arkiv-1.2.1-wsdlif.zip"
