@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>no.nav.pensjon</groupId>
+    <groupId>no.nav.pensjon.pesys-esb-wsclient</groupId>
     <artifactId>pesys-esb-wsclient-legacy</artifactId>
     <packaging>pom</packaging>
     <version>0.1.5-SNAPSHOT</version>
@@ -37,6 +37,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
     </properties>
 
     <modules>
@@ -45,6 +47,7 @@
         <module>pen-esb-wsclient-legacy</module>
         <module>psak-esb-wsclient-legacy</module>
         <module>pselv-esb-wsclient-legacy</module>
+        <module>pesys-esb-wsclient-bom</module>
     </modules>
 
     <build>
@@ -65,11 +68,6 @@
                             <artifactId>cxf-xjc-boolean</artifactId>
                             <version>3.2.0</version>
                         </dependency>
-<!--                        <dependency>-->
-<!--                            <groupId>com.github.jaxb-xew-plugin</groupId>-->
-<!--                            <artifactId>jaxb-xew-plugin</artifactId>-->
-<!--                            <version>1.11</version>-->
-<!--                        </dependency>-->
                     </dependencies>
                 </plugin>
             </plugins>
