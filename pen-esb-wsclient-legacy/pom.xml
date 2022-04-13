@@ -6,7 +6,7 @@
     <parent>
         <groupId>no.nav.pensjon.pesys-esb-wsclient</groupId>
         <artifactId>pesys-esb-wsclient-legacy</artifactId>
-        <version>0.1.5-SNAPSHOT</version>
+        <version>${revision}</version>
     </parent>
 
     <artifactId>pen-esb-wsclient-legacy</artifactId>
@@ -16,7 +16,6 @@
         <dependency>
             <groupId>no.nav.pensjon.pesys-esb-wsclient</groupId>
             <artifactId>pcom-esb-wsclient-legacy</artifactId>
-            <version>${project.version}</version>
         </dependency>
     </dependencies>
 

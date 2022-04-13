@@ -5,40 +5,42 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>no.nav.pensjon.pesys-esb-wsclient</groupId>
-        <artifactId>pesys-esb-wsclient-legacy</artifactId>
-        <version>0.1.5-SNAPSHOT</version>
-    </parent>
-
+    <groupId>no.nav.pensjon.pesys-esb-wsclient</groupId>
     <artifactId>pesys-esb-wsclient-bom</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <revision>1.0.0-SNAPSHOT</revision>
+        <sha1/>
+    </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>no.nav.pensjon.pesys-esb-wsclient</groupId>
                 <artifactId>pcom-esb-wsclient-legacy</artifactId>
-                <version>0.1.5-SNAPSHOT</version>
+                <version>${revision}</version>
             </dependency>
             <dependency>
                 <groupId>no.nav.pensjon.pesys-esb-wsclient</groupId>
                 <artifactId>pen-arkiv-esb-wsclient-legacy</artifactId>
-                <version>0.1.5-SNAPSHOT</version>
+                <version>${revision}</version>
             </dependency>
             <dependency>
                 <groupId>no.nav.pensjon.pesys-esb-wsclient</groupId>
                 <artifactId>pen-esb-wsclient-legacy</artifactId>
-                <version>0.1.5-SNAPSHOT</version>
+                <version>${revision}</version>
             </dependency>
             <dependency>
                 <groupId>no.nav.pensjon.pesys-esb-wsclient</groupId>
                 <artifactId>psak-esb-wsclient-legacy</artifactId>
-                <version>0.1.5-SNAPSHOT</version>
+                <version>${revision}</version>
             </dependency>
             <dependency>
                 <groupId>no.nav.pensjon.pesys-esb-wsclient</groupId>
                 <artifactId>pselv-esb-wsclient-legacy</artifactId>
-                <version>0.1.5-SNAPSHOT</version>
+                <version>${revision}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
