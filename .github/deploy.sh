@@ -5,4 +5,4 @@ COMMIT=$(git rev-parse --short=12 HEAD)
 revision="$TIME-$COMMIT"
 echo "Using revision ${revision}"
 
-mvn -B --settings maven-settings.xml -Drevision="${revision}" -DskipTests source:jar deploy
+mvn -B --settings maven-settings-github.xml -Drevision="${revision}" -DskipTests source:jar deploy
