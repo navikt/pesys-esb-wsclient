@@ -6,27 +6,22 @@
 
     <groupId>no.nav.pensjon.pesys-esb-wsclient</groupId>
     <artifactId>pesys-esb-wsclient-legacy</artifactId>
-    <packaging>pom</packaging>
     <version>${revision}</version>
-         
+    <packaging>pom</packaging>
+
     <licenses>
         <license>
             <name>MIT License</name>
             <url>https://opensource.org/licenses/MIT</url>
         </license>
     </licenses>
+
     <developers>
         <developer>
             <organization>NAV (Arbeids- og velferdsdirektoratet) - The Norwegian Labour and Welfare Administration</organization>
             <organizationUrl>https://www.nav.no</organizationUrl>
         </developer>
     </developers>
-
-    <scm>
-        <connection>scm:git:ssh://git@github.com:navikt/pesys-esb-wsclient.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com:navikt/pesys-esb-wsclient.git</developerConnection>
-        <url>https://github.com/navikt/pesys-esb-wsclient</url>
-    </scm>
 
     <modules>
         <module>pcom-esb-wsclient-legacy</module>
@@ -36,6 +31,18 @@
         <module>pselv-esb-wsclient-legacy</module>
         <module>pesys-esb-wsclient-bom</module>
     </modules>
+
+    <scm>
+        <connection>scm:git:ssh://git@github.com:navikt/pesys-esb-wsclient.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:navikt/pesys-esb-wsclient.git</developerConnection>
+        <url>https://github.com/navikt/pesys-esb-wsclient</url>
+    </scm>
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/navikt/pesys-esb-wsclient</url>
+        </repository>
+    </distributionManagement>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -151,5 +158,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
