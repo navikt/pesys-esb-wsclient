@@ -276,11 +276,6 @@
                                     <wsdl>${basedir}/src/main/resources/wsdl/pensjon-microflow-behandleTilbakekrevingVedDodsfallProxy_BehandleTilbakekrevingVedDodsfallProxyWSEXP.wsdl</wsdl>
                                 </wsdlOption>
 
-                                <!-- Oppgavebehandling -->
-                                <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/wsdl/no/nav/virksomhet/tjenester/oppgavebehandling/v2/Binding.wsdl</wsdl>
-                                </wsdlOption>
-
                                 <!-- Medlemskap -->
                                 <wsdlOption>
                                     <wsdl>${basedir}/src/main/resources/wsdl/nav-tjeneste-medlemskap_MedlemskapWSEXP.wsdl</wsdl>
