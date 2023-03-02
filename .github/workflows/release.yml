@@ -35,5 +35,5 @@ jobs:
           COMMIT=$(git rev-parse --short=12 HEAD)
           revision="$TIME-$COMMIT"
           
-          mvn -B -e -Drevision="${revision}" -DskipTests source:jar deploy
+          mvn -B -X -e -Drevision="${revision}" -DskipTests source:jar deploy
 
