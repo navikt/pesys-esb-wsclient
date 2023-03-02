@@ -28,6 +28,8 @@ jobs:
         run: mvn verify -Dsurefire.rerunFailingTestsCount=3
 
       - name: Deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
         run: |
           set -e
