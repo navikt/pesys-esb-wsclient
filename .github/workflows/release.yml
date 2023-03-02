@@ -25,17 +25,10 @@ jobs:
           java-version: 8
 
       - name: Package
-        run: mvn verify -Dsurefire.rerunFailingTestsCount=3
+        run: mvn verify -B --settings maven-settings-github.xml  -Dsurefire.rerunFailingTestsCount=3
 
       - name: Deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
-        run: |
-          set -e
-          TIME=$(TZ="Europe/Oslo" date +%Y.%m.%d-%H.%M)
-          COMMIT=$(git rev-parse --short=12 HEAD)
-          revision="$TIME-$COMMIT"
-          
-          mvn -B -X -e -Drevision="${revision}" -DskipTests source:jar deploy
-
+        run: .github/deploy.sh
