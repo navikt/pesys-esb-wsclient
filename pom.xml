@@ -37,6 +37,12 @@
         <developerConnection>scm:git:ssh://git@github.com:navikt/pesys-esb-wsclient.git</developerConnection>
         <url>https://github.com/navikt/pesys-esb-wsclient</url>
     </scm>
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/navikt/pesys-esb-wsclient</url>
+        </repository>
+    </distributionManagement>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
