@@ -47,18 +47,6 @@
                             <wsdlOptions>
                                 <!-- -nexclude is used to reuse PCOM versions of certain common types -->
 
-                                <!-- PSELV PPEN004 -->
-                                <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pselv-ppen004_PENPPEN004WSEXP.wsdl</wsdl>
-                                    <extraargs>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pselv-ppen004/no/nav/inf=no.nav.inf.pselv.ppen004</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pselv-ppen004/no/nav/inf/Binding=no.nav.inf.pselv.ppen004</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/ppen004=no.nav.lib.pen.psakpselv.asbo.ppen004</extraarg>
-                                    </extraargs>
-                                </wsdlOption>
 
                                 <!-- Tjenestepensjon -->
                                 <wsdlOption>

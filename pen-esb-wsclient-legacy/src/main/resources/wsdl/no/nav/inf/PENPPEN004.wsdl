@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="PENPPEN004" targetNamespace="http://nav-cons-pen-pselv-ppen004/no/nav/inf" xmlns:bons1="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/ppen004" xmlns:bons2="http://nav-cons-pen-pselv-ppen004/no/nav/inf/" xmlns:tns="http://nav-cons-pen-pselv-ppen004/no/nav/inf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <wsdl:types>
-    <xsd:schema targetNamespace="http://nav-cons-pen-pselv-ppen004/no/nav/inf" xmlns:bons2="http://nav-cons-pen-pselv-ppen004/no/nav/inf">
+      <xsd:schema targetNamespace="http://nav-cons-pen-pselv-ppen004/no/nav/inf">
       <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/ppen004" schemaLocation="../lib/pen/psakpselv/asbo/ppen004/ASBOPenPPEN004Response.xsd"/>
       <xsd:import namespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/ppen004" schemaLocation="../lib/pen/psakpselv/asbo/ppen004/ASBOPenPPEN004Request.xsd"/>
       <xsd:element name="behandleEndringAvUttaksgrad">
