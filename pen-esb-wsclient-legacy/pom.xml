@@ -201,19 +201,6 @@
                                     </extraargs>
                                 </wsdlOption>
 
-                                <!-- PEN PPEN008 -->
-                                <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/wsdl/PPEN008WSEXP_PENPPEN008Http_Service.wsdl</wsdl>
-                                    <extraargs>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pen-ppen008/no/nav/inf/PENPPEN008=no.nav.inf.pen.ppen008</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pen-ppen008/no/nav/inf/PENPPEN008/Binding=no.nav.inf.pen.ppen008</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/ppen008=no.nav.lib.pen.psakpselv.asbo.ppen008</extraarg>
-                                    </extraargs>
-                                </wsdlOption>
-
                                 <!-- PEN PPEN015 -->
                                 <wsdlOption>
                                     <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pen-ppen015_PENPPEN015WSEXP.wsdl</wsdl>
