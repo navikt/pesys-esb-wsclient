@@ -120,8 +120,7 @@
                     <execution>
                         <id>attach-sources</id>
                         <goals>
-                            <!--<goal>jar</goal>-->
-                            <goal>jar-no-fork</goal> <!-- antrun tries to run twice?! -->
+                            <goal>jar</goal>
                         </goals>
                     </execution>
                 </executions>
