@@ -36,11 +36,6 @@
 
                             <wsdlOptions>
 
-                                <!-- Iverksett Vedtak Behandling -->
-                                <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/wsdl/no/nav/domene/pensjon/tjenester/iverksattVedtakBehandling/v1/Binding.wsdl</wsdl>
-                                </wsdlOption>
-
                                 <!-- Oppdrag: placed here for reuse of FaultPenServiceUnavailable -->
                                 <wsdlOption>
                                     <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pen-oppdrag_PENOppdragWSEXP.wsdl
