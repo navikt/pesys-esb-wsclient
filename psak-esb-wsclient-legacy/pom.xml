@@ -95,21 +95,6 @@
                                     </extraargs>
                                 </wsdlOption>
 
-                                <!-- PSAK PPEN015 -->
-                                <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-psak-ppen015_PSAKPPEN015WSEXP.wsdl</wsdl>
-                                    <extraargs>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-psak-ppen015/no/nav/inf/PSAKPPEN015=no.nav.inf.psak.ppen015</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-psak-ppen015/no/nav/inf/PSAKPPEN015/Binding=no.nav.inf.psak.ppen015</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-psak-ppen015/no/nav/lib/pen/psakpselv/asbo/ppen015=no.nav.lib.pen.psakpselv.asbo.ppen015</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/ppen015=no.nav.lib.pen.psakpselv.asbo.ppen015</extraarg>
-                                    </extraargs>
-                                </wsdlOption>
-
                                 <!-- PSAK Trekk -->
                                 <wsdlOption>
                                     <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-psak-trekk_PSAKTrekkWSEXP.wsdl</wsdl>

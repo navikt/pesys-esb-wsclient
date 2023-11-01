@@ -162,60 +162,6 @@
                                     </extraargs>
                                 </wsdlOption>
 
-                                <!-- PEN PPEN003 -->
-                                <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pen-ppen003_PENPPEN003WSEXP.wsdl</wsdl>
-                                    <extraargs>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pen-ppen003/no/nav/inf=no.nav.inf.pen.ppen003</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pen-ppen003/no/nav/inf/Binding=no.nav.inf.pen.ppen003</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/ppen003=no.nav.lib.pen.psakpselv.asbo.ppen003</extraarg>
-                                    </extraargs>
-                                </wsdlOption>
-
-                                <!-- PSELV PPEN004 -->
-                                <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pselv-ppen004_PENPPEN004WSEXP.wsdl</wsdl>
-                                    <extraargs>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pselv-ppen004/no/nav/inf=no.nav.inf.pselv.ppen004</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pselv-ppen004/no/nav/inf/Binding=no.nav.inf.pselv.ppen004</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/ppen004=no.nav.lib.pen.psakpselv.asbo.ppen004</extraarg>
-                                    </extraargs>
-                                </wsdlOption>
-
-                                <!-- PEN PPEN006 -->
-                                <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pen-ppen006_PENPPEN006WSEXP.wsdl</wsdl>
-                                    <extraargs>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pen-ppen006/no/nav/inf=no.nav.inf.pen.ppen006</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pen-ppen006/no/nav/inf/Binding=no.nav.inf.pen.ppen006</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/ppen006=no.nav.lib.pen.psakpselv.asbo.ppen006</extraarg>
-                                    </extraargs>
-                                </wsdlOption>
-
-                                <!-- PEN PPEN015 -->
-                                <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pen-ppen015_PENPPEN015WSEXP.wsdl</wsdl>
-                                    <extraargs>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pen-ppen015/no/nav/inf=no.nav.inf.pen.ppen015</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pen-ppen015/no/nav/inf/Binding=no.nav.inf.pen.ppen015</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pen-ppen015/no/nav/lib/pen/psakpselv/asbo/ppen015=no.nav.lib.pen.psakpselv.asbo.ppen015</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/ppen015=no.nav.lib.pen.psakpselv.asbo.ppen015</extraarg>
-                                    </extraargs>
-                                </wsdlOption>
-
                                 <!-- PEN Fullmakt -->
                                 <wsdlOption>
                                     <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pen-fullmakt_PENFullmaktWSEXP.wsdl</wsdl>
@@ -271,11 +217,6 @@
                                     <wsdl>${basedir}/src/main/resources/wsdl/nav-tjeneste-utbetaling_UtbetalingWSEXP.wsdl</wsdl>
                                 </wsdlOption>
 
-                                <!-- PPEN009 -->
-                                <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/wsdl/pensjon-microflow-behandleTilbakekrevingVedDodsfallProxy_BehandleTilbakekrevingVedDodsfallProxyWSEXP.wsdl</wsdl>
-                                </wsdlOption>
-
                                 <!-- Medlemskap -->
                                 <wsdlOption>
                                     <wsdl>${basedir}/src/main/resources/wsdl/nav-tjeneste-medlemskap_MedlemskapWSEXP.wsdl</wsdl>
@@ -290,33 +231,6 @@
                                 <wsdlOption>
                                     <wsdl>${basedir}/src/main/resources/wsdl/nav-tjeneste-tilbakekreving_TilbakekrevingWSEXP.wsdl</wsdl>
                                 </wsdlOption>
-
-                                <!-- PSELV PPEN003 -->
-                                <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-pselv-ppen003_PSELVPPEN003WSEXP.wsdl</wsdl>
-                                    <extraargs>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pselv-ppen003/no/nav/inf=no.nav.inf.pselv.ppen003</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-pselv-ppen003/no/nav/inf/Binding=no.nav.inf.pselv.ppen003</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/ppen003=no.nav.lib.pen.psakpselv.asbo.ppen003</extraarg>
-                                    </extraargs>
-                                </wsdlOption>
-
-                                <!-- SAM PPEN015 -->
-                                <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-sto-sam-ppen015_SAMPPEN015WSEXP.wsdl</wsdl>
-                                    <extraargs>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-sto-sam-ppen015/no/nav/inf/PPEN015=no.nav.inf.sam.ppen015</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-sto-sam-ppen015/no/nav/inf/PPEN015/Binding=no.nav.inf.sam.ppen015</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/asbo/ppen015=no.nav.lib.sto.sam.asbo.ppen015</extraarg>
-                                    </extraargs>
-                                </wsdlOption>
-
                             </wsdlOptions>
                         </configuration>
                         <goals>
