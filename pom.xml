@@ -46,8 +46,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
         <maven.min-version>3.6</maven.min-version>
         <revision>1.0.0-SNAPSHOT</revision>
     </properties>
@@ -64,6 +64,21 @@
         </dependencies>
     </dependencyManagement>
 
+    <dependencies>
+        <dependency>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.xml.ws</groupId>
+            <artifactId>jakarta.xml.ws-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
     <build>
         <pluginManagement>
             <plugins>
@@ -75,12 +90,12 @@
                 <plugin>
                     <groupId>org.apache.cxf</groupId>
                     <artifactId>cxf-codegen-plugin</artifactId>
-                    <version>3.5.4</version>
+                    <version>4.0.3</version>
                     <dependencies>
                         <dependency>
                             <groupId>org.apache.cxf.xjcplugins</groupId>
                             <artifactId>cxf-xjc-boolean</artifactId>
-                            <version>3.2.0</version>
+                            <version>4.0.0</version>
                         </dependency>
                     </dependencies>
                 </plugin>
@@ -111,8 +126,8 @@
                         <configuration>
                             <rules>
                                 <requireJavaVersion>
-                                    <message>Must use Java 1.8 when compiling</message>
-                                    <version>[1.8,1.9)</version>
+                                    <message>Must use Java 17 when compiling</message>
+                                    <version>[17,18)</version>
                                 </requireJavaVersion>
                                 <requireMavenVersion>
                                     <version>${maven.min-version}</version>
