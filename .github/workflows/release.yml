@@ -6,7 +6,24 @@ on:
       - 'main'
 
 jobs:
+  revision:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: "read"
+    outputs:
+      revision: ${{ steps.revision.outputs.revision }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Calculate revision
+        id: revision
+        shell: bash
+        run: |
+          TIME=$(TZ="Europe/Oslo" date +%Y.%m.%d-%H.%M)
+          COMMIT=$(git rev-parse --short=12 HEAD)
+          echo "revision=$TIME-$COMMIT" >> $GITHUB_OUTPUT
+
   release:
+    needs: revision
     runs-on: ubuntu-latest
     permissions:
       contents: "read"
@@ -20,16 +37,16 @@ jobs:
           java-version: '17'
           cache: 'maven'
 
-      - name: Package
-        run: mvn verify -B --settings maven-settings-github.xml  -Dsurefire.rerunFailingTestsCount=3
-
       - name: Deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REVISION: ${{ needs.revision.outputs.revision }}
         shell: bash
-        run: .github/deploy.sh
+        run: |
+          mvn -B -Drevision="${REVISION}" source:jar deploy
 
   release-javax:
+    needs: revision
     runs-on: ubuntu-latest
     permissions:
       contents: "read"
@@ -42,11 +59,10 @@ jobs:
           distribution: 'temurin'
           java-version: '8'
 
-      - name: Package
-        run: mvn -Pjavax verify -B --settings maven-settings-github.xml  -Dsurefire.rerunFailingTestsCount=3
-
       - name: Deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REVISION: ${{ needs.revision.outputs.revision }}
         shell: bash
-        run: .github/deploy.sh
+        run: |
+          mvn -Pjavax -B -Drevision="${REVISION}" source:jar deploy
