@@ -17,11 +17,33 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: 8
+          java-version: '17'
           cache: 'maven'
 
       - name: Package
         run: mvn verify -B --settings maven-settings-github.xml  -Dsurefire.rerunFailingTestsCount=3
+
+      - name: Deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: .github/deploy.sh
+
+  release-javax:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: "read"
+      packages: "write"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '8'
+
+      - name: Package
+        run: mvn -Pjavax verify -B --settings maven-settings-github.xml  -Dsurefire.rerunFailingTestsCount=3
 
       - name: Deploy
         env:
