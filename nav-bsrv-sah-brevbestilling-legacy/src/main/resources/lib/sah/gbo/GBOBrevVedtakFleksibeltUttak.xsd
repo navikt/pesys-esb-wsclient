@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://nav-lib-sah/no/nav/lib/sah/gbo"
+	xmlns:bons0="http://nav-lib-sah/no/nav/lib/sah/gbo"
+	xmlns:bons1="http://nav-lib-pen/no/nav/lib/pen/gbo"
+	xmlns:bons3="http://nav-lib-frg/no/nav/lib/frg/gbo"
+	xmlns:Q1="http://nav-lib-oko/no/nav/lib/oko/gbo">
+	<xsd:include schemaLocation="GBOLand.xsd"></xsd:include>
+	<xsd:import schemaLocation="../../frg/gbo/GBOPerson.xsd"
+		namespace="http://nav-lib-frg/no/nav/lib/frg/gbo">
+	</xsd:import>
+	<xsd:import schemaLocation="../../pen/gbo/GBOPersongrunnlag.xsd"
+		namespace="http://nav-lib-pen/no/nav/lib/pen/gbo">
+	</xsd:import>
+	<xsd:import schemaLocation="../../pen/gbo/GBOVedtakListe.xsd"
+		namespace="http://nav-lib-pen/no/nav/lib/pen/gbo">
+	</xsd:import>
+
+	<xsd:import schemaLocation="../../pen/gbo/GBOVedtak.xsd"
+		namespace="http://nav-lib-pen/no/nav/lib/pen/gbo">
+	</xsd:import>
+	<xsd:include schemaLocation="GBOBrev.xsd"></xsd:include>
+	<xsd:complexType name="GBOBrevVedtakFleksibeltUttak">
+		<xsd:complexContent>
+			<xsd:extension base="bons0:GBOBrev">
+
+
+
+
+
+
+				<xsd:sequence>
+					<xsd:element minOccurs="0" name="vedtaksdata"
+						type="bons1:GBOVedtak">
+					</xsd:element>
+					<xsd:element minOccurs="0"
+						name="persongrunnlagSoker" type="bons1:GBOPersongrunnlag">
+					</xsd:element>
+					<xsd:element minOccurs="0"
+						name="persongrunnlagAvdod" type="bons1:GBOPersongrunnlag">
+					</xsd:element>
+
+					<xsd:element minOccurs="0" name="vedtakListe"
+						type="bons1:GBOVedtakListe">
+					</xsd:element>
+					<xsd:element minOccurs="0" name="relasjoner"
+						type="bons3:GBOPerson">
+					</xsd:element>
+					<xsd:element minOccurs="0" name="land"
+						type="bons0:GBOLand">
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+</xsd:schema>

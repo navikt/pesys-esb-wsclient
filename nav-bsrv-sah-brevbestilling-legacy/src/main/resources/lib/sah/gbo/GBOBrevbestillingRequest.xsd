@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:bons0="http://nav-lib-sah/no/nav/lib/sah/gbo"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://nav-lib-sah/no/nav/lib/sah/gbo">
+	<xsd:include schemaLocation="GBOAttributt.xsd"></xsd:include>
+	<xsd:include schemaLocation="GBOSakskontekst.xsd" />
+	<xsd:complexType name="GBOBrevbestillingRequest">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="brevKode"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="brevGruppe"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="redigerbart"
+				type="xsd:boolean" nillable="true" />
+			<xsd:element minOccurs="0" name="sprakKode"
+				type="xsd:string" />
+			<xsd:element minOccurs="1" name="vedtaksInformasjon"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="soknadsInformasjon"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="attributtListe"
+				type="bons0:GBOAttributt" maxOccurs="unbounded">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="sakskontekst"
+				type="bons0:GBOSakskontekst" />
+			<xsd:element minOccurs="0" name="brevMottakerNavn"
+				type="xsd:string" />
+
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

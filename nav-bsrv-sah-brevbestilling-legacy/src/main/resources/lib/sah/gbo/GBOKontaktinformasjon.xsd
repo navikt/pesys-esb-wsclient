@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://nav-lib-sah/no/nav/lib/sah/gbo"
+	xmlns:bons0="http://nav-lib-frg/no/nav/lib/frg/gbo"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:import namespace="http://nav-lib-frg/no/nav/lib/frg/gbo"
+		schemaLocation="../../frg/gbo/GBONAVKontor.xsd" />
+	<xsd:complexType name="GBOKontaktinformasjon">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="navnAvsenderEnhet"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="telefonAvsenderEnhet"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="returadresse"
+				type="bons0:GBONAVKontor">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="postadresse"
+				type="bons0:GBONAVKontor">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="besoksadresse"
+				type="bons0:GBONAVKontor">
+			</xsd:element>
+
+
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

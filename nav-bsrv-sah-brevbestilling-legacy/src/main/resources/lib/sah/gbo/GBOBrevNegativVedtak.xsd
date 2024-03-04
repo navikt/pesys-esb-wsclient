@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:bons1="http://nav-lib-pen/no/nav/lib/pen/gbo"
+	xmlns:bons2="http://nav-lib-sah/no/nav/lib/sah/gbo"
+	targetNamespace="http://nav-lib-sah/no/nav/lib/sah/gbo">
+	<import schemaLocation="../../pen/gbo/GBOPersongrunnlag.xsd"
+		namespace="http://nav-lib-pen/no/nav/lib/pen/gbo">
+	</import>
+	<import schemaLocation="../../pen/gbo/GBOVedtak.xsd"
+		namespace="http://nav-lib-pen/no/nav/lib/pen/gbo">
+	</import>
+	<import
+		schemaLocation="../../pen/gbo/GBOOmsorgGodskrGrunnlagListe.xsd"
+		namespace="http://nav-lib-pen/no/nav/lib/pen/gbo">
+	</import>
+	<include schemaLocation="GBOBrev.xsd" />	<complexType name="GBOBrevNegativVedtak">
+		<complexContent>
+			<extension base="bons2:GBOBrev">
+				<sequence>
+					<element minOccurs="0" name="vedtaksdata"
+						type="bons1:GBOVedtak" />
+					<element minOccurs="0" name="grunnlagsdata"
+						type="bons1:GBOOmsorgGodskrGrunnlagListe" />
+					<element minOccurs="0" name="persongrunnlagSoker"
+						type="bons1:GBOPersongrunnlag">
+					</element>
+					<element minOccurs="0" name="persongrunnlagAvdod"
+						type="bons1:GBOPersongrunnlag">
+					</element>
+				</sequence>
+
+
+			</extension>
+		</complexContent>
+	</complexType>
+</schema>

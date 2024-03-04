@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://nav-lib-sah/no/nav/lib/sah/gbo"
+	xmlns:bons0="http://nav-lib-sah/no/nav/lib/sah/gbo">
+	<xsd:include schemaLocation="GBOBrev.xsd" />
+	<xsd:complexType name="GBOBrevPensjonBrev">
+		<xsd:complexContent>
+			<xsd:extension base="bons0:GBOBrev">
+				<xsd:sequence>
+					<xsd:element name="BrevAny"
+						type="bons0:GBOBrevPensjonBrevAny" minOccurs="0" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="GBOBrevPensjonBrevAny">
+		<xsd:sequence>
+			<xsd:any maxOccurs="unbounded" namespace="##other"
+				processContents="skip" />
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

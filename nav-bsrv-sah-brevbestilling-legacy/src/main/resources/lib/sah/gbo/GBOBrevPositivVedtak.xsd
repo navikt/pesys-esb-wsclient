@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:bons1="http://nav-lib-pen/no/nav/lib/pen/gbo"
+	xmlns:tns="http://nav-lib-sah/no/nav/lib/sah/gbo"
+	targetNamespace="http://nav-lib-sah/no/nav/lib/sah/gbo">
+	<include schemaLocation="GBOLand.xsd"></include>
+	<import schemaLocation="../../pen/gbo/GBOPersongrunnlag.xsd"
+		namespace="http://nav-lib-pen/no/nav/lib/pen/gbo">
+	</import>
+
+	<import schemaLocation="../../pen/gbo/GBOPensjonssakListe.xsd"
+		namespace="http://nav-lib-pen/no/nav/lib/pen/gbo">
+	</import>
+	<import schemaLocation="../../pen/gbo/GBOUforegrunnlag.xsd"
+		namespace="http://nav-lib-pen/no/nav/lib/pen/gbo">
+	</import>
+	<import
+		schemaLocation="../../pen/gbo/GBOBeregningSammendragAvdod.xsd"
+		namespace="http://nav-lib-pen/no/nav/lib/pen/gbo">
+	</import>
+	<import
+		schemaLocation="../../pen/gbo/GBOBeregningSammendragBruker.xsd"
+		namespace="http://nav-lib-pen/no/nav/lib/pen/gbo">
+	</import>
+	<include schemaLocation="GBOBrev.xsd" />
+
+
+	<include schemaLocation="GBOVedtaksData.xsd" />
+	<complexType name="GBOBrevPositivVedtak">
+		<complexContent>
+			<extension base="tns:GBOBrev">
+				<sequence>
+					<element minOccurs="0" name="vedtaksdata"
+						type="tns:GBOVedtaksData" />
+
+
+					<element minOccurs="0" name="uforegrunnlag"
+						type="bons1:GBOUforegrunnlag" />
+
+
+					<element minOccurs="0" name="sammendragsdataAvdod"
+						type="bons1:GBOBeregningSammendragAvdod" maxOccurs="unbounded" />
+					<element minOccurs="0" name="sammendragsdataBruker"
+						type="bons1:GBOBeregningSammendragBruker" maxOccurs="unbounded" />
+
+					<element minOccurs="0" name="persongrunnlagSoker"
+						type="bons1:GBOPersongrunnlag">
+					</element>
+					<element minOccurs="0" name="persongrunnlagAvdod"
+						type="bons1:GBOPersongrunnlag">
+					</element>
+
+					<element minOccurs="0" name="pensjonssakListe"
+						type="bons1:GBOPensjonssakListe">
+					</element>
+					<element minOccurs="0" name="land"
+						type="tns:GBOLand">
+					</element>
+				</sequence>
+
+
+
+
+			</extension>
+		</complexContent>
+	</complexType>
+
+
+
+
+
+
+</schema>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:bons0="http://nav-lib-sah/no/nav/lib/sah/gbo"
+	targetNamespace="http://nav-lib-sah/no/nav/lib/sah/gbo">
+	<xsd:include schemaLocation="GBOBrevPensjonBrev.xsd"></xsd:include>
+	<xsd:include schemaLocation="GBOBrevVedtaksbrev.xsd"></xsd:include>
+	<xsd:include schemaLocation="GBOBrevSEDBlanketter.xsd"></xsd:include>
+	<xsd:include schemaLocation="GBOBrevVedtakFleksibeltUttak.xsd"></xsd:include>
+	<xsd:include schemaLocation="GBOBrevVedtakAndre.xsd"></xsd:include>
+	<xsd:include schemaLocation="GBOBrevbestillingRequest.xsd" />
+	<xsd:include schemaLocation="GBOBrevPositivVedtak.xsd" />
+	<xsd:include schemaLocation="GBOBrevNegativVedtak.xsd" />
+	<xsd:include schemaLocation="GBOBrevStandard.xsd" />
+	<xsd:complexType name="GBOBrevbestillingProduserBrevRequest">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="brevbestillingRequest"
+				type="bons0:GBOBrevbestillingRequest" />
+			<xsd:element minOccurs="0" name="brevStandardPensjon"
+				type="bons0:GBOBrevStandard" />
+			<xsd:element minOccurs="0" name="brevStandard"
+				type="bons0:GBOBrevStandard" />
+			<xsd:element minOccurs="0" name="brevNegativVedtak"
+				type="bons0:GBOBrevNegativVedtak" />
+			<xsd:element minOccurs="0" name="brevPositivVedtak"
+				type="bons0:GBOBrevPositivVedtak" />
+			<xsd:element minOccurs="0" name="brevVedtakAndre"
+				type="bons0:GBOBrevVedtakAndre">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="brevVedtakFleksibeltUttak"
+				type="bons0:GBOBrevVedtakFleksibeltUttak">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="brevSEDBlanketter"
+				type="bons0:GBOBrevSEDBlanketter">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="brevVedtaksbrev"
+				type="bons0:GBOBrevVedtaksbrev">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="brevPensjonBrev"
+				type="bons0:GBOBrevPensjonBrev">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="journalpostId"
+				type="xsd:string" />
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:bons1="http://nav-lib-sah/no/nav/lib/sah/gbo"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://nav-lib-sah/no/nav/lib/sah/gbo">
+	<xsd:include schemaLocation="GBOVedlegg.xsd" />
+	<xsd:complexType name="GBOSakskontekst">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="saksid" type="xsd:string" />
+			<xsd:element minOccurs="0" name="saksbehandlernavn"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="fagsystem"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="fagomradeKode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="journalenhet"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="dokumentdato"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="gjelder" type="xsd:string" />
+			<xsd:element minOccurs="0" name="dokumenttype"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="innhold" type="xsd:string" />
+			<xsd:element minOccurs="0" name="kategori"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="mottaker"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="sensitivitetsgrad"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="kravtype"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="tilleggsbeskrivelse"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="merknad" type="xsd:string" />
+			<xsd:element minOccurs="0" name="fagspesifikkgradering"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="tillattelektroniskvarsling"
+				type="xsd:boolean" />
+			<xsd:element minOccurs="0" name="referanse"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="vedlegg"
+				type="bons1:GBOVedlegg" />
+			<xsd:element minOccurs="0" name="land" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="saksbehandlerId"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>
