@@ -23,6 +23,7 @@ jobs:
           echo "revision=$TIME-$COMMIT" >> $GITHUB_OUTPUT
 
   release:
+    if: false
     needs: revision
     runs-on: ubuntu-latest
     permissions:
