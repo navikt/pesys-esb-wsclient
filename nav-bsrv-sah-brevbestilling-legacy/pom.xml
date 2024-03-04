@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>no.nav.pensjon.pesys-esb-wsclient</groupId>
+        <artifactId>pesys-esb-wsclient-legacy</artifactId>
+        <version>${revision}</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>nav-bsrv-sah-brevbestilling-legacy</artifactId>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-codegen-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>generate-BrevbestillingInternt</id>
+                        <phase>process-sources</phase>
+                        <configuration>
+                            <defaultOptions>
+                                <extraargs>
+                                    <!--change Boolean type getters to getXXX (to ensure status quo with starting point) -->
+                                    <extraarg>-xjc-Xbg</extraarg>
+                                    <!-- Add namespace on element, not on package level -->
+                                    <extraarg>-xjc-npa</extraarg>
+                                </extraargs>
+                            </defaultOptions>
+                            <wsdlOptions>
+                                <wsdlOption>
+                                    <wsdl>${basedir}/src/main/resources/wsdl/BrevbestillingInternt.wsdl</wsdl>
+                                </wsdlOption>
+                            </wsdlOptions>
+                        </configuration>
+                        <goals>
+                            <goal>wsdl2java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

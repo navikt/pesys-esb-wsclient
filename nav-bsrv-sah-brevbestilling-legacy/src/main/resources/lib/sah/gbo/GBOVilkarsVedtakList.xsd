@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://nav-lib-pen/no/nav/lib/pen/gbo" targetNamespace="http://nav-lib-sah/no/nav/lib/sah/gbo">
+    <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../../pen/gbo/GBOVillkarsvedtak.xsd"/>
+    <xsd:complexType name="GBOVilkarsVedtakList">
+    
+		<xsd:sequence>
+			<xsd:element name="BTInnvAntall" type="xsd:string"/>
+			<xsd:element name="BTAvslAntall" type="xsd:string"/>
+			<xsd:element name="ETInnvAntall" type="xsd:string"/>
+			<xsd:element name="ETAvslAntall" type="xsd:string"/>
+			<xsd:element maxOccurs="unbounded" name="vilkarsVedtak" type="bons0:GBOVilkarsvedtak"/>
+		</xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

@@ -29,6 +29,7 @@
         <module>pen-esb-wsclient-legacy</module>
         <module>psak-esb-wsclient-legacy</module>
         <module>pselv-esb-wsclient-legacy</module>
+        <module>nav-bsrv-sah-brevbestilling-legacy</module>
         <module>pesys-esb-wsclient-bom</module>
     </modules>
 

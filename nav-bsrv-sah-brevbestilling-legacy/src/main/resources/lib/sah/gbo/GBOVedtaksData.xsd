@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:bons0="http://nav-lib-sah/no/nav/lib/sah/gbo"
+	xmlns:bons1="http://nav-lib-pen/no/nav/lib/pen/gbo"
+	targetNamespace="http://nav-lib-sah/no/nav/lib/sah/gbo">
+	<xsd:import
+		schemaLocation="../../pen/gbo/GBOSammenstotstilfelle.xsd"
+		namespace="http://nav-lib-pen/no/nav/lib/pen/gbo">
+	</xsd:import>
+	<xsd:import
+		schemaLocation="../../pen/gbo/GBOBeregningSammendragBruker.xsd"
+		namespace="http://nav-lib-pen/no/nav/lib/pen/gbo">
+	</xsd:import>
+	<xsd:import schemaLocation="../../pen/gbo/GBOKravhode.xsd"
+		namespace="http://nav-lib-pen/no/nav/lib/pen/gbo">
+	</xsd:import>
+	<xsd:import
+		schemaLocation="../../pen/gbo/GBOBeregningSammendragAvdod.xsd"
+		namespace="http://nav-lib-pen/no/nav/lib/pen/gbo">
+	</xsd:import>
+	<xsd:include schemaLocation="GBOBeregningsData.xsd" />
+	<xsd:include schemaLocation="GBOVilkarsVedtakList.xsd" />
+
+
+	<xsd:complexType name="GBOVedtaksData">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="vedtaksid"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="vedtakvirkFom"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="vedtakvirkTom"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="vedtakstype"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="vedtakkravhode"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="vedtakfattetdato"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="vedtakiverksattdato"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="vedtakbehandtype"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="vedtakgjelderperson"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="vedtakansvsaksbeh"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="vilkarinnstilling"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="vilkarsvedtaklist"
+				type="bons0:GBOVilkarsVedtakList" maxOccurs="1" />
+			<xsd:element minOccurs="0" name="kravhode"
+				type="bons1:GBOKravhode" />
+			<xsd:element minOccurs="0" name="beregningsdata"
+				type="bons0:GBOBeregningsData" />
+			<xsd:element minOccurs="0" name="sakskode"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="etterbetaling"
+				type="xsd:boolean" />
+			<xsd:element minOccurs="0" name="sammendragsdataAvdod"
+				type="bons1:GBOBeregningSammendragAvdod" maxOccurs="unbounded">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="sammendragsdataBruker"
+				type="bons1:GBOBeregningSammendragBruker" maxOccurs="unbounded">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="sammenstotstilfelle"
+				type="bons1:GBOSammenstotstilfelle">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

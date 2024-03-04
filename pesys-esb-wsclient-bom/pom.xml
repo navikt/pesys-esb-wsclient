@@ -49,6 +49,11 @@
                 <artifactId>pselv-esb-wsclient-legacy</artifactId>
                 <version>${revision}</version>
             </dependency>
+            <dependency>
+                <groupId>no.nav.pensjon.pesys-esb-wsclient</groupId>
+                <artifactId>nav-bsrv-sah-brevbestilling-legacy</artifactId>
+                <version>${revision}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
