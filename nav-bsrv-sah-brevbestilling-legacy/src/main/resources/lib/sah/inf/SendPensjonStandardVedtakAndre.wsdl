@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons1="http://nav-lib-sah/no/nav/lib/sah/gbo" xmlns:bons2="http://nav-lib-frg/no/nav/lib/frg/fault" xmlns:bons3="http://nav-lib-sah/no/nav/lib/sah/fault" xmlns:bons4="http://nav-lib-pen/no/nav/lib/pen/gbo" xmlns:bons5="http://nav-lib-pen/no/nav/lib/pen/fault" xmlns:bons6="http://nav-lib-frg/no/nav/lib/frg/gbo" xmlns:tns="http://nav-lib-sah/no/nav/lib/sah/inf/SendPensjonStandardVedtakAndre" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SendPensjonStandardVedtakAndre" targetNamespace="http://nav-lib-sah/no/nav/lib/sah/inf/SendPensjonStandardVedtakAndre">
+  <wsdl:types>
+    <xsd:schema xmlns:bons="http://nav-lib-frg/no/nav/lib/frg/gbo" xmlns:bons12="http://nav-lib-pen/no/nav/lib/pen/gbo" xmlns:bons123="http://nav-lib-pen/no/nav/lib/pen/gbo" xmlns:bons1234="http://nav-lib-pen/no/nav/lib/pen/gbo" xmlns:bons12345="http://nav-lib-pen/no/nav/lib/pen/gbo" xmlns:bons123456="http://nav-lib-pen/no/nav/lib/pen/fault" xmlns:bons1234567="http://nav-lib-pen/no/nav/lib/pen/fault" xmlns:bons12345678="http://nav-lib-pen/no/nav/lib/pen/fault" xmlns:bons123456789="http://nav-lib-pen/no/nav/lib/pen/gbo" xmlns:bons12345678910="http://nav-lib-pen/no/nav/lib/pen/gbo" xmlns:bons1234567891011="http://nav-lib-pen/no/nav/lib/pen/gbo" xmlns:bons123456789101112="http://nav-lib-pen/no/nav/lib/pen/gbo" xmlns:bons12345678910111213="http://nav-lib-pen/no/nav/lib/pen/gbo" xmlns:bons1234567891011121314="http://nav-lib-pen/no/nav/lib/pen/gbo" xmlns:bons123456789101112131415="http://nav-lib-sah/no/nav/lib/sah/gbo" xmlns:bons12345678910111213141516="http://nav-lib-pen/no/nav/lib/pen/gbo" xmlns:bons1234567891011121314151617="http://nav-lib-sah/no/nav/lib/sah/gbo" xmlns:bons123456789101112131415161718="http://nav-lib-pen/no/nav/lib/pen/fault" xmlns:bons12345678910111213141516171819="http://nav-lib-frg/no/nav/lib/frg/gbo" xmlns:bons1234567891011121314151617181920="http://nav-lib-pen/no/nav/lib/pen/gbo" xmlns:bons123456789101112131415161718192021="http://nav-lib-pen/no/nav/lib/pen/gbo" xmlns:bons12345678910111213141516171819202122="http://nav-lib-sah/no/nav/lib/sah/gbo" xmlns:bons1234567891011121314151617181920212223="http://nav-lib-pen/no/nav/lib/pen/gbo" xmlns:bons123456789101112131415161718192021222324="http://nav-lib-sah/no/nav/lib/sah/gbo" targetNamespace="http://nav-lib-sah/no/nav/lib/sah/inf/SendPensjonStandardVedtakAndre" xmlns:bons1="http://nav-lib-sah/no/nav/lib/sah/gbo" xmlns:bons2="http://nav-lib-frg/no/nav/lib/frg/fault" xmlns:bons3="http://nav-lib-sah/no/nav/lib/sah/fault" xmlns:bons4="http://nav-lib-pen/no/nav/lib/pen/gbo" xmlns:bons5="http://nav-lib-pen/no/nav/lib/pen/fault" xmlns:tns="http://nav-lib-sah/no/nav/lib/sah/inf/SendPensjonStandardVedtakAndre" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../../pen/gbo/GBOOmsorgOverfGrunnlagListe.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../../pen/gbo/GBOOmsorgGodskrGrunnlagListe.xsd"/>
+            <xsd:import namespace="http://nav-lib-frg/no/nav/lib/frg/gbo" schemaLocation="../../frg/gbo/GBOPerson.xsd"/>
+            <xsd:import namespace="http://nav-lib-frg/no/nav/lib/frg/gbo" schemaLocation="../../frg/gbo/GBOHentPersonRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../../pen/gbo/GBOHentOmsorgGodskrGrunnlagRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/fault" schemaLocation="../../pen/fault/FaultIkkeGodskrevetOmsorgsPoeng.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../../pen/gbo/GBOHentOmsorgOverfGrunnlagRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../gbo/GBOBrevVedtakAndre.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/fault" schemaLocation="../../pen/fault/FaultVedtakIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../../pen/gbo/GBOTilbakekrevingTotal.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../../pen/gbo/GBOPersongrunnlagListe.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../../pen/gbo/GBOPensjonssak.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/fault" schemaLocation="../../pen/fault/FaultSakIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../gbo/GBOInndata.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../../pen/gbo/GBOHentPersongrunnlagListeRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-frg/no/nav/lib/frg/fault" schemaLocation="../../frg/fault/FaultPersonIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../../pen/gbo/GBOVedtak.xsd"/>
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../fault/FaultAdresseMangelfull.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../../pen/gbo/GBOHentTilbakekrevingTotalRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../fault/FaultManglerObligatoriskOutput.xsd"/>
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../gbo/GBOBrevbestillingRequest.xsd"/>
+      <xsd:element name="hentPersonSakOgBrevmottaker">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentPersonSakOgBrevmottakerRequest" nillable="true" type="bons1:GBOBrevbestillingRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentPersonSakOgBrevmottakerResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentPersonSakOgBrevmottakerResponse" nillable="true" type="bons1:GBOBrevVedtakAndre"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentPersonSakOgBrevmottaker_faultPersonIkkeFunnet" type="bons2:FaultPersonIkkeFunnet"/>
+      <xsd:element name="hentPersonSakOgBrevmottaker_faultAdresseMangelFull" type="bons3:FaultAdresseMangelfull"/>
+      <xsd:element name="hentPersonSakOgBrevmottaker_faultManglerObligatoriskOutput" type="bons3:FaultManglerObligatoriskOutput"/>
+      <xsd:element name="hentVedtaksdata">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentVedtakRequest" nillable="true" type="bons1:GBOBrevbestillingRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentVedtaksdataResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentVedtakResponse" nillable="true" type="bons4:GBOVedtak"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentVedtaksdata_faultVedtakIkkeFunnet" type="bons5:FaultVedtakIkkeFunnet"/>
+      <xsd:element name="hentTilbakekrevingTotal">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentTilbakekrevingTotalRequest" nillable="true" type="bons4:GBOHentTilbakekrevingTotalRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentTilbakekrevingTotalResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentTilbakekrevingTotalResponse" nillable="true" type="bons4:GBOTilbakekrevingTotal"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentPersongrunnlagliste">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentPersongrunnlaglisteRequest" nillable="true" type="bons4:GBOHentPersongrunnlagListeRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentPersongrunnlaglisteResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentPersongrunnlaglisteResponse" nillable="true" type="bons4:GBOPersongrunnlagListe"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="orchestrateSendPensjonStandardVedtakAndre">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="orchestrateSendPensjonStandardVedtakAndreRequest" nillable="true" type="bons1:GBOBrevbestillingRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="orchestrateSendPensjonStandardVedtakAndreResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="orchestrateSendPensjonStandardVedtakAndreResponse" nillable="true" type="bons1:GBOBrevVedtakAndre"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentSaksdataatadskaStne" nillable="true" type="bons1:GBOInndata"/>
+            <xsd:element name="hentSaksdataatadskaStneResponse" nillable="true" type="bons4:GBOPensjonssak"/>
+            <xsd:element name="hentSaksdata_faultSakIkkeFunnet" type="bons5:FaultSakIkkeFunnet"/>
+            <xsd:element name="GBOBrevbestillingRequest_element" nillable="true" type="bons1:GBOBrevbestillingRequest"/>
+            <xsd:element name="hentGrunnlagsdataOmsorgspoengGodskrivning">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentGrunnlagsdataOmsorgspoengGodskrivningRequest" nillable="true" type="bons123456789101112:GBOHentOmsorgGodskrGrunnlagRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentGrunnlagsdataOmsorgspoengGodskrivningResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentGrunnlagsdataOmsorgspoengGodskrivningResponse" nillable="true" type="bons12:GBOOmsorgGodskrGrunnlagListe"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentGrunnlagsdataOmsorgspoengGodskrivningrForPosVed_faultIkkeGodskrevetOmsorgPoeng" type="bons1234567:FaultIkkeGodskrevetOmsorgsPoeng"/>
+            <xsd:element name="hentGrunnlagsdataOmsorgspoengOverforing">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentGrunnlagsdataOmsorgspoengOverforingRequest" nillable="true" type="bons123456789101112:GBOHentOmsorgOverfGrunnlagRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentGrunnlagsdataOmsorgspoengOverforingResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentGrunnlagsdataOmsorgspoengOverforingResponse" nillable="true" type="bons12:GBOOmsorgOverfGrunnlagListe"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentRelasjoner">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentRelasjonerRequest" nillable="true" type="bons12345678910111213141516171819:GBOHentPersonRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentRelasjonerResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentRelasjonerResponse" nillable="true" type="bons12345678910111213141516171819:GBOPerson"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+        </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="hentPersonSakOgBrevmottakerRequestMsg">
+    <wsdl:part element="tns:hentPersonSakOgBrevmottaker" name="hentPersonSakOgBrevmottakerParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonSakOgBrevmottakerResponseMsg">
+    <wsdl:part element="tns:hentPersonSakOgBrevmottakerResponse" name="hentPersonSakOgBrevmottakerResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonSakOgBrevmottaker_faultPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:hentPersonSakOgBrevmottaker_faultPersonIkkeFunnet" name="faultPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonSakOgBrevmottaker_faultAdresseMangelFullMsg">
+    <wsdl:part element="tns:hentPersonSakOgBrevmottaker_faultAdresseMangelFull" name="faultAdresseMangelFull"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonSakOgBrevmottaker_faultManglerObligatoriskOutputMsg">
+    <wsdl:part element="tns:hentPersonSakOgBrevmottaker_faultManglerObligatoriskOutput" name="faultManglerObligatoriskOutput"/>
+  </wsdl:message>
+    <wsdl:message name="hentVedtaksdataRequestMsg">
+    <wsdl:part element="tns:hentVedtaksdata" name="hentVedtaksdataParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentVedtaksdataResponseMsg">
+    <wsdl:part element="tns:hentVedtaksdataResponse" name="hentVedtaksdataResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentVedtaksdata_faultVedtakIkkeFunnetMsg">
+    <wsdl:part element="tns:hentVedtaksdata_faultVedtakIkkeFunnet" name="faultVedtakIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="hentTilbakekrevingTotalRequestMsg">
+    <wsdl:part element="tns:hentTilbakekrevingTotal" name="hentTilbakekrevingTotalParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentTilbakekrevingTotalResponseMsg">
+    <wsdl:part element="tns:hentTilbakekrevingTotalResponse" name="hentTilbakekrevingTotalResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersongrunnlaglisteRequestMsg">
+    <wsdl:part element="tns:hentPersongrunnlagliste" name="hentPersongrunnlaglisteParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersongrunnlaglisteResponseMsg">
+    <wsdl:part element="tns:hentPersongrunnlaglisteResponse" name="hentPersongrunnlaglisteResult"/>
+   </wsdl:message>
+    <wsdl:message name="orchestrateSendPensjonStandardVedtakAndreRequestMsg">
+    <wsdl:part element="tns:orchestrateSendPensjonStandardVedtakAndre" name="orchestrateSendPensjonStandardVedtakAndreParameters"/>
+  </wsdl:message>
+    <wsdl:message name="orchestrateSendPensjonStandardVedtakAndreResponseMsg">
+    <wsdl:part element="tns:orchestrateSendPensjonStandardVedtakAndreResponse" name="orchestrateSendPensjonStandardVedtakAndreResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentSaksdataatadskaStneRequestMsg">
+    <wsdl:part element="tns:GBOBrevbestillingRequest_element" name="hentSaksdataRequest"/>
+  </wsdl:message>
+    <wsdl:message name="hentSaksdataatadskaStneResponseMsg">
+    <wsdl:part element="tns:hentSaksdataatadskaStneResponse" name="hentSaksdataResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentSaksdata_faultSakIkkeFunnetMsg">
+    <wsdl:part element="tns:hentSaksdata_faultSakIkkeFunnet" name="faultSakIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="orchestrateSendPensjonStandardVedtakAndre_faultManglerObligatoriskOutputMsg">
+    <wsdl:part element="tns:hentPersonSakOgBrevmottaker_faultManglerObligatoriskOutput" name="faultManglerObligatoriskOutput"/>
+  </wsdl:message>
+    <wsdl:message name="hentGrunnlagsdataOmsorgspoengGodskrivningRequestMsg">
+    <wsdl:part element="tns:hentGrunnlagsdataOmsorgspoengGodskrivning" name="hentGrunnlagsdataOmsorgspoengGodskrivningParameters1"/>
+  </wsdl:message>
+    <wsdl:message name="hentGrunnlagsdataOmsorgspoengGodskrivningResponseMsg">
+    <wsdl:part element="tns:hentGrunnlagsdataOmsorgspoengGodskrivningResponse" name="hentGrunnlagsdataOmsorgspoengGodskrivningResult1"/>
+  </wsdl:message>
+    <wsdl:message name="hentGrunnlagsdataOmsorgspoengGodskrivning_faultIkkeGodskrevetOmsorgPoengMsg">
+    <wsdl:part element="tns:hentGrunnlagsdataOmsorgspoengGodskrivningrForPosVed_faultIkkeGodskrevetOmsorgPoeng" name="faultIkkeGodskrevetOmsorgPoeng1"/>
+  </wsdl:message>
+    <wsdl:message name="hentGrunnlagsdataOmsorgspoengOverforingRequestMsg">
+    <wsdl:part element="tns:hentGrunnlagsdataOmsorgspoengOverforing" name="hentGrunnlagsdataOmsorgspoengOverforingParameters1"/>
+  </wsdl:message>
+    <wsdl:message name="hentGrunnlagsdataOmsorgspoengOverforingResponseMsg">
+    <wsdl:part element="tns:hentGrunnlagsdataOmsorgspoengOverforingResponse" name="hentGrunnlagsdataOmsorgspoengOverforingResult1"/>
+  </wsdl:message>
+    <wsdl:message name="hentRelasjonerRequestMsg">
+    <wsdl:part element="tns:hentRelasjoner" name="hentRelasjonerParameters1"/>
+  </wsdl:message>
+    <wsdl:message name="hentRelasjonerResponseMsg">
+    <wsdl:part element="tns:hentRelasjonerResponse" name="hentRelasjonerResult1"/>
+  </wsdl:message>
+    <wsdl:message name="orchestrateSendPensjonStandardVedtakAndre_faultAdresseMangelFullMsg">
+    <wsdl:part element="tns:hentPersonSakOgBrevmottaker_faultAdresseMangelFull" name="faultAdresseMangelFull"/>
+  </wsdl:message>
+    <wsdl:portType name="SendPensjonStandardVedtakAndre">
+    <wsdl:operation name="hentPersonSakOgBrevmottaker">
+      <wsdl:input message="tns:hentPersonSakOgBrevmottakerRequestMsg" name="hentPersonSakOgBrevmottakerRequest"/>
+      <wsdl:output message="tns:hentPersonSakOgBrevmottakerResponseMsg" name="hentPersonSakOgBrevmottakerResponse"/>
+      <wsdl:fault message="tns:hentPersonSakOgBrevmottaker_faultPersonIkkeFunnetMsg" name="faultPersonIkkeFunnet"/>
+      <wsdl:fault message="tns:hentPersonSakOgBrevmottaker_faultAdresseMangelFullMsg" name="faultAdresseMangelFull"/>
+      <wsdl:fault message="tns:hentPersonSakOgBrevmottaker_faultManglerObligatoriskOutputMsg" name="faultManglerObligatoriskOutput"/>
+    </wsdl:operation>
+    <wsdl:operation name="hentVedtaksdata">
+      <wsdl:input message="tns:hentVedtaksdataRequestMsg" name="hentVedtaksdataRequest"/>
+      <wsdl:output message="tns:hentVedtaksdataResponseMsg" name="hentVedtaksdataResponse"/>
+      <wsdl:fault message="tns:hentVedtaksdata_faultVedtakIkkeFunnetMsg" name="faultVedtakIkkeFunnet"/>
+    </wsdl:operation>
+    <wsdl:operation name="hentTilbakekrevingTotal">
+      <wsdl:input message="tns:hentTilbakekrevingTotalRequestMsg" name="hentTilbakekrevingTotalRequest"/>
+      <wsdl:output message="tns:hentTilbakekrevingTotalResponseMsg" name="hentTilbakekrevingTotalResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="hentPersongrunnlagliste">
+      <wsdl:input message="tns:hentPersongrunnlaglisteRequestMsg" name="hentPersongrunnlaglisteRequest"/>
+      <wsdl:output message="tns:hentPersongrunnlaglisteResponseMsg" name="hentPersongrunnlaglisteResponse"/>
+    </wsdl:operation>
+        <wsdl:operation name="orchestrateSendPensjonStandardVedtakAndre">
+      <wsdl:input message="tns:orchestrateSendPensjonStandardVedtakAndreRequestMsg" name="orchestrateSendPensjonStandardVedtakAndreRequest"/>
+      <wsdl:output message="tns:orchestrateSendPensjonStandardVedtakAndreResponseMsg" name="orchestrateSendPensjonStandardVedtakAndreResponse"/>
+            <wsdl:fault message="tns:orchestrateSendPensjonStandardVedtakAndre_faultManglerObligatoriskOutputMsg" name="faultManglerObligatoriskOutput"/>
+            <wsdl:fault message="tns:orchestrateSendPensjonStandardVedtakAndre_faultAdresseMangelFullMsg" name="faultAdresseMangelFull"/>
+        </wsdl:operation>
+        <wsdl:operation name="hentSaksdata">
+      <wsdl:input message="tns:hentSaksdataatadskaStneRequestMsg" name="hentSaksdataatadskaStneRequest"/>
+      <wsdl:output message="tns:hentSaksdataatadskaStneResponseMsg" name="hentSaksdataatadskaStneResponse"/>
+      <wsdl:fault message="tns:hentSaksdata_faultSakIkkeFunnetMsg" name="faultSakIkkeFunnet"/>
+    </wsdl:operation>
+        <wsdl:operation name="hentGrunnlagsdataOmsorgspoengGodskrivning">
+      <wsdl:input message="tns:hentGrunnlagsdataOmsorgspoengGodskrivningRequestMsg" name="hentGrunnlagsdataOmsorgspoengGodskrivningRequest"/>
+      <wsdl:output message="tns:hentGrunnlagsdataOmsorgspoengGodskrivningResponseMsg" name="hentGrunnlagsdataOmsorgspoengGodskrivningResponse"/>
+      <wsdl:fault message="tns:hentGrunnlagsdataOmsorgspoengGodskrivning_faultIkkeGodskrevetOmsorgPoengMsg" name="faultIkkeGodskrevetOmsorgPoeng"/>
+    </wsdl:operation>
+        <wsdl:operation name="hentGrunnlagsdataOmsorgspoengOverforing">
+      <wsdl:input message="tns:hentGrunnlagsdataOmsorgspoengOverforingRequestMsg" name="hentGrunnlagsdataOmsorgspoengOverforingRequest"/>
+      <wsdl:output message="tns:hentGrunnlagsdataOmsorgspoengOverforingResponseMsg" name="hentGrunnlagsdataOmsorgspoengOverforingResponse"/>
+    </wsdl:operation>
+        <wsdl:operation name="hentRelasjoner">
+      <wsdl:input message="tns:hentRelasjonerRequestMsg" name="hentRelasjonerRequest"/>
+      <wsdl:output message="tns:hentRelasjonerResponseMsg" name="hentRelasjonerResponse"/>
+    </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

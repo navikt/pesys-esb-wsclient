@@ -29,11 +29,10 @@
                                     <extraarg>-xjc-npa</extraarg>
                                 </extraargs>
                             </defaultOptions>
-                            <wsdlOptions>
-                                <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/wsdl/BrevbestillingInternt.wsdl</wsdl>
-                                </wsdlOption>
-                            </wsdlOptions>
+                            <wsdlRoot>${basedir}/src/main/resources/lib/sah/inf</wsdlRoot>
+                            <includes>
+                                <include>*.wsdl</include>
+                            </includes>
                         </configuration>
                         <goals>
                             <goal>wsdl2java</goal>

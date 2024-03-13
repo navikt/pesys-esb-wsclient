@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons1="http://nav-lib-sah/no/nav/lib/sah/gbo" xmlns:bons2="http://nav-lib-pen/no/nav/lib/pen/fault" xmlns:bons3="http://nav-lib-frg/no/nav/lib/frg/fault" xmlns:bons4="http://nav-lib-sah/no/nav/lib/sah/fault" xmlns:bons5="http://nav-lib-pen/no/nav/lib/pen/gbo" xmlns:tns="http://nav-lib-sah/no/nav/lib/sah/inf/SendPensjonsStandardVedtakNegativBrev" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SendPensjonsStandardVedtakNegativBrev" targetNamespace="http://nav-lib-sah/no/nav/lib/sah/inf/SendPensjonsStandardVedtakNegativBrev">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://nav-lib-sah/no/nav/lib/sah/inf/SendPensjonsStandardVedtakNegativBrev" xmlns:bons1="http://nav-lib-sah/no/nav/lib/sah/gbo" xmlns:bons2="http://nav-lib-pen/no/nav/lib/pen/fault" xmlns:bons3="http://nav-lib-frg/no/nav/lib/frg/fault" xmlns:bons4="http://nav-lib-sah/no/nav/lib/sah/fault" xmlns:bons5="http://nav-lib-pen/no/nav/lib/pen/gbo" xmlns:tns="http://nav-lib-sah/no/nav/lib/sah/inf/SendPensjonsStandardVedtakNegativBrev" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../../pen/gbo/GBOPersongrunnlagListe.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../../pen/gbo/GBOHentPersongrunnlagListeRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../../pen/gbo/GBOOmsorgGodskrGrunnlagListe.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../../pen/gbo/GBOVedtak.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../../pen/gbo/GBOHentOmsorgGodskrGrunnlagRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../../pen/gbo/GBOPensjonssak.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/fault" schemaLocation="../../pen/fault/FaultSakIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/fault" schemaLocation="../../pen/fault/FaultIkkeGodskrevetOmsorgsPoeng.xsd"/>
+            <xsd:import namespace="http://nav-lib-frg/no/nav/lib/frg/fault" schemaLocation="../../frg/fault/FaultPersonIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../gbo/GBOBrevNegativVedtak.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/fault" schemaLocation="../../pen/fault/FaultVedtakIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../gbo/GBOBrevbestillingRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../fault/FaultManglerObligatoriskOutput.xsd"/>
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../fault/FaultAdresseMangelfull.xsd"/>
+            <xsd:element name="hentBrevMottakerOgPersonSak">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentBrevMottakerOgPersonSakRequest" nillable="true" type="bons1:GBOBrevbestillingRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentBrevMottakerOgPersonSakResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentBrevMottakerOgPersonSakResponse" nillable="true" type="bons1:GBOBrevNegativVedtak"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentSaksDataForNegBrev">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentSaksDataForNegBrevRequest" nillable="true" type="bons1:GBOBrevbestillingRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentSaksDataForNegBrevResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentSaksDataForNegBrevResponse" nillable="true" type="bons5:GBOPensjonssak"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentVedtaksDataForNegBrev">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentVedtaksDataForNegBrevRequest" nillable="true" type="bons1:GBOBrevbestillingRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentVedtaksDataForNegBrevResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentVedtaksDataForNegBrevResponse" nillable="true" type="bons5:GBOVedtak"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentGrunnlagsDataForNegBrev">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentGrunnlagsForNegBrevDataRequest" nillable="true" type="bons5:GBOHentOmsorgGodskrGrunnlagRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentGrunnlagsDataForNegBrevResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentGrunnlagsDataForNegBrevResponse" nillable="true" type="bons5:GBOOmsorgGodskrGrunnlagListe"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="orchestrateSendPensjonStandardVedtakNegativBrev">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="orchestrateSendPensjonStandardVedtakNegativBrevRequest" nillable="true" type="bons1:GBOBrevbestillingRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="orchestrateSendPensjonStandardVedtakNegativBrevResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="orchestrateSendPensjonStandardVedtakNegativBrevResponse" nillable="true" type="bons1:GBOBrevNegativVedtak"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentSaksDataForNegBrev_faultSakIkkeFunnet" type="bons2:FaultSakIkkeFunnet"/>
+            <xsd:element name="hentBrevMottakerOgPersonSak_faultPersonIkkeFunnet" type="bons3:FaultPersonIkkeFunnet"/>
+            <xsd:element name="hentVedtaksDataForNegBrev_faultVedtakIkkeFunnet" type="bons2:FaultVedtakIkkeFunnet"/>
+            <xsd:element name="orchestrateSendPensjonStandardVedtakNegativBrev_faultAdresseMangelFull" type="bons4:FaultAdresseMangelfull"/>
+            <xsd:element name="hentBrevMottakerOgPersonSak_faultAdresseMangelfull" type="bons4:FaultAdresseMangelfull"/>
+            <xsd:element name="orchestrateSendPensjonStandardVedtakNegativBrev_faultManglerObligatoriskOutput" type="bons4:FaultManglerObligatoriskOutput"/>
+            <xsd:element name="hentGrunnlagsDataForNegBrev_faultIkkeGodskrevetOmsorgPoeng" type="bons2:FaultIkkeGodskrevetOmsorgsPoeng"/>
+            <xsd:element name="hentPersonGrunnlagListeForNegBrev">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentPersonGrunnlagListeForNegBrevRequest" nillable="true" type="bons5:GBOHentPersongrunnlagListeRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentPersonGrunnlagListeForNegBrevResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentPersonGrunnlagListeForNegBrevResponse" nillable="true" type="bons5:GBOPersongrunnlagListe"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+        </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="hentBrevMottakerOgPersonSakRequestMsg">
+    <wsdl:part element="tns:hentBrevMottakerOgPersonSak" name="hentBrevMottakerOgPersonSakParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentBrevMottakerOgPersonSakResponseMsg">
+    <wsdl:part element="tns:hentBrevMottakerOgPersonSakResponse" name="hentBrevMottakerOgPersonSakResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentSaksDataForNegBrevRequestMsg">
+    <wsdl:part element="tns:hentSaksDataForNegBrev" name="hentSaksDataForNegBrevParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentSaksDataForNegBrevResponseMsg">
+    <wsdl:part element="tns:hentSaksDataForNegBrevResponse" name="hentSaksDataForNegBrevResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentVedtaksDataForNegBrevRequestMsg">
+    <wsdl:part element="tns:hentVedtaksDataForNegBrev" name="hentVedtaksDataForNegBrevParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentVedtaksDataForNegBrevResponseMsg">
+    <wsdl:part element="tns:hentVedtaksDataForNegBrevResponse" name="hentVedtaksDataForNegBrevResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentGrunnlagsDataForNegBrevRequestMsg">
+    <wsdl:part element="tns:hentGrunnlagsDataForNegBrev" name="hentGrunnlagsDataForNegBrevParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentGrunnlagsDataForNegBrevResponseMsg">
+    <wsdl:part element="tns:hentGrunnlagsDataForNegBrevResponse" name="hentGrunnlagsDataForNegBrevResult"/>
+  </wsdl:message>
+    <wsdl:message name="orchestrateSendPensjonStandardVedtakNegativBrevRequestMsg">
+    <wsdl:part element="tns:orchestrateSendPensjonStandardVedtakNegativBrev" name="orchestrateSendPensjonStandardVedtakNegativBrevParameters"/>
+  </wsdl:message>
+    <wsdl:message name="orchestrateSendPensjonStandardVedtakNegativBrevResponseMsg">
+    <wsdl:part element="tns:orchestrateSendPensjonStandardVedtakNegativBrevResponse" name="orchestrateSendPensjonStandardVedtakNegativBrevResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentSaksDataForNegBrev_faultSakIkkeFunnetMsg">
+    <wsdl:part element="tns:hentSaksDataForNegBrev_faultSakIkkeFunnet" name="faultSakIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="hentBrevMottakerOgPersonSak_faultPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:hentBrevMottakerOgPersonSak_faultPersonIkkeFunnet" name="faultPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="hentVedtaksDataForNegBrev_faultVedtakIkkeFunnetMsg">
+    <wsdl:part element="tns:hentVedtaksDataForNegBrev_faultVedtakIkkeFunnet" name="faultVedtakIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="orchestrateSendPensjonStandardVedtakNegativBrev_faultAdresseMangelFullMsg">
+    <wsdl:part element="tns:orchestrateSendPensjonStandardVedtakNegativBrev_faultAdresseMangelFull" name="faultAdresseMangelFull"/>
+  </wsdl:message>
+    <wsdl:message name="hentBrevMottakerOgPersonSak_faultAdresseMangelfullMsg">
+    <wsdl:part element="tns:hentBrevMottakerOgPersonSak_faultAdresseMangelfull" name="faultAdresseMangelfull"/>
+  </wsdl:message>
+    <wsdl:message name="orchestrateSendPensjonStandardVedtakNegativBrev_faultManglerObligatoriskOutputMsg">
+    <wsdl:part element="tns:orchestrateSendPensjonStandardVedtakNegativBrev_faultManglerObligatoriskOutput" name="faultManglerObligatoriskOutput"/>
+  </wsdl:message>
+    <wsdl:message name="hentGrunnlagsDataForNegBrev_faultIkkeGodskrevetOmsorgPoengMsg">
+    <wsdl:part element="tns:hentGrunnlagsDataForNegBrev_faultIkkeGodskrevetOmsorgPoeng" name="faultIkkeGodskrevetOmsorgPoeng"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonGrunnlagListeForNegBrevRequestMsg">
+    <wsdl:part element="tns:hentPersonGrunnlagListeForNegBrev" name="hentPersonGrunnlagListeForNegBrevParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonGrunnlagListeForNegBrevResponseMsg">
+    <wsdl:part element="tns:hentPersonGrunnlagListeForNegBrevResponse" name="hentPersonGrunnlagListeForNegBrevResult"/>
+  </wsdl:message>
+    <wsdl:portType name="SendPensjonsStandardVedtakNegativBrev">
+    <wsdl:operation name="hentBrevMottakerOgPersonSak">
+      <wsdl:input message="tns:hentBrevMottakerOgPersonSakRequestMsg" name="hentBrevMottakerOgPersonSakRequest"/>
+      <wsdl:output message="tns:hentBrevMottakerOgPersonSakResponseMsg" name="hentBrevMottakerOgPersonSakResponse"/>
+            <wsdl:fault message="tns:hentBrevMottakerOgPersonSak_faultPersonIkkeFunnetMsg" name="faultPersonIkkeFunnet"/>
+            <wsdl:fault message="tns:hentBrevMottakerOgPersonSak_faultAdresseMangelfullMsg" name="faultAdresseMangelfull"/>
+        </wsdl:operation>
+    <wsdl:operation name="hentSaksDataForNegBrev">
+      <wsdl:input message="tns:hentSaksDataForNegBrevRequestMsg" name="hentSaksDataForNegBrevRequest"/>
+      <wsdl:output message="tns:hentSaksDataForNegBrevResponseMsg" name="hentSaksDataForNegBrevResponse"/>
+            <wsdl:fault message="tns:hentSaksDataForNegBrev_faultSakIkkeFunnetMsg" name="faultSakIkkeFunnet"/>
+        </wsdl:operation>
+    <wsdl:operation name="hentVedtaksDataForNegBrev">
+      <wsdl:input message="tns:hentVedtaksDataForNegBrevRequestMsg" name="hentVedtaksDataForNegBrevRequest"/>
+      <wsdl:output message="tns:hentVedtaksDataForNegBrevResponseMsg" name="hentVedtaksDataForNegBrevResponse"/>
+            <wsdl:fault message="tns:hentVedtaksDataForNegBrev_faultVedtakIkkeFunnetMsg" name="faultVedtakIkkeFunnet"/>
+        </wsdl:operation>
+    <wsdl:operation name="hentGrunnlagsDataForNegBrev">
+      <wsdl:input message="tns:hentGrunnlagsDataForNegBrevRequestMsg" name="hentGrunnlagsDataForNegBrevRequest"/>
+      <wsdl:output message="tns:hentGrunnlagsDataForNegBrevResponseMsg" name="hentGrunnlagsDataForNegBrevResponse"/>
+            <wsdl:fault message="tns:hentGrunnlagsDataForNegBrev_faultIkkeGodskrevetOmsorgPoengMsg" name="faultIkkeGodskrevetOmsorgPoeng"/>
+        </wsdl:operation>
+        <wsdl:operation name="orchestrateSendPensjonStandardVedtakNegativBrev">
+      <wsdl:input message="tns:orchestrateSendPensjonStandardVedtakNegativBrevRequestMsg" name="orchestrateSendPensjonStandardVedtakNegativBrevRequest"/>
+      <wsdl:output message="tns:orchestrateSendPensjonStandardVedtakNegativBrevResponseMsg" name="orchestrateSendPensjonStandardVedtakNegativBrevResponse"/>
+            <wsdl:fault message="tns:orchestrateSendPensjonStandardVedtakNegativBrev_faultAdresseMangelFullMsg" name="faultAdresseMangelFull"/>
+            <wsdl:fault message="tns:orchestrateSendPensjonStandardVedtakNegativBrev_faultManglerObligatoriskOutputMsg" name="faultManglerObligatoriskOutput"/>
+        </wsdl:operation>
+        <wsdl:operation name="hentPersonGrunnlagListeForNegBrev">
+      <wsdl:input message="tns:hentPersonGrunnlagListeForNegBrevRequestMsg" name="hentPersonGrunnlagListeForNegBrevRequest"/>
+      <wsdl:output message="tns:hentPersonGrunnlagListeForNegBrevResponseMsg" name="hentPersonGrunnlagListeForNegBrevResponse"/>
+    </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

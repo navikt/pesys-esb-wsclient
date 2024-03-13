@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="SendSEDBlanketter" targetNamespace="http://nav-lib-sah/no/nav/lib/sah/inf/SendSEDBlanketter" xmlns:bons1="http://nav-lib-sah/no/nav/lib/sah/gbo" xmlns:bons2="http://nav-lib-sah/no/nav/lib/sah/fault" xmlns:bons3="http://nav-lib-frg/no/nav/lib/frg/fault" xmlns:tns="http://nav-lib-sah/no/nav/lib/sah/inf/SendSEDBlanketter" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <wsdl:types>
+    <xsd:schema targetNamespace="http://nav-lib-sah/no/nav/lib/sah/inf/SendSEDBlanketter">
+      <xsd:import namespace="http://nav-lib-frg/no/nav/lib/frg/fault" schemaLocation="../../frg/fault/FaultPersonIkkeFunnet.xsd"/>
+      <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../fault/FaultAdresseMangelfull.xsd"/>
+      <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../fault/FaultManglerObligatoriskOutput.xsd"/>
+      <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../gbo/GBOBrevSEDBlanketter.xsd"/>
+      <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../gbo/GBOBrevbestillingRequest.xsd"/>
+      <xsd:element name="orchestrateSendSEDBlanketter">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="orchestrateSendSEDBlanketterRequest" nillable="true" type="bons1:GBOBrevbestillingRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="orchestrateSendSEDBlanketterResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="orchestrateSendSEDBlanketterResponse" nillable="true" type="bons1:GBOBrevSEDBlanketter"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="orchestrateSendSEDBlanketterFault1_faultManglerObligatoriskOutput" nillable="true" type="bons2:FaultManglerObligatoriskOutput"/>
+      <xsd:element name="orchestrateSendSEDBlanketterFault2_faultAdresseMangelfull" nillable="true" type="bons2:FaultAdresseMangelfull"/>
+      <xsd:element name="hentPersonSakOgBrevmottaker">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentPersonSakOgBrevmottakerRequest" nillable="true" type="bons1:GBOBrevbestillingRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentPersonSakOgBrevmottakerResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentPersonSakOgBrevmottakerResponse" nillable="true" type="bons1:GBOBrevSEDBlanketter"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentPersonSakOgBrevmottakerFault1_faultAdresseMangelfull" nillable="true" type="bons2:FaultAdresseMangelfull"/>
+      <xsd:element name="hentPersonSakOgBrevmottakerFault2_faultPersonIkkeFunnet" nillable="true" type="bons3:FaultPersonIkkeFunnet"/>
+      <xsd:element name="hentPersonSakOgBrevmottakerFault3_faultManglerObligatoriskOutput" nillable="true" type="bons2:FaultManglerObligatoriskOutput"/>
+    </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="orchestrateSendSEDBlanketterRequestMsg">
+    <wsdl:part element="tns:orchestrateSendSEDBlanketter" name="orchestrateSendSEDBlanketterParameters"/>
+  </wsdl:message>
+    <wsdl:message name="orchestrateSendSEDBlanketterResponseMsg">
+    <wsdl:part element="tns:orchestrateSendSEDBlanketterResponse" name="orchestrateSendSEDBlanketterResult"/>
+  </wsdl:message>
+    <wsdl:message name="orchestrateSendSEDBlanketter_faultManglerObligatoriskOutputMsg">
+    <wsdl:part element="tns:orchestrateSendSEDBlanketterFault1_faultManglerObligatoriskOutput" name="faultManglerObligatoriskOutput"/>
+  </wsdl:message>
+    <wsdl:message name="orchestrateSendSEDBlanketter_faultAdresseMangelfullMsg">
+    <wsdl:part element="tns:orchestrateSendSEDBlanketterFault2_faultAdresseMangelfull" name="faultAdresseMangelfull"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonSakOgBrevmottakerRequestMsg">
+    <wsdl:part element="tns:hentPersonSakOgBrevmottaker" name="hentPersonSakOgBrevmottakerParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonSakOgBrevmottakerResponseMsg">
+    <wsdl:part element="tns:hentPersonSakOgBrevmottakerResponse" name="hentPersonSakOgBrevmottakerResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonSakOgBrevmottaker_faultAdresseMangelfullMsg">
+    <wsdl:part element="tns:hentPersonSakOgBrevmottakerFault1_faultAdresseMangelfull" name="faultAdresseMangelfull"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonSakOgBrevmottaker_faultPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:hentPersonSakOgBrevmottakerFault2_faultPersonIkkeFunnet" name="faultPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonSakOgBrevmottaker_faultManglerObligatoriskOutputMsg">
+    <wsdl:part element="tns:hentPersonSakOgBrevmottakerFault3_faultManglerObligatoriskOutput" name="faultManglerObligatoriskOutput"/>
+  </wsdl:message>
+    <wsdl:portType name="SendSEDBlanketter">
+    <wsdl:operation name="orchestrateSendSEDBlanketter">
+      <wsdl:input message="tns:orchestrateSendSEDBlanketterRequestMsg" name="orchestrateSendSEDBlanketterRequest"/>
+      <wsdl:output message="tns:orchestrateSendSEDBlanketterResponseMsg" name="orchestrateSendSEDBlanketterResponse"/>
+      <wsdl:fault message="tns:orchestrateSendSEDBlanketter_faultManglerObligatoriskOutputMsg" name="faultManglerObligatoriskOutput"/>
+      <wsdl:fault message="tns:orchestrateSendSEDBlanketter_faultAdresseMangelfullMsg" name="faultAdresseMangelfull"/>
+    </wsdl:operation>
+    <wsdl:operation name="hentPersonSakOgBrevmottaker">
+      <wsdl:input message="tns:hentPersonSakOgBrevmottakerRequestMsg" name="hentPersonSakOgBrevmottakerRequest"/>
+      <wsdl:output message="tns:hentPersonSakOgBrevmottakerResponseMsg" name="hentPersonSakOgBrevmottakerResponse"/>
+      <wsdl:fault message="tns:hentPersonSakOgBrevmottaker_faultAdresseMangelfullMsg" name="faultAdresseMangelfull"/>
+      <wsdl:fault message="tns:hentPersonSakOgBrevmottaker_faultPersonIkkeFunnetMsg" name="faultPersonIkkeFunnet"/>
+      <wsdl:fault message="tns:hentPersonSakOgBrevmottaker_faultManglerObligatoriskOutputMsg" name="faultManglerObligatoriskOutput"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
