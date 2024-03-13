@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons2="http://nav-lib-sah/no/nav/lib/sah/gbo" xmlns:bons3="http://nav-lib-sah/no/nav/lib/sah/fault" xmlns:bons6="http://nav-lib-frg/no/nav/lib/frg/fault" xmlns:tns="http://nav-lib-sah/no/nav/lib/sah/inf/SendStandardBrev" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SendStandardBrev" targetNamespace="http://nav-lib-sah/no/nav/lib/sah/inf/SendStandardBrev">
+    <wsdl:types>
+    <xsd:schema xmlns:bons="http://nav-lib-frg/no/nav/lib/frg/fault" xmlns:bons12="http://nav-lib-frg/no/nav/lib/frg/fault" xmlns:bons1234="http://nav-lib-sah/no/nav/lib/sah/gbo" xmlns:bons123456="http://nav-lib-sah/no/nav/lib/sah/gbo" xmlns:bons1234567="http://nav-lib-sah/no/nav/lib/sah/fault" xmlns:bons12345678="http://nav-lib-sah/no/nav/lib/sah/fault" targetNamespace="http://nav-lib-sah/no/nav/lib/sah/inf/SendStandardBrev" xmlns:tns="http://nav-lib-sah/no/nav/lib/sah/inf/SendStandardBrev" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../gbo/GBOBrevStandard.xsd"/>
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../fault/FaultAdresseMangelfull.xsd"/>
+      <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../fault/FaultManglerObligatoriskOutput.xsd"/>
+      <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../gbo/GBOBrevbestillingRequest.xsd"/>
+      <xsd:import namespace="http://nav-lib-frg/no/nav/lib/frg/fault" schemaLocation="../../frg/fault/FaultPersonIkkeFunnet.xsd"/>
+      <xsd:import namespace="http://nav-lib-frg/no/nav/lib/frg/fault" schemaLocation="../../frg/fault/FaultSamhandlerIkkeFunnet.xsd"/>
+      <xsd:element name="orchestrateSendStandardBrev">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="orchestrateSendStandardBrevRequest" nillable="true" type="bons1234:GBOBrevbestillingRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="orchestrateSendStandardBrevResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="orchestranteSendStandardBrevResponse" nillable="true" type="bons1234:GBOBrevStandard"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentPersonSakOgBrevmottaker">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentPersonSakOgBrevMottakerRequest" nillable="true" type="bons1234:GBOBrevbestillingRequest"/>
+            <xsd:element name="hentTSSBrevMottaker" nillable="true" type="xsd:boolean"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentPersonSakOgBrevmottakerResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentPersonSakOgBrevMottakerResponse" nillable="true" type="bons1234:GBOBrevStandard"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentPersonSakOgBrevmottaker_faultPersonIkkeFunnet" type="bons:FaultPersonIkkeFunnet"/>
+      <xsd:element name="hentPersonSakOgBrevmottaker_faultAdresseMangelFull" type="bons1234567:FaultAdresseMangelfull"/>
+      <xsd:element name="hentPersonSakOgBrevmottaker_faultManglerObligatoriskOutputf" type="bons1234567:FaultManglerObligatoriskOutput"/>
+      <xsd:element name="hentSamhandlerForBrev">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentSamhandlerForBrevRequest" nillable="true" type="bons123456:GBOBrevbestillingRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentSamhandlerForBrevResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentSamhandlerForBrevResponse" nillable="true" type="bons1234:GBOBrevStandard"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentSamhandlerForBrev_faultSamhandlerIkkeFunnet" type="bons12:FaultSamhandlerIkkeFunnet"/>
+      <xsd:element name="hentFamilieRelasjonerForBrev">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentFamilieRelasjonerForBrevRequest" nillable="true" type="bons123456:GBOBrevbestillingRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentFamilieRelasjonerForBrevResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentFamilieRelasjonerForBrevResponse" nillable="true" type="bons1234:GBOBrevStandard"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentFamilieRelasjonerForBrev_faultPersonIkkeFunnet" type="bons12:FaultPersonIkkeFunnet"/>
+    </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="orchestrateSendStandardBrevRequestMsg">
+    <wsdl:part element="tns:orchestrateSendStandardBrev" name="orchestrateSendStandardBrevParameters"/>
+  </wsdl:message>
+    <wsdl:message name="orchestrateSendStandardBrevResponseMsg">
+    <wsdl:part element="tns:orchestrateSendStandardBrevResponse" name="orchestrateSendStandardBrevResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonSakOgBrevmottakerRequestMsg">
+    <wsdl:part element="tns:hentPersonSakOgBrevmottaker" name="hentPersonSakOgBrevmottakerParameters1"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonSakOgBrevmottakerResponseMsg">
+    <wsdl:part element="tns:hentPersonSakOgBrevmottakerResponse" name="hentPersonSakOgBrevmottakerResult1"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonSakOgBrevmottaker_faultPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:hentPersonSakOgBrevmottaker_faultPersonIkkeFunnet" name="faultPersonIkkeFunnet1"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonSakOgBrevmottaker_faultAdresseMangelFullMsg">
+    <wsdl:part name="faultAdresseMangelFull1" type="bons3:FaultAdresseMangelfull"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonSakOgBrevmottaker_faultManglerObligatoriskOutputfMsg">
+    <wsdl:part name="faultManglerObligatoriskOutputf1" type="bons3:FaultManglerObligatoriskOutput"/>
+  </wsdl:message>
+    <wsdl:message name="hentSamhandlerForBrevRequestMsg">
+    <wsdl:part element="tns:hentSamhandlerForBrev" name="hentSamhandlerForBrevParameters1"/>
+  </wsdl:message>
+    <wsdl:message name="hentSamhandlerForBrevResponseMsg">
+    <wsdl:part element="tns:hentSamhandlerForBrevResponse" name="hentSamhandlerForBrevResult1"/>
+  </wsdl:message>
+    <wsdl:message name="hentSamhandlerForBrev_faultSamhandlerIkkeFunnetMsg">
+    <wsdl:part element="tns:hentSamhandlerForBrev_faultSamhandlerIkkeFunnet" name="faultSamhandlerIkkeFunnet1"/>
+  </wsdl:message>
+    <wsdl:message name="hentFamilieRelasjonerForBrevRequestMsg">
+    <wsdl:part element="tns:hentFamilieRelasjonerForBrev" name="hentFamilieRelasjonerForBrevParameters1"/>
+  </wsdl:message>
+    <wsdl:message name="hentFamilieRelasjonerForBrevResponseMsg">
+    <wsdl:part element="tns:hentFamilieRelasjonerForBrevResponse" name="hentFamilieRelasjonerForBrevResult1"/>
+  </wsdl:message>
+    <wsdl:message name="hentFamilieRelasjonerForBrev_faultPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:hentFamilieRelasjonerForBrev_faultPersonIkkeFunnet" name="faultPersonIkkeFunnet1"/>
+  </wsdl:message>
+    <wsdl:message name="orchestrateSendStandardBrev_faultAdresseMangelfullMsg">
+    <wsdl:part element="tns:hentPersonSakOgBrevmottaker_faultAdresseMangelFull" name="faultAdresseMangelfull"/>
+  </wsdl:message>
+    <wsdl:message name="orchestrateSendStandardBrev_faultManglerObligatoriskOutputMsg">
+    <wsdl:part element="tns:hentPersonSakOgBrevmottaker_faultManglerObligatoriskOutputf" name="faultManglerObligatoriskOutput"/>
+  </wsdl:message>
+    <wsdl:portType name="SendStandardBrev">
+    <wsdl:operation name="orchestrateSendStandardBrev">
+      <wsdl:input message="tns:orchestrateSendStandardBrevRequestMsg" name="orchestrateSendStandardBrevRequest"/>
+      <wsdl:output message="tns:orchestrateSendStandardBrevResponseMsg" name="orchestrateSendStandardBrevResponse"/>
+      <wsdl:fault message="tns:orchestrateSendStandardBrev_faultAdresseMangelfullMsg" name="faultAdresseMangelfull"/>
+      <wsdl:fault message="tns:orchestrateSendStandardBrev_faultManglerObligatoriskOutputMsg" name="faultManglerObligatoriskOutput"/>
+    </wsdl:operation>
+    <wsdl:operation name="hentPersonSakOgBrevmottaker">
+      <wsdl:input message="tns:hentPersonSakOgBrevmottakerRequestMsg" name="hentPersonSakOgBrevmottakerRequest"/>
+      <wsdl:output message="tns:hentPersonSakOgBrevmottakerResponseMsg" name="hentPersonSakOgBrevmottakerResponse"/>
+      <wsdl:fault message="tns:hentPersonSakOgBrevmottaker_faultAdresseMangelFullMsg" name="faultAdresseMangelFull"/>
+      <wsdl:fault message="tns:hentPersonSakOgBrevmottaker_faultPersonIkkeFunnetMsg" name="faultPersonIkkeFunnet"/>
+      <wsdl:fault message="tns:hentPersonSakOgBrevmottaker_faultManglerObligatoriskOutputfMsg" name="faultManglerObligatoriskOutput"/>
+    </wsdl:operation>
+    <wsdl:operation name="hentSamhandlerForBrev">
+      <wsdl:input message="tns:hentSamhandlerForBrevRequestMsg" name="hentSamhandlerForBrevRequest"/>
+      <wsdl:output message="tns:hentSamhandlerForBrevResponseMsg" name="hentSamhandlerForBrevResponse"/>
+      <wsdl:fault message="tns:hentSamhandlerForBrev_faultSamhandlerIkkeFunnetMsg" name="faultSamhandlerIkkeFunnet"/>
+    </wsdl:operation>
+    <wsdl:operation name="hentFamilieRelasjonerForBrev">
+      <wsdl:input message="tns:hentFamilieRelasjonerForBrevRequestMsg" name="hentFamilieRelasjonerForBrevRequest"/>
+      <wsdl:output message="tns:hentFamilieRelasjonerForBrevResponseMsg" name="hentFamilieRelasjonerForBrevResponse"/>
+      <wsdl:fault message="tns:hentFamilieRelasjonerForBrev_faultPersonIkkeFunnetMsg" name="faultPersonIkkeFunnet"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

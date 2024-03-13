@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="SendPensjonVedtakFleksibeltUttak" targetNamespace="http://nav-lib-sah/no/nav/lib/sah/inf/SendPensjonVedtakFleksibeltUttak" xmlns:bons="http://nav-lib-sah/no/nav/lib/sah/gbo" xmlns:bons1="http://nav-lib-sah/no/nav/lib/sah/fault" xmlns:bons3="http://nav-lib-frg/no/nav/lib/frg/fault" xmlns:tns="http://nav-lib-sah/no/nav/lib/sah/inf/SendPensjonVedtakFleksibeltUttak" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <wsdl:types>
+    <xsd:schema targetNamespace="http://nav-lib-sah/no/nav/lib/sah/inf/SendPensjonVedtakFleksibeltUttak">
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../gbo/GBOFinnBostedslandRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../gbo/GBOLand.xsd"/>
+            <xsd:import namespace="http://nav-lib-frg/no/nav/lib/frg/fault" schemaLocation="../../frg/fault/FaultPersonIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../fault/FaultAdresseMangelfull.xsd"/>
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../fault/FaultManglerObligatoriskOutput.xsd"/>
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../gbo/GBOBrevVedtakFleksibeltUttak.xsd"/>
+      <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../gbo/GBOBrevbestillingRequest.xsd"/>
+      <xsd:element name="orchestrateSendPensjonVedtakFleksibeltUttak">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="orchestrateSendPensjonVedtakFleksibeltUttakRequest" nillable="true" type="bons:GBOBrevbestillingRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="orchestrateSendPensjonVedtakFleksibeltUttakResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="orchestrateSendPensjonVedtakFleksibeltUttakResponse" nillable="true" type="bons:GBOBrevVedtakFleksibeltUttak"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentPersonSakOgBrevmottaker">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentPersonSakOgBrevmottakerRequest" nillable="true" type="bons:GBOBrevbestillingRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentPersonSakOgBrevmottakerResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentPersonSakOgBrevmottakerResponse" nillable="true" type="bons:GBOBrevVedtakFleksibeltUttak"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="FaultManglerObligatoriskOutput_element" nillable="true" type="bons1:FaultManglerObligatoriskOutput"/>
+            <xsd:element name="FaultAdresseMangelfull_element" nillable="true" type="bons1:FaultAdresseMangelfull"/>
+            <xsd:element name="FaultPersonIkkeFunnet_element" nillable="true" type="bons3:FaultPersonIkkeFunnet"/>
+            <xsd:element name="finnBostedsland">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="finnBostedslandRequest" nillable="true" type="bons:GBOFinnBostedslandRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="finnBostedslandResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="finnBostedslandResponse" nillable="true" type="bons:GBOLand"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+        </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="orchestrateSendPensjonVedtakFleksibeltUttakRequestMsg">
+    <wsdl:part element="tns:orchestrateSendPensjonVedtakFleksibeltUttak" name="orchestrateSendPensjonVedtakFleksibeltUttakParameters"/>
+  </wsdl:message>
+    <wsdl:message name="orchestrateSendPensjonVedtakFleksibeltUttakResponseMsg">
+    <wsdl:part element="tns:orchestrateSendPensjonVedtakFleksibeltUttakResponse" name="orchestrateSendPensjonVedtakFleksibeltUttakResult"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonSakOgBrevmottakerRequestMsg">
+    <wsdl:part element="tns:hentPersonSakOgBrevmottaker" name="hentPersonSakOgBrevmottakerParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonSakOgBrevmottakerResponseMsg">
+    <wsdl:part element="tns:hentPersonSakOgBrevmottakerResponse" name="hentPersonSakOgBrevmottakerResult"/>
+  </wsdl:message>
+    <wsdl:message name="orchestrateSendPensjonVedtakFleksibeltUttak_faultManglerObligatoriskOutputMsg">
+    <wsdl:part element="tns:FaultManglerObligatoriskOutput_element" name="faultManglerObligatoriskOutput"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonSakOgBrevmottaker_faultAdresseMangelfullMsg">
+    <wsdl:part element="tns:FaultAdresseMangelfull_element" name="faultAdresseMangelfull"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonSakOgBrevmottaker_faultPersonIkkeFunnetMsg">
+    <wsdl:part element="tns:FaultPersonIkkeFunnet_element" name="faultPersonIkkeFunnet"/>
+  </wsdl:message>
+    <wsdl:message name="hentPersonSakOgBrevmottaker_faultManglerObligatoriskOutputMsg">
+    <wsdl:part element="tns:FaultManglerObligatoriskOutput_element" name="faultManglerObligatoriskOutput"/>
+  </wsdl:message>
+    <wsdl:message name="orchestrateSendPensjonVedtakFleksibeltUttak_faultAdresseMangelfullMsg">
+    <wsdl:part element="tns:FaultAdresseMangelfull_element" name="faultAdresseMangelfull"/>
+  </wsdl:message>
+    <wsdl:message name="finnBostedslandRequestMsg">
+    <wsdl:part element="tns:finnBostedsland" name="finnBostedslandParameters"/>
+  </wsdl:message>
+    <wsdl:message name="finnBostedslandResponseMsg">
+    <wsdl:part element="tns:finnBostedslandResponse" name="finnBostedslandResult"/>
+  </wsdl:message>
+    <wsdl:portType name="SendPensjonVedtakFleksibeltUttak">
+    <wsdl:operation name="orchestrateSendPensjonVedtakFleksibeltUttak">
+      <wsdl:input message="tns:orchestrateSendPensjonVedtakFleksibeltUttakRequestMsg" name="orchestrateSendPensjonVedtakFleksibeltUttakRequest"/>
+      <wsdl:output message="tns:orchestrateSendPensjonVedtakFleksibeltUttakResponseMsg" name="orchestrateSendPensjonVedtakFleksibeltUttakResponse"/>
+            <wsdl:fault message="tns:orchestrateSendPensjonVedtakFleksibeltUttak_faultManglerObligatoriskOutputMsg" name="faultManglerObligatoriskOutput"/>
+            <wsdl:fault message="tns:orchestrateSendPensjonVedtakFleksibeltUttak_faultAdresseMangelfullMsg" name="faultAdresseMangelfull"/>
+        </wsdl:operation>
+        <wsdl:operation name="hentPersonSakOgBrevmottaker">
+      <wsdl:input message="tns:hentPersonSakOgBrevmottakerRequestMsg" name="hentPersonSakOgBrevmottakerRequest"/>
+      <wsdl:output message="tns:hentPersonSakOgBrevmottakerResponseMsg" name="hentPersonSakOgBrevmottakerResponse"/>
+            <wsdl:fault message="tns:hentPersonSakOgBrevmottaker_faultAdresseMangelfullMsg" name="faultAdresseMangelfull"/>
+            <wsdl:fault message="tns:hentPersonSakOgBrevmottaker_faultPersonIkkeFunnetMsg" name="faultPersonIkkeFunnet"/>
+            <wsdl:fault message="tns:hentPersonSakOgBrevmottaker_faultManglerObligatoriskOutputMsg" name="faultManglerObligatoriskOutput"/>
+        </wsdl:operation>
+        <wsdl:operation name="finnBostedsland">
+      <wsdl:input message="tns:finnBostedslandRequestMsg" name="finnBostedslandRequest"/>
+      <wsdl:output message="tns:finnBostedslandResponseMsg" name="finnBostedslandResponse"/>
+    </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

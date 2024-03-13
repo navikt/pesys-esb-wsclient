@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:bons1="http://nav-lib-sah/no/nav/lib/sah/gbo" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah/no/nav/lib/sah/gbo">
+    <xsd:include schemaLocation="GBOSakskontekst.xsd"/>
+    <xsd:complexType name="GBOInndata">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="brevkode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="brevgruppe" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="redigerbart" type="xsd:boolean"/>
+      <xsd:element minOccurs="0" name="sprakkode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="vedtaksinformasjon" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="soknadsinformasjon" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="sakskontekst" type="bons1:GBOSakskontekst"/>
+            <xsd:element minOccurs="0" name="brukmottakerfnr" type="xsd:boolean"/>
+        </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>
