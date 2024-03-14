@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:bons1="http://nav-lib-sah/no/nav/lib/sah/gbo"
+	targetNamespace="http://nav-lib-sah/no/nav/lib/sah/gbo">
+	<include schemaLocation="GBOBrevPensjonBrev.xsd"></include>
+	<include schemaLocation="GBOBrevVedtaksbrev.xsd"></include>
+	<include schemaLocation="GBOBrevSEDBlanketter.xsd"></include>
+	<include schemaLocation="GBOBrevVedtakFleksibeltUttak.xsd"></include>
+	<include schemaLocation="GBOBrevVedtakAndre.xsd"></include>
+	<include schemaLocation="GBOBrevPositivVedtak.xsd" />
+	<include schemaLocation="GBOBrevStandard.xsd" />
+	<include schemaLocation="GBOBrevNegativVedtak.xsd" />
+	<complexType name="GBOBrevRtvBrev">
+		<sequence>
+			<element name="brevStandard" type="bons1:GBOBrevStandard" />
+			<element minOccurs="0" name="brevNegativVedtak"
+				type="bons1:GBOBrevNegativVedtak" />
+			<element minOccurs="0" name="brevPositivVedtak"
+				type="bons1:GBOBrevPositivVedtak" />
+			<element minOccurs="0" name="brevVedtakAndre"
+				type="bons1:GBOBrevVedtakAndre">
+			</element>
+			<element minOccurs="0" name="brevStandardPensjon"
+				type="bons1:GBOBrevStandard">
+			</element>
+			<element minOccurs="0" name="brevVedtakFleksibeltUttak"
+				type="bons1:GBOBrevVedtakFleksibeltUttak">
+			</element>
+			<element minOccurs="0" name="brevSEDBlanketter"
+				type="bons1:GBOBrevSEDBlanketter">
+			</element>
+			<element minOccurs="0" name="brevVedtaksbrev"
+				type="bons1:GBOBrevVedtaksbrev">
+			</element>
+			<element minOccurs="0" name="brevPensjonBrev"
+				type="bons1:GBOBrevPensjonBrev">
+			</element>
+		</sequence>
+		<attribute name="malpakke" type="string" />
+		<attribute name="saksbehandler" type="string" />
+		<attribute name="sysid" type="string" />
+		<attribute name="passord" type="string" />
+		<attribute name="direkteutskrift" type="boolean" />
+		<attribute name="arkiver" type="string" />
+		<attribute name="skrivertype" type="string" />
+		<attribute name="skriver" type="string" />
+		<attribute name="skuff" type="string" />
+		<attribute name="format" type="string" />
+		<attribute name="saksbehandlerId" type="string" />
+	</complexType>
+</schema>

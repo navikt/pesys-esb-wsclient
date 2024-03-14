@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://nav-lib-sah/no/nav/lib/sah/gbo" targetNamespace="http://nav-lib-sah/no/nav/lib/sah/gbo">
+    <xsd:include schemaLocation="GBOBrevRtvBrev.xsd"/>
+    <xsd:complexType name="GBOProduserBrevRequest">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="brevkode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="saksbehandler" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="kilde" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="skalDirekteutskrives" type="xsd:boolean"/>
+      <xsd:element minOccurs="0" name="brevReferanse" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="språkKode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="brevData" type="bons0:GBOBrevRtvBrev"/>
+        </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

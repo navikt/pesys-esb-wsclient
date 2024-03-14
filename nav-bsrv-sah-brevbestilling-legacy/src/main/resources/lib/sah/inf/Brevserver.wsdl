@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="Brevserver" targetNamespace="http://nav-prod-sah-brv/no/nav/inf/Brevserver" xmlns:tns="http://nav-prod-sah-brv/no/nav/inf/Brevserver" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://nav-prod-sah-brv/no/nav/inf/Brevserver">
+            <xsd:import schemaLocation="../brv/asbo/rtvBrevTypeAny.xsd"/>
+            <xsd:element name="bestillStandardBrev">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="bestillStandardBrevRequest" nillable="true" type="RtvBrevType"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="bestillNegativVedtakBrev">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="bestillNegativVedtakBrevRequest" nillable="true" type="RtvBrevType"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="bestillPositivVedtakBrev">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="bestillPositivVedtakBrevRequest" nillable="true" type="RtvBrevType"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentBrevklientURL">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentBrevklientURLRequest" nillable="true" type="RtvBrevType"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="bestillVedtakAndreBrev">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="bestillVedtakAndreBrevRequest" nillable="true" type="RtvBrevType"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="bestillVedtakFleksibeltUttakBrev">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="brevVedtakFleksibeltUttakBrevRequest" nillable="true" type="RtvBrevType"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="bestillSEDBlanketterBrev">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="brevSEDBlanketterRequest" nillable="true" type="RtvBrevType"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="bestillPensjonVedtakBrev">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="brevPensjonVedtakRequest" nillable="true" type="RtvBrevType"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="bestillPensjonBrev">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="bestillPensjonBrevRequest" nillable="true" type="RtvBrevType"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+        </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="bestillStandardBrevRequestMsg">
+    <wsdl:part element="tns:bestillStandardBrev" name="bestillStandardBrevParameters"/>
+  </wsdl:message>
+    <wsdl:message name="bestillNegativVedtakBrevRequestMsg">
+    <wsdl:part element="tns:bestillNegativVedtakBrev" name="bestillNegativVedtakBrevParameters"/>
+  </wsdl:message>
+    <wsdl:message name="bestillPositivVedtakBrevRequestMsg">
+    <wsdl:part element="tns:bestillPositivVedtakBrev" name="bestillPositivVedtakBrevParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentBrevklientURLRequestMsg">
+    <wsdl:part element="tns:hentBrevklientURL" name="hentBrevklientURLParameters"/>
+  </wsdl:message>
+    <wsdl:message name="bestillVedtakAndreBrevRequestMsg">
+    <wsdl:part element="tns:bestillVedtakAndreBrev" name="bestillVedtakAndreBrevParameters"/>
+  </wsdl:message>
+    <wsdl:message name="bestillVedtakFleksibeltUttakBrevRequestMsg">
+    <wsdl:part element="tns:bestillVedtakFleksibeltUttakBrev" name="bestillVedtakFleksibeltUttakBrevParameters"/>
+  </wsdl:message>
+    <wsdl:message name="bestillSEDBlanketterBrevRequestMsg">
+    <wsdl:part element="tns:bestillSEDBlanketterBrev" name="bestillSEDBlanketterBrevParameters"/>
+  </wsdl:message>
+    <wsdl:message name="bestillPensjonVedtakBrevRequestMsg">
+    <wsdl:part element="tns:bestillPensjonVedtakBrev" name="bestillPensjonVedtakBrevParameters"/>
+  </wsdl:message>
+    <wsdl:message name="bestillPensjonBrevRequestMsg">
+    <wsdl:part element="tns:bestillPensjonBrev" name="bestillPensjonBrevParameters"/>
+  </wsdl:message>
+    <wsdl:portType name="Brevserver">
+        <wsdl:operation name="bestillStandardBrev">
+      <wsdl:input message="tns:bestillStandardBrevRequestMsg" name="bestillStandardBrevRequest"/>
+    </wsdl:operation>
+        <wsdl:operation name="bestillNegativVedtakBrev">
+      <wsdl:input message="tns:bestillNegativVedtakBrevRequestMsg" name="bestillNegativVedtakBrevRequest"/>
+    </wsdl:operation>
+        <wsdl:operation name="bestillPositivVedtakBrev">
+      <wsdl:input message="tns:bestillPositivVedtakBrevRequestMsg" name="bestillPositivVedtakBrevRequest"/>
+    </wsdl:operation>
+        <wsdl:operation name="hentBrevklientURL">
+      <wsdl:input message="tns:hentBrevklientURLRequestMsg" name="hentBrevklientURLRequest"/>
+    </wsdl:operation>
+        <wsdl:operation name="bestillVedtakAndreBrev">
+      <wsdl:input message="tns:bestillVedtakAndreBrevRequestMsg" name="bestillVedtakAndreBrevRequest"/>
+    </wsdl:operation>
+        <wsdl:operation name="bestillVedtakFleksibeltUttakBrev">
+      <wsdl:input message="tns:bestillVedtakFleksibeltUttakBrevRequestMsg" name="bestillVedtakFleksibeltUttakBrevRequest"/>
+    </wsdl:operation>
+        <wsdl:operation name="bestillSEDBlanketterBrev">
+      <wsdl:input message="tns:bestillSEDBlanketterBrevRequestMsg" name="bestillSEDBlanketterBrevRequest"/>
+    </wsdl:operation>
+        <wsdl:operation name="bestillPensjonVedtakBrev">
+      <wsdl:input message="tns:bestillPensjonVedtakBrevRequestMsg" name="bestillPensjonVedtakBrevRequest"/>
+    </wsdl:operation>
+        <wsdl:operation name="bestillPensjonBrev">
+      <wsdl:input message="tns:bestillPensjonBrevRequestMsg" name="bestillPensjonBrevRequest"/>
+    </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:complexType name="RtvBrevType">
+		<xs:sequence>
+			<xs:element name="brev" type="BrevBrevTypeAny"/>
+		</xs:sequence>
+		<xs:attribute name="malpakke" type="xs:string"/>
+		<xs:attribute name="saksbehandler" type="xs:string"/>
+		<xs:attribute name="sysid" type="xs:string"/>
+		<xs:attribute name="passord" type="xs:string"/>
+		<xs:attribute name="direkteutskrift" type="xs:string"/>
+		<xs:attribute name="arkiver" type="xs:string"/>
+		<xs:attribute name="skrivertype" type="xs:string"/>
+		<xs:attribute name="skriver" type="xs:string"/>
+		<xs:attribute name="skuff" type="xs:string"/>
+		<xs:attribute name="format" type="xs:string"/>
+		<xs:attribute name="klientToken" type="xs:string" use="optional"/>
+		<xs:attribute name="modus" type="xs:string" use="optional"/>
+		<xs:attribute name="saksbehandlerId" type="xs:string"/>
+	</xs:complexType>
+
+	<xs:complexType name="BrevBrevTypeAny">
+		<xs:sequence>
+			<xs:any maxOccurs="unbounded" processContents="skip"/>
+		</xs:sequence>
+		<xs:attribute name="brevref" type="xs:string"/>
+		<xs:attribute name="spraak" type="xs:string"/>
+		<xs:attribute name="tknr" type="xs:string"/>
+		<xs:attribute name="spesregType" type="xs:string"/>
+	</xs:complexType>
+
+	<!-- typesASBO -->
+	<xs:element name="rtv-brev" type="RtvBrevType"/>
+
+
+</xs:schema>

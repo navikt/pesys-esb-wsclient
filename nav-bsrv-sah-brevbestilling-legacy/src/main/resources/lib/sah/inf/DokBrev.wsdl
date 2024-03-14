@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://nav-lib-sah/no/nav/lib/sah/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Brev" targetNamespace="http://nav-lib-sah/no/nav/lib/sah/inf">
+  <wsdl:types>
+    <xsd:schema xmlns:bons0="http://nav-lib-sah/no/nav/lib/sah/gbo" xmlns:bons1="http://nav-lib-sah/no/nav/lib/sah/inf" targetNamespace="http://nav-lib-sah/no/nav/lib/sah/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../gbo/GBOHentBrevklientURLRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../gbo/GBOHentBrevklientURLResponse.xsd"/>
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../gbo/GBOProduserBrevRequest.xsd"/>
+            <xsd:element name="hentBrevklientURL">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentBrevklientURLRequest" nillable="true" type="bons0:GBOHentBrevklientURLRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="hentBrevklientURLResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentBrevklientURLResponse" nillable="true" type="bons0:GBOHentBrevklientURLResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="bestillBrev">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="brevBestillingRequest" nillable="true" type="bons0:GBOProduserBrevRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="bestillBrevResponse">
+        <xsd:complexType>
+          <xsd:sequence/>
+        </xsd:complexType>
+      </xsd:element>
+        </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="hentBrevklientURLRequestMsg">
+    <wsdl:part element="tns:hentBrevklientURL" name="hentBrevklientURLParameters"/>
+  </wsdl:message>
+    <wsdl:message name="hentBrevklientURLResponseMsg">
+    <wsdl:part element="tns:hentBrevklientURLResponse" name="hentBrevklientURLResult"/>
+  </wsdl:message>
+    <wsdl:message name="bestillBrevRequestMsg">
+    <wsdl:part element="tns:bestillBrev" name="bestillBrevParameters"/>
+  </wsdl:message>
+    <wsdl:message name="bestillBrevResponseMsg">
+    <wsdl:part element="tns:bestillBrevResponse" name="bestillBrevResult"/>
+  </wsdl:message>
+    <wsdl:portType name="DokBrev">
+        <wsdl:operation name="hentBrevklientURL">
+      <wsdl:input message="tns:hentBrevklientURLRequestMsg" name="hentBrevklientURLRequest"/>
+      <wsdl:output message="tns:hentBrevklientURLResponseMsg" name="hentBrevklientURLResponse"/>
+    </wsdl:operation>
+        <wsdl:operation name="bestillBrev">
+      <wsdl:input message="tns:bestillBrevRequestMsg" name="bestillBrevRequest"/>
+      <wsdl:output message="tns:bestillBrevResponseMsg" name="bestillBrevResponse"/>
+    </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>
