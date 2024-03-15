@@ -1,30 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<wsdl:definitions name="BrevBestillingInternt"
-                  targetNamespace="http://nav-bsrv-sah-brevbestilling/no/nav/inf/BrevBestillingInternt"
-                  xmlns:bons1="http://nav-lib-sah/no/nav/lib/sah/gbo"
-                  xmlns:bons2="http://nav-lib-sah/no/nav/lib/sah/fault"
-                  xmlns:bons4="http://nav.no/virksomhet/tjenester/arkiv/journalbehandling/meldinger/v1"
-                  xmlns:bons5="http://nav.no/virksomhet/tjenester/arkiv/journal/meldinger/v2"
-                  xmlns:tns="http://nav-bsrv-sah-brevbestilling/no/nav/inf/BrevBestillingInternt"
-                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-<wsdl:types>
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="BrevBestillingInternt" targetNamespace="http://nav-bsrv-sah-brevbestilling/no/nav/inf/BrevBestillingInternt" xmlns:bons1="http://nav-lib-sah/no/nav/lib/sah/gbo" xmlns:bons2="http://nav-lib-sah/no/nav/lib/sah/fault" xmlns:bons4="http://nav.no/virksomhet/tjenester/arkiv/journalbehandling/meldinger/v1" xmlns:bons5="http://nav.no/virksomhet/tjenester/arkiv/journal/meldinger/v2" xmlns:tns="http://nav-bsrv-sah-brevbestilling/no/nav/inf/BrevBestillingInternt" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
     <xsd:schema targetNamespace="http://nav-bsrv-sah-brevbestilling/no/nav/inf/BrevBestillingInternt">
-            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevVedtaksbrev.xsd"/>
-            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOVedtaksData.xsd"/>
-            <xsd:import namespace="http://nav.no/virksomhet/tjenester/arkiv/journal/meldinger/v2" schemaLocation="../virksomhet/tjenester/arkiv/journal/meldinger/meldinger.xsd"/>
-            <xsd:import namespace="http://nav.no/virksomhet/tjenester/arkiv/journalbehandling/meldinger/v1" schemaLocation="../virksomhet/tjenester/arkiv/journalbehandling/meldinger/meldinger.xsd"/>
-            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevSEDBlanketter.xsd"/>
-            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../lib/sah/fault/FaultAdresseIkkeRegistrert.xsd"/>
-            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevVedtakFleksibeltUttak.xsd"/>
-            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevVedtakAndre.xsd"/>
-            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevStandard.xsd"/>
-            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevbestillingRequest.xsd"/>
-            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevPositivVedtak.xsd"/>
-            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../lib/sah/fault/FaultOpprettelseJournalpostFeilet.xsd"/>
-            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevNegativVedtak.xsd"/>
-            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../lib/sah/fault/FaultHenteBrevdataFeilet.xsd"/>
-            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevbestillingProduserBrevRequest.xsd"/>
-            <xsd:element name="hentStandardPensjonBrevdata">
+      <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevVedtaksbrev.xsd"/>
+      <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOVedtaksData.xsd"/>
+      <xsd:import namespace="http://nav.no/virksomhet/tjenester/arkiv/journal/meldinger/v2" schemaLocation="../virksomhet/tjenester/arkiv/journal/meldinger/meldinger.xsd"/>
+      <xsd:import namespace="http://nav.no/virksomhet/tjenester/arkiv/journalbehandling/meldinger/v1" schemaLocation="../virksomhet/tjenester/arkiv/journalbehandling/meldinger/meldinger.xsd"/>
+      <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevSEDBlanketter.xsd"/>
+      <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../lib/sah/fault/FaultAdresseIkkeRegistrert.xsd"/>
+      <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevVedtakFleksibeltUttak.xsd"/>
+      <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevVedtakAndre.xsd"/>
+      <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevStandard.xsd"/>
+      <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevbestillingRequest.xsd"/>
+      <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevPositivVedtak.xsd"/>
+      <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../lib/sah/fault/FaultOpprettelseJournalpostFeilet.xsd"/>
+      <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevNegativVedtak.xsd"/>
+      <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../lib/sah/fault/FaultHenteBrevdataFeilet.xsd"/>
+      <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevbestillingProduserBrevRequest.xsd"/>
+      <xsd:element name="hentStandardPensjonBrevdata">
         <xsd:complexType>
           <xsd:sequence>
             <xsd:element name="hentStandardBrevdataRequest" nillable="true" type="bons1:GBOBrevbestillingRequest"/>
@@ -66,58 +58,58 @@
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
-            <xsd:element name="hentStandardBrevdata_faultHenteBrevdataFeilet" type="bons2:FaultHenteBrevdataFeilet"/>
-            <xsd:element name="hentNegativBrevdata_faultHenteBrevdataFeilet" type="bons2:FaultHenteBrevdataFeilet"/>
-            <xsd:element name="hentPositivBrevdata_faultHenteBrevdataFeilet" type="bons2:FaultHenteBrevdataFeilet"/>
-            <xsd:element name="opprettJournalpost">
+      <xsd:element name="hentStandardBrevdata_faultHenteBrevdataFeilet" type="bons2:FaultHenteBrevdataFeilet"/>
+      <xsd:element name="hentNegativBrevdata_faultHenteBrevdataFeilet" type="bons2:FaultHenteBrevdataFeilet"/>
+      <xsd:element name="hentPositivBrevdata_faultHenteBrevdataFeilet" type="bons2:FaultHenteBrevdataFeilet"/>
+      <xsd:element name="opprettJournalpost">
         <xsd:complexType>
           <xsd:sequence>
             <xsd:element name="opprettJournalpostRequest" nillable="true" type="bons1:GBOBrevbestillingRequest"/>
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
-            <xsd:element name="opprettJournalpostResponse">
+      <xsd:element name="opprettJournalpostResponse">
         <xsd:complexType>
           <xsd:sequence>
             <xsd:element name="opprettJournalpostResponse" nillable="true" type="bons4:LagreDokumentOgOpprettJournalpostResponse"/>
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
-            <xsd:element name="opprettJournalpost_faultOpprettelseJournalpostFeilet" type="bons2:FaultOpprettelseJournalpostFeilet"/>
-            <xsd:element name="hentJournalpost">
+      <xsd:element name="opprettJournalpost_faultOpprettelseJournalpostFeilet" type="bons2:FaultOpprettelseJournalpostFeilet"/>
+      <xsd:element name="hentJournalpost">
         <xsd:complexType>
           <xsd:sequence>
             <xsd:element name="hentJournalpostRequest" nillable="true" type="bons5:HentJournalpostRequest"/>
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
-            <xsd:element name="hentJournalpostResponse">
+      <xsd:element name="hentJournalpostResponse">
         <xsd:complexType>
           <xsd:sequence>
             <xsd:element name="hentJournalpostResponse" nillable="true" type="bons5:HentJournalpostResponse"/>
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
-            <xsd:element name="lagreJournalpost">
+      <xsd:element name="lagreJournalpost">
         <xsd:complexType>
           <xsd:sequence>
             <xsd:element name="lagreJournalpostRequest" nillable="true" type="bons5:HentJournalpostResponse"/>
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
-            <xsd:element name="lagreJournalpostResponse">
+      <xsd:element name="lagreJournalpostResponse">
         <xsd:complexType>
           <xsd:sequence/>
         </xsd:complexType>
       </xsd:element>
-            <xsd:element name="bestillBrevMedSBE">
+      <xsd:element name="bestillBrevMedSBE">
         <xsd:complexType>
           <xsd:sequence>
             <xsd:element name="bestillBrevRequest" nillable="true" type="bons1:GBOBrevbestillingProduserBrevRequest"/>
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
-            <xsd:element name="bestillBrevMedSBEResponse">
+      <xsd:element name="bestillBrevMedSBEResponse">
         <xsd:complexType>
           <xsd:sequence/>
         </xsd:complexType>
@@ -129,7 +121,7 @@
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
-            <xsd:element name="hentBrevVedtakAndreResponse">
+      <xsd:element name="hentBrevVedtakAndreResponse">
         <xsd:complexType>
           <xsd:sequence>
             <xsd:element name="hentBrevVedtakAndreResponse" nillable="true" type="bons1:GBOBrevVedtakAndre"/>
@@ -143,250 +135,250 @@
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
-            <xsd:element name="hentStandardBrevdataResponse">
+      <xsd:element name="hentStandardBrevdataResponse">
         <xsd:complexType>
           <xsd:sequence>
             <xsd:element name="hentStandardBrevdataResponse" nillable="true" type="bons1:GBOBrevStandard"/>
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
-            <xsd:element name="hentVedtakFleksibeltUttakBrevdata">
+      <xsd:element name="hentVedtakFleksibeltUttakBrevdata">
         <xsd:complexType>
           <xsd:sequence>
             <xsd:element name="hentVedtakFleksibeltUttakBrevdataRequest" nillable="true" type="bons1:GBOBrevbestillingRequest"/>
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
-            <xsd:element name="hentVedtakFleksibeltUttakBrevdataResponse">
+      <xsd:element name="hentVedtakFleksibeltUttakBrevdataResponse">
         <xsd:complexType>
           <xsd:sequence>
             <xsd:element name="hentVedtakFleksibeltUttakBrevdataResponse" nillable="true" type="bons1:GBOBrevVedtakFleksibeltUttak"/>
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
-            <xsd:element name="FaultAdresseIkkeRegistrert_element" nillable="true" type="bons2:FaultAdresseIkkeRegistrert"/>
-            <xsd:element name="hentSEDBlanketterBrevData">
+      <xsd:element name="FaultAdresseIkkeRegistrert_element" nillable="true" type="bons2:FaultAdresseIkkeRegistrert"/>
+      <xsd:element name="hentSEDBlanketterBrevData">
         <xsd:complexType>
           <xsd:sequence>
             <xsd:element name="hentSEDBlanketterBrevdataRequest" nillable="true" type="bons1:GBOBrevbestillingRequest"/>
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
-            <xsd:element name="hentSEDBlanketterBrevDataResponse">
+      <xsd:element name="hentSEDBlanketterBrevDataResponse">
         <xsd:complexType>
           <xsd:sequence>
             <xsd:element name="hentSEDBlanketterBrevdataResponse" nillable="true" type="bons1:GBOBrevSEDBlanketter"/>
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
-            <xsd:element name="hentSEDBlanketterBrevDataFault1_faultHenteBrevdataFeilet" nillable="true" type="bons2:FaultHenteBrevdataFeilet"/>
-            <xsd:element name="hentSEDBlanketterBrevDataFault2_faultAdresseIkkeRegistrert" nillable="true" type="bons2:FaultAdresseIkkeRegistrert"/>
-            <xsd:element name="hentPensjonVedtakBrev">
+      <xsd:element name="hentSEDBlanketterBrevDataFault1_faultHenteBrevdataFeilet" nillable="true" type="bons2:FaultHenteBrevdataFeilet"/>
+      <xsd:element name="hentSEDBlanketterBrevDataFault2_faultAdresseIkkeRegistrert" nillable="true" type="bons2:FaultAdresseIkkeRegistrert"/>
+      <xsd:element name="hentPensjonVedtakBrev">
         <xsd:complexType>
           <xsd:sequence>
             <xsd:element name="hentPensjonVedtakBrevRequest" nillable="true" type="bons1:GBOBrevbestillingRequest"/>
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
-            <xsd:element name="hentPensjonVedtakBrevResponse">
+      <xsd:element name="hentPensjonVedtakBrevResponse">
         <xsd:complexType>
           <xsd:sequence>
             <xsd:element name="hentPensjonVedtakBrevResponse" nillable="true" type="bons1:GBOBrevVedtaksbrev"/>
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
-            <xsd:element name="hentPensjonVedtakBrevFault1_faultHenteBrevdataFeilet" nillable="true" type="bons2:FaultHenteBrevdataFeilet"/>
-            <xsd:element name="hentPensjonVedtakBrevFault2_faultAdresseIkkeRegistrert" nillable="true" type="bons2:FaultAdresseIkkeRegistrert"/>
-        </xsd:schema>
+      <xsd:element name="hentPensjonVedtakBrevFault1_faultHenteBrevdataFeilet" nillable="true" type="bons2:FaultHenteBrevdataFeilet"/>
+      <xsd:element name="hentPensjonVedtakBrevFault2_faultAdresseIkkeRegistrert" nillable="true" type="bons2:FaultAdresseIkkeRegistrert"/>
+    </xsd:schema>
   </wsdl:types>
-    <wsdl:message name="hentStandardPensjonBrevdataRequestMsg">
+  <wsdl:message name="hentStandardPensjonBrevdataRequestMsg">
     <wsdl:part element="tns:hentStandardPensjonBrevdata" name="hentStandardPensjonBrevdataParameters"/>
   </wsdl:message>
-    <wsdl:message name="hentStandardPensjonBrevdataResponseMsg">
+  <wsdl:message name="hentStandardPensjonBrevdataResponseMsg">
     <wsdl:part element="tns:hentStandardPensjonBrevdataResponse" name="hentStandardPensjonBrevdataResult"/>
   </wsdl:message>
-    <wsdl:message name="hentNegativBrevdataRequestMsg">
+  <wsdl:message name="hentNegativBrevdataRequestMsg">
     <wsdl:part element="tns:hentNegativBrevdata" name="hentNegativBrevdataParameters"/>
   </wsdl:message>
-    <wsdl:message name="hentNegativBrevdataResponseMsg">
+  <wsdl:message name="hentNegativBrevdataResponseMsg">
     <wsdl:part element="tns:hentNegativBrevdataResponse" name="hentNegativBrevdataResult"/>
   </wsdl:message>
-    <wsdl:message name="hentPositivBrevdataRequestMsg">
+  <wsdl:message name="hentPositivBrevdataRequestMsg">
     <wsdl:part element="tns:hentPositivBrevdata" name="hentPositivBrevdataParameters"/>
   </wsdl:message>
-    <wsdl:message name="hentPositivBrevdataResponseMsg">
+  <wsdl:message name="hentPositivBrevdataResponseMsg">
     <wsdl:part element="tns:hentPositivBrevdataResponse" name="hentPositivBrevdataResult"/>
   </wsdl:message>
-    <wsdl:message name="hentStandardPensjonBrevdata_faultHenteBrevdataFeiletMsg">
+  <wsdl:message name="hentStandardPensjonBrevdata_faultHenteBrevdataFeiletMsg">
     <wsdl:part element="tns:hentStandardBrevdata_faultHenteBrevdataFeilet" name="faultHenteBrevdataFeilet"/>
   </wsdl:message>
-    <wsdl:message name="hentNegativBrevdata_faultHenteBrevdataFeiletMsg">
+  <wsdl:message name="hentNegativBrevdata_faultHenteBrevdataFeiletMsg">
     <wsdl:part element="tns:hentNegativBrevdata_faultHenteBrevdataFeilet" name="faultHenteBrevdataFeilet"/>
   </wsdl:message>
-    <wsdl:message name="hentPositivBrevdata_faultHenteBrevdataFeiletMsg">
+  <wsdl:message name="hentPositivBrevdata_faultHenteBrevdataFeiletMsg">
     <wsdl:part element="tns:hentPositivBrevdata_faultHenteBrevdataFeilet" name="faultHenteBrevdataFeilet"/>
   </wsdl:message>
-    <wsdl:message name="opprettJournalpostRequestMsg">
+  <wsdl:message name="opprettJournalpostRequestMsg">
     <wsdl:part element="tns:opprettJournalpost" name="opprettJournalpostParameters"/>
   </wsdl:message>
-    <wsdl:message name="opprettJournalpostResponseMsg">
+  <wsdl:message name="opprettJournalpostResponseMsg">
     <wsdl:part element="tns:opprettJournalpostResponse" name="opprettJournalpostResult"/>
   </wsdl:message>
-    <wsdl:message name="opprettJournalpost_faultOpprettelseJournalpostFeiletMsg">
+  <wsdl:message name="opprettJournalpost_faultOpprettelseJournalpostFeiletMsg">
     <wsdl:part element="tns:opprettJournalpost_faultOpprettelseJournalpostFeilet" name="faultOpprettelseJournalpostFeilet"/>
   </wsdl:message>
-    <wsdl:message name="hentJournalpostRequestMsg">
+  <wsdl:message name="hentJournalpostRequestMsg">
     <wsdl:part element="tns:hentJournalpost" name="hentJournalpostParameters"/>
   </wsdl:message>
-    <wsdl:message name="hentJournalpostResponseMsg">
+  <wsdl:message name="hentJournalpostResponseMsg">
     <wsdl:part element="tns:hentJournalpostResponse" name="hentJournalpostResult"/>
   </wsdl:message>
-    <wsdl:message name="lagreJournalpostRequestMsg">
+  <wsdl:message name="lagreJournalpostRequestMsg">
     <wsdl:part element="tns:lagreJournalpost" name="lagreJournalpostParameters"/>
   </wsdl:message>
-    <wsdl:message name="lagreJournalpostResponseMsg">
+  <wsdl:message name="lagreJournalpostResponseMsg">
     <wsdl:part element="tns:lagreJournalpostResponse" name="lagreJournalpostResult"/>
   </wsdl:message>
-    <wsdl:message name="bestillBrevMedSBERequestMsg">
+  <wsdl:message name="bestillBrevMedSBERequestMsg">
     <wsdl:part element="tns:bestillBrevMedSBE" name="bestillBrevMedSBEParameters"/>
   </wsdl:message>
-    <wsdl:message name="bestillBrevMedSBEResponseMsg">
+  <wsdl:message name="bestillBrevMedSBEResponseMsg">
     <wsdl:part element="tns:bestillBrevMedSBEResponse" name="bestillBrevMedSBEResult"/>
   </wsdl:message>
-    <wsdl:message name="hentBrevVedtakAndreRequestMsg">
+  <wsdl:message name="hentBrevVedtakAndreRequestMsg">
     <wsdl:part element="tns:hentBrevVedtakAndre" name="hentBrevVedtakAndreParameters"/>
   </wsdl:message>
-    <wsdl:message name="hentBrevVedtakAndreResponseMsg">
+  <wsdl:message name="hentBrevVedtakAndreResponseMsg">
     <wsdl:part element="tns:hentBrevVedtakAndreResponse" name="hentBrevVedtakAndreResult"/>
   </wsdl:message>
-    <wsdl:message name="hentBrevVedtakAndre_faultHenteBrevdataFeiletMsg">
+  <wsdl:message name="hentBrevVedtakAndre_faultHenteBrevdataFeiletMsg">
     <wsdl:part element="tns:hentStandardBrevdata_faultHenteBrevdataFeilet" name="faultHenteBrevdataFeilet"/>
   </wsdl:message>
-    <wsdl:message name="hentStandardBrevdataRequestMsg">
+  <wsdl:message name="hentStandardBrevdataRequestMsg">
     <wsdl:part element="tns:hentStandardBrevdata" name="hentStandardBrevdataParameters"/>
   </wsdl:message>
-    <wsdl:message name="hentStandardBrevdataResponseMsg">
+  <wsdl:message name="hentStandardBrevdataResponseMsg">
     <wsdl:part element="tns:hentStandardBrevdataResponse" name="hentStandardBrevdataResult"/>
   </wsdl:message>
-    <wsdl:message name="hentStandardBrevdata_faultHenteBrevdataFeilerMsg">
+  <wsdl:message name="hentStandardBrevdata_faultHenteBrevdataFeilerMsg">
     <wsdl:part element="tns:hentStandardBrevdata_faultHenteBrevdataFeilet" name="faultHenteBrevdataFeiler"/>
   </wsdl:message>
-    <wsdl:message name="hentVedtakFleksibeltUttakBrevdataRequestMsg">
+  <wsdl:message name="hentVedtakFleksibeltUttakBrevdataRequestMsg">
     <wsdl:part element="tns:hentVedtakFleksibeltUttakBrevdata" name="hentVedtakFleksibeltUttakBrevdataParameters"/>
   </wsdl:message>
-    <wsdl:message name="hentVedtakFleksibeltUttakBrevdataResponseMsg">
+  <wsdl:message name="hentVedtakFleksibeltUttakBrevdataResponseMsg">
     <wsdl:part element="tns:hentVedtakFleksibeltUttakBrevdataResponse" name="hentVedtakFleksibeltUttakBrevdataResult"/>
   </wsdl:message>
-    <wsdl:message name="hentVedtakFleksibeltUttakBrevdata_faultHenteBrevdataFeiletMsg">
+  <wsdl:message name="hentVedtakFleksibeltUttakBrevdata_faultHenteBrevdataFeiletMsg">
     <wsdl:part element="tns:hentStandardBrevdata_faultHenteBrevdataFeilet" name="faultHenteBrevdataFeilet"/>
   </wsdl:message>
-    <wsdl:message name="hentPositivBrevdata_faultAdresseIkkeRegistrertMsg">
+  <wsdl:message name="hentPositivBrevdata_faultAdresseIkkeRegistrertMsg">
     <wsdl:part element="tns:FaultAdresseIkkeRegistrert_element" name="faultAdresseIkkeRegistrert"/>
   </wsdl:message>
-    <wsdl:message name="hentBrevVedtakAndre_faultAdresseIkkeRegistrertMsg">
+  <wsdl:message name="hentBrevVedtakAndre_faultAdresseIkkeRegistrertMsg">
     <wsdl:part element="tns:FaultAdresseIkkeRegistrert_element" name="faultAdresseIkkeRegistrert"/>
   </wsdl:message>
-    <wsdl:message name="hentVedtakFleksibeltUttakBrevdata_faultAdresseIkkeRegistrertMsg">
+  <wsdl:message name="hentVedtakFleksibeltUttakBrevdata_faultAdresseIkkeRegistrertMsg">
     <wsdl:part element="tns:FaultAdresseIkkeRegistrert_element" name="faultAdresseIkkeRegistrert"/>
   </wsdl:message>
-    <wsdl:message name="hentStandardPensjonBrevdata_faultAdresseIkkeRegistrertMsg">
+  <wsdl:message name="hentStandardPensjonBrevdata_faultAdresseIkkeRegistrertMsg">
     <wsdl:part element="tns:FaultAdresseIkkeRegistrert_element" name="faultAdresseIkkeRegistrert"/>
   </wsdl:message>
-    <wsdl:message name="hentNegativBrevdata_faultAdresseIkkeRegistrertMsg">
+  <wsdl:message name="hentNegativBrevdata_faultAdresseIkkeRegistrertMsg">
     <wsdl:part element="tns:FaultAdresseIkkeRegistrert_element" name="faultAdresseIkkeRegistrert"/>
   </wsdl:message>
-    <wsdl:message name="hentStandardBrevdata_faultAdresseIkkeRegistrertMsg">
+  <wsdl:message name="hentStandardBrevdata_faultAdresseIkkeRegistrertMsg">
     <wsdl:part element="tns:FaultAdresseIkkeRegistrert_element" name="faultAdresseIkkeRegistrert"/>
   </wsdl:message>
-    <wsdl:message name="hentSEDBlanketterBrevDataRequestMsg">
+  <wsdl:message name="hentSEDBlanketterBrevDataRequestMsg">
     <wsdl:part element="tns:hentSEDBlanketterBrevData" name="hentSEDBlanketterBrevDataParameters"/>
   </wsdl:message>
-    <wsdl:message name="hentSEDBlanketterBrevDataResponseMsg">
+  <wsdl:message name="hentSEDBlanketterBrevDataResponseMsg">
     <wsdl:part element="tns:hentSEDBlanketterBrevDataResponse" name="hentSEDBlanketterBrevDataResult"/>
   </wsdl:message>
-    <wsdl:message name="hentSEDBlanketterBrevData_faultHenteBrevdataFeiletMsg">
+  <wsdl:message name="hentSEDBlanketterBrevData_faultHenteBrevdataFeiletMsg">
     <wsdl:part element="tns:hentSEDBlanketterBrevDataFault1_faultHenteBrevdataFeilet" name="faultHenteBrevdataFeilet"/>
   </wsdl:message>
-    <wsdl:message name="hentSEDBlanketterBrevData_faultAdresseIkkeRegistrertMsg">
+  <wsdl:message name="hentSEDBlanketterBrevData_faultAdresseIkkeRegistrertMsg">
     <wsdl:part element="tns:hentSEDBlanketterBrevDataFault2_faultAdresseIkkeRegistrert" name="faultAdresseIkkeRegistrert"/>
   </wsdl:message>
-    <wsdl:message name="hentPensjonVedtakBrevRequestMsg">
+  <wsdl:message name="hentPensjonVedtakBrevRequestMsg">
     <wsdl:part element="tns:hentPensjonVedtakBrev" name="hentPensjonVedtakBrevParameters"/>
   </wsdl:message>
-    <wsdl:message name="hentPensjonVedtakBrevResponseMsg">
+  <wsdl:message name="hentPensjonVedtakBrevResponseMsg">
     <wsdl:part element="tns:hentPensjonVedtakBrevResponse" name="hentPensjonVedtakBrevResult"/>
   </wsdl:message>
-    <wsdl:message name="hentPensjonVedtakBrev_faultHenteBrevdataFeiletMsg">
+  <wsdl:message name="hentPensjonVedtakBrev_faultHenteBrevdataFeiletMsg">
     <wsdl:part element="tns:hentPensjonVedtakBrevFault1_faultHenteBrevdataFeilet" name="faultHenteBrevdataFeilet"/>
   </wsdl:message>
-    <wsdl:message name="hentPensjonVedtakBrev_faultAdresseIkkeRegistrertMsg">
+  <wsdl:message name="hentPensjonVedtakBrev_faultAdresseIkkeRegistrertMsg">
     <wsdl:part element="tns:hentPensjonVedtakBrevFault2_faultAdresseIkkeRegistrert" name="faultAdresseIkkeRegistrert"/>
   </wsdl:message>
-    <wsdl:portType name="BrevbestillingInternt">
+  <wsdl:portType name="BrevbestillingInternt">
     <wsdl:operation name="hentStandardPensjonBrevdata">
       <wsdl:input message="tns:hentStandardPensjonBrevdataRequestMsg" name="hentStandardPensjonBrevdataRequest"/>
       <wsdl:output message="tns:hentStandardPensjonBrevdataResponseMsg" name="hentStandardPensjonBrevdataResponse"/>
-            <wsdl:fault message="tns:hentStandardPensjonBrevdata_faultHenteBrevdataFeiletMsg" name="faultHenteBrevdataFeilet"/>
-            <wsdl:fault message="tns:hentStandardPensjonBrevdata_faultAdresseIkkeRegistrertMsg" name="faultAdresseIkkeRegistrert"/>
-        </wsdl:operation>
+      <wsdl:fault message="tns:hentStandardPensjonBrevdata_faultHenteBrevdataFeiletMsg" name="faultHenteBrevdataFeilet"/>
+      <wsdl:fault message="tns:hentStandardPensjonBrevdata_faultAdresseIkkeRegistrertMsg" name="faultAdresseIkkeRegistrert"/>
+    </wsdl:operation>
     <wsdl:operation name="hentNegativBrevdata">
       <wsdl:input message="tns:hentNegativBrevdataRequestMsg" name="hentNegativBrevdataRequest"/>
       <wsdl:output message="tns:hentNegativBrevdataResponseMsg" name="hentNegativBrevdataResponse"/>
-            <wsdl:fault message="tns:hentNegativBrevdata_faultHenteBrevdataFeiletMsg" name="faultHenteBrevdataFeilet"/>
-            <wsdl:fault message="tns:hentNegativBrevdata_faultAdresseIkkeRegistrertMsg" name="faultAdresseIkkeRegistrert"/>
-        </wsdl:operation>
+      <wsdl:fault message="tns:hentNegativBrevdata_faultHenteBrevdataFeiletMsg" name="faultHenteBrevdataFeilet"/>
+      <wsdl:fault message="tns:hentNegativBrevdata_faultAdresseIkkeRegistrertMsg" name="faultAdresseIkkeRegistrert"/>
+    </wsdl:operation>
     <wsdl:operation name="hentPositivBrevdata">
       <wsdl:input message="tns:hentPositivBrevdataRequestMsg" name="hentPositivBrevdataRequest"/>
       <wsdl:output message="tns:hentPositivBrevdataResponseMsg" name="hentPositivBrevdataResponse"/>
-            <wsdl:fault message="tns:hentPositivBrevdata_faultHenteBrevdataFeiletMsg" name="faultHenteBrevdataFeilet"/>
-            <wsdl:fault message="tns:hentPositivBrevdata_faultAdresseIkkeRegistrertMsg" name="faultAdresseIkkeRegistrert"/>
-        </wsdl:operation>
-        <wsdl:operation name="opprettJournalpost">
+      <wsdl:fault message="tns:hentPositivBrevdata_faultHenteBrevdataFeiletMsg" name="faultHenteBrevdataFeilet"/>
+      <wsdl:fault message="tns:hentPositivBrevdata_faultAdresseIkkeRegistrertMsg" name="faultAdresseIkkeRegistrert"/>
+    </wsdl:operation>
+    <wsdl:operation name="opprettJournalpost">
       <wsdl:input message="tns:opprettJournalpostRequestMsg" name="opprettJournalpostRequest"/>
       <wsdl:output message="tns:opprettJournalpostResponseMsg" name="opprettJournalpostResponse"/>
       <wsdl:fault message="tns:opprettJournalpost_faultOpprettelseJournalpostFeiletMsg" name="faultOpprettelseJournalpostFeilet"/>
     </wsdl:operation>
-        <wsdl:operation name="hentJournalpost">
+    <wsdl:operation name="hentJournalpost">
       <wsdl:input message="tns:hentJournalpostRequestMsg" name="hentJournalpostRequest"/>
       <wsdl:output message="tns:hentJournalpostResponseMsg" name="hentJournalpostResponse"/>
     </wsdl:operation>
-        <wsdl:operation name="lagreJournalpost">
+    <wsdl:operation name="lagreJournalpost">
       <wsdl:input message="tns:lagreJournalpostRequestMsg" name="lagreJournalpostRequest"/>
       <wsdl:output message="tns:lagreJournalpostResponseMsg" name="lagreJournalpostResponse"/>
     </wsdl:operation>
-        <wsdl:operation name="bestillBrevMedSBE">
+    <wsdl:operation name="bestillBrevMedSBE">
       <wsdl:input message="tns:bestillBrevMedSBERequestMsg" name="bestillBrevMedSBERequest"/>
       <wsdl:output message="tns:bestillBrevMedSBEResponseMsg" name="bestillBrevMedSBEResponse"/>
-        </wsdl:operation>
-        <wsdl:operation name="hentBrevVedtakAndre">
+    </wsdl:operation>
+    <wsdl:operation name="hentBrevVedtakAndre">
       <wsdl:input message="tns:hentBrevVedtakAndreRequestMsg" name="hentBrevVedtakAndreRequest"/>
       <wsdl:output message="tns:hentBrevVedtakAndreResponseMsg" name="hentBrevVedtakAndreResponse"/>
       <wsdl:fault message="tns:hentBrevVedtakAndre_faultHenteBrevdataFeiletMsg" name="faultHenteBrevdataFeilet"/>
-            <wsdl:fault message="tns:hentBrevVedtakAndre_faultAdresseIkkeRegistrertMsg" name="faultAdresseIkkeRegistrert"/>
-        </wsdl:operation>
-        <wsdl:operation name="hentStandardBrevdata">
+      <wsdl:fault message="tns:hentBrevVedtakAndre_faultAdresseIkkeRegistrertMsg" name="faultAdresseIkkeRegistrert"/>
+    </wsdl:operation>
+    <wsdl:operation name="hentStandardBrevdata">
       <wsdl:input message="tns:hentStandardBrevdataRequestMsg" name="hentStandardBrevdataRequest"/>
       <wsdl:output message="tns:hentStandardBrevdataResponseMsg" name="hentStandardBrevdataResponse"/>
       <wsdl:fault message="tns:hentStandardBrevdata_faultHenteBrevdataFeilerMsg" name="faultHenteBrevdataFeiler"/>
-            <wsdl:fault message="tns:hentStandardBrevdata_faultAdresseIkkeRegistrertMsg" name="faultAdresseIkkeRegistrert"/>
-        </wsdl:operation>
-        <wsdl:operation name="hentVedtakFleksibeltUttakBrevdata">
+      <wsdl:fault message="tns:hentStandardBrevdata_faultAdresseIkkeRegistrertMsg" name="faultAdresseIkkeRegistrert"/>
+    </wsdl:operation>
+    <wsdl:operation name="hentVedtakFleksibeltUttakBrevdata">
       <wsdl:input message="tns:hentVedtakFleksibeltUttakBrevdataRequestMsg" name="hentVedtakFleksibeltUttakBrevdataRequest"/>
       <wsdl:output message="tns:hentVedtakFleksibeltUttakBrevdataResponseMsg" name="hentVedtakFleksibeltUttakBrevdataResponse"/>
-            <wsdl:fault message="tns:hentVedtakFleksibeltUttakBrevdata_faultHenteBrevdataFeiletMsg" name="faultHenteBrevdataFeilet"/>
-            <wsdl:fault message="tns:hentVedtakFleksibeltUttakBrevdata_faultAdresseIkkeRegistrertMsg" name="faultAdresseIkkeRegistrert"/>
-        </wsdl:operation>
-        <wsdl:operation name="hentSEDBlanketterBrevData">
+      <wsdl:fault message="tns:hentVedtakFleksibeltUttakBrevdata_faultHenteBrevdataFeiletMsg" name="faultHenteBrevdataFeilet"/>
+      <wsdl:fault message="tns:hentVedtakFleksibeltUttakBrevdata_faultAdresseIkkeRegistrertMsg" name="faultAdresseIkkeRegistrert"/>
+    </wsdl:operation>
+    <wsdl:operation name="hentSEDBlanketterBrevData">
       <wsdl:input message="tns:hentSEDBlanketterBrevDataRequestMsg" name="hentSEDBlanketterBrevDataRequest"/>
       <wsdl:output message="tns:hentSEDBlanketterBrevDataResponseMsg" name="hentSEDBlanketterBrevDataResponse"/>
       <wsdl:fault message="tns:hentSEDBlanketterBrevData_faultHenteBrevdataFeiletMsg" name="faultHenteBrevdataFeilet"/>
       <wsdl:fault message="tns:hentSEDBlanketterBrevData_faultAdresseIkkeRegistrertMsg" name="faultAdresseIkkeRegistrert"/>
     </wsdl:operation>
-        <wsdl:operation name="hentPensjonVedtakBrev">
+    <wsdl:operation name="hentPensjonVedtakBrev">
       <wsdl:input message="tns:hentPensjonVedtakBrevRequestMsg" name="hentPensjonVedtakBrevRequest"/>
       <wsdl:output message="tns:hentPensjonVedtakBrevResponseMsg" name="hentPensjonVedtakBrevResponse"/>
       <wsdl:fault message="tns:hentPensjonVedtakBrev_faultHenteBrevdataFeiletMsg" name="faultHenteBrevdataFeilet"/>
       <wsdl:fault message="tns:hentPensjonVedtakBrev_faultAdresseIkkeRegistrertMsg" name="faultAdresseIkkeRegistrert"/>
     </wsdl:operation>
-    </wsdl:portType>
+  </wsdl:portType>
 </wsdl:definitions>

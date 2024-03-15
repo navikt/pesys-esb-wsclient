@@ -2,11 +2,11 @@
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons1="http://nav-lib-sah/no/nav/lib/sah/gbo" xmlns:bons2="http://nav-lib-sah/no/nav/lib/sah/fault" xmlns:tns="http://nav-lib-sah/no/nav/lib/sah/inf/Brevbestilling" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Brevbestilling" targetNamespace="http://nav-lib-sah/no/nav/lib/sah/inf/Brevbestilling">
   <wsdl:types>
     <xsd:schema targetNamespace="http://nav-lib-sah/no/nav/lib/sah/inf/Brevbestilling" xmlns:bons1="http://nav-lib-sah/no/nav/lib/sah/gbo" xmlns:bons2="http://nav-lib-sah/no/nav/lib/sah/fault" xmlns:tns="http://nav-lib-sah/no/nav/lib/sah/inf/Brevbestilling" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../fault/FaultAdresseIkkeRegistrert.xsd"/>
-            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../gbo/GBOBrevbestillingRequest.xsd"/>
-            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../fault/FaultHenteBrevdataFeilet.xsd"/>
-            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../fault/FaultOpprettelseJournalpostFeilet.xsd"/>
-            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../fault/FaultManglerObligatoriskInput.xsd"/>
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../lib/sah/fault/FaultAdresseIkkeRegistrert.xsd"/>
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevbestillingRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../lib/sah/fault/FaultHenteBrevdataFeilet.xsd"/>
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../lib/sah/fault/FaultOpprettelseJournalpostFeilet.xsd"/>
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../lib/sah/fault/FaultManglerObligatoriskInput.xsd"/>
             <xsd:element name="bestillBrev">
         <xsd:complexType>
           <xsd:sequence>

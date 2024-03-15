@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="Brevserver" targetNamespace="http://nav-prod-sah-brv/no/nav/inf/Brevserver" xmlns:tns="http://nav-prod-sah-brv/no/nav/inf/Brevserver" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <wsdl:types>
     <xsd:schema targetNamespace="http://nav-prod-sah-brv/no/nav/inf/Brevserver">
-            <xsd:import schemaLocation="../brv/asbo/rtvBrevTypeAny.xsd"/>
+            <xsd:import schemaLocation="../lib/sah/brv/asbo/rtvBrevTypeAny.xsd"/>
             <xsd:element name="bestillStandardBrev">
         <xsd:complexType>
           <xsd:sequence>

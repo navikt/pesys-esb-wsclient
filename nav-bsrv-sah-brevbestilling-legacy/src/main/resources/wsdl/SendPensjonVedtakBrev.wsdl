@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="SendPensjonVedtakBrev" targetNamespace="http://nav-lib-sah/no/nav/lib/sah/inf/SendPensjonVedtakBrev" xmlns:bons1="http://nav-lib-sah/no/nav/lib/sah/gbo" xmlns:bons2="http://nav-lib-sah/no/nav/lib/sah/fault" xmlns:tns="http://nav-lib-sah/no/nav/lib/sah/inf/SendPensjonVedtakBrev" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <wsdl:types>
     <xsd:schema targetNamespace="http://nav-lib-sah/no/nav/lib/sah/inf/SendPensjonVedtakBrev" xmlns:bons="http://nav-lib-sah/no/nav/lib/sah/gbo" xmlns:bons12="http://nav-lib-sah/no/nav/lib/sah/gbo">
-            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../fault/FaultPersonIkkeFunnet.xsd"/>
-            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../fault/FaultHenteBrevdataFeilet.xsd"/>
-            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../fault/FaultAdresseIkkeRegistrert.xsd"/>
-            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../fault/FaultManglerObligatoriskOutput.xsd"/>
-            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../fault/FaultAdresseMangelfull.xsd"/>
-            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../gbo/GBOBrevStandard.xsd"/>
-      <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../gbo/GBOBrevVedtaksbrev.xsd"/>
-      <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../gbo/GBOBrevbestillingRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../lib/sah/fault/FaultPersonIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../lib/sah/fault/FaultHenteBrevdataFeilet.xsd"/>
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../lib/sah/fault/FaultAdresseIkkeRegistrert.xsd"/>
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../lib/sah/fault/FaultManglerObligatoriskOutput.xsd"/>
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../lib/sah/fault/FaultAdresseMangelfull.xsd"/>
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevStandard.xsd"/>
+      <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevVedtaksbrev.xsd"/>
+      <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevbestillingRequest.xsd"/>
       <xsd:element name="orchestrateSendPensjonVedtakBrev">
         <xsd:complexType>
           <xsd:sequence>

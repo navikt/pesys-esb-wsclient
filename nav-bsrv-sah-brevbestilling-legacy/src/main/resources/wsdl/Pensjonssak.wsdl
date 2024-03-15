@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="Pensjonssak" targetNamespace="http://nav-lib-pen/no/nav/lib/pen/inf/Pensjonssak" xmlns:bons1="http://nav-lib-pen/no/nav/lib/pen/gbo" xmlns:bons2="http://nav-lib-pen/no/nav/lib/pen/fault" xmlns:tns="http://nav-lib-pen/no/nav/lib/pen/inf/Pensjonssak" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <wsdl:types>
     <xsd:schema targetNamespace="http://nav-lib-pen/no/nav/lib/pen/inf/Pensjonssak">
-            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../gbo/GBOAnnulerDodsmeldingRequest.xsd"/>
-            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../gbo/GBOOppdaterDodsdatoResponse.xsd"/>
-            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../gbo/GBOOppdaterDodsdatoRequest.xsd"/>
-            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../gbo/GBOOpprettsakRequest.xsd"/>
-            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../gbo/GBOBatchBrevdata.xsd"/>
-            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../gbo/GBOUforeHistorikk.xsd"/>
-            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../gbo/GBOHentUforeHistorikkRequest.xsd"/>
-            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../gbo/GBOPensjonssakListe.xsd"/>
-            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../gbo/GBOKontrollpunkt.xsd"/>
-            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../gbo/GBOHentBatchBrevdata.xsd"/>
-            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../gbo/GBOHentPensjonssakRequest.xsd"/>
-            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../gbo/GBOKontrollpunktListe.xsd"/>
-            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/fault" schemaLocation="../fault/FaultPersonIkkeFunnet.xsd"/>
-            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/fault" schemaLocation="../fault/FaultSakIkkeFunnet.xsd"/>
-            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../gbo/GBOHentPensjonssakListeRequest.xsd"/>
-            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../gbo/GBOPensjonssak.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../lib/pen/gbo/GBOAnnulerDodsmeldingRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../lib/pen/gbo/GBOOppdaterDodsdatoResponse.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../lib/pen/gbo/GBOOppdaterDodsdatoRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../lib/pen/gbo/GBOOpprettsakRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../lib/pen/gbo/GBOBatchBrevdata.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../lib/pen/gbo/GBOUforeHistorikk.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../lib/pen/gbo/GBOHentUforeHistorikkRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../lib/pen/gbo/GBOPensjonssakListe.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../lib/pen/gbo/GBOKontrollpunkt.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../lib/pen/gbo/GBOHentBatchBrevdata.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../lib/pen/gbo/GBOHentPensjonssakRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../lib/pen/gbo/GBOKontrollpunktListe.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/fault" schemaLocation="../lib/pen/fault/FaultPersonIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/fault" schemaLocation="../lib/pen/fault/FaultSakIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../lib/pen/gbo/GBOHentPensjonssakListeRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../lib/pen/gbo/GBOPensjonssak.xsd"/>
             <xsd:element name="hentUforeHistorikk">
         <xsd:complexType>
           <xsd:sequence>
