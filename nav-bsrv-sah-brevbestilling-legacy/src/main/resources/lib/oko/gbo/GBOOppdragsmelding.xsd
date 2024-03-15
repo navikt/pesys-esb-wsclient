@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://nav-lib-oko/no/nav/lib/oko/gbo" targetNamespace="http://nav-lib-oko/no/nav/lib/oko/gbo">
+    <xsd:include schemaLocation="GBOSimuleringsresultatlinje.xsd"/>
+    <xsd:include schemaLocation="GBOSimuleringsperiode.xsd"/>
+    <xsd:include schemaLocation="GBOOppdrag.xsd"/>
+    <xsd:include schemaLocation="GBOOppdragkjorestatus.xsd"/>
+    <xsd:complexType name="GBOOppdragsmelding">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="oppdragKjorestatus" type="bons0:GBOOppdragkjorestatus"/>
+      <xsd:element minOccurs="0" name="oppdrag" type="bons0:GBOOppdrag"/>
+      <xsd:element minOccurs="0" name="simuleringsperiode" type="bons0:GBOSimuleringsperiode"/>
+      <xsd:element minOccurs="0" name="simuleringsresultatlinjeListe" type="bons0:GBOSimuleringsresultatlinje" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

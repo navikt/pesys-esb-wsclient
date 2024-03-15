@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-oko/no/nav/lib/oko/gbo">
+  <xsd:complexType name="GBOValuta">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="valutaKode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="valuta" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="fom" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="feilreg" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

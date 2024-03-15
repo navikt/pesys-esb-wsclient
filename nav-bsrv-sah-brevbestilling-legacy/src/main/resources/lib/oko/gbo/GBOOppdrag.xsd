@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:bons0="http://nav-lib-oko/no/nav/lib/oko/gbo"
+	targetNamespace="http://nav-lib-oko/no/nav/lib/oko/gbo">
+	<xsd:include schemaLocation="GBOAvstemmingtransaksjon.xsd"></xsd:include>
+	<xsd:include schemaLocation="GBOOppdragslinje.xsd" />
+	<xsd:include schemaLocation="GBOTekst.xsd" />
+	<xsd:include schemaLocation="GBOBelopsgrense.xsd" />
+	<xsd:include schemaLocation="GBOOppdragsenhet.xsd" />
+	<xsd:complexType name="GBOOppdrag">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="aksjonKode"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="endringKode"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="statusKode"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="statusFom"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="fagomradeKode"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="fagsystemId"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="oppdragsId"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="utbetalingsfrekvens"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="forfallsdato"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="stonadId"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="oppdragGjelderId"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="oppdragGjelderFom"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="saksbehandlerId"
+				type="xsd:string" />
+			<xsd:element minOccurs="0" name="oppdragsenhetListe"
+				type="bons0:GBOOppdragsenhet" maxOccurs="unbounded" />
+			<xsd:element minOccurs="0" name="belopsgrenseListe"
+				type="bons0:GBOBelopsgrense" maxOccurs="unbounded" />
+			<xsd:element minOccurs="0" name="tekstListe"
+				type="bons0:GBOTekst" maxOccurs="unbounded" />
+			<xsd:element minOccurs="0" name="oppdragslinjeListe"
+				type="bons0:GBOOppdragslinje" maxOccurs="unbounded" />
+			<xsd:element minOccurs="0" name="avstemmingtransaksjon"
+				type="bons0:GBOAvstemmingtransaksjon">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>
