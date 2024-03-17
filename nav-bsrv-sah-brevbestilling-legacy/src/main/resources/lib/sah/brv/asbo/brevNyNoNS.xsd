@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo"
+	xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+	<xs:import schemaLocation="BrevAny.xsd" />
+	<xs:include schemaLocation="TTUtlandTrygdeAvtale.xsd" />
+	<xs:include schemaLocation="TrygdetidsgrunnlagListeNor.xsd" />
+	<xs:include schemaLocation="BeregningPeriode.xsd" />
+	<xs:include schemaLocation="TTUtlandTrygdeAvtaleListe.xsd" />
+	<xs:include schemaLocation="BrevVedtaksliste.xsd" />
+	<xs:include schemaLocation="KravlinjeListe.xsd" />
+	<xs:include schemaLocation="Barnekull.xsd" />
+	<xs:include schemaLocation="SEDKravhodeType.xsd" />
+	<xs:include schemaLocation="AFPEOGrunnlag.xsd" />
+	<xs:include schemaLocation="BeregningAP2016.xsd" />
+	<xs:include schemaLocation="TrygdetidsgrunnlagListeBilateral.xsd" />
+	<xs:include schemaLocation="TrygdetidsgrunnlagListeEOS.xsd" />
+	<xs:include schemaLocation="Pensjonssakliste.xsd" />
+	<xs:include schemaLocation="SEDVedtakType.xsd" />
+	<xs:include schemaLocation="Sammenstot.xsd" />
+	<xs:include schemaLocation="Land.xsd" />
+	<xs:include schemaLocation="BeregningUfore.xsd" />
+	<xs:include schemaLocation="SEDPersonerType.xsd" />
+	<xs:include schemaLocation="Vilkar.xsd" />
+	<xs:include schemaLocation="TrygdetidsgrunnlagListeKap20.xsd" />
+	<xs:include schemaLocation="Beregning.xsd" />
+	<xs:include schemaLocation="BeregningsVilkar.xsd" />
+	<xs:include schemaLocation="SEDAvsenderinfoType.xsd" />
+	<xs:include schemaLocation="RelatertAFPPrivat.xsd" />
+	<xs:include schemaLocation="BrevBrevMottaker.xsd" />
+	<xs:include schemaLocation="Kontaktinformasjon.xsd" />
+
+	<xs:complexType name="RtvBrevTypeInternal">
+		<xs:sequence>
+			<xs:element name="brev" type="bons0:BrevBrevType" />
+			<xs:element minOccurs="0" name="BrevAny" type="BrevAny" />
+
+		</xs:sequence>
+		<xs:attribute name="malpakke" type="xs:string" />
+		<xs:attribute name="saksbehandler" type="xs:string" />
+		<xs:attribute name="sysid" type="xs:string" />
+		<xs:attribute name="passord" type="xs:string" />
+		<xs:attribute name="direkteutskrift" type="xs:string" />
+		<xs:attribute name="arkiver" type="xs:string" />
+		<xs:attribute name="skrivertype" type="xs:string" />
+		<xs:attribute name="skriver" type="xs:string" />
+		<xs:attribute name="skuff" type="xs:string" />
+		<xs:attribute name="format" type="xs:string" />
+		<xs:attribute name="klientToken" type="xs:string"
+			use="optional" />
+		<xs:attribute name="modus" type="xs:string" use="optional" />
+		<xs:attribute name="saksbehandlerId" type="xs:string" />
+	</xs:complexType>
+
+	<xs:complexType name="BrevBrevType">
+		<xs:sequence>
+			<xs:element name="BrevMottaker"
+				type="bons0:BrevBrevMottakerType" />
+			<xs:element name="PersonSak" type="bons0:BrevPersonSakType" />
+			<xs:element name="SaksData" type="bons0:BrevSaksDataType" />
+			<xs:element minOccurs="0" name="Pensjonssakliste"
+				type="bons0:Pensjonssakliste">
+			</xs:element>
+
+			<!-- Standard Brev -->
+			<xs:element name="EktefellePartner"
+				type="bons0:BrevEktefellePartnerType" />
+			<xs:element maxOccurs="unbounded" name="BarnU18"
+				type="bons0:BrevBarnU18Type" />
+			<xs:element name="Samboer" type="bons0:BrevSamboerType" />
+			<xs:element name="GenerelleSatser"
+				type="bons0:BrevGenerelleSatserType" />
+			<xs:element minOccurs="0" name="InformasjonAvdode"
+				type="bons0:BrevInformasjonAvdodeType">
+			</xs:element>
+
+			<!-- Negative vedtak -->
+			<xs:element name="KravData" type="bons0:BrevKravDataType" />
+			<!-- Positive vedtak -->
+			<xs:element name="Grunnlag" type="bons0:Grunnlag" />
+			<xs:element name="Vedtaksdata" type="bons0:VedtaksDataType" />
+
+			<xs:element minOccurs="0" name="Vedtaksliste"
+				type="bons0:BrevVedtaksliste">
+			</xs:element>
+			<xs:element minOccurs="0" name="SEDAvsenderinfo"
+				type="bons0:SEDAvsenderinfoType">
+			</xs:element>
+			<xs:element minOccurs="0" name="SEDPersoner"
+				type="bons0:SEDPersonerType">
+			</xs:element>
+			<xs:element minOccurs="0" name="SEDKravhode"
+				type="bons0:SEDKravhodeType">
+			</xs:element>
+			<xs:element minOccurs="0" name="SEDVedtak"
+				type="bons0:SEDVedtakType">
+			</xs:element>
+
+			<xs:element minOccurs="0" name="Kontaktinformasjon"
+				type="bons0:Kontaktinformasjon">
+			</xs:element>
+			<xs:element minOccurs="0" name="Vedtaksbrev"
+				type="xs:anyType">
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="brevref" type="xs:string" />
+		<xs:attribute name="spraak" type="xs:string" />
+		<xs:attribute name="tknr" type="xs:string" />
+		<xs:attribute name="spesregType" type="xs:string" />
+	</xs:complexType>
+
+	<xs:complexType name="BrevPersonSakType">
+		<xs:sequence>
+			<xs:element name="spesen" type="xs:string" />
+			<xs:element name="PSfnr_tssid" type="xs:string" />
+			<xs:element name="PSNavn" type="xs:string" />
+			<xs:element name="PSTlfPrivat" type="xs:string" />
+			<xs:element name="PSTlfJobb" type="xs:string" />
+			<xs:element name="PSTlfMobil" type="xs:string" />
+			<xs:element name="PSepost" type="xs:string" />
+			<xs:element name="PSadr1" type="xs:string" />
+			<xs:element name="PSadr2" type="xs:string" />
+			<xs:element name="PSadr3" type="xs:string" />
+			<xs:element name="PSadr4" type="xs:string" />
+			<xs:element name="PSpostnr" type="xs:string" />
+			<xs:element name="PSsivilstand" type="xs:string" />
+			<xs:element name="PSstatsborger" type="xs:string" />
+			<xs:element name="PSkontonummer" type="xs:string" />
+			<xs:element minOccurs="0" name="Fodselsdato"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="AdresseType"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="dodsDato"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="PSFornavn"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="PSMellomnavn"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="PSEtternavn"
+				type="xs:string">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="BrevSaksDataType">
+		<xs:sequence>
+			<xs:element name="saksreferanse" type="xs:string" />
+			<xs:element minOccurs="0" name="Sakstype" type="xs:string" />
+			<xs:element minOccurs="0" name="Sakstatus" type="xs:string" />
+			<xs:element minOccurs="1" name="SakAPogUP"
+				type="xs:boolean">
+			</xs:element>
+			<xs:element minOccurs="1" name="SakAPStatus"
+				type="xs:string">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="BrevEktefellePartnerType">
+		<xs:sequence>
+			<xs:element name="EPfodselsnummer" type="xs:string" />
+			<xs:element name="EPnavn" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="BrevBarnU18Type">
+		<xs:sequence>
+			<xs:element name="BarnNavn" type="xs:string" />
+			<xs:element name="Barnfodselsnummer" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="BrevInformasjonAvdodeType">
+		<xs:sequence>
+			<xs:element name="AvdFodselsnummer" type="xs:string" />
+			<xs:element name="AvdFornavn" type="xs:string" />
+			<xs:element name="AvdMellomnavn" type="xs:string" />
+			<xs:element name="AvdEtternavn" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="BrevSamboerType">
+		<xs:sequence>
+			<xs:element name="SMBnavn" type="xs:string" />
+			<xs:element name="SMBfodselsnummer" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="BrevGenerelleSatserType">
+		<xs:sequence>
+			<xs:element name="grunnbelop" type="xs:string" />
+			<xs:element name="minstepensjon_ep" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="BrevVedtakstype">
+		<xs:sequence>
+			<xs:element name="VedtaksID" type="xs:string" />
+			<xs:element name="VedtakVirkFOM" type="xs:string" />
+			<xs:element name="VedtakVirkTOM" type="xs:string" />
+			<xs:element name="Vedtakstype" type="xs:string" />
+			<xs:element name="VedtakKravhode" type="xs:string" />
+			<xs:element name="VedtakFattetDato" type="xs:string" />
+			<xs:element name="VedtakIverksattDato" type="xs:string" />
+			<xs:element name="VedtakBehandtype" type="xs:string" />
+			<xs:element name="VedtakGjelderPerson" type="xs:string" />
+			<xs:element name="VedtakAnsvSaksBeh" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="BrevKravDataType">
+		<xs:sequence>
+			<xs:element name="Kravhode" type="bons0:BrevKravhodeType" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="BrevKravhodeType">
+		<xs:sequence>
+			<xs:element name="Kravtype" type="xs:string" />
+			<xs:element name="KravGjelder" type="xs:string" />
+			<xs:element name="KravMottatDato" type="xs:string" />
+			<xs:element name="KravKomplettDato" type="xs:string" />
+			<xs:element minOccurs="0" name="KravVelgType"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="VurdereTrygdeavtale"
+				type="xs:boolean">
+			</xs:element>
+			<xs:element minOccurs="0" name="NorgeBehandlendeLand"
+				type="xs:boolean">
+			</xs:element>
+			<xs:element maxOccurs="unbounded" minOccurs="0"
+				name="Kravlinje" type="bons0:BrevKravlinjeType" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="BrevKravlinjeType">
+		<xs:sequence>
+			<xs:element name="KravlinjeID" type="xs:string" />
+			<xs:element name="Kravlinjetype" type="xs:string" />
+			<xs:element name="KravRelatertPerson" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="BrevGrunnlagsDataType">
+		<xs:sequence>
+			<xs:element name="OmsGodskrGrunnlag"
+				type="bons0:BrevOmsGodskrGrunnlagType" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="BrevOmsGodskrGrunnlagType">
+		<xs:sequence>
+			<xs:element name="OmsGodskrGrunnlagAr" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="VedtaksDataType">
+		<xs:sequence>
+			<xs:element name="VedtaksID" type="xs:string" />
+			<xs:element name="VirkningFom" type="xs:string" />
+			<xs:element name="VirkningTom" type="xs:string" />
+			<xs:element minOccurs="0" name="OppgjorsAr"
+				type="xs:string">
+			</xs:element>
+			<xs:element name="Sakskode" type="xs:string" />
+			<xs:element name="Etterbetaling" type="xs:string" />
+			<xs:element name="Vedtakstype" type="xs:string" />
+			<xs:element name="VedtakFattetDato" type="xs:string" />
+			<xs:element minOccurs="0" name="BrukerAlder"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="BehandlingType"
+				type="xs:string">
+			</xs:element>
+			<xs:element name="VedtakBehandtype" type="xs:string" />
+			<xs:element name="VedtakGjelderPerson" type="xs:string" />
+			<xs:element minOccurs="0" name="VedtakIverksattDato"
+				type="xs:string" />
+			<xs:element minOccurs="0" name="VedtakKravhode"
+				type="xs:string" />
+			<xs:element name="VedtakAnsvSaksbeh" type="xs:string" />
+			<xs:element name="VilkarInstilling" type="xs:string" />
+			<xs:element minOccurs="0" name="Sammenstot"
+				type="bons0:Sammenstot">
+			</xs:element>
+			<xs:element name="VilkarsVedtakList"
+				type="bons0:VilkarsVedtakList" />
+			<xs:element name="AFPEO" type="bons0:AFPEO" />
+			<xs:element name="Kravhode" type="bons0:Kravhode" />
+			<xs:element name="TilbakekrevingTotal"
+				type="bons0:TilbakekrevingTotal" />
+			<xs:element name="BeregningsData"
+				type="bons0:BeregningsData" />
+			<xs:element minOccurs="0" name="AnsvarligSaksbehandler"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="Innstillingsverdi"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="GjenlevendeKravAvslatt"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="ForsteUforetidspunkt"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="Reaktiviseringsforskriften"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="Faktoromregnet"
+				type="xs:string">
+			</xs:element>
+
+			<xs:element minOccurs="0" name="RelatertAFPPrivat"
+				type="bons0:RelatertAFPPrivat">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="VilkarsVedtakList">
+		<xs:sequence>
+			<xs:element name="BTInnvAntall" type="xs:string" />
+			<xs:element name="BTAvslAntall" type="xs:string" />
+			<xs:element name="ETInnvAntall" type="xs:string" />
+			<xs:element name="ETAvslAntall" type="xs:string" />
+			<xs:element maxOccurs="unbounded" name="VilkarsVedtak"
+				type="bons0:VilkarsVedtak" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="VilkarsVedtak">
+		<xs:sequence>
+			<xs:element name="VilkarsvedtakID" type="xs:string" />
+			<xs:element name="VilkarVirkningFom" type="xs:string" />
+			<xs:element name="VilkarVirkningTom" type="xs:string" />
+			<xs:element name="VilkarKravlinjeKode" type="xs:string" />
+			<xs:element name="VilkarVedtakResultat" type="xs:string" />
+			<xs:element name="VilkarGjelderPerson" type="xs:string" />
+			<xs:element name="VilkarAnvendtVurdering" type="xs:string" />
+
+			<xs:element minOccurs="0" name="Begrunnelse"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="TotalPensjon67Ar"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="MPN67Ar" type="xs:string" />
+			<xs:element minOccurs="0" name="TotalPensjon67ArAFP"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="GarantipensjonsnivaVed67ar"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="VektetPensjonsnivaVed67ar"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="Motregning"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="ViderefortilUT"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="1" name="BeregningsVilkar"
+				type="bons0:BeregningsVilkar">
+			</xs:element>
+			<xs:element minOccurs="0" name="Vilkar" type="bons0:Vilkar" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Kravlinje">
+		<xs:sequence>
+			<xs:element name="KravlinjeID" type="xs:string" />
+			<xs:element name="Kravlinjetype" type="xs:string" />
+			<xs:element name="KravlinjeRelatertPerson" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Kravhode">
+		<xs:sequence>
+			<xs:element name="VedtakKravhode" type="xs:string" />
+			<xs:element name="KravGjelder" type="xs:string" />
+			<xs:element minOccurs="0" name="KravStatus"
+				type="xs:string">
+			</xs:element>
+			<xs:element name="KravMottatDato" type="xs:string" />
+			<xs:element name="KravKomplettDato" type="xs:string" />
+			<xs:element name="KravTilbakekreving" type="xs:string" />
+			<xs:element name="KravAFPordning" type="xs:string" />
+			<xs:element name="AFPTillegg" type="xs:string" />
+			<xs:element name="KravAvdodFnr" type="xs:string" />
+			<xs:element name="KravVelgType" type="xs:string" />
+			<xs:element minOccurs="0" name="KravArsakType"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="AvdodFnr"
+				type="xs:string">
+			</xs:element>
+
+
+			<xs:element minOccurs="0" name="VurdereTrygdeavtale"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="SokerBT" type="xs:string" />
+			<xs:element minOccurs="0" name="SokerET" type="xs:string" />
+			<xs:element minOccurs="0" name="SokerAFPPrivat"
+				type="xs:string">
+			</xs:element>
+			<xs:element name="onsketVirkningsDato" type="xs:string" />
+			<xs:element minOccurs="0" name="AlderVedUttak"
+				type="xs:string">
+			</xs:element>
+
+
+			<xs:element maxOccurs="unbounded" name="Kravlinje"
+				type="bons0:Kravlinje" />
+			<xs:element minOccurs="0" name="BoddArbeidUtland"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="NorgeBehandlendeLand"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="KravlinjeListe"
+				type="bons0:KravlinjeListe">
+			</xs:element>
+			<xs:element minOccurs="0" name="Regelverktype"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="ForrigeVedtakPaTidslinjen"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="erRevurdPgaReduksjonOppt"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="BoddArbeidUtlandAvdod"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="BoddArbeidUtlandEps"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="BehandlendeEnhet"
+				type="xs:string">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TilbakekrevingTotal">
+		<xs:sequence>
+			<xs:element name="TilbakekrevType" type="xs:string" />
+			<xs:element name="TilbakekrevingTotal" type="xs:string" />
+			<xs:element name="BeregnetFeilutbetalinger"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="OppgittFeilutbetaling"
+				type="xs:string">
+			</xs:element>
+			<xs:element name="Motregning" type="xs:string" />
+
+
+			<xs:element name="MotregningSatt" type="xs:string" />
+			<xs:element name="ResultatTotal" type="xs:string" />
+			<xs:element name="SkattOgTrekk" type="xs:string" />
+			<xs:element name="SkattOgtrekkSatt" type="xs:string" />
+
+
+			<xs:element minOccurs="0" name="RenterSatt"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="Renter" type="xs:string" />
+			<xs:element minOccurs="0" name="TilbakekrevingUtenRenter"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="TilbakekrevingMedRenter"
+				type="xs:string">
+			</xs:element>
+			<xs:element maxOccurs="unbounded"
+				name="TilbakekrevingPerArListe"
+				type="bons0:TilbakekrevingPerArListe" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="TilbakekrevingPerArListe">
+		<xs:sequence>
+			<xs:element name="Ar" type="xs:string" />
+			<xs:element name="BrukAr" type="xs:string" />
+
+			<xs:element minOccurs="0" name="ManedKode"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="Maned" type="xs:string" />
+			<xs:element minOccurs="0" name="TilbakekrevMnd"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="ResultatManed"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="FaktiskTilbakekrevingManed"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="brukMnd" type="xs:string" />
+			<xs:element minOccurs="0" name="konteringKode"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="konteringDekode"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="UrKonto" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="BeregningsData">
+		<xs:sequence>
+			<xs:element name="BeregningAntallPerioder" type="xs:string" />
+			<xs:element name="BeregningsRelasjoner"
+				type="bons0:BeregningsRelasjoner" />
+			<xs:element maxOccurs="1" name="Beregning"
+				type="bons0:Beregning" />
+			<xs:element maxOccurs="unbounded" name="BeregningPeriode"
+				type="bons0:BeregningPeriode" />
+			<xs:element minOccurs="0" name="BeregningAP2016"
+				type="bons0:BeregningAP2016">
+			</xs:element>
+			<xs:element maxOccurs="unbounded" minOccurs="1"
+				name="BeregningAP2016Periode" type="bons0:BeregningAP2016">
+			</xs:element>
+			<xs:element minOccurs="0" name="BeregningUfore"
+				type="bons0:BeregningUfore">
+			</xs:element>
+			<xs:element maxOccurs="unbounded" minOccurs="0"
+				name="BeregningUforePeriode" type="bons0:BeregningUfore">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="BeregningsRelasjoner">
+		<xs:sequence>
+			<xs:element name="AvdodFornavn" type="xs:string" />
+			<xs:element minOccurs="0" name="AvdodMellomnavn"
+				type="xs:string" />
+			<xs:element name="AvdodEtternavn" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Grunnlag">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded"
+				name="OmsorgGodskrGrunnlagListe" type="bons0:OmsorgGodskrGrunnlag" />
+			<xs:element maxOccurs="unbounded"
+				name="OmsorgOverfGrunnlagListe" type="bons0:OmsorgOverfGrunnlag" />
+			<xs:element name="Persongrunnlag"
+				type="bons0:Persongrunnlag" />
+			<xs:element maxOccurs="unbounded" minOccurs="0"
+				name="Persongrunnlagsliste" type="bons0:PersongrunnlagslisteType" />
+			<xs:element maxOccurs="unbounded" minOccurs="0"
+				name="PersongrunnlagslisteAvdod"
+				type="bons0:PersongrunnlagslisteType">
+			</xs:element>
+			<xs:element minOccurs="0" name="Land" type="bons0:Land" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="PersongrunnlagslisteType">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="Fodselsnummer"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="PersonBostedsland"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="Barnekull"
+				type="bons0:Barnekull">
+			</xs:element>
+
+			<xs:element minOccurs="0" name="Overkomp"
+				type="xs:string">
+			</xs:element>
+			<xs:element name="Persondetaljer"
+				type="bons0:Persondetaljer" />
+			<xs:element name="InngangOgEksportGrunnlag"
+				type="bons0:InngangOgEksportGrunnlag" />
+			<xs:element name="Trygdeavtaler" type="bons0:Trygdeavtaler" />
+			<xs:element name="Trygdetid" type="bons0:Trygdetid" />
+			<xs:element minOccurs="0" name="TTUtlandTrygdeAvtale"
+				type="bons0:TTUtlandTrygdeAvtale">
+			</xs:element>
+
+			<xs:element minOccurs="0" name="Trygdeavtaledetaljer"
+				type="bons0:Trygdeavtaledetaljer">
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="0"
+				name="TrygdetidsgrunnlagListeNor"
+				type="bons0:TrygdetidsgrunnlagListeNor">
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="0"
+				name="TrygdetidsgrunnlagListeEOS"
+				type="bons0:TrygdetidsgrunnlagListeEOS">
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="0"
+				name="TrygdetidsgrunnlagListeBilateral"
+				type="bons0:TrygdetidsgrunnlagListeBilateral">
+			</xs:element>
+			<xs:element maxOccurs="1" minOccurs="0"
+				name="TrygdetidsgrunnlagListeKap20"
+				type="bons0:TrygdetidsgrunnlagListeKap20">
+			</xs:element>
+			<xs:element minOccurs="0"
+				name="TrygdetidsgrunnlagListeNorPopulert" type="xs:boolean">
+			</xs:element>
+			<xs:element minOccurs="0"
+				name="TrygdetidsgrunnlagListeEOSPopulert" type="xs:boolean">
+			</xs:element>
+			<xs:element minOccurs="0"
+				name="TrygdetidsgrunnlagListeBilateralPopulert" type="xs:boolean">
+			</xs:element>
+
+			<xs:element minOccurs="0" name="AntallBarn"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="UforehistorikkGarantigrad"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="BrukerFlyktning"
+				type="xs:string">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Trygdeavtaledetaljer">
+		<xs:sequence>
+			<xs:element name="Art10BruktGP" type="xs:boolean" />
+			<xs:element name="Art10BruktTP" type="xs:boolean" />
+			<xs:element name="TTNordiskAr" type="xs:string" />
+			<xs:element name="TTNordiskMnd" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Persondetaljer">
+		<xs:sequence>
+			<xs:element name="PersonDetaljId" type="xs:string" />
+
+			<xs:element minOccurs="0" name="PersondetaljFom"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="PersondetaljTom"
+				type="xs:string">
+			</xs:element>
+			<xs:element name="Grunnlagsrolle" type="xs:string" />
+			<xs:element minOccurs="0" name="PersondetaljBrukes"
+				type="xs:string">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="InngangOgEksportGrunnlag">
+		<xs:sequence>
+			<xs:element name="Minst20ArBotid" type="xs:string" />
+			<xs:element name="OppfyltVedSammenlegging" type="xs:string" />
+			<xs:element minOccurs="0" name="Minst3ArTrygdetid"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="Eksportforbud"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="Eksportunntak"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="MinstTreArsFMNorge"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="MinstEttArFMNorge"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="OppfyltEtterGamleRegler"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0"
+				name="UnntakFraForutgaendeMedlemskap" type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="OpptjentRettTilTPEtterFT"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0"
+				name="EksportrettEtterEOSForordning" type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0"
+				name="EksportrettEtterTrygdeavtalerEOS" type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0"
+				name="EksportrettEtterAndreTrygdeavtaler" type="xs:string">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Trygdeavtaler">
+		<xs:sequence>
+			<xs:element name="AvtaleType" type="xs:string" />
+			<xs:element minOccurs="0" name="Avtaleland"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="BostedslandBeskrivelse"
+				type="xs:string">
+			</xs:element>
+			<xs:element name="Bostedsland" type="xs:string" />
+
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Trygdetid">
+		<xs:sequence>
+			<xs:element name="FaTTNorge" type="xs:string" />
+			<xs:element name="FramtidigTTNorsk" type="xs:string" />
+			<xs:element minOccurs="0" name="RedusertFramtidigTrygdetid"
+				type="xs:boolean">
+			</xs:element>
+			<xs:element name="FaTTEOS" type="xs:string" />
+			<xs:element name="TTTellerEOS" type="xs:string" />
+			<xs:element name="TTNevnerEOS" type="xs:string" />
+			<xs:element name="FramtidigTTEOS" type="xs:string" />
+			<xs:element name="TTAnvendtEOS" type="xs:string" />
+			<xs:element minOccurs="0" name="TTTeoretiskEOS"
+				type="xs:string">
+			</xs:element>
+			<xs:element name="TTNordisk" type="xs:string" />
+			<xs:element name="TTTellerNordisk" type="xs:string" />
+			<xs:element name="TTNevnerNordisk" type="xs:string" />
+			<xs:element name="FaTT_A10_netto" type="xs:string" />
+			<xs:element minOccurs="0" name="TTUtlandTrygdeAvtaleListe"
+				type="bons0:TTUtlandTrygdeAvtaleListe">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<xs:complexType name="OmsorgGodskrGrunnlag">
+		<xs:sequence>
+			<xs:element name="OmsorgsGodskrGrunnlagAr" type="xs:string" />
+			<xs:element name="OGomsorgspoengType" type="xs:string" />
+			<xs:element maxOccurs="unbounded" name="Godskrivesliste"
+				type="bons0:Godskrivesliste" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Godskrivesliste">
+		<xs:sequence>
+			<xs:element name="OGPersonPleieTrengfnr" type="xs:string" />
+			<xs:element name="OGPersonPleieTrengFornavn"
+				type="xs:string" />
+			<xs:element name="OGPersonPleieTrengMellomnavn"
+				type="xs:string" />
+			<xs:element name="OGPersonPleieTrengEtternavn"
+				type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="OmsorgOverfGrunnlag">
+		<xs:sequence>
+			<xs:element name="OmsorgGodskGrunnlagAr" type="xs:string" />
+			<xs:element name="OOmottakerFnr" type="xs:string" />
+			<xs:element name="OOmottakerFornavn" type="xs:string" />
+			<xs:element name="OOmottakerMellomnavn" type="xs:string" />
+			<xs:element name="OOmottakerEtternavn" type="xs:string" />
+			<xs:element name="OOomsorgspoengType" type="xs:string" />
+			<xs:element name="OOgiverFornavn" type="xs:string" />
+			<xs:element name="OOgiverMellomnavn" type="xs:string" />
+			<xs:element name="OOgiverEtternavn" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Persongrunnlag">
+		<xs:sequence>
+			<xs:element name="AFPEOGrunnlag" type="bons0:AFPEOGrunnlag" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="AFPEO">
+		<xs:sequence>
+			<xs:element name="IIAP" type="xs:string" />
+			<xs:element name="FPIberegnet" type="xs:string" />
+			<xs:element name="TPIberegnet" type="xs:string" />
+			<xs:element name="AFP_Avvik" type="xs:string" />
+			<xs:element name="fullAFP" type="xs:string" />
+			<xs:element name="FradragBeregnetAI" type="xs:string" />
+			<xs:element name="KorrigertAFP" type="xs:string" />
+			<xs:element name="UtbetaltAFP" type="xs:string" />
+			<xs:element name="ForMyeBetalt" type="xs:string" />
+			<xs:element name="ForLiteBetalt" type="xs:string" />
+			<xs:element name="IFUBeregnet" type="xs:string" />
+			<xs:element name="IEOBeregnet" type="xs:string" />
+			<xs:element minOccurs="0" name="Dato0101"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="Dato0102"
+				type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="Dato3112"
+				type="xs:string">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- typesASBO -->
+	<xs:element name="rtv-brev" type="bons0:RtvBrevTypeInternal" />
+
+
+</xs:schema>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+    <xsd:include schemaLocation="Belopsendring.xsd"/>
+    <xsd:include schemaLocation="BeregningYtelsesKomp.xsd"/>
+    <xsd:include schemaLocation="Uforetrygdberegning.xsd"/>
+    <xsd:complexType name="BeregningUfore">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="BeregningId" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BeregningVirkningDatoFom" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BeregningVirkningDatoTom" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BeregningBenyttetSivilstand" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BeregningBrukerSivilstand" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BeregningSivilstandAnvendt" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EndringArsak" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Uttaksgrad" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Total" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="TotalNetto" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TotalAr" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TotalNettoAkk" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TotalNettoRestAr" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BelopOkt" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BelopRedusert" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Belopsendring" type="bons0:Belopsendring">
+			</xsd:element>
+			<xsd:element minOccurs="1" name="BeregningYtelsesKomp" type="bons0:BeregningYtelsesKomp">
+			</xsd:element>
+			<xsd:element minOccurs="1" name="Uforetrygdberegning" type="bons0:Uforetrygdberegning">
+			</xsd:element>
+
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

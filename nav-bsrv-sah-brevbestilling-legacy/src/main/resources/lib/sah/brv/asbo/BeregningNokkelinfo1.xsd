@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+    <xs:include schemaLocation="SPT.xsd"/>
+	<xs:include schemaLocation="YPT.xsd"/>
+	<xs:include schemaLocation="OPT.xsd"/>
+	<xs:element name="BeregningNokkelinfo1" type="bons0:BeregningNokkelinfo1"/>
+	<xs:complexType name="BeregningNokkelinfo1">
+		<xs:sequence>
+			<xs:element name="BeregningsID" type="xs:string"/>
+			<xs:element name="PenPersonFnr" type="xs:string"/>
+			<xs:element name="AnvendtiBeregningen1" type="xs:string"/>
+			<xs:element name="GrunnlagsrolleKode" type="xs:string"/>
+			<xs:element name="TTanv" type="xs:string"/>
+			<xs:element minOccurs="0" name="ttBeregnetForGrunnlagsrolle" type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="Beregningsmetode1" type="xs:string">
+			</xs:element>
+			<xs:element name="SPT" type="bons0:SPT"/>
+			<xs:element name="YPT" type="bons0:YPT"/>
+			<xs:element name="OPT" type="bons0:OPT"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+    
+    <xsd:complexType name="Uforetrygdberegning">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="ResultatType" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AnvendtTrygdetid" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BruttoPerAr" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Uforegrad" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Uforetidspunkt" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ProratabrokTeller" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ProratabrokNevner" type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="Yrkesskadegrad" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Grunnbelop" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Mottarminsteytelse" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="YtelsesgrunnlagetBest" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BeregningsMetode" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

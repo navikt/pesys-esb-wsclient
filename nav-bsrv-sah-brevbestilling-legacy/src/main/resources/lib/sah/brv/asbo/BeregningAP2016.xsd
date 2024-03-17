@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+    <xsd:include schemaLocation="BeregningYtelseKomp.xsd"/>
+	<xsd:include schemaLocation="BeregningsInformasjonAvdod.xsd"/>
+	<xsd:include schemaLocation="BeregningsInformasjonKapittel19.xsd"/>
+	<xsd:include schemaLocation="BeregningsInformasjonKapittel20.xsd"/>
+	<xsd:complexType name="BeregningAP2016">
+		<xsd:sequence>
+
+			<xsd:element minOccurs="0" name="VirkdatoFom" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="VirkdatoTom" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TotalPensjon" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BeregningSivilstandAnvendt" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AndKap19" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AndKap20" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BeregningsInformasjonKapittel19" type="bons0:BeregningsInformasjonKapittel19">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BeregningsInformasjonKapittel20" type="bons0:BeregningsInformasjonKapittel20">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BeregningsInformasjonAvdod" type="bons0:BeregningsInformasjonAvdod">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AvdodTTBest" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AnvendtGjenlevenderett" type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="BeregningYtelsesKomp" type="bons0:BeregningYtelseKomp">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

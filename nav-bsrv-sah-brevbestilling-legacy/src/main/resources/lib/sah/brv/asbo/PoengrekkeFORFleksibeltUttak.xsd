@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+    <xsd:include schemaLocation="Poengtall.xsd"/>
+    <xsd:complexType name="PoengrekkeFORFleksibeltUttak">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="Poengar" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Poengarf92" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Poengare91" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Poengarf92EOS" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Poengare91EOS" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PoengarTpi" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PoengarFaktiskNorge" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PoengarFaktiskEOS" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PoengarTeoretiskEOS" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PoengarFaktiskeNorden" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PoengarTellerEOS" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PoengarNevnerEOS" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="FramtidigPoengarNordenBrutto" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="FramtidigPoengarNordenNetto" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="FramtidigPoengtall" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PoengtallListe" type="bons0:Poengtall">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

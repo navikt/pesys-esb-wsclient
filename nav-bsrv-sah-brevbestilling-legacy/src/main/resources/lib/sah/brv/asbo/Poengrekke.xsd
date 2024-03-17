@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+	<xs:include schemaLocation="Poengtall.xsd"/>
+	<xs:element name="Poengrekke" type="bons0:Poengrekke"/>
+	<xs:complexType name="Poengrekke">
+		<xs:sequence>
+			<xs:element name="PoengarUtenOk" type="xs:string"/>
+			<xs:element name="PoengarUtenOkf92" type="xs:string"/>
+			<xs:element name="PoengarUtenOke91" type="xs:string"/>
+			<xs:element name="PoengarUtenOkf92EOS" type="xs:string"/>
+			<xs:element name="PoengarUtenOke91EOS" type="xs:string"/>
+			<xs:element name="PoengarUtenOkTpi" type="xs:string"/>
+			<xs:element name="PoengarUtenOkFaktiskNorge" type="xs:string"/>
+			<xs:element name="PoengarUtenOkFaktiskEOS" type="xs:string"/>
+			<xs:element name="PoengarUtenOkTeoretiskEOS" type="xs:string"/>
+			<xs:element name="PoengarUtenOkfaktiskeNorden" type="xs:string"/>
+			<xs:element name="PoengarTellerEOS" type="xs:string"/>
+			<xs:element name="PoengarNevnerEOS" type="xs:string"/>
+			<xs:element name="FramtidigPoengarNordenBrutto" type="xs:string"/>
+			<xs:element name="FramtidigPoengarNordenNetto" type="xs:string"/>
+			<xs:element minOccurs="0" name="FramtidigPoengtall" type="xs:string">
+			</xs:element>
+			<xs:element name="Poengtall" type="bons0:Poengtall"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

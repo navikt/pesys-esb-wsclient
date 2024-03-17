@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+	<xs:element name="BarnetilleggFelles" type="bons0:BarnetilleggFelles"/>
+	<xs:complexType name="BarnetilleggFelles">
+		<xs:sequence>
+			<xs:element name="BTFBinnvilget" type="xs:string"/>
+			<xs:element name="BTFBfribelop" type="xs:string"/>
+			<xs:element name="AntallBarnFelles" type="xs:string"/>
+			<xs:element name="BTFBbrutto" type="xs:string"/>
+			<xs:element name="BTFBnetto" type="xs:string"/>
+
+			<xs:element minOccurs="0" name="BTFBbruttoPerAr" type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="BTFBnettoPerAr" type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="BTFBfradragPerAr" type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="BTFBfradrag" type="xs:string">
+			</xs:element>
+			<xs:element name="BTFBInntektBruktiAvkortning" type="xs:string"/>
+			<xs:element minOccurs="0" name="BTFBBrukersInntektTilAvkortning" type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="BTFBnettoAkk" type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="BTFBnettoRestAr" type="xs:string">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

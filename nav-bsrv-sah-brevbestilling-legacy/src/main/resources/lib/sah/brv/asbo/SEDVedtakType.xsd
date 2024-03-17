@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+
+	<xsd:complexType name="SEDVedtakType">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="VedtaksDato"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="VirkningFom"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HovedkravlinjeResultat"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AvgjorelseAvslag"
+				type="xsd:boolean">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AvgjorelseInnvilgelse"
+				type="xsd:boolean">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AvgjorelseEndring"
+				type="xsd:boolean">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ResultatKode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PensjonsTypeAlder"
+				type="xsd:boolean">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PensjonsTypeUfore"
+				type="xsd:boolean">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PensjonsTypeGjenlev"
+				type="xsd:boolean">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Totalbelop"
+				type="xsd:int">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Virkningstidspunkt"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

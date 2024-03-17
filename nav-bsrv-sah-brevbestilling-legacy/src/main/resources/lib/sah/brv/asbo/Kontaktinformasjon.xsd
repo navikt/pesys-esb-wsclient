@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+	targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+	<xsd:include schemaLocation="NavKontor.xsd"></xsd:include>
+	<xsd:complexType name="Kontaktinformasjon">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="NavnAvsenderEnhet"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TelefonAvsenderEnhet"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Returadresse"
+				type="bons0:NavKontor">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Postadresse"
+				type="bons0:NavKontor">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Besoksadresse"
+				type="bons0:NavKontor">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

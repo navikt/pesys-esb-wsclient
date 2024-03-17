@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+	<xs:element name="GarantiNordisk27" type="bons0:GarantiNordisk27"/>
+	<xs:complexType name="GarantiNordisk27">
+		<xs:sequence>
+			<xs:element name="GarantiNordisk27Innvilget" type="xs:string"/>
+			<xs:element name="GarantiNordisk27Brutto" type="xs:string"/>
+			<xs:element name="GarantiNordisk27Netto" type="xs:string"/>
+			<xs:element minOccurs="0" name="GarantiNordisk27bruttoPerAr" type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="GarantiNordisk27NettoPerAr" type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="GarantiNordisk27FradragPerAr" type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="GarantiNordisk27Fradrag" type="xs:string">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

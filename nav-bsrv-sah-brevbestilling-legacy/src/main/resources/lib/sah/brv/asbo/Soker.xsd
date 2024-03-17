@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+    
+    <xsd:complexType name="Soker">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="Personnummer" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Fornavn" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Mellomnavn" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="FornavnMellomnavn" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Etternavn" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Fodselsdato" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Kjonn" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="Nasjonalitet" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Adr1" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="Adr2" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="Adr3" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="Adr4" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="BoAdr1" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BoAdr2" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BoAdr3" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BoAdr4" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="KontaktAdr1" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="KontaktAdr2" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="KontaktAdr3" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="KontaktAdr4" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

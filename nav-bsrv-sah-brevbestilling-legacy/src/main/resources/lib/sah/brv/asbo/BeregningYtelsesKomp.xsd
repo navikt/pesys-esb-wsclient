@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:bons1="[null]">
+    <xsd:include schemaLocation="GarantiNordisk27.xsd"/>
+    <xsd:include schemaLocation="UforetrygdOrdiner.xsd"/>
+    <xsd:include schemaLocation="Gjenlevendetillegg.xsd"/>
+    <xsd:include schemaLocation="Ektefelletillegg.xsd"/>
+    <xsd:include schemaLocation="BarnetilleggFelles.xsd"/>
+    <xsd:include schemaLocation="BarnetilleggSerkull.xsd"/>
+    <xsd:complexType name="BeregningYtelsesKomp">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="UforetrygdOrdiner" type="bons0:UforetrygdOrdiner">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Ektefelletillegg" type="bons0:Ektefelletillegg">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="BarnetilleggFelles" type="bons0:BarnetilleggFelles">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BarnetilleggSerkull" type="bons0:BarnetilleggSerkull">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="GarantiNordisk27" type="bons0:GarantiNordisk27">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Gjenlevendetillegg" type="bons0:Gjenlevendetillegg">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

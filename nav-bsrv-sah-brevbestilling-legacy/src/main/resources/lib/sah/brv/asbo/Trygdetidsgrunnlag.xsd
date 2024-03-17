@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+    
+    <xsd:complexType name="Trygdetidsgrunnlag">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="TempTrygdeFomDato" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TempTrygdeTomDato" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PoengIInnAr" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PoengIUtAr" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Grunnlagsrolle" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TrygdetidFom" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TrygdetidTom" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

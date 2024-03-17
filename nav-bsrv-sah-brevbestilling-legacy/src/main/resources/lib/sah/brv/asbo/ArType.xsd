@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+<xs:element name="ArType" type="bons0:ArType"/>
+	<xs:complexType name="ArType">
+		<xs:sequence>
+			<xs:element name="Arstall" type="xs:string"/>
+			<xs:element name="Pensjonspoeng" type="xs:string"/>
+			<xs:element name="PensjonsgivendeInntekt" type="xs:string"/>
+			<xs:element name="GrunnbelopVeiet" type="xs:string"/>
+			<xs:element name="Poengtallstype" type="xs:string"/>
+			<xs:element name="BruktiBeregning" type="xs:string"/>
+			<xs:element name="MaksUforegrad" type="xs:string"/>
+			<xs:element name="Merknadsliste" type="bons0:Merknadsliste"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Merknadsliste">
+		<xs:sequence>
+			<xs:element name="Merknad1" type="xs:string"/>
+			<xs:element name="Merknad2" type="xs:string"/>
+			<xs:element name="Merknad3" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

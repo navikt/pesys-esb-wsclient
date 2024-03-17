@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+	<xs:include schemaLocation="BeregningYtelseKomp.xsd"/>
+    <xs:include schemaLocation="BeregningsInformasjonKapittel19.xsd"/>
+    <xs:include schemaLocation="BeregningsSammendragBruker.xsd"/>
+    <xs:include schemaLocation="BeregningUforeEkstra.xsd"/>
+    <xs:include schemaLocation="BeregningNokkelinfo.xsd"/>
+    <xs:include schemaLocation="BeregningsSammendragAvdod.xsd"/>
+    <xs:include schemaLocation="BeregningsInformasjonAvdod.xsd"/>
+    <xs:include schemaLocation="PeriodeArsakListe.xsd"/>
+    
+	<xs:element name="BeregningPeriode" type="bons0:BeregningPeriode"/>
+	<xs:complexType name="BeregningPeriode">
+		<xs:sequence>
+			<xs:element name="BeregningsID" type="xs:string"/>
+			<xs:element name="VirkdatoFom" type="xs:string"/>
+			<xs:element name="VirkdatoTom" type="xs:string"/>
+			<xs:element name="ResultatKode" type="xs:string"/>
+			<xs:element name="P67beregning" type="xs:string"/>
+			<xs:element name="AFPpensjonsgrad" type="xs:string"/>
+
+			<xs:element name="Grunnbelop" type="xs:string"/>
+
+			<xs:element name="BeregningEktefelleInntektOver2g" type="xs:string"/>
+			<xs:element name="BeregningEktefelleMottarPensjon" type="xs:string"/>
+			<xs:element name="BeregningBenyttetSivilstand" type="xs:string"/>
+			<xs:element name="BeregningBrukerSivilstand" type="xs:string"/>
+			<xs:element name="BeregningSivilstandAnvendt" type="xs:string"/>
+			<xs:element name="BeregnetFremtidigInntekt" type="xs:string"/>
+			<xs:element name="BeregningRedusertPgaInstOpphold" type="xs:string"/>
+			<xs:element name="Uforegrad" type="xs:string"/>
+			<xs:element name="Yug" type="xs:string"/>
+			<xs:element name="inntektBruktiAvkorting" type="xs:string"/>
+			<xs:element name="Fribelop" type="xs:string"/>
+			<xs:element name="Friintekt" type="xs:string"/>
+			<xs:element name="Brutto" type="xs:string"/>
+			<xs:element name="Netto" type="xs:string"/>
+			<xs:element name="BeregningYtelsesKomp" type="bons0:BeregningYtelseKomp"/>
+			<xs:element minOccurs="0" name="BelopOkt" type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="BelopRedusert" type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="Hjemmelsendring" type="xs:string">
+			</xs:element>
+			<xs:element name="BeregningNokkelinfo" type="bons0:BeregningNokkelInfo"/>
+			<xs:element name="BeregningsSammendragBruker" type="bons0:BeregningsSammendragBruker"/>
+			<xs:element name="BeregningsSammendragAvdod" type="bons0:BeregningsSammendragAvdod"/>
+			<xs:element minOccurs="0" name="TotalPensjon" type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="TotalPensjonBrutto" type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="BeregningsInformasjonKapittel19" type="bons0:BeregningsInformasjonKapittel19">
+			</xs:element>
+			<xs:element minOccurs="0" name="BeregningsInforamsjonAvdod" type="bons0:BeregningsInformasjonAvdod">
+			</xs:element>
+			<xs:element minOccurs="0" name="AvdodTTBest" type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="AnvendtGjenlevenderett" type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="BeregningUforeEkstra" type="bons0:BeregningUforeEkstra">
+			</xs:element>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="PeriodeArsakListe" type="bons0:PeriodeArsakListe">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

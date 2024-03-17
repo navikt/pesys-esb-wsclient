@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+    
+    <xsd:complexType name="SEDKravhodeType">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="OnsketVirkningsdato" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AvdodFnr" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="KravGjelder" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="KravMottattDato" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

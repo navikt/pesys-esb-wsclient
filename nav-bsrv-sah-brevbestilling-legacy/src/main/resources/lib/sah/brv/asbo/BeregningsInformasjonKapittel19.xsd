@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+    <xsd:include schemaLocation="SPTFORFleksibeltUttak.xsd"/>
+    <xsd:include schemaLocation="BelopsendringListe.xsd"/>
+	<xsd:include schemaLocation="YPT.xsd"/>
+	<xsd:include schemaLocation="SPTFORFleksibeltUttak.xsd"/>
+	<xsd:complexType name="BeregningsInformasjonKapittel19">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="BeregningsInformasjonId" type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="Flyktning" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="GrunnpensjonAvkortet" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="OpptjentTrygdetid" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AnvendtTrygdetid" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ttBeregnetForGrunnlagsrolle" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BeregningsMetode" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ResultatType" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="GrunnlagsrolleBeregning" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="MottarMinstePensjonsniva" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Uttaksgrad" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Yug" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="Sivilstand" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EPSOver2G" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EPSMottarPensjon" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Grunnbelop" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BasisGP" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BasisTP" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BasisPT" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ForholdstallUttak" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Forholdstall67" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ForholdstallMPNUttak" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ForholdstallMPN67" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="MPNUttakFullTrygdetid" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="MPNUttakAnvTrygdetid" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="GPRestpensjon" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="GP" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="TPRestpensjon" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TP" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="PTRestpensjon" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PT" type="xsd:string"/>
+
+			<xsd:element minOccurs="0" name="MPN" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="MNTPP" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="VirkdatoFom" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="VirkdatoTom" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="UngUfor" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="UngUforAnvendt" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="YrkesskadeAnvendt" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EnsligPensjonInstOpph" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TotalPensjonRedusert" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="BelopsendringListe" type="bons0:BelopsendringListe">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ETOpphort" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BTOpphort" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BelopOkt" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BelopRedusert" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Hjemmelsendring" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="SPT" type="bons0:SPTFORFleksibeltUttak">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="YPT" type="bons0:YPT"/>
+
+
+
+
+			<xsd:element minOccurs="0" name="Forholdstall" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

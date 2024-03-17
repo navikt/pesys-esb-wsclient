@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+	<xs:element name="FamilieTillegg" type="bons0:FamilieTillegg"/>
+	<xs:complexType name="FamilieTillegg">
+		<xs:sequence>
+			<xs:element name="FamilieTilleggInnvilget" type="xs:string"/>
+			<xs:element name="FamilieTilleggBrutto" type="xs:string"/>
+			<xs:element name="FamilieTilleggNetto" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

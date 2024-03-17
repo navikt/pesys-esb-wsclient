@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+	<xsd:element name="Barn" type="bons0:Barn"/>
+	<xsd:complexType name="Barn">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="Personnummer" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Fornavn" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Mellomnavn" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="FornavnMellomnavn" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Etternavn" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Fodselsdato" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Kjonn" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="Nasjonalitet" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Dodsdato" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="RelasjonsKode" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+
+
+    <xs:include schemaLocation="FasteUtgifter.xsd"/>
+    <xs:include schemaLocation="Inntektspensjon.xsd"/>
+    <xs:include schemaLocation="Krig.xsd"/>
+    <xs:include schemaLocation="Garantipensjon.xsd"/>
+    <xs:include schemaLocation="Grunnpensjon.xsd"/>
+    <xs:include schemaLocation="Garantitillegg.xsd"/>
+    <xs:include schemaLocation="Sertillegg.xsd"/>
+    <xs:include schemaLocation="Ektefelletillegg.xsd"/>
+    <xs:include schemaLocation="Paragraf851Tillegg.xsd"/>
+    <xs:include schemaLocation="PensjonsTillegg.xsd"/>
+    <xs:include schemaLocation="HjelpeloshetsBidrag.xsd"/>
+    <xs:include schemaLocation="Skjermingstillegg.xsd"/>
+    <xs:include schemaLocation="GarantiNordisk27.xsd"/>
+    <xs:include schemaLocation="MinstenivatilleggPensjonistpar.xsd"/>
+    <xs:include schemaLocation="Ventetillegg.xsd"/>
+    <xs:include schemaLocation="Familietillegg.xsd"/>
+    <xs:include schemaLocation="Mendel.xsd"/>
+    <xs:include schemaLocation="GarantiEOS50.xsd"/>
+    <xs:include schemaLocation="MinstenivatilleggIndividuelt.xsd"/>
+    <xs:include schemaLocation="Tilleggspensjon.xsd"/>
+    <xs:include schemaLocation="AFPLivsvarig.xsd"/>
+    <xs:include schemaLocation="AFPTillegg.xsd"/>
+    <xs:include schemaLocation="TilleggTilHjelpIHuset.xsd"/>
+    <xs:include schemaLocation="BarnetilleggFelles.xsd"/>
+    <xs:include schemaLocation="BarnetilleggSerkull.xsd"/>
+    <xs:include schemaLocation="AFPKronetillegg.xsd"/>
+    <xs:include schemaLocation="AFPKompensasjonstillegg.xsd"/>
+    <xs:element name="BeregningYtelseKomp" type="bons0:BeregningYtelseKomp"/>
+
+	<xs:complexType name="BeregningYtelseKomp">
+		<xs:sequence>
+			<xs:element name="Grunnpensjon" type="bons0:Grunnpensjon"/>
+			<xs:element name="Tilleggspensjon" type="bons0:Tilleggspensjon"/>
+			<xs:element name="Sertillegg" type="bons0:Sertillegg"/>
+			<xs:element name="Ektefelletillegg" type="bons0:Ektefelletillegg"/>
+			<xs:element name="BarnetilleggFelles" type="bons0:BarnetilleggFelles"/>
+			<xs:element name="BarnetilleggSerkull" type="bons0:BarnetilleggSerkull"/>
+			<xs:element name="AFPtillegg" type="bons0:AFPtillegg"/>
+			<xs:element name="FamilieTillegg" type="bons0:FamilieTillegg"/>
+			<xs:element name="Ventetillegg" type="bons0:Ventetillegg"/>
+			<xs:element name="FasteUtgifter" type="bons0:FasteUtgifter"/>
+			<xs:element name="Paragraf851Tillegg" type="bons0:Paragraf851Tillegg"/>
+			<xs:element name="Krig" type="bons0:Krig"/>
+			<xs:element name="TilleggTilHjelpIHuset" type="bons0:TilleggTilHjelpIHuset"/>
+			<xs:element name="HjelpeloshetsBidrag" type="bons0:HjelpeloshetsBidrag"/>
+			<xs:element name="GarantiEOS50" type="bons0:GarantiEOS50"/>
+			<xs:element name="GarantiNordisk27" type="bons0:GarantiNordisk27"/>
+			<xs:element name="Mendel" type="bons0:Mendel"/>
+			<xs:element minOccurs="0" name="PensjonsTillegg" type="bons0:PensjonsTillegg">
+			</xs:element>
+			<xs:element minOccurs="0" name="MinstenivatilleggPensjonistpar" type="bons0:MinstenivatilleggPensjonistpar">
+			</xs:element>
+			<xs:element minOccurs="0" name="MinstenivatilleggIndividuelt" type="bons0:MinstenivatilleggIndividuelt">
+			</xs:element>
+			<xs:element minOccurs="0" name="AFPLivsvarig" type="bons0:AFPLivsvarig">
+			</xs:element>
+			<xs:element minOccurs="0" name="AFPKronetillegg" type="bons0:AFPKronetillegg">
+			</xs:element>
+			<xs:element minOccurs="0" name="AFPKompensasjonstillegg" type="bons0:AFPKompensasjonstillegg">
+			</xs:element>
+			<xs:element minOccurs="0" name="Skjermingstillegg" type="bons0:Skjermingstillegg">
+			</xs:element>
+			<xs:element minOccurs="0" name="Inntektspensjon" type="bons0:Inntektspensjon">
+			</xs:element>
+			<xs:element minOccurs="0" name="Garantipensjon" type="bons0:Garantipensjon">
+			</xs:element>
+			<xs:element minOccurs="0" name="Garantitillegg" type="bons0:Garantitillegg">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

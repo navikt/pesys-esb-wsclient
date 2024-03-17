@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+	targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+	<xsd:include schemaLocation="GjenlevendetilleggYK.xsd"></xsd:include>
+	<xsd:include schemaLocation="GarantiNordisk27YK.xsd"></xsd:include>
+	<xsd:include schemaLocation="BarnetilleggSerkullYK.xsd"></xsd:include>
+	<xsd:include schemaLocation="BarnetilleggFellesYK.xsd"></xsd:include>
+	<xsd:include schemaLocation="EktefelletilleggYK.xsd"></xsd:include>
+	<xsd:include schemaLocation="UforetrygdOrdinerYK.xsd"></xsd:include>
+	<xsd:complexType name="Belopsendring">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="UforetrygdOrdinerYK"
+				type="bons0:UforetrygdOrdinerYK">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EktefelletilleggYK"
+				type="bons0:EktefelletilleggYK">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BarnetilleggFellesYK"
+				type="bons0:BarnetilleggFellesYK">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BarnetilleggSerkullYK"
+				type="bons0:BarnetilleggSerkullYK">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="GarantiNordisk27YK"
+				type="bons0:GarantiNordisk27YK">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="GjenlevendetilleggYK"
+				type="bons0:GjenlevendetilleggYK">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

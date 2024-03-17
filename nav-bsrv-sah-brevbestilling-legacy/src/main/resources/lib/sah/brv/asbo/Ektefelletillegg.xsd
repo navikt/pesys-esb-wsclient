@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+    <xs:element name="Ektefelletillegg" type="bons0:Ektefelletillegg"/>
+	<xs:complexType name="Ektefelletillegg">
+		<xs:sequence>
+			<xs:element name="ETinnvilget" type="xs:string"/>
+
+			<xs:element name="ETbrutto" type="xs:string"/>
+			<xs:element name="ETnetto" type="xs:string"/>
+
+			<xs:element minOccurs="0" name="ETbruttoPerAr" type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="ETnettoPerAr" type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="ETfradragPerAr" type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="ETfradrag" type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="ETnettoAkk" type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="ETnettoRestAr" type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="ETfribelop" type="xs:string">
+			</xs:element>
+			<xs:element minOccurs="0" name="ETInntektBruktiAvkortning" type="xs:string">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

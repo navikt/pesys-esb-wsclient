@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+	<xs:include schemaLocation="Poengrekke.xsd"/>
+	<xs:element name="SPT" type="bons0:SPT"/>
+	<xs:complexType name="SPT">
+		<xs:sequence>
+			<xs:element name="SluttpoengtallUtenOk" type="xs:string"/>
+			<xs:element name="SluttpoengtallUtenOkEOS" type="xs:string"/>
+			<xs:element name="SluttpoengtallUtenOkNordisk" type="xs:string"/>
+			<xs:element minOccurs="0" name="PoengrekkePopulert" type="xs:string">
+			</xs:element>
+			<xs:element name="Poengrekke" type="bons0:Poengrekke"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+    <xsd:include schemaLocation="OpptjeningUTListe.xsd"/>
+    <xsd:complexType name="BeregningsgrunnlagOrdiner">
+		<xsd:sequence>
+
+			<xsd:element minOccurs="0" name="BeregningsgrunnlagOrdinerArsbelop" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AntallArInntektIAvtaleland" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AntallArOver1G" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="OpptjeningUTListe" type="bons0:OpptjeningUTListe">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+    
+    <xs:element name="Sertillegg" type="bons0:Sertillegg"/>
+<xs:complexType name="Sertillegg">
+		<xs:sequence>
+			<xs:element name="STinnvilget" type="xs:string"/>
+			<xs:element name="STbrutto" type="xs:string"/>
+			<xs:element name="STnetto" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

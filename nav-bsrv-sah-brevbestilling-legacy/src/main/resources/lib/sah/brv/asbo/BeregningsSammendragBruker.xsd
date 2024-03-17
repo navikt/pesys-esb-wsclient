@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+	<xs:element name="BeregningsSammendragBruker" type="bons0:BeregningsSammendragBruker"/>
+	<xs:complexType name="BeregningsSammendragBruker">
+		<xs:sequence>
+			<xs:element name="BrukerFPI" type="xs:string"/>
+			<xs:element name="BrukerFlyktning" type="xs:string"/>
+			<xs:element name="BrukerSkadetidspunktYrkesskade" type="xs:string"/>
+			<xs:element name="BrukerAntattInntektVedSkadetidspunkt" type="xs:string"/>
+			<xs:element name="BrukerUngUforFodtEtter1940" type="xs:string"/>
+			<xs:element name="BrukerUngUforFodtFor1941" type="xs:string"/>
+			<xs:element name="BrukerSPT" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

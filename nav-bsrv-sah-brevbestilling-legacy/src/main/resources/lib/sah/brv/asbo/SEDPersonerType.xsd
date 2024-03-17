@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+
+    <xsd:include schemaLocation="Avdod.xsd"/>
+    <xsd:include schemaLocation="BarnListeType.xsd"/>
+    <xsd:include schemaLocation="AvdodesBarn.xsd"/>
+    <xsd:include schemaLocation="EPS.xsd"/>
+    <xsd:include schemaLocation="RelasjonerListe.xsd"/>
+    <xsd:include schemaLocation="Soker.xsd"/>
+    <xsd:complexType name="SEDPersonerType">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="Soker" type="bons0:Soker"/>
+
+
+			<xsd:element minOccurs="0" name="Avdod" type="bons0:Avdod"/>
+			<xsd:element minOccurs="0" name="EPS" type="bons0:EPS"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="BarnListe" type="bons0:BarnListe">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AvdodesBarnListe" type="bons0:AvdodesBarnListe">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="RelasjonerListe" type="bons0:RelasjonerListe">
+			</xsd:element>
+
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+	<xsd:complexType name="TrygdetidsgrunnlagKap20">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="TempTrygdeFomDatoKap20" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TempTrygdeTomDatoKap20" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PoengIInnArKap20" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PoengIUtArKap20" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TrygdetidKap20Land" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TrygdetidFomKap20" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TrygdetidTomKap20" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

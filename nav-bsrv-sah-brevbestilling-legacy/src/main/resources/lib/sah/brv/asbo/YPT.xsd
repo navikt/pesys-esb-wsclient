@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+    <xs:include schemaLocation="PoengrekkeYPT.xsd"/>
+    <xs:element name="YPT" type="bons0:YPT"/>
+<xs:complexType name="YPT">
+		<xs:sequence>
+			<xs:element name="SluttpoengtallYrke" type="xs:string"/>
+			<xs:element name="SluttpoengtallYrkeEOS" type="xs:string"/>
+			<xs:element name="SluttpoengtallYrkeNordisk" type="xs:string"/>
+			<xs:element minOccurs="0" name="Poengrekke" type="bons0:PoengrekkeYPT"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+    
+    <xsd:include schemaLocation="ForutgaendeMedlemskap.xsd"/>
+    <xsd:include schemaLocation="FortsattMedlemskap.xsd"/>
+    <xsd:include schemaLocation="RettTilEksportEtterTrygdeavtaler.xsd"/>
+    <xsd:include schemaLocation="MedlemskapForUTEtterTrygdeavtaler.xsd"/>
+    <xsd:complexType name="Vilkar">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="YrkesskadeResultat" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="YrkesskadeBegrunnelse" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="UngUforResultat" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="UngUforBegrunnelse" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AlderResultat" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AlderBegrunnelse" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="FortsattMedlemsskapResultat" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="FortsattMedlemsskapBegrunnelse" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HensiktsmessigBehandlingResultat" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HensiktsmessigBehandlingBegrunnelse" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="NedsattInntektsevneResultat" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="NedsattInntektsevneBegrunnelse" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="NedsattInntektsevneMedMinstHalvpartenResultat" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="NedsattInntektsevneMedMinstHalvpartenBegrunnelse" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ForutgaendeMedlemskapResultat" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ForutgaendeMedlemskapBegrunnelse" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HensiktsmessigArbeidsrettedeTiltakResultat" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HensiktsmessigArbeidsrettedeTiltakBegrunnelse" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="SykdomSkadeLyteResultat" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="SykdomSkadeLyteBegrunnelse" type="xsd:string">
+			</xsd:element>
+
+
+			<xsd:element minOccurs="0" name="MedlemskapForUTEtterTrygdeavtalerResultat" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="RettTilEksportEtterTrygdeavtalerResultat" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="FortsattMedlemskap" type="bons0:FortsattMedlemskap">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ForutgaendeMedlemskap" type="bons0:ForutgaendeMedlemskap">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="MedlemskapForUTEtterTrygdeavtaler" type="bons0:MedlemskapForUTEtterTrygdeavtaler">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="RettTilEksportEtterTrygdeavtaler" type="bons0:RettTilEksportEtterTrygdeavtaler">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

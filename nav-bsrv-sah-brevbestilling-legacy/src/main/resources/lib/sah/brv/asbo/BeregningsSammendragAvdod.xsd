@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+<xs:element name="BeregningsSammendragAvdod" type="bons0:BeregningsSammendragAvdod"/>
+<xs:complexType name="BeregningsSammendragAvdod">
+		<xs:sequence>
+			<xs:element name="AvdodSPT" type="xs:string"/>
+			<xs:element name="AvdodFlyktning" type="xs:string"/>
+			<xs:element name="AvdodDodsdato" type="xs:string"/>
+			<xs:element name="AvdodDodsfallSkyldesYrkesskade" type="xs:string"/>
+			<xs:element name="AvdodSkadetidspunktYrkesskade" type="xs:string"/>
+			<xs:element name="AvdodAntattInntektVedSkadetidspunkt" type="xs:string"/>
+			<xs:element name="AvdodUngUforFodtEtter1940" type="xs:string"/>
+			<xs:element name="AvdodUngUforFodtFor1941" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

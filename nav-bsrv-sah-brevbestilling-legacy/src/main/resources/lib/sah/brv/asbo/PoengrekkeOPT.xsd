@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+    <xs:include schemaLocation="Poengtall.xsd"/>
+    <xs:element name="PoengrekkeOPT" type="bons0:PoengrekkeOPT"/>
+
+<xs:complexType name="PoengrekkeOPT">
+		<xs:sequence>
+			<xs:element name="PoengarMedOk" type="xs:string"/>
+			<xs:element name="PoengarMedOkf92" type="xs:string"/>
+			<xs:element name="PoengarMedOke91" type="xs:string"/>
+			<xs:element name="PoengarMedOkf92EOS" type="xs:string"/>
+			<xs:element name="PoengarMedOke91EOS" type="xs:string"/>
+			<xs:element name="PoengarMedOkTpi" type="xs:string"/>
+			<xs:element name="PoengarMedOkFaktiskNorge" type="xs:string"/> 
+			<xs:element name="PoengarMedOkFaktiskEOS" type="xs:string"/>
+			<xs:element name="PoengarMedOkTeoretiskEOS" type="xs:string"/>
+			<xs:element name="PoengarMedOkfaktiskeNorden" type="xs:string"/>
+			<xs:element name="Poengtall" type="bons0:Poengtall"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

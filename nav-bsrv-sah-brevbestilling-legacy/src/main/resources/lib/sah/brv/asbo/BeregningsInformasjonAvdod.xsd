@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+	<xsd:include schemaLocation="YPT.xsd"/>
+	<xsd:include schemaLocation="OPT.xsd"/>
+	<xsd:include schemaLocation="SPTFORBeregingsInformasjonAvdod.xsd"/>
+	<xsd:complexType name="BeregningsInformasjonAvdod">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="BeregningsInformasjonId" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Flyktning" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="GrunnpensjonAvkortet" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="OpptjentTrygdetid" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AnvendtTrygdetid" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BeregningsMetode" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ResultatType" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="GrunnlagsrolleBeregning" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="VirkdatoFom" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="VirkdatoTom" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="UngUfor" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="UngUforAnvendt" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="YrkesskadeAnvendt" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BelopOkt" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BelopRedusert" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Hjemmelsendring" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="SPT" type="bons0:SPTFORBeregingsInformasjonAvdod">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="OPT" type="bons0:OPT"/>
+			<xsd:element minOccurs="0" name="YPT" type="bons0:YPT"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

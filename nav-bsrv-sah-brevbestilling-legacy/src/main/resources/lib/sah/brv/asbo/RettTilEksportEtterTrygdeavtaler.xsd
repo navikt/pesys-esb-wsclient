@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+	targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="RettTilEksportEtterTrygdeavtaler">
+		<xsd:sequence>
+			<xsd:element minOccurs="0"
+				name="EksportrettEtterEOSForordning" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0"
+				name="EksportrettEtterTrygdeavtalerEOS" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0"
+				name="EksportrettEtterAndreTrygdeavtaler" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

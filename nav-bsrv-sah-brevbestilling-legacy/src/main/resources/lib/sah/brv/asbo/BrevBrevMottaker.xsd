@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+	<xs:element name="BrevMottaker" type="bons0:BrevBrevMottakerType"/>
+	<xs:complexType name="BrevBrevMottakerType">
+		<xs:sequence>
+
+			<xs:element name="BMfnr_tssid" type="xs:string"/>
+			<xs:element name="BMNavn" type="xs:string"/>
+			<xs:element name="BMpostnr" type="xs:string"/>
+			<xs:element name="BMadr1" type="xs:string"/>
+			<xs:element name="BMadr2" type="xs:string"/>
+			<xs:element name="BMadr3" type="xs:string"/>
+			<xs:element name="BMadr4" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="GjenlevendetilleggYK">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="BelopGammelGT" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="BelopNyGT" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

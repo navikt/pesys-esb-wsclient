@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+    <xs:element name="AFPEOGrunnlag" type="bons0:AFPEOGrunnlag"/>
+	<xs:complexType name="AFPEOGrunnlag">
+		<xs:sequence>
+			<xs:element name="AFP_Uttaksdato" type="xs:string"/>
+			<xs:element name="AFP_opphorsdato" type="xs:string"/>
+			<xs:element name="PGI" type="xs:string"/>
+			<xs:element name="IFUregistrert" type="xs:string"/>
+			<xs:element name="IEOregistrert" type="xs:string"/>
+			<xs:element name="IFU" type="xs:string"/>
+			<xs:element name="IEO" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

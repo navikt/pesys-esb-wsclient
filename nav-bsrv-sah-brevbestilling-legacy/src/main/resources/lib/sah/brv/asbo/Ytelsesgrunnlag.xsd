@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo" xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
+	<xsd:include schemaLocation="BeregningsgrunnlagOrdiner.xsd"/>
+	<xsd:complexType name="Ytelsesgrunnlag">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="Faktor" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Formelkode" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Arsbelop" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BeregningsgrunnlagYrkesskadeBest" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BeregningsgrunnlagYrkesskadeArsbelop" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="InntektVedSkadetidspunktet" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BeregningsgrunnlagOrdinar" type="bons0:BeregningsgrunnlagOrdiner">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>
