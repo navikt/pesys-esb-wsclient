@@ -33,7 +33,7 @@
 	<xs:complexType name="RtvBrevTypeInternal">
 		<xs:sequence>
 			<xs:element name="brev" type="bons0:BrevBrevType" />
-			<xs:element minOccurs="0" name="BrevAny" type="BrevAny" />
+			<xs:element minOccurs="0" name="BrevAny" type="bons0:BrevAny" />
 
 		</xs:sequence>
 		<xs:attribute name="malpakke" type="xs:string" />
