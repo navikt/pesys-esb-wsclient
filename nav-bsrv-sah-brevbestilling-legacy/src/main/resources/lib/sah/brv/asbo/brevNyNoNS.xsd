@@ -2,7 +2,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	targetNamespace="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo"
 	xmlns:bons0="http://nav-lib-sah-brv/no/nav/lib/sah/brv/asbo">
-	<xs:import schemaLocation="BrevAny.xsd" />
+	<xs:include schemaLocation="BrevAny.xsd" />
 	<xs:include schemaLocation="TTUtlandTrygdeAvtale.xsd" />
 	<xs:include schemaLocation="TrygdetidsgrunnlagListeNor.xsd" />
 	<xs:include schemaLocation="BeregningPeriode.xsd" />
