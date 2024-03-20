@@ -169,7 +169,7 @@
             <properties>
                 <classifier>javax</classifier>
                 <cxf-codegen-plugin.version>3.5.4</cxf-codegen-plugin.version>
-                <cxf-xjc-boolean.version>3.2.0</cxf-xjc-boolean.version>
+                <cxf-xjc-boolean.version>3.3.3</cxf-xjc-boolean.version>
                 <maven.compiler.target>1.8</maven.compiler.target>
                 <maven.compiler.source>1.8</maven.compiler.source>
                 <required-java-version>[1.8,1.9)</required-java-version>
