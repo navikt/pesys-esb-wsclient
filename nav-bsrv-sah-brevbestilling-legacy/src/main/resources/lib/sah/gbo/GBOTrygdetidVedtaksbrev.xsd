@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://nav-lib-sah/no/nav/lib/sah/gbo"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:bons0="http://nav-lib-sah/no/nav/lib/sah/gbo">
+	<xsd:include schemaLocation="GBOTTUtlandTrygdeAvtaleListe.xsd"></xsd:include>
+	<xsd:complexType name="GBOTrygdetidVedtaksbrev">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="FaTTNorge"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="FramtidigTTNorsk"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="RedusertFramtidigTrygdetid"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="FaTTEOS"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TTTellerEOS"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TTNevnerEOS"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="FramtidigTTEOS"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TTAnvendtEOS"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TTNordisk"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TTTellerNordisk"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TTNevnerNordisk"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="FaTT_A10_netto"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TTUtlandTrygdeAvtaleListe"
+				type="bons0:GBOTTUtlandTrygdeAvtaleListe">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

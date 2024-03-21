@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://nav-lib-sah/no/nav/lib/sah/gbo"
+	xmlns:bons0="http://nav-lib-sah/no/nav/lib/sah/gbo"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:include schemaLocation="GBOYtelsesgrunnlag.xsd" />
+	<xsd:include schemaLocation="GBOMinsteytelse.xsd" />
+	<xsd:include schemaLocation="GBOAvkortningsInformasjon.xsd" />
+	<xsd:complexType name="GBOUforetrygdOrdinar">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="BruttoPerAr"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Brutto"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="NettoPerAr"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Netto" type="xsd:string" />
+			<xsd:element minOccurs="0" name="FradragPerAr"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Fradrag"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="NettoAkk"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="NettoRestAr"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="YtelsesgrunnlagBest"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AvkortningsInformasjon"
+				type="bons0:GBOAvkortningsInformasjon">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Minsteytelse"
+				type="bons0:GBOMinsteytelse">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Ytelsesgrunnlag"
+				type="bons0:GBOYtelsesgrunnlag">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

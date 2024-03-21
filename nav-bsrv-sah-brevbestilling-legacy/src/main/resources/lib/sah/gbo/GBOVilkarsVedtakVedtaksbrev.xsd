@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://nav-lib-sah/no/nav/lib/sah/gbo"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:bons0="http://nav-lib-sah/no/nav/lib/sah/gbo">
+	<xsd:include schemaLocation="GBOVilkar.xsd"></xsd:include>
+	<xsd:include schemaLocation="GBOBeregningsVilkar.xsd"></xsd:include>
+	<xsd:complexType name="GBOVilkarsVedtakVedtaksbrev">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="VilkarsvedtakID"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="VilkarVirkningFom"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="VilkarVirkningTom"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="VilkarKravlinjeKode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="VilkarVedtakResultat"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="VilkarGjelderPerson"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="VilkarAnvendtVurdering"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Motregning"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ViderefortilUT"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Begrunnelse"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BeregningsVilkar"
+				type="bons0:GBOBeregningsVilkar">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Vilkar"
+				type="bons0:GBOVilkar">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

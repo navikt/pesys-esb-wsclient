@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://nav-lib-sah/no/nav/lib/sah/gbo"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="GBOGjenlevendetillegg">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="GTinnvilget"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="GTbrutto"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="GTnetto"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="GTbruttoPerAr"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="GTnettoPerAr"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="GTfradragPerAr"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="GTfradrag"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="GTnettoAkk"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="GTnettoRestAr"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

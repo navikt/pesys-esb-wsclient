@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons1="http://nav-lib-pen/no/nav/lib/pen/gbo" targetNamespace="http://nav-lib-sah/no/nav/lib/sah/gbo">
+    <xsd:import namespace="http://nav-lib-pen/no/nav/lib/pen/gbo" schemaLocation="../../pen/gbo/GBOKravhode.xsd"/>
+    <xsd:complexType name="GBOKravData">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="kravhode" type="bons1:GBOKravhode"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" name="kravlinje" type="bons1:GBOKravlinje"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://nav-lib-sah/no/nav/lib/sah/gbo"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:bons0="http://nav-lib-sah/no/nav/lib/sah/gbo">
+	<xsd:include schemaLocation="GBOBeregningsDataVedtaksbrev.xsd"></xsd:include>
+	<xsd:include schemaLocation="GBOKravhodeVedtaksbrev.xsd"></xsd:include>
+	<xsd:include schemaLocation="GBOVilkarsVedtakListVedtaksbrev.xsd"></xsd:include>
+	<xsd:complexType name="GBOVedtaksdataVedtaksbrev">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="VedtaksID"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="VirkningFom"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="VirkningTom"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Sakskode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Vedtakstype"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="VedtakFattetDato"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BehandlingType"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="VedtakGjelderPerson"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AnsvarligSaksbehandler"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="GjenlevendeKravAvslatt"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ForsteUforetidspunkt"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Reaktiviseringsforskriften"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Faktoromregnet"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="VilkarsVedtakList"
+				type="bons0:GBOVilkarsVedtakListVedtaksbrev">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Kravhode"
+				type="bons0:GBOKravhodeVedtaksbrev">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BeregningsData"
+				type="bons0:GBOBeregningsDataVedtaksbrev">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

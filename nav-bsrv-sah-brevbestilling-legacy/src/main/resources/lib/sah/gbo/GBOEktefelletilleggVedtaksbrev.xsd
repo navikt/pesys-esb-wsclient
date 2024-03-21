@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://nav-lib-sah/no/nav/lib/sah/gbo"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="GBOEktefelletilleggVedtaksbrev">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="ETinnvilget"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ETbrutto"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ETnetto"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ETbruttoPerAr"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ETnettoPerAr"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ETfradragPerAr"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ETfradrag"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ETnettoAkk"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ETnettoRestAr"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

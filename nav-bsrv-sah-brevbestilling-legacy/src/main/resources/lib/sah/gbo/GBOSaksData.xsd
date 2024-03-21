@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://nav-lib-sah/no/nav/lib/sah/gbo"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:complexType name="GBOSaksData">
+		<xsd:sequence>
+			<xsd:element minOccurs="1" name="saksreferanse"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="1" name="Sakstype"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="1" name="Sakstatus"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="1" name="SakAPogUP"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="1" name="SakAPStatus"
+				type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

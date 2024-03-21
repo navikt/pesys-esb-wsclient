@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://nav-lib-sah/no/nav/lib/sah/gbo"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:bons0="http://nav-lib-sah/no/nav/lib/sah/gbo">
+	<xsd:include
+		schemaLocation="GBOTrygdetidsgrunnlagListeBilateral.xsd">
+	</xsd:include>
+	<xsd:include schemaLocation="GBOTrygdetidsgrunnlagListeEOS.xsd"></xsd:include>
+	<xsd:include schemaLocation="GBOTrygdetidsgrunnlagListeNor.xsd"></xsd:include>
+	<xsd:include schemaLocation="GBOTrygdeavtaler.xsd"></xsd:include>
+	<xsd:include schemaLocation="GBOPersondetaljer.xsd"></xsd:include>
+	<xsd:complexType name="GBOPersongrunnlagliste">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="Fodselsnummer"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PersonBostedsland"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Overkomp"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AntallBarn"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="UforehistorikkGarantigrad"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BrukerFlyktning"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Persondetaljer"
+				type="bons0:GBOPersondetaljer">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Trygdeavtaler"
+				type="bons0:GBOTrygdeavtaler">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TrygdetidsgrunnlagListeNor"
+				type="bons0:GBOTrygdetidsgrunnlagListeNor">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TrygdetidsgrunnlagListeEOS"
+				type="bons0:GBOTrygdetidsgrunnlagListeEOS">
+			</xsd:element>
+			<xsd:element minOccurs="0"
+				name="TrygdetidsgrunnlagListeBilateral"
+				type="bons0:GBOTrygdetidsgrunnlagListeBilateral">
+			</xsd:element>
+			<xsd:element minOccurs="0"
+				name="TrygdetidsgrunnlagListeNorPopulert" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0"
+				name="TrygdetidsgrunnlagListeEOSPopulert" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0"
+				name="TrygdetidsgrunnlagListeBilateralPopulert" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>
