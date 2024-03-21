@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="HentEnhetId" targetNamespace="http://nav-bsrv-sah-sendstandardbrev/no/nav/inf/HentEnhetId" xmlns:bons1="http://nav-lib-sah/no/nav/lib/sah/fault" xmlns:tns="http://nav-bsrv-sah-sendstandardbrev/no/nav/inf/HentEnhetId" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://nav-bsrv-sah-sendstandardbrev/no/nav/inf/HentEnhetId">
+            <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../lib/sah/fault/FaultManglerObligatoriskOutput.xsd"/>
+            <xsd:element name="hentEnhetId">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="hentEnhetIdRequest" nillable="true" type="xsd:string"/>
+                    </xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="hentEnhetIdResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="navEnhetId" nillable="true" type="xsd:string"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+            <xsd:element name="hentEnhetIdFault1_faultManglerObligatoriskOutput" nillable="true" type="bons1:FaultManglerObligatoriskOutput"/>
+        </xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="hentEnhetIdRequestMsg">
+		<wsdl:part element="tns:hentEnhetId" name="hentEnhetIdParameters"/>
+	</wsdl:message>
+	<wsdl:message name="hentEnhetIdResponseMsg">
+		<wsdl:part element="tns:hentEnhetIdResponse" name="hentEnhetIdResult"/>
+	</wsdl:message>
+    <wsdl:message name="hentEnhetId_faultManglerObligatoriskOutputMsg">
+    <wsdl:part element="tns:hentEnhetIdFault1_faultManglerObligatoriskOutput" name="faultManglerObligatoriskOutput"/>
+  </wsdl:message>
+    <wsdl:portType name="HentEnhetId">
+		<wsdl:operation name="hentEnhetId">
+            <wsdl:input message="tns:hentEnhetIdRequestMsg" name="hentEnhetIdRequest"/>
+            <wsdl:output message="tns:hentEnhetIdResponseMsg" name="hentEnhetIdResponse"/>
+            <wsdl:fault message="tns:hentEnhetId_faultManglerObligatoriskOutputMsg" name="faultManglerObligatoriskOutput"/>
+        </wsdl:operation>
+	</wsdl:portType>
+</wsdl:definitions>
