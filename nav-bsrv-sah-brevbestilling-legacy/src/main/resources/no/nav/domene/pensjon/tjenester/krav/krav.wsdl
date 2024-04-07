@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="krav" targetNamespace="http://nav.no/domene/pensjon/tjenester/krav/v1" xmlns:tns="http://nav.no/domene/pensjon/tjenester/krav/v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://nav.no/domene/pensjon/tjenester/krav/v1" xmlns:feil="http://nav.no/domene/pensjon/tjenester/krav/feil/v1" xmlns:meldinger="http://nav.no/domene/pensjon/tjenester/krav/meldinger/v1">
+      <xsd:import namespace="http://nav.no/domene/pensjon/tjenester/krav/feil/v1" schemaLocation="feil/feil.xsd"/>
+      <xsd:import namespace="http://nav.no/domene/pensjon/tjenester/krav/meldinger/v1" schemaLocation="meldinger/meldinger.xsd"/>
+      <xsd:element name="overforTilbakekrevingskravTilManuellBehandling">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:OverforTilbakekrevingskravTilManuellBehandlingRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="overforTilbakekrevingskravTilManuellBehandlingResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="plassholder" type="xsd:anyType"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentKontrollpunktListe">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:HentKontrollpunktListeRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentKontrollpunktListeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="response" type="meldinger:HentKontrollpunktListeResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="opprettKontrollpunkt">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:OpprettKontrollpunktRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="opprettKontrollpunktResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="response" type="meldinger:OpprettKontrollpunktResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="henleggKrav">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:HenleggKravRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="henleggKravResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="plassholder" type="xsd:anyType"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentKravForRelatertPerson">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:HentKravForRelatertPersonRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentKravForRelatertPersonResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="response" type="meldinger:HentKravForRelatertPersonResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="overforKravTilManuellBehandling">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:OverforKravTilManuellBehandlingRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="overforKravTilManuellBehandlingResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="plassholder" type="xsd:anyType"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentKrav">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:HentKravRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentKravResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="response" type="meldinger:HentKravResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentKravListe">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:HentKravListeRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentKravListeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="response" type="meldinger:HentKravListeResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="kontrollerInstitusjonsopphold">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:KontrollerInstitusjonsoppholdRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="kontrollerInstitusjonsoppholdkanIkkeKontrollereInstOpphold" type="feil:KanIkkeKontrollereInstOpphold"/>
+      <xsd:element name="kontrollerInstitusjonsoppholdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="response" type="meldinger:KontrollerInstitusjonsoppholdResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="kontrollerKravOgKompletterGrunnlag">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:KontrollerKravOgKompletterGrunnlagRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="kontrollerKravOgKompletterGrunnlagResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="response" type="meldinger:KontrollerKravOgKompletterGrunnlagResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="kontrollerUtlandsopphold">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:KontrollerUtlandsoppholdRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="kontrollerUtlandsoppholdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="response" type="meldinger:KontrollerUtlandsoppholdResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="kontrollerUtlandsoppholdkanIkkeKontrollereUtlandsopphold" type="feil:KanIkkeKontrollereUtlandsopphold"/>
+      <xsd:element name="settBehandlingstype">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:SettBehandlingstypeRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="settBehandlingstypeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="plassholder" type="xsd:anyType"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="kontrollerSamletUttaksgrad">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:KontrollerSamletUttaksgradRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="kontrollerSamletUttaksgradResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="response" type="meldinger:KontrollerSamletUttaksgradResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="overforTilbakekrevingskravTilManuellBehandlingRequest">
+    <wsdl:part element="tns:overforTilbakekrevingskravTilManuellBehandling" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="overforTilbakekrevingskravTilManuellBehandlingResponse">
+    <wsdl:part element="tns:overforTilbakekrevingskravTilManuellBehandlingResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="hentKontrollpunktListeRequest">
+    <wsdl:part element="tns:hentKontrollpunktListe" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="hentKontrollpunktListeResponse">
+    <wsdl:part element="tns:hentKontrollpunktListeResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="opprettKontrollpunktRequest">
+    <wsdl:part element="tns:opprettKontrollpunkt" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="opprettKontrollpunktResponse">
+    <wsdl:part element="tns:opprettKontrollpunktResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="henleggKravRequest">
+    <wsdl:part element="tns:henleggKrav" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="henleggKravResponse">
+    <wsdl:part element="tns:henleggKravResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="hentKravForRelatertPersonRequest">
+    <wsdl:part element="tns:hentKravForRelatertPerson" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="hentKravForRelatertPersonResponse">
+    <wsdl:part element="tns:hentKravForRelatertPersonResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="overforKravTilManuellBehandlingRequest">
+    <wsdl:part element="tns:overforKravTilManuellBehandling" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="overforKravTilManuellBehandlingResponse">
+    <wsdl:part element="tns:overforKravTilManuellBehandlingResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="hentKravRequest">
+    <wsdl:part element="tns:hentKrav" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="hentKravResponse">
+    <wsdl:part element="tns:hentKravResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="hentKravListeRequest">
+    <wsdl:part element="tns:hentKravListe" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="hentKravListeResponse">
+    <wsdl:part element="tns:hentKravListeResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="kontrollerInstitusjonsoppholdRequest">
+    <wsdl:part element="tns:kontrollerInstitusjonsopphold" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="kontrollerInstitusjonsoppholdResponse">
+    <wsdl:part element="tns:kontrollerInstitusjonsoppholdResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="kontrollerInstitusjonsoppholdFault">
+    <wsdl:part element="tns:kontrollerInstitusjonsoppholdkanIkkeKontrollereInstOpphold" name="kanIkkeKontrollereInstOpphold"/>
+  </wsdl:message>
+  <wsdl:message name="kontrollerKravOgKompletterGrunnlagRequest">
+    <wsdl:part element="tns:kontrollerKravOgKompletterGrunnlag" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="kontrollerKravOgKompletterGrunnlagResponse">
+    <wsdl:part element="tns:kontrollerKravOgKompletterGrunnlagResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="kontrollerUtlandsoppholdRequest">
+    <wsdl:part element="tns:kontrollerUtlandsopphold" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="kontrollerUtlandsoppholdResponse">
+    <wsdl:part element="tns:kontrollerUtlandsoppholdResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="kontrollerUtlandsoppholdFault">
+    <wsdl:part element="tns:kontrollerUtlandsoppholdkanIkkeKontrollereUtlandsopphold" name="kanIkkeKontrollereUtlandsopphold"/>
+  </wsdl:message>
+  <wsdl:message name="settBehandlingstypeRequest">
+    <wsdl:part element="tns:settBehandlingstype" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="settBehandlingstypeResponse">
+    <wsdl:part element="tns:settBehandlingstypeResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="kontrollerSamletUttaksgradRequest">
+    <wsdl:part element="tns:kontrollerSamletUttaksgrad" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="kontrollerSamletUttaksgradResponse">
+    <wsdl:part element="tns:kontrollerSamletUttaksgradResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="Krav">
+    <wsdl:operation name="overforTilbakekrevingskravTilManuellBehandling">
+      <wsdl:input message="tns:overforTilbakekrevingskravTilManuellBehandlingRequest"/>
+      <wsdl:output message="tns:overforTilbakekrevingskravTilManuellBehandlingResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="hentKontrollpunktListe">
+      <wsdl:input message="tns:hentKontrollpunktListeRequest"/>
+      <wsdl:output message="tns:hentKontrollpunktListeResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="opprettKontrollpunkt">
+      <wsdl:input message="tns:opprettKontrollpunktRequest"/>
+      <wsdl:output message="tns:opprettKontrollpunktResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="henleggKrav">
+      <wsdl:input message="tns:henleggKravRequest"/>
+      <wsdl:output message="tns:henleggKravResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="hentKravForRelatertPerson">
+      <wsdl:input message="tns:hentKravForRelatertPersonRequest"/>
+      <wsdl:output message="tns:hentKravForRelatertPersonResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="overforKravTilManuellBehandling">
+      <wsdl:input message="tns:overforKravTilManuellBehandlingRequest"/>
+      <wsdl:output message="tns:overforKravTilManuellBehandlingResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="hentKrav">
+      <wsdl:documentation>&lt;p&gt;&lt;b&gt;&lt;/b&gt;&lt;/p&gt; </wsdl:documentation>
+      <wsdl:input message="tns:hentKravRequest"/>
+      <wsdl:output message="tns:hentKravResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="hentKravListe">
+      <wsdl:input message="tns:hentKravListeRequest"/>
+      <wsdl:output message="tns:hentKravListeResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="kontrollerInstitusjonsopphold">
+      <wsdl:input message="tns:kontrollerInstitusjonsoppholdRequest"/>
+      <wsdl:output message="tns:kontrollerInstitusjonsoppholdResponse"/>
+      <wsdl:fault message="tns:kontrollerInstitusjonsoppholdFault" name="kontrollerInstitusjonsoppholdFault"/>
+    </wsdl:operation>
+    <wsdl:operation name="kontrollerKravOgKompletterGrunnlag">
+      <wsdl:input message="tns:kontrollerKravOgKompletterGrunnlagRequest"/>
+      <wsdl:output message="tns:kontrollerKravOgKompletterGrunnlagResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="kontrollerUtlandsopphold">
+      <wsdl:documentation>&lt;p&gt;&lt;/p&gt; </wsdl:documentation>
+      <wsdl:input message="tns:kontrollerUtlandsoppholdRequest"/>
+      <wsdl:output message="tns:kontrollerUtlandsoppholdResponse"/>
+      <wsdl:fault message="tns:kontrollerUtlandsoppholdFault" name="kontrollerUtlandsoppholdFault"/>
+    </wsdl:operation>
+    <wsdl:operation name="settBehandlingstype">
+      <wsdl:documentation>&lt;p&gt;Tjenesten kaller først PROPEN103 hentKrav på kravId, for så å oppdatere behandlingstype på kravet og lagre kravet med PROPEN101oppdaterKravhode.&lt;/p&gt; </wsdl:documentation>
+      <wsdl:input message="tns:settBehandlingstypeRequest"/>
+      <wsdl:output message="tns:settBehandlingstypeResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="kontrollerSamletUttaksgrad">
+      <wsdl:documentation>&lt;p&gt;&lt;/p&gt; </wsdl:documentation>
+      <wsdl:input message="tns:kontrollerSamletUttaksgradRequest"/>
+      <wsdl:output message="tns:kontrollerSamletUttaksgradResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

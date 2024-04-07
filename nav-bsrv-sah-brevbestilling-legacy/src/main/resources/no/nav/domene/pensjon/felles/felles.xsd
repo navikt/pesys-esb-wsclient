@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://nav.no/domene/pensjon/felles/v1" version="1.0" xmlns:felles="http://nav.no/domene/pensjon/felles/v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="Utvidelse">
+    <xsd:sequence>
+      <xsd:any maxOccurs="unbounded" minOccurs="0" namespace="##any"/>
+    </xsd:sequence>
+    <xsd:anyAttribute namespace="##any"/>
+  </xsd:complexType>
+    <xsd:complexType name="EndringsInfoUtvidelse1">
+    <xsd:complexContent>
+      <xsd:extension base="felles:Utvidelse"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="EndringsInfo">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="endretAvId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="endretAvNavn" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="endretAvEnhetId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="endretAvEnhetNavn" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="opprettetAvId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="opprettetAvEnhetId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="opprettetAvEnhetNavn" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="opprettetAvNavn" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="endretDato" type="xsd:dateTime"/>
+      <xsd:element minOccurs="0" name="opprettetDato" type="xsd:dateTime"/>
+      <xsd:element minOccurs="0" name="kildeId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="kildeNavn" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="utvidelse" type="felles:EndringsInfoUtvidelse1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

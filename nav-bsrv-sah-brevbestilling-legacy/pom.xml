@@ -37,6 +37,28 @@
                             <goal>wsdl2java</goal>
                         </goals>
                     </execution>
+                    <execution>
+                        <id>pensjon-tjeneste-krav</id>
+                        <phase>process-sources</phase>
+                        <configuration>
+                            <defaultOptions>
+                                <extraargs>
+                                    <!--change Boolean type getters to getXXX (to ensure status quo with starting point) -->
+                                    <extraarg>-xjc-Xbg</extraarg>
+                                    <!-- Add namespace on element, not on package level -->
+                                    <extraarg>-xjc-npa</extraarg>
+                                </extraargs>
+                            </defaultOptions>
+                            <wsdlOptions>
+                                <wsdlOption>
+                                    <wsdl>${basedir}/src/main/resources/no/nav/domene/pensjon/tjenester/krav/krav.wsdl</wsdl>
+                                </wsdlOption>
+                            </wsdlOptions>
+                        </configuration>
+                        <goals>
+                            <goal>wsdl2java</goal>
+                        </goals>
+                    </execution>
                 </executions>
             </plugin>
         </plugins>

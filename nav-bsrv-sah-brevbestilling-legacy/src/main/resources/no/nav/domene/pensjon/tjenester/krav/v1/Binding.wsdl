@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="Binding" targetNamespace="http://no.nav/domene/pensjon/tjenester/krav/v1/Binding/" xmlns:krav="http://nav.no/domene/pensjon/tjenester/krav/v1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://no.nav/domene/pensjon/tjenester/krav/v1/Binding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:import location="../krav.wsdl" namespace="http://nav.no/domene/pensjon/tjenester/krav/v1"/>
+  <wsdl:binding name="KravBinding" type="krav:Krav">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="overforTilbakekrevingskravTilManuellBehandling">
+      <soap:operation soapAction="http://no.nav/domene/pensjon/tjenester/krav/v1/Binding/overforTilbakekrevingskravTilManuellBehandling/"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="overforTilbakekrevingskravTilManuellBehandling">
+      <wsdl:input/>
+      <wsdl:output/>
+    </wsdl:operation>
+    <wsdl:operation name="hentKontrollpunktListe">
+      <soap:operation soapAction="http://no.nav/domene/pensjon/tjenester/krav/v1/Binding/hentKontrollpunktListe/"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hentKontrollpunktListe">
+      <wsdl:input/>
+      <wsdl:output/>
+    </wsdl:operation>
+    <wsdl:operation name="opprettKontrollpunkt">
+      <soap:operation soapAction="http://no.nav/domene/pensjon/tjenester/krav/v1/Binding/opprettKontrollpunkt/"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="opprettKontrollpunkt">
+      <wsdl:input/>
+      <wsdl:output/>
+    </wsdl:operation>
+    <wsdl:operation name="henleggKrav">
+      <soap:operation soapAction="http://no.nav/domene/pensjon/tjenester/krav/v1/Binding/henleggKrav/"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="henleggKrav">
+      <wsdl:input/>
+      <wsdl:output/>
+    </wsdl:operation>
+    <wsdl:operation name="hentKravForRelatertPerson">
+      <soap:operation soapAction="http://no.nav/domene/pensjon/tjenester/krav/v1/Binding/hentKravForRelatertPerson/"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hentKravForRelatertPerson">
+      <wsdl:input/>
+      <wsdl:output/>
+    </wsdl:operation>
+    <wsdl:operation name="overforKravTilManuellBehandling">
+      <soap:operation soapAction="http://no.nav/domene/pensjon/tjenester/krav/v1/Binding/overforKravTilManuellBehandling/"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="overforKravTilManuellBehandling">
+      <wsdl:input/>
+      <wsdl:output/>
+    </wsdl:operation>
+    <wsdl:operation name="hentKrav">
+      <soap:operation soapAction="http://no.nav/domene/pensjon/tjenester/krav/v1/Binding/hentKrav/"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hentKrav">
+      <wsdl:input/>
+      <wsdl:output/>
+    </wsdl:operation>
+    <wsdl:operation name="hentKravListe">
+      <soap:operation soapAction="http://no.nav/domene/pensjon/tjenester/krav/v1/Binding/hentKravListe/"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="hentKravListe">
+      <wsdl:input/>
+      <wsdl:output/>
+    </wsdl:operation>
+    <wsdl:operation name="kontrollerInstitusjonsopphold">
+      <soap:operation soapAction="http://no.nav/domene/pensjon/tjenester/krav/v1/Binding/kontrollerInstitusjonsopphold/"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="kontrollerInstitusjonsoppholdFault">
+        <soap:fault name="kontrollerInstitusjonsoppholdFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="kontrollerInstitusjonsopphold">
+      <wsdl:input/>
+      <wsdl:output/>
+      <wsdl:fault name="kontrollerInstitusjonsoppholdFault"/>
+    </wsdl:operation>
+    <wsdl:operation name="kontrollerKravOgKompletterGrunnlag">
+      <soap:operation soapAction="http://no.nav/domene/pensjon/tjenester/krav/v1/Binding/kontrollerKravOgKompletterGrunnlag/"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="kontrollerKravOgKompletterGrunnlag">
+      <wsdl:input/>
+      <wsdl:output/>
+    </wsdl:operation>
+    <wsdl:operation name="kontrollerUtlandsopphold">
+      <soap:operation soapAction="http://no.nav/domene/pensjon/tjenester/krav/v1/Binding/kontrollerUtlandsopphold/"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="kontrollerUtlandsoppholdFault">
+        <soap:fault name="kontrollerUtlandsoppholdFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="kontrollerUtlandsopphold">
+      <wsdl:input/>
+      <wsdl:output/>
+      <wsdl:fault name="kontrollerUtlandsoppholdFault"/>
+    </wsdl:operation>
+    <wsdl:operation name="settBehandlingstype">
+      <soap:operation soapAction="http://no.nav/domene/pensjon/tjenester/krav/v1/Binding/settBehandlingstype/"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="settBehandlingstype">
+      <wsdl:input/>
+      <wsdl:output/>
+    </wsdl:operation>
+    <wsdl:operation name="kontrollerSamletUttaksgrad">
+      <soap:operation soapAction="http://no.nav/domene/pensjon/tjenester/krav/v1/Binding/kontrollerSamletUttaksgrad/"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="kontrollerSamletUttaksgrad">
+      <wsdl:input/>
+      <wsdl:output/>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Krav">
+    <wsdl:port binding="tns:KravBinding" name="KravPort">
+      <soap:address location="http://no.nav/domene/pensjon/tjenester/krav/v1/Binding/Krav/KravPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
