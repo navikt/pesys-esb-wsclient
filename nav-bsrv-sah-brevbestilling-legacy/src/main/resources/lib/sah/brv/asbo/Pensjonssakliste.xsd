@@ -3,7 +3,7 @@
     <xsd:include schemaLocation="Pensjonssak.xsd"/>
     <xsd:complexType name="Pensjonssakliste">
 		<xsd:sequence>
-			<xsd:element minOccurs="0" name="SakAPogUP" type="xsd:string">
+			<xsd:element minOccurs="0" nillable="true" name="SakAPogUP" type="xsd:string">
 			</xsd:element>
 			<xsd:element minOccurs="0" name="SakAPStatus" type="xsd:string">
 			</xsd:element>
