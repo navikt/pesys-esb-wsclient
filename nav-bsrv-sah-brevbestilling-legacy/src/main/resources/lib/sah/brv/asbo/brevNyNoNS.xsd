@@ -152,8 +152,7 @@
 			<xs:element name="saksreferanse" type="xs:string" />
 			<xs:element minOccurs="0" name="Sakstype" type="xs:string" />
 			<xs:element minOccurs="0" name="Sakstatus" type="xs:string" />
-			<xs:element minOccurs="0" name="SakAPogUP"
-				type="xs:boolean">
+			<xs:element minOccurs="0" nillable="true" name="SakAPogUP" type="xs:boolean">
 			</xs:element>
 			<xs:element minOccurs="1" name="SakAPStatus"
 				type="xs:string">
