@@ -22,9 +22,6 @@
                         <phase>process-sources</phase>
                         <configuration>
                             <defaultOptions>
-                                <bindingFiles>
-                                    <bindingFile>src/main/resources/bindings.xjb</bindingFile>
-                                </bindingFiles>
                                 <extraargs>
                                     <!--change Boolean type getters to getXXX (to ensure status quo with starting point) -->
                                     <extraarg>-xjc-Xbg</extraarg>
@@ -45,9 +42,6 @@
                         <phase>process-sources</phase>
                         <configuration>
                             <defaultOptions>
-                                <bindingFiles>
-                                    <bindingFile>src/main/resources/bindings.xjb</bindingFile>
-                                </bindingFiles>
                                 <extraargs>
                                     <!--change Boolean type getters to getXXX (to ensure status quo with starting point) -->
                                     <extraarg>-xjc-Xbg</extraarg>

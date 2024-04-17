@@ -1,10 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="BrevBestillingInternt" targetNamespace="http://nav-bsrv-sah-brevbestilling/no/nav/inf/BrevBestillingInternt" xmlns:bons1="http://nav-lib-sah/no/nav/lib/sah/gbo" xmlns:bons2="http://nav-lib-sah/no/nav/lib/sah/fault" xmlns:bons4="http://nav.no/virksomhet/tjenester/arkiv/journalbehandling/meldinger/v1" xmlns:bons5="http://nav.no/virksomhet/tjenester/arkiv/journal/meldinger/v2" xmlns:tns="http://nav-bsrv-sah-brevbestilling/no/nav/inf/BrevBestillingInternt" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="BrevBestillingInternt" targetNamespace="http://nav-bsrv-sah-brevbestilling/no/nav/inf/BrevBestillingInternt" xmlns:bons1="http://nav-lib-sah/no/nav/lib/sah/gbo" xmlns:bons2="http://nav-lib-sah/no/nav/lib/sah/fault" xmlns:tns="http://nav-bsrv-sah-brevbestilling/no/nav/inf/BrevBestillingInternt" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <wsdl:types>
     <xsd:schema targetNamespace="http://nav-bsrv-sah-brevbestilling/no/nav/inf/BrevBestillingInternt">
       <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevVedtaksbrev.xsd"/>
       <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOVedtaksData.xsd"/>
-      <xsd:import namespace="http://nav.no/virksomhet/tjenester/arkiv/journal/meldinger/v2" schemaLocation="../virksomhet/tjenester/arkiv/journal/meldinger/meldinger.xsd"/>
-      <xsd:import namespace="http://nav.no/virksomhet/tjenester/arkiv/journalbehandling/meldinger/v1" schemaLocation="../virksomhet/tjenester/arkiv/journalbehandling/meldinger/meldinger.xsd"/>
       <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevSEDBlanketter.xsd"/>
       <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../lib/sah/fault/FaultAdresseIkkeRegistrert.xsd"/>
       <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevVedtakFleksibeltUttak.xsd"/>
@@ -12,7 +10,6 @@
       <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevStandard.xsd"/>
       <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevbestillingRequest.xsd"/>
       <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevPositivVedtak.xsd"/>
-      <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../lib/sah/fault/FaultOpprettelseJournalpostFeilet.xsd"/>
       <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevNegativVedtak.xsd"/>
       <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/fault" schemaLocation="../lib/sah/fault/FaultHenteBrevdataFeilet.xsd"/>
       <xsd:import namespace="http://nav-lib-sah/no/nav/lib/sah/gbo" schemaLocation="../lib/sah/gbo/GBOBrevbestillingProduserBrevRequest.xsd"/>
@@ -61,47 +58,6 @@
       <xsd:element name="hentStandardBrevdata_faultHenteBrevdataFeilet" type="bons2:FaultHenteBrevdataFeilet"/>
       <xsd:element name="hentNegativBrevdata_faultHenteBrevdataFeilet" type="bons2:FaultHenteBrevdataFeilet"/>
       <xsd:element name="hentPositivBrevdata_faultHenteBrevdataFeilet" type="bons2:FaultHenteBrevdataFeilet"/>
-      <xsd:element name="opprettJournalpost">
-        <xsd:complexType>
-          <xsd:sequence>
-            <xsd:element name="opprettJournalpostRequest" nillable="true" type="bons1:GBOBrevbestillingRequest"/>
-          </xsd:sequence>
-        </xsd:complexType>
-      </xsd:element>
-      <xsd:element name="opprettJournalpostResponse">
-        <xsd:complexType>
-          <xsd:sequence>
-            <xsd:element name="opprettJournalpostResponse" nillable="true" type="bons4:LagreDokumentOgOpprettJournalpostResponse"/>
-          </xsd:sequence>
-        </xsd:complexType>
-      </xsd:element>
-      <xsd:element name="opprettJournalpost_faultOpprettelseJournalpostFeilet" type="bons2:FaultOpprettelseJournalpostFeilet"/>
-      <xsd:element name="hentJournalpost">
-        <xsd:complexType>
-          <xsd:sequence>
-            <xsd:element name="hentJournalpostRequest" nillable="true" type="bons5:HentJournalpostRequest"/>
-          </xsd:sequence>
-        </xsd:complexType>
-      </xsd:element>
-      <xsd:element name="hentJournalpostResponse">
-        <xsd:complexType>
-          <xsd:sequence>
-            <xsd:element name="hentJournalpostResponse" nillable="true" type="bons5:HentJournalpostResponse"/>
-          </xsd:sequence>
-        </xsd:complexType>
-      </xsd:element>
-      <xsd:element name="lagreJournalpost">
-        <xsd:complexType>
-          <xsd:sequence>
-            <xsd:element name="lagreJournalpostRequest" nillable="true" type="bons5:HentJournalpostResponse"/>
-          </xsd:sequence>
-        </xsd:complexType>
-      </xsd:element>
-      <xsd:element name="lagreJournalpostResponse">
-        <xsd:complexType>
-          <xsd:sequence/>
-        </xsd:complexType>
-      </xsd:element>
       <xsd:element name="bestillBrevMedSBE">
         <xsd:complexType>
           <xsd:sequence>
@@ -218,27 +174,6 @@
   <wsdl:message name="hentPositivBrevdata_faultHenteBrevdataFeiletMsg">
     <wsdl:part element="tns:hentPositivBrevdata_faultHenteBrevdataFeilet" name="faultHenteBrevdataFeilet"/>
   </wsdl:message>
-  <wsdl:message name="opprettJournalpostRequestMsg">
-    <wsdl:part element="tns:opprettJournalpost" name="opprettJournalpostParameters"/>
-  </wsdl:message>
-  <wsdl:message name="opprettJournalpostResponseMsg">
-    <wsdl:part element="tns:opprettJournalpostResponse" name="opprettJournalpostResult"/>
-  </wsdl:message>
-  <wsdl:message name="opprettJournalpost_faultOpprettelseJournalpostFeiletMsg">
-    <wsdl:part element="tns:opprettJournalpost_faultOpprettelseJournalpostFeilet" name="faultOpprettelseJournalpostFeilet"/>
-  </wsdl:message>
-  <wsdl:message name="hentJournalpostRequestMsg">
-    <wsdl:part element="tns:hentJournalpost" name="hentJournalpostParameters"/>
-  </wsdl:message>
-  <wsdl:message name="hentJournalpostResponseMsg">
-    <wsdl:part element="tns:hentJournalpostResponse" name="hentJournalpostResult"/>
-  </wsdl:message>
-  <wsdl:message name="lagreJournalpostRequestMsg">
-    <wsdl:part element="tns:lagreJournalpost" name="lagreJournalpostParameters"/>
-  </wsdl:message>
-  <wsdl:message name="lagreJournalpostResponseMsg">
-    <wsdl:part element="tns:lagreJournalpostResponse" name="lagreJournalpostResult"/>
-  </wsdl:message>
   <wsdl:message name="bestillBrevMedSBERequestMsg">
     <wsdl:part element="tns:bestillBrevMedSBE" name="bestillBrevMedSBEParameters"/>
   </wsdl:message>
@@ -332,19 +267,6 @@
       <wsdl:output message="tns:hentPositivBrevdataResponseMsg" name="hentPositivBrevdataResponse"/>
       <wsdl:fault message="tns:hentPositivBrevdata_faultHenteBrevdataFeiletMsg" name="faultHenteBrevdataFeilet"/>
       <wsdl:fault message="tns:hentPositivBrevdata_faultAdresseIkkeRegistrertMsg" name="faultAdresseIkkeRegistrert"/>
-    </wsdl:operation>
-    <wsdl:operation name="opprettJournalpost">
-      <wsdl:input message="tns:opprettJournalpostRequestMsg" name="opprettJournalpostRequest"/>
-      <wsdl:output message="tns:opprettJournalpostResponseMsg" name="opprettJournalpostResponse"/>
-      <wsdl:fault message="tns:opprettJournalpost_faultOpprettelseJournalpostFeiletMsg" name="faultOpprettelseJournalpostFeilet"/>
-    </wsdl:operation>
-    <wsdl:operation name="hentJournalpost">
-      <wsdl:input message="tns:hentJournalpostRequestMsg" name="hentJournalpostRequest"/>
-      <wsdl:output message="tns:hentJournalpostResponseMsg" name="hentJournalpostResponse"/>
-    </wsdl:operation>
-    <wsdl:operation name="lagreJournalpost">
-      <wsdl:input message="tns:lagreJournalpostRequestMsg" name="lagreJournalpostRequest"/>
-      <wsdl:output message="tns:lagreJournalpostResponseMsg" name="lagreJournalpostResponse"/>
     </wsdl:operation>
     <wsdl:operation name="bestillBrevMedSBE">
       <wsdl:input message="tns:bestillBrevMedSBERequestMsg" name="bestillBrevMedSBERequest"/>
