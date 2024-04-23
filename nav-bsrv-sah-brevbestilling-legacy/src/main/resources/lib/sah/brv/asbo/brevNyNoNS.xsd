@@ -36,20 +36,20 @@
 			<xs:element minOccurs="0" name="BrevAny" type="bons0:BrevAny" />
 
 		</xs:sequence>
+
+		<xs:attribute name="direkteutskrift" type="xs:string" />
 		<xs:attribute name="malpakke" type="xs:string" />
 		<xs:attribute name="saksbehandler" type="xs:string" />
+		<xs:attribute name="saksbehandlerId" type="xs:string" />
 		<xs:attribute name="sysid" type="xs:string" />
 		<xs:attribute name="passord" type="xs:string" />
-		<xs:attribute name="direkteutskrift" type="xs:string" />
 		<xs:attribute name="arkiver" type="xs:string" />
 		<xs:attribute name="skrivertype" type="xs:string" />
 		<xs:attribute name="skriver" type="xs:string" />
 		<xs:attribute name="skuff" type="xs:string" />
 		<xs:attribute name="format" type="xs:string" />
-		<xs:attribute name="klientToken" type="xs:string"
-			use="optional" />
+		<xs:attribute name="klientToken" type="xs:string" use="optional" />
 		<xs:attribute name="modus" type="xs:string" use="optional" />
-		<xs:attribute name="saksbehandlerId" type="xs:string" />
 	</xs:complexType>
 
 	<xs:complexType name="BrevBrevType">
