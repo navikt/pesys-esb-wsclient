@@ -3,6 +3,7 @@
 	xmlns:bons0="http://nav-lib-pen/no/nav/lib/pen/gbo"
 	xmlns:bons1="http://stelvio-commons-lib/no/nav/gbo"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:include schemaLocation="GBOBeregningsResultat2025.xsd"></xsd:include>
 	<xsd:include schemaLocation="GBOBeregningsResultat2016.xsd" />
 	<xsd:include schemaLocation="GBOBeregningsResultatUforetrygd.xsd" />
 	<xsd:include schemaLocation="GBOSammenstotstilfelle.xsd" />
@@ -128,6 +129,10 @@
 				name="beregningsresultatUforetrygdListe"
 				type="bons0:GBOBeregningsResultatUforetrygd"
 				maxOccurs="unbounded">
+			</xsd:element>
+			<xsd:element minOccurs="0"
+				name="beregningsResultat2025Liste"
+				type="bons0:GBOBeregningsResultat2025" maxOccurs="unbounded">
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
