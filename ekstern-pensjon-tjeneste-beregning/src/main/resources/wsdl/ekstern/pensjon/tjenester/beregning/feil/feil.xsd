@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://nav.no/ekstern/pensjon/tjenester/beregning/feil/v1" version="1.0" xmlns:feil="http://nav.no/ekstern/pensjon/tjenester/beregning/feil/v1" xmlns:felles="http://nav.no/ekstern/pensjon/tjenester/beregning/felles/v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import namespace="http://nav.no/ekstern/pensjon/tjenester/beregning/felles/v1" schemaLocation="../felles/felles.xsd"/>
+  <xsd:complexType name="AvslagForKortTrygdetid">
+    <xsd:annotation>
+      <xsd:documentation>&lt;p&gt;Avslag på vilkårsprøving grunnet for kort trygdetid &lt;/p&gt;</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="felles:StelvioFault"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="AvslagForLavtTidligUttak">
+    <xsd:annotation>
+      <xsd:documentation>&lt;p&gt;Avslag på vilkårsprøving grunnet for lavt tidlig uttak &lt;/p&gt;</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="felles:StelvioFault"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="EpsInfoOmYtelserSamsvarerIkkeMedNav">
+    <xsd:annotation>
+      <xsd:documentation>&lt;p&gt;Informasjon om EPS mottar folketrygdytelser eller AFP samsvarer ikke med informasjon lagret hos NAV. &lt;/p&gt;</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="felles:StelvioFault"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="SivilstatusSamsvarerIkkeMedNav">
+    <xsd:annotation>
+      <xsd:documentation>&lt;p&gt;Sivilstatus samsvarer ikke med informasjon registrert i Nav.&lt;/p&gt;</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="felles:StelvioFault"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="YtelseIkkeRegistrertITP">
+    <xsd:annotation>
+      <xsd:documentation>&lt;p&gt;Bruker er ikke registrert med ytelse i Tjenestepensjonsregisteret. &lt;/p&gt;</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="felles:StelvioFault"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

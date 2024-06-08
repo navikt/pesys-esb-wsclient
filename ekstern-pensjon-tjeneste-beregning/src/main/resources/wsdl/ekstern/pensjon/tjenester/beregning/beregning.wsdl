@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="beregning" targetNamespace="http://nav.no/ekstern/pensjon/tjenester/beregning/v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://nav.no/ekstern/pensjon/tjenester/beregning/v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://nav.no/ekstern/pensjon/tjenester/beregning/v1" xmlns:feil="http://nav.no/ekstern/pensjon/tjenester/beregning/feil/v1" xmlns:meldinger="http://nav.no/ekstern/pensjon/tjenester/beregning/meldinger/v1">
+      <xsd:import namespace="http://nav.no/ekstern/pensjon/tjenester/beregning/feil/v1" schemaLocation="feil/feil.xsd"/>
+      <xsd:import namespace="http://nav.no/ekstern/pensjon/tjenester/beregning/meldinger/v1" schemaLocation="meldinger/meldinger.xsd"/>
+      <xsd:element name="foretaFolketrygdberegnetAfp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:ForetaFolketrygdberegnetAfpRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="foretaFolketrygdberegnetAfpResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="response" type="meldinger:ForetaFolketrygdberegnetAfpResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="foretaFolketrygdberegnetAfpAvslagForKortTrygdetid" type="feil:AvslagForKortTrygdetid"/>
+      <xsd:element name="foretaFolketrygdberegnetAfpAvslagForLavtTidligUttak" type="feil:AvslagForLavtTidligUttak"/>
+      <xsd:element name="foretaFolketrygdberegnetAfpEpsInfoOmYtelseSamsvarerIkkeMedNav" type="feil:EpsInfoOmYtelserSamsvarerIkkeMedNav"/>
+      <xsd:element name="foretaFolketrygdberegnetAfpSivilstatusSamsvarerIkkeMedNav" type="feil:SivilstatusSamsvarerIkkeMedNav"/>
+      <xsd:element name="foretaFolketrygdberegnetAfpYtelseIkkeRegistrertITP" type="feil:YtelseIkkeRegistrertITP"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="foretaFolketrygdberegnetAfp_SivilstatusSamsvarerIkkeMedNav">
+    <wsdl:part name="SivilstatusSamsvarerIkkeMedNav" element="tns:foretaFolketrygdberegnetAfpSivilstatusSamsvarerIkkeMedNav">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="foretaFolketrygdberegnetAfp_EpsInfoOmYtelseSamsvarerIkkeMedNav">
+    <wsdl:part name="EpsInfoOmYtelseSamsvarerIkkeMedNav" element="tns:foretaFolketrygdberegnetAfpEpsInfoOmYtelseSamsvarerIkkeMedNav">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="foretaFolketrygdberegnetAfpRequest">
+    <wsdl:part name="parameters" element="tns:foretaFolketrygdberegnetAfp">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="foretaFolketrygdberegnetAfp_AvslagForKortTrygdetid">
+    <wsdl:part name="AvslagForKortTrygdetid" element="tns:foretaFolketrygdberegnetAfpAvslagForKortTrygdetid">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="foretaFolketrygdberegnetAfp_YtelseIkkeRegistrertITP">
+    <wsdl:part name="YtelseIkkeRegistrertITP" element="tns:foretaFolketrygdberegnetAfpYtelseIkkeRegistrertITP">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="foretaFolketrygdberegnetAfp_AvslagForLavtTidligUttak">
+    <wsdl:part name="AvslagForLavtTidligUttak" element="tns:foretaFolketrygdberegnetAfpAvslagForLavtTidligUttak">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="foretaFolketrygdberegnetAfpResponse">
+    <wsdl:part name="parameters" element="tns:foretaFolketrygdberegnetAfpResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Beregning">
+    <wsdl:operation name="foretaFolketrygdberegnetAfp">
+      <wsdl:input message="tns:foretaFolketrygdberegnetAfpRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:foretaFolketrygdberegnetAfpResponse">
+    </wsdl:output>
+      <wsdl:fault name="AvslagForLavtTidligUttak" message="tns:foretaFolketrygdberegnetAfp_AvslagForLavtTidligUttak">
+    </wsdl:fault>
+      <wsdl:fault name="YtelseIkkeRegistrertITP" message="tns:foretaFolketrygdberegnetAfp_YtelseIkkeRegistrertITP">
+    </wsdl:fault>
+      <wsdl:fault name="AvslagForKortTrygdetid" message="tns:foretaFolketrygdberegnetAfp_AvslagForKortTrygdetid">
+    </wsdl:fault>
+      <wsdl:fault name="SivilstatusSamsvarerIkkeMedNav" message="tns:foretaFolketrygdberegnetAfp_SivilstatusSamsvarerIkkeMedNav">
+    </wsdl:fault>
+      <wsdl:fault name="EpsInfoOmYtelseSamsvarerIkkeMedNav" message="tns:foretaFolketrygdberegnetAfp_EpsInfoOmYtelseSamsvarerIkkeMedNav">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

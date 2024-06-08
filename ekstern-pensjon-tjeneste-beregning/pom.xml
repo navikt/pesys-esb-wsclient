@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>no.nav.pensjon.pesys-esb-wsclient</groupId>
+        <artifactId>pesys-esb-wsclient-legacy</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>ekstern-pensjon-tjeneste-beregning</artifactId>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-codegen-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>generate-beregning</id>
+                        <phase>process-sources</phase>
+                        <configuration>
+                            <defaultOptions>
+                                <extraargs>
+                                    <!--change Boolean type getters to getXXX (to ensure status quo with starting point) -->
+                                    <extraarg>-xjc-Xbg</extraarg>
+                                    <!-- Add namespace on element, not on package level -->
+                                    <extraarg>-xjc-npa</extraarg>
+                                </extraargs>
+                            </defaultOptions>
+                            <includes>
+                                <include>*.wsdl</include>
+                            </includes>
+                        </configuration>
+                        <goals>
+                            <goal>wsdl2java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
