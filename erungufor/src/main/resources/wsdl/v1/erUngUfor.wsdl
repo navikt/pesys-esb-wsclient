@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="erUngUfor" targetNamespace="http://nav.no/ekstern/pensjon/tjenester/erUngUfor/v1" xmlns:tns="http://nav.no/ekstern/pensjon/tjenester/erUngUfor/v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://nav.no/ekstern/pensjon/tjenester/erUngUfor/v1" xmlns:feil="http://nav.no/ekstern/pensjon/tjenester/erUngUfor/feil/v1" xmlns:meldinger="http://nav.no/ekstern/pensjon/tjenester/erUngUfor/meldinger/v1">
+      <xsd:import namespace="http://nav.no/ekstern/pensjon/tjenester/erUngUfor/feil/v1" schemaLocation="../feil/feil.xsd"/>
+      <xsd:import namespace="http://nav.no/ekstern/pensjon/tjenester/erUngUfor/meldinger/v1" schemaLocation="../meldinger/meldinger.xsd"/>
+      <xsd:element name="erUngUfor">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="request" type="meldinger:ErUngUforRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="erUngUforResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="response" type="meldinger:ErUngUforResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="erUngUforpersonIkkeFunnet" type="feil:PersonIkkeFunnet"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="erUngUforRequest">
+    <wsdl:part element="tns:erUngUfor" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="erUngUforResponse">
+    <wsdl:part element="tns:erUngUforResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="erUngUforFault">
+    <wsdl:part element="tns:erUngUforpersonIkkeFunnet" name="personIkkeFunnet"/>
+  </wsdl:message>
+  <wsdl:portType name="ErUngUfor">
+    <wsdl:operation name="erUngUfor">
+      <wsdl:documentation>&lt;p&gt;Tjenesten tilbyr konsument informasjon om en person er kategorisert som "Ung Ufør" eller ikke.&lt;/p&gt; </wsdl:documentation>
+      <wsdl:input message="tns:erUngUforRequest"/>
+      <wsdl:output message="tns:erUngUforResponse"/>
+      <wsdl:fault message="tns:erUngUforFault" name="erUngUforFault"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

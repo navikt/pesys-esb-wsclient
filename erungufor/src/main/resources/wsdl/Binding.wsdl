@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions name="Binding" targetNamespace="http://no.nav/ekstern/pensjon/tjenester/erUngUfor/v1/Binding/" xmlns:erUngUfor="http://nav.no/ekstern/pensjon/tjenester/erUngUfor/v1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://no.nav/ekstern/pensjon/tjenester/erUngUfor/v1/Binding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:import location="v1/erUngUfor.wsdl" namespace="http://nav.no/ekstern/pensjon/tjenester/erUngUfor/v1"/>
+  <wsdl:binding name="ErUngUforBinding" type="erUngUfor:ErUngUfor">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="erUngUfor">
+      <soap:operation soapAction="http://no.nav/ekstern/pensjon/tjenester/erUngUfor/v1/Binding/erUngUfor/"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="erUngUforFault">
+        <soap:fault name="erUngUforFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ErUngUfor">
+    <wsdl:port binding="tns:ErUngUforBinding" name="ErUngUforPort">
+      <soap:address location="http://no.nav/ekstern/pensjon/tjenester/erUngUfor/v1/Binding/ErUngUfor/ErUngUforPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -33,6 +33,7 @@
         <module>pesys-esb-wsclient-bom</module>
         <module>ekstern-pensjon-tjeneste-beregning</module>
         <module>samhandler</module>
+        <module>erungufor</module>
     </modules>
 
     <scm>
