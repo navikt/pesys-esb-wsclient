@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/fullmakt" targetNamespace="http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/fullmakt">
-    <xsd:include schemaLocation="ASBOPenFullmakt.xsd"/>
-    <xsd:complexType name="ASBOPenFullmaktListe">
-    <xsd:sequence>
-      <xsd:element minOccurs="0" name="fullmakter" type="bons0:ASBOPenFullmakt" maxOccurs="unbounded"/>
-    </xsd:sequence>
-  </xsd:complexType>
-</xsd:schema>

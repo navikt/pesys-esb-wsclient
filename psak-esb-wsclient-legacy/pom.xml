@@ -45,39 +45,6 @@
                             <wsdlOptions>
                                 <!-- -nexclude is used to reuse PCOM versions of certain common types -->
 
-                                <!-- PSAK Fullmakt -->
-                                <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/wsdl/PSAKFullmaktWSEXP_PSAKFullmaktHttp_Service.wsdl</wsdl>
-                                    <extraargs>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-psak-fullmakt/no/nav/inf=no.nav.inf.psak.fullmakt</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-psak-fullmakt/no/nav/inf/Binding=no.nav.inf.psak.fullmakt</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/fullmakt=no.nav.lib.pen.psakpselv.asbo.fullmakt</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/fullmakt=no.nav.lib.pen.psakpselv.fault.fullmakt</extraarg>
-                                    </extraargs>
-                                </wsdlOption>
-
-                                <!-- PSAK NAVOrgEnhet -->
-                                <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-psak-navorgenhet_PSAKNAVOrgEnhetWSEXP.wsdl
-                                    </wsdl>
-                                    <extraargs>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-psak-navorgenhet/no/nav/inf=no.nav.inf.psak.navorgenhet</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-psak-navorgenhet/no/nav/inf/Binding=no.nav.inf.psak.navorgenhet</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/navorgenhet=no.nav.lib.pen.psakpselv.asbo.navorgenhet</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo=no.nav.lib.pen.psakpselv.asbo</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/navorgenhet=no.nav.lib.pen.psakpselv.fault.navorgenhet</extraarg>
-                                    </extraargs>
-                                </wsdlOption>
-
                                 <!-- PSAK Person -->
                                 <wsdlOption>
                                     <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-psak-person_PSAKPersonWSEXP.wsdl</wsdl>
@@ -129,53 +96,6 @@
                                     </extraargs>
                                 </wsdlOption>
 
-                                <!-- PSAK Institusjonsopphold -->
-                                <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/wsdl/nav-cons-pen-psak-institusjonsopphold_PSAKInstitusjonsoppholdWSEXP.wsdl</wsdl>
-                                    <extraargs>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-psak-institusjonsopphold/no/nav/inf=no.nav.inf.psak.instopphold</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-psak-institusjonsopphold/no/nav/inf/Binding=no.nav.inf.psak.instopphold</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/institusjonsopphold=no.nav.lib.pen.psakpselv.asbo.institusjonsopphold</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo=no.nav.lib.pen.psakpselv.asbo</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/institusjonsopphold=no.nav.lib.pen.psakpselv.fault.institusjonsopphold</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/samhandler=no.nav.lib.pen.psakpselv.fault.samhandler</extraarg>
-                                    </extraargs>
-                                </wsdlOption>
-
-                                <!-- PSAK Arenasak -->
-                                <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/wsdl/PSAKArenasakWSEXP_PSAKArenasakHttp_Service.wsdl</wsdl>
-                                    <extraargs>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-psak-arenasak/no/nav/inf=no.nav.inf.psak.arenasak</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-psak-arenasak/no/nav/inf/Binding=no.nav.inf.psak.arenasak</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/arenasak=no.nav.lib.pen.psakpselv.asbo.arenasak</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo=no.nav.lib.pen.psakpselv.asbo</extraarg>
-                                    </extraargs>
-                                </wsdlOption>
-
-                                <!-- PSAK Bidragsak -->
-                                <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/wsdl/PSAKBidragsakWSEXP_PSAKBidragsakHttp_Service.wsdl</wsdl>
-                                    <extraargs>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-psak-bidragsak/no/nav/inf=no.nav.inf.psak.bidragsak</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-psak-bidragsak/no/nav/inf/Binding=no.nav.inf.psak.bidragsak</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/bidragsak=no.nav.lib.pen.psakpselv.asbo.bidragsak</extraarg>
-                                    </extraargs>
-                                </wsdlOption>
-
                                 <!-- PSAK Infotrygdsak -->
                                 <wsdlOption>
                                     <wsdl>${basedir}/src/main/resources/wsdl/PSAKInfotrygdsakWSEXP_PSAKInfotrygdsakHttp_Service.wsdl</wsdl>
@@ -188,65 +108,6 @@
                                         <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/infotrygdsak=no.nav.lib.pen.psakpselv.asbo.infotrygdsak</extraarg>
                                         <extraarg>-p</extraarg>
                                         <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo=no.nav.lib.pen.psakpselv.asbo</extraarg>
-                                    </extraargs>
-                                </wsdlOption>
-
-                                <!-- PSAK DokBrev -->
-                                <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/wsdl/PSAKDokBrevSCAEXP_PSAKDokBrevHttp_Service.wsdl</wsdl>
-                                    <extraargs>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-psak-dokbrev/no/nav/inf/PSAKDokBrev=no.nav.inf.psak.dokbrev</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-psak-dokbrev/no/nav/inf/PSAKDokBrev/Binding=no.nav.inf.psak.dokbrev</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/brev=no.nav.lib.pen.psakpselv.asbo.brev</extraarg>
-                                    </extraargs>
-                                </wsdlOption>
-
-                                <!-- Enhet -->
-                                <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/wsdl/no/nav/virksomhet/tjenester/enhet/v1/Binding.wsdl</wsdl>
-                                </wsdlOption>
-
-                                <!-- PSAK Henvendelse (due to PCOM stuff) -->
-                                <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/wsdl/PSAKHenvendelseWSEXP_PSAKHenvendelseHttp_Service.wsdl</wsdl>
-                                    <extraargs>
-                                        <extraarg>-xjc-Xbg</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-psak-henvendelse/no/nav/inf=no.nav.inf.psak.henvendelse</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-psak-henvendelse/no/nav/inf/Binding=no.nav.inf.psak.henvendelse</extraarg>
-                                        <extraarg>-nexclude</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/henvendelse=no.nav.lib.pen.psakpselv.asbo.henvendelse</extraarg>
-                                        <extraarg>-nexclude</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/oppgave=no.nav.lib.pen.psakpselv.asbo.oppgave</extraarg>
-                                        <extraarg>-nexclude</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo=no.nav.lib.pen.psakpselv.asbo</extraarg>
-                                        <extraarg>-nexclude</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault=no.nav.lib.pen.psakpselv.fault</extraarg>
-                                        <extraarg>-nexclude</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/henvendelse=no.nav.lib.pen.psakpselv.fault.henvendelse</extraarg>
-                                    </extraargs>
-                                </wsdlOption>
-
-                                <!-- PSAK Samhandler (domain in pcom) -->
-                                <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/wsdl/PSAKSamhandlerWSEXP_PSAKSamhandlerHttp_Service.wsdl</wsdl>
-                                    <extraargs>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-psak-samhandler/no/nav/inf=no.nav.inf.psak.samhandler</extraarg>
-                                        <extraarg>-p</extraarg>
-                                        <extraarg>http://nav-cons-pen-psak-samhandler/no/nav/inf/Binding=no.nav.inf.psak.samhandler</extraarg>
-                                        <extraarg>-nexclude</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo=no.nav.lib.pen.psakpselv.asbo</extraarg>
-                                        <extraarg>-nexclude</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/asbo/samhandler=no.nav.lib.pen.psakpselv.asbo.samhandler</extraarg>
-                                        <extraarg>-nexclude</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault=no.nav.lib.pen.psakpselv.fault</extraarg>
-                                        <extraarg>-nexclude</extraarg>
-                                        <extraarg>http://nav-lib-cons-pen-psakpselv/no/nav/lib/pen/psakpselv/fault/samhandler=no.nav.lib.pen.psakpselv.fault.samhandler</extraarg>
                                     </extraargs>
                                 </wsdlOption>
 
