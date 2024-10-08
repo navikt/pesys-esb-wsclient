@@ -31,7 +31,7 @@
                         <configuration>
                             <defaultOptions>
                                 <bindingFiles>
-                                    <bindingFile>src/main/resources/bindings.xjb</bindingFile>
+                                    <bindingFile>src/main/resources/${bindings-file}</bindingFile>
                                 </bindingFiles>
                                 <extraargs>
 <!--                                    <extraarg>-verbose</extraarg>-->

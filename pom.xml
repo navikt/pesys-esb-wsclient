@@ -173,6 +173,7 @@
                 <classifier>javax</classifier>
                 <cxf-codegen-plugin.version>3.5.4</cxf-codegen-plugin.version>
                 <cxf-xjc-boolean.version>3.2.0</cxf-xjc-boolean.version>
+                <bindings-file>bindings.xjb</bindings-file>
                 <jaxb-maven-plugin.version>2.0.12</jaxb-maven-plugin.version>
                 <maven.compiler.target>1.8</maven.compiler.target>
                 <maven.compiler.source>1.8</maven.compiler.source>
@@ -187,7 +188,8 @@
             <properties>
                 <classifier>jakarta</classifier>
                 <cxf-codegen-plugin.version>4.0.3</cxf-codegen-plugin.version>
-                <cxf-xjc-boolean.version>4.0.0</cxf-xjc-boolean.version>
+                <cxf-xjc-boolean.version>4.0.2</cxf-xjc-boolean.version>
+                <bindings-file>bindings-jakarta.xjb</bindings-file>
                 <jaxb-maven-plugin.version>3.0.1</jaxb-maven-plugin.version>
                 <maven.compiler.target>17</maven.compiler.target>
                 <maven.compiler.source>17</maven.compiler.source>
