@@ -23,7 +23,6 @@ jobs:
           echo "revision=$TIME-$COMMIT" >> $GITHUB_OUTPUT
 
   release:
-    if: false
     needs: revision
     runs-on: ubuntu-latest
     permissions:
@@ -44,7 +43,7 @@ jobs:
           REVISION: ${{ needs.revision.outputs.revision }}
         shell: bash
         run: |
-          mvn -B -Drevision="${REVISION}" source:jar deploy
+          mvn -B -Drevision="${REVISION}-jakarta" source:jar deploy
 
   release-javax:
     needs: revision
