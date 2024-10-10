@@ -34,6 +34,7 @@
         <module>ekstern-pensjon-tjeneste-beregning</module>
         <module>samhandler</module>
         <module>erungufor</module>
+        <module>getapplicationversion</module>
     </modules>
 
     <scm>
